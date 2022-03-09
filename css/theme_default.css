@@ -261,6 +261,9 @@
 #portalMain .mainContainer .stores .store .info .type div {
   color: #F0941D;
 }
+#main .noticeBanner {
+  background-color: #F0941D;
+}
 #main #banner .dots .active {
   background-color: #F0941D;
 }

@@ -2554,6 +2554,17 @@ select {
     padding: 80px 25px 0;
   }
 }
+#main .noticeBanner {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main .noticeBanner span {
+  font-size: 16px;
+  color: white;
+}
 #main #banner {
   width: 100%;
   position: relative;
