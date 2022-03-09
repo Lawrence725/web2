@@ -1,0 +1,381 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+.spinner div {
+  border-top: 5px solid #F0941D;
+}
+#header #headerRight .menu:hover {
+  color: #F0941D;
+}
+#header #headerRight #profile .main:hover span {
+  color: #F0941D;
+}
+#header #headerRight #profile .main:hover i {
+  background: #FFEED8;
+}
+#header #headerRight #profile .main i {
+  color: #F0941D;
+}
+#header #headerRight #profile .dropdown a:hover {
+  color: #F0941D;
+  background-color: #FFEED8;
+}
+#header #headerRight #buttonCart {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+#header #headerRight #buttonCart:hover {
+  background: #F0941D;
+}
+#footer #left a:hover {
+  color: #F0941D;
+}
+#footer #center i {
+  color: #F0941D;
+}
+#footer #right a:hover {
+  color: #F0941D;
+}
+#footer #right a:-webkit-any-link:hover {
+  color: #F0941D;
+}
+.modal#popNotice .modal-content .submit {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+.modal#popNotice .modal-content .submit:hover {
+  background: #F0941D;
+}
+.modal#popInfo .modal-content .content div {
+  color: #F0941D;
+}
+.modal#popInfo .modal-content .content a:hover {
+  color: #F0941D;
+}
+.modal#popSetting .modal-content #mode .mode.active {
+  background-color: #F0941D;
+}
+.modal#popSetting .modal-content #mode .mode:hover:not(.active) {
+  background-color: #FFEED8;
+}
+.modal#popSetting .modal-content .delivery .address .left .icon {
+  color: #F0941D;
+}
+.modal#popSetting .modal-content .delivery .address a:hover {
+  color: #F0941D;
+}
+.modal#popSetting .modal-content .delivery .action {
+  color: #F0941D;
+  background-color: #FFEED8;
+}
+.modal#popSetting .modal-content .delivery .action:hover {
+  color: #FFEED8;
+  background-color: #F0941D;
+}
+.modal#popSetting .modal-content .time .left .select:hover {
+  background: #FFEED8;
+  border: 2px solid #FFEED8;
+}
+.modal#popSetting .modal-content .time .left .select .icon {
+  color: #F0941D;
+}
+.modal#popSetting .modal-content .time .action {
+  color: #F0941D;
+  background-color: #FFEED8;
+}
+.modal#popSetting .modal-content .time .action:hover {
+  color: #FFEED8;
+  background-color: #F0941D;
+}
+.modal#popSetting .modal-content .chair,
+.modal#popSetting .modal-content .note div {
+  color: #F0941D;
+}
+.modal#popSetting .modal-content .submit {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+.modal#popSetting .modal-content .submit:hover {
+  background: #F0941D;
+}
+.modal#popTime .modal-content .container .select:hover {
+  background: #FFEED8;
+}
+.modal#popTime .modal-content .container .select i {
+  color: #F0941D;
+}
+.modal#popTime .modal-content .container .submit {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+.modal#popTime .modal-content .container .submit:hover {
+  background: #F0941D;
+}
+.modal#popTime .modal-content .container .submit.secondary {
+  background: #FFEED8;
+}
+.modal#popTime .modal-content .container .submit.secondary:hover {
+  background: #F0941D;
+}
+.modal#popLocation .modal-content .address .container .icon {
+  color: #F0941D;
+}
+.modal#popLocation .modal-content .address a:hover {
+  color: #F0941D;
+}
+.modal#popLocation .modal-content .note div {
+  color: #F0941D;
+}
+.modal#popLocation .modal-content .submit {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+.modal#popLocation .modal-content .submit:hover {
+  background: #F0941D;
+}
+.modal#popVerify .modal-content .container .icon {
+  color: #F0941D;
+}
+.modal#popVerify .modal-content .button {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+.modal#popVerify .modal-content .button:hover {
+  background: #F0941D;
+}
+.modal#popVerify .modal-content .button.secondary {
+  background: #FFEED8;
+}
+.modal#popProfile .modal-content .container .icon {
+  color: #F0941D;
+}
+.modal#popProfile .modal-content .button {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+.modal#popProfile .modal-content .button:hover {
+  background: #F0941D;
+}
+.modal#popProfile .modal-content .button.secondary {
+  background: #FFEED8;
+}
+.modal#popCart .modal-content .container .item .left .area .icon {
+  color: #F0941D;
+}
+.modal#popCart .modal-content .container .addon label {
+  /* When the radio button is checked, add a blue background */
+}
+.modal#popCart .modal-content .container .addon label .main .right .number .icon {
+  color: #F0941D;
+}
+.modal#popCart .modal-content .container .addon label .main .right a {
+  color: #F0941D;
+}
+.modal#popCart .modal-content .container .addon label input:checked ~ .checkmark {
+  background-color: #F0941D;
+}
+.modal#popCart .modal-content .container .addon .checkmark.radio {
+  border: 2px solid #F0941D;
+}
+.modal#popCart .modal-content .container .addon .checkmark.checkbox {
+  border: solid 2px #F0941D;
+}
+.modal#popCart .modal-content .container .note div {
+  color: #F0941D;
+}
+.modal#popCart .modal-content .submit {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+.modal#popCart .modal-content .submit:hover {
+  background: #F0941D;
+}
+.modal#popItem .modal-content .container .top .title .remark {
+  background: #FFEED8;
+}
+.modal#popItem .modal-content .container .top .title .remark span {
+  color: #F0941D;
+}
+.modal#popItem .modal-content .container .top .area label {
+  /* When the radio button is checked, add a blue background */
+}
+.modal#popItem .modal-content .container .top .area label .main .right .number .icon {
+  color: #F0941D;
+}
+.modal#popItem .modal-content .container .top .area label .main .right a {
+  color: #F0941D;
+}
+.modal#popItem .modal-content .container .top .area label input:checked ~ .checkmark {
+  background-color: #F0941D;
+}
+.modal#popItem .modal-content .container .top .area .checkmark.radio {
+  border: 2px solid #F0941D;
+}
+.modal#popItem .modal-content .container .top .area .checkmark.checkbox {
+  border: solid 2px #F0941D;
+}
+.modal#popItem .modal-content .container .top .note div {
+  color: #F0941D;
+}
+.modal#popItem .modal-content .container .buttom .icon {
+  color: #F0941D;
+}
+.modal#popItem .modal-content .container .buttom .submit {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+.modal#popItem .modal-content .container .buttom .submit:hover {
+  background: #F0941D;
+}
+#portalMain #banner .dots .active {
+  background-color: #F0941D;
+}
+#portalMain #info #store #text .content {
+  color: #F0941D;
+}
+#portalMain #info #store #buttons .icon {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+#portalMain #info #store #buttons .icon:hover {
+  background: #F0941D;
+}
+#portalMain #info #buttonSetting:hover {
+  border: 2px solid #FFEED8;
+}
+#portalMain #info #buttonSetting .container .icon {
+  color: #F0941D;
+}
+#portalMain #info #mode .mode.active {
+  background-color: #F0941D;
+}
+#portalMain #info #mode .mode:hover:not(.active) {
+  background-color: #FFEED8;
+}
+#portalMain #info #address .left .icon {
+  color: #F0941D;
+}
+#portalMain #info #address #location:hover {
+  color: #F0941D;
+}
+#portalMain #info #address #confirm {
+  background: #F0941D;
+}
+#portalMain #info #address #confirm:hover {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+#portalMain .mainContainer .stores .store:hover {
+  border: 2px solid #FFEED8;
+}
+#portalMain .mainContainer .stores .store .image .discount {
+  background-color: #F0941D;
+}
+#portalMain .mainContainer .stores .store .info .type div {
+  color: #F0941D;
+}
+#main #banner .dots .active {
+  background-color: #F0941D;
+}
+#main #info #store #text .content {
+  color: #F0941D;
+}
+#main #info #store #buttons .icon {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+#main #info #store #buttons .icon:hover {
+  background: #F0941D;
+}
+#main #info #buttonSetting:hover {
+  border: 2px solid #FFEED8;
+}
+#main #info #buttonSetting .container .icon {
+  color: #F0941D;
+}
+#main #category::-webkit-scrollbar-thumb {
+  background: #F0941D;
+}
+@media (hover: hover) and (pointer: fine) {
+  #main #category a:hover:not(.active) {
+    color: #F0941D;
+    background: #FFEED8;
+  }
+}
+#main #category .active {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+#main .mainContainer .items .item:hover {
+  border: 2px solid #FFEED8;
+}
+#main .mainContainer .items .item .info .title .remark {
+  color: #F0941D;
+  background: #FFEED8;
+}
+#paymentMain #left .container .icon {
+  color: #F0941D;
+}
+#paymentMain #right #top .area .dropdown .arrow {
+  color: #F0941D;
+}
+#paymentMain #right #top .area .switch {
+  /* Create a custom radio button */
+  /* When the radio button is checked, add a blue background */
+}
+#paymentMain #right #top .area .switch .container:hover {
+  background: #FFEED8;
+}
+#paymentMain #right #top .area .switch .checkmark {
+  border: 2px solid #F0941D;
+}
+#paymentMain #right #top .area .switch .container input:checked ~ .checkmark {
+  background-color: #F0941D;
+}
+#paymentMain #right #top .area .checkbox {
+  /* Create a custom checkbox */
+  /* When the checkbox is checked, add a blue background */
+}
+#paymentMain #right #top .area .checkbox .checkmark {
+  border: solid 2px #F0941D;
+}
+#paymentMain #right #top .area .checkbox .container input:checked ~ .checkmark {
+  background-color: #F0941D;
+}
+#paymentMain #right #top .area .item .icon {
+  color: #F0941D;
+}
+#paymentMain #right #bottom .policy a {
+  color: #F0941D;
+}
+#paymentMain #right #bottom #submit {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+#paymentMain #right #bottom #submit:hover {
+  background: #F0941D;
+}
+#orderMain #left #top #info #number {
+  border: solid 3px #F0941D;
+  color: #F0941D;
+}
+#orderMain #left #top #info #time {
+  color: #F0941D;
+}
+#orderMain #left #top #states .state .done {
+  background-color: #F0941D;
+}
+#orderMain #left #top #states .state .now {
+  background-color: #F0941D;
+}
+#orderMain #left #top #states .done {
+  color: #F0941D !important;
+}
+#orderMain #left #top #states .now {
+  color: #F0941D !important;
+}
+#orderMain #left #restaurant .icon {
+  color: #F0941D;
+}
+#orderMain #right .container .icon {
+  color: #F0941D;
+}
+#listMain .item .left span {
+  color: #F0941D;
+}
+#listMain .item .center hr {
+  border: 0.5px solid #F0941D;
+}
+#listMain .item .right .button.payment {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}
+#listMain .item .right .button.payment:hover {
+  background: #F0941D;
+}
+#listMain .item .right .button.again:hover {
+  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+}

@@ -1,0 +1,454 @@
+<!-- Script -->
+<script src="header.js"></script>
+
+<!-- Main -->
+<div id="header">
+    <div id="headerLeft">
+        <a class="desktop" href="home2.html"><img src="photo/logo.png"></a>
+        <a class="mobile" href="home2.html"><img src="photo/favicon.png"></a>
+    </div>
+    <div id="headerCenter">
+        <div id="search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="想吃點什麼？">
+        </div>
+    </div>
+    <div id="headerRight">
+        <a class="menu">
+            <span>登出</span>
+        </a>
+        <a class="menu hide">
+            <span>登入/註冊</span>
+        </a>
+        <a href="list.html" class="menu">
+            <span>我的訂單</span>
+        </a>
+        <!-- <a id="buttonSearch">
+            <i class="fas fa-lg fa-search"></i>
+        </a> -->
+        <div id="profile">
+            <a class="main">
+                <img src="photo/item.png">
+                <!-- <i class="fas fa-user-circle fa-2x"></i> --> <!-- 預設照片 -->
+                <span>陳小明</span>
+            </a>
+            <div class="dropdown">
+                <a href="list.html">我的訂單</a>
+                <a>登出</a>
+            </div>
+        </div>
+        <a id="buttonCart">
+            <i class="fas fa-shopping-cart"></i>
+            <span>9</span>
+        </a>
+    </div>
+</div>
+
+<!-- Verify Popup -->
+<div id="popVerify" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <span class="title">手機驗證</span>
+        <div class="container">
+            <div class="icon"><i class="fas fa-phone-alt"></i></div>
+            <input type="text" placeholder="手機號碼">
+        </div>
+        <a class="button"><!-- secondary -->
+            <span>發送手機驗證</span>
+        </a>
+        <div class="container">
+            <div class="icon"><i class="fas fa-key"></i></div>
+            <input type="text" placeholder="驗證碼">
+        </div>
+        <a class="submit button disabled">
+            <span>完成驗證</span>
+        </a>
+    </div>
+</div>
+
+<!-- Profile Popup -->
+<div id="popProfile" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <span class="title">個人資料</span>
+        <div class="container">
+            <div class="icon"><i class="fas fa-user"></i></div>
+            <input type="text" placeholder="姓名">
+        </div>
+        <div class="container">
+            <div class="icon"><i class="fas fa-phone-alt"></i></div>
+            <input type="text" placeholder="電話">
+            <div class="icon"><i class="fas fa-check-circle"></i></div>
+            <a class="button small"><!-- 重新發送 class: secondary -->
+                <span>手機驗證</span>
+            </a>
+        </div>
+        <div class="container">
+            <div class="icon"><i class="fas fa-key"></i></div>
+            <input type="text" placeholder="驗證碼">
+            <a class="button small">
+                <span>完成驗證</span>
+            </a>
+        </div>
+        <div class="area">
+            <a class="cancel button secondary">
+                <span>取消</span>
+            </a>
+            <a class="submit button"><!-- class: disabled -->
+                <span>儲存</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Popup -->
+<div id="popCart" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <span class="title">購物車</span>
+        <span class="subTitle">麥町吐司工房 新莊中原店</span>
+        <div class="container">
+            <!-- <div class="delivery">
+                <ul class="contentB">
+                    <li>外送條件1</li>
+                    <li>外送條件2</li>
+                    <li>外送條件3</li>
+                </ul>
+            </div> -->
+            <!-- Item -->
+            <div class="item">
+                <div class="left">
+                    <div class="area">
+                        <a class="icon"><i class="fas fa-minus fa-xs"></i></a>
+                        <input class="count" type="number" value="1">
+                        <a class="icon"><i class="fas fa-plus fa-xs"></i></a>
+                    </div>
+                    <div class="detail">
+                        <span class="contentB">國王厚牛美式漢堡</span>
+                        <div class="contentG">
+                            <span>不加熱</span>
+                            <span>・</span>
+                            <span>蛋</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <!-- <img src="photo/item.png"> -->
+                    <img class="point" src="/icon/treepoints.png">
+                    <span class="contentB point">2</span>
+                    <span class="contentB price">$245</span>
+                </div>
+            </div>
+            <!-- Item -->
+            <div class="item">
+                <div class="left">
+                    <div class="area">
+                        <a class="icon"><i class="fas fa-minus fa-xs"></i></a>
+                        <input class="count" type="number" value="18">
+                        <a class="icon"><i class="fas fa-plus fa-xs"></i></a>
+                    </div>
+                    <div class="detail">
+                        <span class="contentB">國王厚牛美式漢堡</span>
+                        <div class="contentG">
+                            <span>不加熱</span>
+                            <span>・</span>
+                            <span>蛋</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <!-- <img src="photo/item.png"> -->
+                    <span class="contentB price">$245</span>
+                </div>
+            </div>
+            <!-- Item -->
+            <div class="item">
+                <div class="left">
+                    <div class="area">
+                        <a class="icon"><i class="fas fa-minus fa-xs"></i></a>
+                        <input class="count" type="number" value="1">
+                        <a class="icon"><i class="fas fa-plus fa-xs"></i></a>
+                    </div>
+                    <div class="detail">
+                        <span class="contentB">國王厚牛美式漢堡國王厚牛美式漢堡</span>
+                        <div class="contentG">
+                            <span>不加熱</span>
+                            <span>・</span>
+                            <span>蛋</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="photo/item.png">
+                    <span class="contentB price">$245</span>
+                </div>
+            </div>
+            <!-- Item -->
+            <div class="item">
+                <div class="left">
+                    <div class="area">
+                        <a class="icon"><i class="fas fa-minus fa-xs"></i></a>
+                        <input class="count" type="number" value="1">
+                        <a class="icon"><i class="fas fa-plus fa-xs"></i></a>
+                    </div>
+                    <div class="detail">
+                        <span class="contentB">國王厚牛美式漢堡</span>
+                        <div class="contentG">
+                            <span>不加熱</span>
+                            <span>・</span>
+                            <span>蛋</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <!-- <img src="photo/item.png"> -->
+                    <span class="contentB price">$245</span>
+                </div>
+            </div>
+            <div class="addon">
+                <span class="contentB header">加購內容</span>
+                <label>
+                    <input type="radio" name="radio3"> <!-- checked="checked" -->
+                    <span class="checkmark radio"></span>
+                    <div class="contentB">加熱</div>
+                </label>
+                <label>
+                    <input type="radio" name="radio3"> <!-- checked="checked" -->
+                    <span class="checkmark radio"></span>
+                    <div class="main">
+                        <div class="contentB">不加熱</div>
+                        <div class="right">
+                            <div class="number">
+                                <a class="icon"><i class="fas fa-minus fa-sm"></i></a>
+                                <span class="contentB">1</span>
+                                <a class="icon"><i class="fas fa-plus fa-sm"></i></a>
+                            </div>
+                            <span class="price">+$10</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="addon">
+                <span class="contentB header">加購內容</span>
+                <label>
+                    <input type="checkbox" name="checkbox3"> <!-- checked="checked" -->
+                    <span class="checkmark checkbox"></span>
+                    <div class="main">
+                        <div class="text">起司</div>
+                        <div class="right">
+                            <div class="number">
+                                <a class="icon"><i class="fas fa-minus fa-sm"></i></a>
+                                <span>1</span>
+                                <a class="icon"><i class="fas fa-plus fa-sm"></i></a>
+                            </div>
+                            <span class="price"></span>
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input type="checkbox" name="checkbox3"> <!-- checked="checked" -->
+                    <span class="checkmark checkbox"></span>
+                    <div class="main">
+                        <div class="text">蛋</div>
+                        <div class="right">
+                            <div class="number">
+                                <a class="icon"><i class="fas fa-minus fa-sm"></i></a>
+                                <span>1</span>
+                                <a class="icon"><i class="fas fa-plus fa-sm"></i></a>
+                            </div>
+                            <span class="price">+$10</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="note">
+                <div><i class="fas fa-sticky-note"></i></div>
+                <textarea placeholder="訂單備註"></textarea>
+            </div>
+            <div class="empty">
+                <span>無商品</span>
+            </div>
+        </div>
+        <a class="submit" href="payment2.html">
+            <span>前往結帳</span>
+            <div class="price">
+                <img src="/icon/treepoints-w.png">
+                <span>2</span>
+                <span>+</span>
+                <span>$1000</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+<!-- Item Popup -->
+<div id="popItem" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="photo/item.png">
+        <div class="container">
+            <div class="top">
+                <div>
+                    <div class="title">
+                        <span class="name">國王厚牛美式漢堡</span>
+                        <div class="remark">
+                            <span>台灣豬</span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <span>香蒜荷蘭醬佐無骨烤雞堡套餐</span>
+                    </div>
+                    <div class="content">
+                        <span>剩餘10份</span>
+                        <span>・</span>
+                        <span>300卡路里</span>
+                    </div>
+                    <div class="price">
+                        <div class="point">
+                            <img src="/icon/treepoints.png">
+                            <span>2</span>
+                        </div>
+                        <span>+</span>
+                        <span>$245</span>
+                        <span class="discount">$399</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="area">
+                    <span class="header">是否加熱麵包</span>
+                    <span class="content">必填</span>
+                    <label>
+                        <input type="radio" name="radio1"> <!-- checked="checked" -->
+                        <span class="checkmark radio"></span>
+                        <div class="text">加熱</div>
+                    </label>
+                    <label>
+                        <input type="radio" name="radio1"> <!-- checked="checked" -->
+                        <span class="checkmark radio"></span>
+                        <div class="main">
+                            <div class="text">不加熱</div>
+                            <div class="right">
+                                <div class="number">
+                                    <a class="icon"><i class="fas fa-minus fa-sm"></i></a>
+                                    <span>1</span>
+                                    <a class="icon"><i class="fas fa-plus fa-sm"></i></a>
+                                </div>
+                                <span class="price">+$10</span>
+                                <a class="fas fa-caret-down fa-lg dropdown"></a>
+                            </div>
+                        </div>
+                        <div class="sub">
+                            <span class="header">是否加熱麵包</span>
+                            <span class="content">必填</span>
+                            <label>
+                                <input type="radio" name="radio2"> <!-- checked="checked" -->
+                                <span class="checkmark radio"></span>
+                                <div class="text">加熱</div>
+                            </label>
+                            <label>
+                                <input type="radio" name="radio2"> <!-- checked="checked" -->
+                                <span class="checkmark radio"></span>
+                                <div class="main">
+                                    <div class="text">不加熱</div>
+                                    <div class="right">
+                                        <div class="number">
+                                            <a class="icon"><i class="fas fa-minus fa-sm"></i></a>
+                                            <span>1</span>
+                                            <a class="icon"><i class="fas fa-plus fa-sm"></i></a>
+                                        </div>
+                                        <span class="price"></span>
+                                    </div>
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="radio2"> <!-- checked="checked" -->
+                                <span class="checkmark radio"></span>
+                                <div class="main">
+                                    <div class="text">不加熱</div>
+                                    <div class="right">
+                                        <div class="number">
+                                            <a class="icon"><i class="fas fa-minus fa-sm"></i></a>
+                                            <span>1</span>
+                                            <a class="icon"><i class="fas fa-plus fa-sm"></i></a>
+                                        </div>
+                                        <span class="price">+$10</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </label>
+                </div>
+                <hr>
+                <div class="area">
+                    <span class="header">加料區</span>
+                    <span class="content">最多可選擇2個項目</span>
+                    <label>
+                        <input type="checkbox" name="checkbox1"> <!-- checked="checked" -->
+                        <span class="checkmark checkbox"></span>
+                        <div class="main">
+                            <div class="text">起司</div>
+                            <div class="right">
+                                <div class="number">
+                                    <a class="icon"><i class="fas fa-minus fa-sm"></i></a>
+                                    <span>1</span>
+                                    <a class="icon"><i class="fas fa-plus fa-sm"></i></a>
+                                </div>
+                                <span class="price">+$10</span>
+                                <a class="fas fa-caret-down fa-lg dropdown"></a>
+                            </div>
+                        </div>
+                        <div class="sub">
+                            <span class="header">加料區</span>
+                            <span class="content">必填・請選擇1到2個項目</span>
+                            <label>
+                                <input type="checkbox" name="checkbox2"> <!-- checked="checked" -->
+                                <span class="checkmark checkbox"></span>
+                                <div class="text">加熱</div>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="checkbox2"> <!-- checked="checked" -->
+                                <span class="checkmark checkbox"></span>
+                                <div class="text">加熱</div>
+                            </label>
+                        </div>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="checkbox1"> <!-- checked="checked" -->
+                        <span class="checkmark checkbox"></span>
+                        <div class="main">
+                            <div class="text">蛋</div>
+                            <div class="right">
+                                <div class="number">
+                                    <a class="icon"><i class="fas fa-minus fa-sm"></i></a>
+                                    <span>1</span>
+                                    <a class="icon"><i class="fas fa-plus fa-sm"></i></a>
+                                </div>
+                                <span class="price">+$10</span>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <hr>
+                <div class="note">
+                    <div><i class="fas fa-sticky-note"></i></div>
+                    <textarea placeholder="餐點備註"></textarea>
+                </div>
+            </div>
+            <div class="buttom">
+                <a class="icon"><i class="fas fa-minus fa-sm"></i></a>
+                <input type="number" value="1">
+                <a class="icon"><i class="fas fa-plus fa-sm"></i></a>
+                <a class="submit">
+                    <span>加入購物車</span>
+                    <div class="price">
+                        <img src="/icon/treepoints-w.png">
+                        <span>2</span>
+                        <span>+</span>
+                        <span>$245</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

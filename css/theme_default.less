@@ -1,0 +1,288 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+// Color
+#colors() {
+    primary:    #F0941D;
+    secondary:  #FFEED8;
+    gradient:   linear-gradient(135deg, #FF8008 0%, #FFC837 100%);;
+}
+
+// Common
+.spinner div { border-top: 5px solid #colors[primary]; }
+
+// Header
+#header #headerRight {
+    .menu:hover { color: #colors[primary]; }
+    #profile {
+        .main {
+            &:hover span { color: #colors[primary]; }
+            &:hover i { background: #colors[secondary]; }
+            i { color: #colors[primary]; }
+        }
+        .dropdown a:hover { color: #colors[primary]; background-color: #colors[secondary]; }
+    }
+    #buttonCart { background: #colors[gradient];
+        &:hover { background: #colors[primary]; }
+    }
+}
+
+// Footer
+#footer {
+    #left a:hover { color: #colors[primary]; }
+    #center i { color: #colors[primary]; }
+    #right a {
+        &:hover { color: #colors[primary]; }
+        &:-webkit-any-link:hover { color: #colors[primary]; }
+    }
+}
+
+// Modal
+.modal {
+    &#popNotice .modal-content {
+        .submit { background: #colors[gradient]; 
+            &:hover { background: #colors[primary]; }
+        }
+    }
+    &#popInfo .modal-content .content {
+        div { color: #colors[primary]; }
+        a:hover { color: #colors[primary]; }
+    }
+    &#popSetting .modal-content {
+        #mode .mode {
+            &.active { background-color: #colors[primary]; }
+            &:hover:not(.active) { background-color: #colors[secondary]; } 
+        }
+        .delivery {
+            .address {
+                .left .icon { color: #colors[primary]; }
+                a:hover { color: #colors[primary]; }
+            }
+            .action { color: #colors[primary]; background-color: #colors[secondary];
+                &:hover { color: #colors[secondary]; background-color: #colors[primary]; }
+            }
+        }
+        .time {
+            .left .select {
+                &:hover { background: #colors[secondary]; border: 2px solid #colors[secondary]; }
+                .icon { color: #colors[primary]; }
+            }
+            .action { color: #colors[primary]; background-color: #colors[secondary];
+                &:hover { color: #colors[secondary]; background-color: #colors[primary]; }
+            }
+        }
+        .chair,.note div { color: #colors[primary]; }
+        .submit { background: #colors[gradient]; 
+            &:hover { background: #colors[primary]; }
+        }
+    }
+    &#popTime .modal-content .container {
+        .select {
+            &:hover { background: #colors[secondary]; }
+            i { color: #colors[primary]; }
+        }
+        .submit { background: #colors[gradient]; 
+            &:hover { background: #colors[primary]; }
+            &.secondary { background: #colors[secondary];
+                &:hover { background: #colors[primary]; }
+            }
+        }
+    }
+    &#popLocation .modal-content {
+        .address {
+            .container .icon { color: #colors[primary]; }
+            a:hover { color: #colors[primary]; }
+        }
+        .note div { color: #colors[primary]; }
+        .submit { background: #colors[gradient]; 
+            &:hover { background: #colors[primary]; }
+        }
+    }
+    &#popVerify .modal-content {
+        .container .icon { color: #colors[primary]; }
+        .button { background: #colors[gradient]; 
+            &:hover { background: #colors[primary]; }
+            &.secondary { background: #colors[secondary]; }
+        }
+    }
+    &#popProfile .modal-content {
+        .container .icon { color: #colors[primary]; }
+        .button { background: #colors[gradient]; 
+            &:hover { background: #colors[primary]; }
+            &.secondary { background: #colors[secondary]; }
+        }
+    }
+    &#popCart .modal-content {
+        .container {
+            .item .left .area .icon { color: #colors[primary]; }
+            .addon {
+                label {
+                    .main .right {
+                        .number .icon { color: #colors[primary]; }
+                        a { color: #colors[primary]; }
+                    }
+                    /* When the radio button is checked, add a blue background */
+                    input:checked ~ .checkmark { background-color: #colors[primary]; }
+                }
+                .checkmark.radio { border: 2px solid #colors[primary];  }
+                .checkmark.checkbox { border: solid 2px #colors[primary]; }
+            }
+            .note div { color: #colors[primary]; }
+        }
+        .submit { background: #colors[gradient];
+            &:hover { background: #colors[primary]; }
+        }
+    }
+    &#popItem .modal-content .container {
+        .top {
+            .title .remark { background: #colors[secondary];
+                span { color: #colors[primary]; }
+            }
+            .area {
+                label {
+                    .main .right {
+                        .number .icon { color: #colors[primary]; }
+                        a { color: #colors[primary]; }
+                    }
+                    /* When the radio button is checked, add a blue background */
+                    input:checked ~ .checkmark { background-color: #colors[primary]; }
+                }
+                .checkmark.radio { border: 2px solid #colors[primary]; }
+                .checkmark.checkbox { border: solid 2px #colors[primary]; }
+            }
+            .note div { color: #colors[primary]; }
+        }
+        .buttom {
+            .icon { color: #colors[primary]; }
+            .submit { background: #colors[gradient];
+                &:hover { background: #colors[primary]; }
+            }
+        }
+    }
+}
+
+// Portal Page
+#portalMain {
+    #banner .dots .active { background-color: #colors[primary]; }
+    #info {
+        #store {
+            #text .content { color: #colors[primary]; }
+            #buttons .icon { background: #colors[gradient];
+                &:hover { background: #colors[primary]; }
+            }
+        }
+        #buttonSetting {
+            &:hover { border: 2px solid #colors[secondary]; }
+            .container .icon { color: #colors[primary]; }
+        }
+        #mode .mode {
+            &.active { background-color: #colors[primary]; }
+            &:hover:not(.active) { background-color: #colors[secondary]; } 
+        }
+        #address {
+            .left .icon { color: #colors[primary]; }
+            #location:hover { color: #colors[primary]; }
+            #confirm { background: #colors[primary];
+                &:hover { background: #colors[gradient]; }
+            }
+        }
+    }
+    .mainContainer .stores .store {
+        &:hover { border: 2px solid #colors[secondary]; }
+        .image .discount { background-color: #colors[primary]; }
+        .info .type div { color: #colors[primary]; }
+    }
+}
+
+// Store Page
+#main {
+    #banner .dots .active { background-color: #colors[primary]; }
+    #info {
+        #store {
+            #text .content { color: #colors[primary]; }
+            #buttons .icon { background: #colors[gradient];
+                &:hover { background: #colors[primary]; }
+            }
+        }
+        #buttonSetting {
+            &:hover { border: 2px solid #colors[secondary]; }
+            .container .icon { color: #colors[primary]; }
+        }
+    }
+    #category {
+        &::-webkit-scrollbar-thumb { background: #colors[primary]; }
+        a {
+            @media (hover: hover) and (pointer: fine) {
+                &:hover:not(.active) { color: #colors[primary]; background: #colors[secondary]; }
+            }
+        }
+        .active { background: #colors[gradient]; }
+    }
+    .mainContainer .items .item {
+        &:hover { border: 2px solid #colors[secondary]; }
+        .info .title .remark { color: #colors[primary]; background: #colors[secondary]; }
+    }
+}
+
+// Payment Page
+#paymentMain {
+    #left .container .icon { color: #colors[primary]; }
+    #right {
+        #top .area {
+            .dropdown .arrow { color: #colors[primary]; }
+            .switch {
+                .container:hover { background: #colors[secondary]; }
+                /* Create a custom radio button */
+                .checkmark { border: 2px solid #colors[primary]; }
+                /* When the radio button is checked, add a blue background */
+                .container input:checked ~ .checkmark { background-color: #colors[primary]; }
+            }
+            .checkbox {
+                /* Create a custom checkbox */
+                .checkmark { border: solid 2px #colors[primary]; }
+                /* When the checkbox is checked, add a blue background */
+                .container input:checked ~ .checkmark { background-color: #colors[primary]; }
+            }
+            .item .icon { color: #colors[primary]; }
+        }
+        #bottom {
+            .policy a { color: #colors[primary]; }
+            #submit { background: #colors[gradient];
+                &:hover { background: #colors[primary]; }
+            }
+        }
+    }
+}
+
+// Order Page
+#orderMain {
+    #left {
+        #top {
+            #info {
+                #number { border: solid 3px #colors[primary]; color: #colors[primary]; }
+                #time { color: #colors[primary]; }
+            }
+            #states {
+                .state {
+                    .done { background-color: #colors[primary]; }
+                    .now { background-color: #colors[primary]; }
+                }
+                .done { color: #colors[primary] !important; }
+                .now { color: #colors[primary] !important; }
+            }
+        }
+        #restaurant .icon { color: #colors[primary]; }
+    }
+    #right .container .icon { color: #colors[primary]; }
+}
+
+// List Page
+#listMain .item {
+    .left span { color: #colors[primary]; }
+    .center hr { border: 0.5px solid #colors[primary]; }
+    .right .button {
+        &.payment { background: #colors[gradient]; 
+            &:hover { background: #colors[primary]; }
+        }
+        &.again:hover { background: #colors[gradient]; }
+    }
+}
