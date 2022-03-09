@@ -642,6 +642,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
     @media @screen-tablet { width: calc(100% - 100px); padding: 80px 50px 0; }
     @media @screen-mobile { width: calc(100% - 50px); padding: 80px 25px 0; }
     .noticeBanner { width: 100%; height: 40px; display: flex; align-items: center; justify-content: center;
+        @media @screen-mobile { margin-left: -25px; width: calc(100% + 50px); }
         span { font-size: 16px; color: white; }}
     #banner { width: 100%; position: relative;
         @media @screen-mobile { margin-left: -25px; width: calc(100% + 50px); }

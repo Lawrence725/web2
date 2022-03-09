@@ -2561,6 +2561,12 @@ select {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  #main .noticeBanner {
+    margin-left: -25px;
+    width: calc(100% + 50px);
+  }
+}
 #main .noticeBanner span {
   font-size: 16px;
   color: white;
