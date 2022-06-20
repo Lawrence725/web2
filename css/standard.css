@@ -1,18 +1,18 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 #fontTitle {
-  font-size: 24px !important;
+  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
 #fontHeaderB {
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 #fontHeaderL {
-  font-size: 18px !important;
-  font-weight: 300 !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-weight: normal !important;
 }
 #fontContent {
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 body {
@@ -158,7 +158,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: #F5F6FA;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #header #headerRight {
@@ -170,8 +170,8 @@ select {
   margin-right: 30px;
   color: #333333;
   white-space: nowrap;
-  font-size: 18px !important;
-  font-weight: 300 !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-weight: normal !important;
 }
 @media (max-width: 1199px) {
   #header #headerRight .menu {
@@ -235,8 +235,8 @@ select {
 #header #headerRight #profile .main span {
   margin-left: 5px;
   color: #333333;
-  font-size: 18px !important;
-  font-weight: 300 !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-weight: normal !important;
 }
 @media (max-width: 767px) {
   #header #headerRight #profile .main span {
@@ -255,7 +255,7 @@ select {
   padding: 10px 20px;
   display: block;
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #header #headerRight #buttonCart {
@@ -269,7 +269,7 @@ select {
 }
 #header #headerRight #buttonCart span {
   margin-left: 5px;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 #footer {
@@ -336,7 +336,7 @@ select {
   border: 0;
   color: white;
   background: transparent;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #footer #center select:hover {
@@ -357,7 +357,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 @media (max-width: 767px) {
@@ -414,7 +414,7 @@ select {
   position: absolute;
   color: #BDBDBD;
   z-index: 3;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal .close:hover,
@@ -425,7 +425,7 @@ select {
 }
 .modal .title {
   color: #333333;
-  font-size: 24px !important;
+  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
 .modal#popNotice .modal-content {
@@ -451,7 +451,7 @@ select {
 }
 .modal#popNotice .modal-content .content {
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popNotice .modal-content .submit {
@@ -463,7 +463,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal#popInfo .modal-content {
@@ -496,12 +496,12 @@ select {
 }
 .modal#popInfo .modal-content .content span {
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popInfo .modal-content .content a {
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popInfo .modal-content .payment {
@@ -564,7 +564,7 @@ select {
 .modal#popDelivery .modal-content .content {
   width: 100%;
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popDelivery .modal-content .content li {
@@ -595,7 +595,7 @@ select {
 }
 .modal#popSetting .modal-content .message {
   color: #EB5757;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popSetting .modal-content #mode {
@@ -636,7 +636,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popSetting .modal-content .delivery {
@@ -674,7 +674,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: #F5F6FA;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popSetting .modal-content .delivery .address a {
@@ -690,7 +690,7 @@ select {
   margin: 0;
   padding-left: 20px;
   color: #828282;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
   font-size: 12px !important;
 }
@@ -702,7 +702,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popSetting .modal-content .time {
@@ -739,7 +739,7 @@ select {
   border: 0;
   color: #333333;
   background: transparent;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popSetting .modal-content .time .left .select select:hover {
@@ -775,7 +775,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popSetting .modal-content .chair {
@@ -803,7 +803,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: #F5F6FA;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popSetting .modal-content .note {
@@ -828,7 +828,7 @@ select {
   height: 100%;
   margin-left: 5px;
   background-color: #F5F6FA;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popSetting .modal-content .submit {
@@ -840,7 +840,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal#popSetting .modal-content .submit.disabled {
@@ -883,7 +883,7 @@ select {
   border: 0;
   color: #333333;
   background: transparent;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popTime .modal-content .container .select select:hover {
@@ -908,7 +908,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal#popTime .modal-content .container .submit.secondary {
@@ -956,7 +956,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: #F5F6FA;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popLocation .modal-content .address a {
@@ -988,7 +988,7 @@ select {
   height: 100%;
   margin-left: 5px;
   background-color: #F5F6FA;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popLocation .modal-content .submit {
@@ -1000,7 +1000,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal#popVerify .modal-content {
@@ -1037,7 +1037,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: #F5F6FA;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popVerify .modal-content .button {
@@ -1049,7 +1049,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal#popVerify .modal-content .button.secondary {
@@ -1094,7 +1094,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: #F5F6FA;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popProfile .modal-content .area {
@@ -1112,7 +1112,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal#popProfile .modal-content .button.small {
@@ -1122,7 +1122,7 @@ select {
   margin: 0;
   border-radius: 5px;
   white-space: nowrap;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popProfile .modal-content .button.secondary {
@@ -1163,7 +1163,7 @@ select {
 .modal#popPrivacy .modal-content span,
 .modal#popTerms .modal-content span {
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popPrivacy .modal-content ul,
@@ -1174,7 +1174,7 @@ select {
 .modal#popTerms .modal-content li {
   margin: 10px 0;
   color: #828282;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popPrivacy .modal-content .title,
@@ -1182,15 +1182,15 @@ select {
   width: 100%;
   margin-bottom: 20px;
   text-align: center;
-  font-size: 24px !important;
+  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
 .modal#popPrivacy .modal-content .header,
 .modal#popTerms .modal-content .header {
   margin-top: 20px;
   color: #333333;
-  font-size: 18px !important;
-  font-weight: 300 !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-weight: normal !important;
 }
 @media (max-width: 767px) {
   .modal#popCart {
@@ -1229,7 +1229,7 @@ select {
 }
 .modal#popCart .modal-content .subTitle {
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popCart .modal-content .container {
@@ -1244,12 +1244,12 @@ select {
 }
 .modal#popCart .modal-content .container .contentB {
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popCart .modal-content .container .contentG {
   color: #828282;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popCart .modal-content .container .delivery {
@@ -1301,7 +1301,7 @@ select {
   text-align: center;
   color: #333333;
   background-color: #F5F6FA;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popCart .modal-content .container .item .left .detail {
@@ -1359,7 +1359,7 @@ select {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
   /* On mouse-over, add a grey background color */
   /* Hide the browser's default radio button */
@@ -1409,7 +1409,7 @@ select {
   width: 60px;
   color: #333333;
   text-align: end;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 @media (max-width: 767px) {
@@ -1508,7 +1508,7 @@ select {
   height: 100%;
   margin-left: 5px;
   background-color: #F5F6FA;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popCart .modal-content .container .empty {
@@ -1518,8 +1518,8 @@ select {
   align-items: center;
   justify-content: center;
   color: #828282;
-  font-size: 18px !important;
-  font-weight: 300 !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-weight: normal !important;
 }
 .modal#popCart .modal-content .submit {
   width: calc(100% - 40px);
@@ -1531,7 +1531,7 @@ select {
   align-items: center;
   justify-content: space-between;
   color: white;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal#popCart .modal-content .submit .price {
@@ -1626,7 +1626,7 @@ select {
   display: flex;
   align-items: center;
   color: #333333;
-  font-size: 24px !important;
+  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
 .modal#popItem .modal-content .container .top .title .remark {
@@ -1640,26 +1640,26 @@ select {
 }
 .modal#popItem .modal-content .container .top .title .remark span {
   white-space: nowrap;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popItem .modal-content .container .top .header {
   margin-bottom: 5px;
   color: #333333;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal#popItem .modal-content .container .top .content {
   margin-bottom: 5px;
   color: #828282;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popItem .modal-content .container .top .price {
   display: flex;
   align-items: flex-end;
   color: #333333;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal#popItem .modal-content .container .top .price .point {
@@ -1677,7 +1677,7 @@ select {
 .modal#popItem .modal-content .container .top .price span.discount {
   color: #828282;
   text-decoration: line-through;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popItem .modal-content .container .top hr {
@@ -1699,7 +1699,7 @@ select {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
   /* On mouse-over, add a grey background color */
   /* Hide the browser's default radio button */
@@ -1761,7 +1761,7 @@ select {
   width: 60px;
   color: #333333;
   text-align: end;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 @media (max-width: 767px) {
@@ -1864,7 +1864,7 @@ select {
   height: 100%;
   margin-left: 5px;
   background-color: #F5F6FA;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popItem .modal-content .container .buttom {
@@ -1889,7 +1889,7 @@ select {
   border-radius: 10px;
   margin: 0 10px;
   text-align: center;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal#popItem .modal-content .container .buttom .submit {
@@ -1902,7 +1902,7 @@ select {
   align-items: center;
   justify-content: space-between;
   color: white;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal#popItem .modal-content .container .buttom .submit .price {
@@ -1977,7 +1977,7 @@ select {
   justify-content: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  font-size: 24px !important;
+  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
 @media (max-width: 767px) {
@@ -2058,11 +2058,11 @@ select {
 }
 #portalMain #info #store #text .title {
   color: #333333;
-  font-size: 24px !important;
+  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
 #portalMain #info #store #text .content {
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #portalMain #info #store #buttons {
@@ -2132,7 +2132,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #portalMain #info #buttonSetting #mode {
@@ -2153,7 +2153,7 @@ select {
 #portalMain #info #buttonSetting .separate {
   margin: 0 10px;
   color: #BDBDBD;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 @media (max-width: 767px) {
@@ -2205,7 +2205,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #portalMain #info #address {
@@ -2242,7 +2242,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: white;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #portalMain #info #address #location {
@@ -2262,7 +2262,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #portalMain #info .error {
@@ -2274,8 +2274,8 @@ select {
 }
 #portalMain .mainContainer .title {
   color: #333333;
-  font-size: 18px !important;
-  font-weight: 300 !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-weight: normal !important;
 }
 #portalMain .mainContainer .stores {
   width: calc(100% + 20px);
@@ -2317,7 +2317,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
   box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
 }
@@ -2331,7 +2331,7 @@ select {
   justify-content: center;
   color: white;
   background: rgba(0, 0, 0, 0.5);
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 #portalMain .mainContainer .stores .store .image img {
@@ -2358,7 +2358,7 @@ select {
 #portalMain .mainContainer .stores .store .info .title {
   display: flex;
   color: #333333;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 #portalMain .mainContainer .stores .store .info .title .remark {
@@ -2376,7 +2376,7 @@ select {
 }
 #portalMain .mainContainer .stores .store .info .title .remark span {
   white-space: nowrap;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #portalMain .mainContainer .stores .store .info .detail {
@@ -2385,7 +2385,7 @@ select {
   overflow: hidden;
   text-overflow: ellipsis;
   color: #828282;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #portalMain .mainContainer .stores .store .info .type {
@@ -2401,7 +2401,7 @@ select {
   display: flex;
   justify-content: center;
   color: #F2F2F2;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #portalMain .mainContainer .stores .store .info .type .off {
@@ -2534,7 +2534,7 @@ select {
   align-items: center;
   justify-content: center;
   color: #828282;
-  font-size: 24px !important;
+  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
 #main {
@@ -2614,7 +2614,7 @@ select {
   justify-content: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  font-size: 24px !important;
+  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
 @media (max-width: 767px) {
@@ -2695,11 +2695,11 @@ select {
 }
 #main #info #store #text .title {
   color: #333333;
-  font-size: 24px !important;
+  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
 #main #info #store #text .content {
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #main #info #store #buttons {
@@ -2770,7 +2770,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #main #info #buttonSetting #mode {
@@ -2796,7 +2796,7 @@ select {
 #main #info #buttonSetting .separate {
   margin: 0 10px;
   color: #BDBDBD;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 @media (max-width: 767px) {
@@ -2833,7 +2833,7 @@ select {
   margin-right: 10px;
   border-radius: 5px;
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #main #category a span {
@@ -2851,8 +2851,8 @@ select {
 }
 #main .mainContainer .title {
   color: #333333;
-  font-size: 18px !important;
-  font-weight: 300 !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-weight: normal !important;
 }
 #main .mainContainer .items {
   width: calc(100% + 20px);
@@ -2893,7 +2893,7 @@ select {
 #main .mainContainer .items .item .info .title {
   display: flex;
   color: #333333;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 #main .mainContainer .items .item .info .title .remark {
@@ -2911,7 +2911,7 @@ select {
 }
 #main .mainContainer .items .item .info .title .remark span {
   white-space: nowrap;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #main .mainContainer .items .item .info .detail {
@@ -2920,7 +2920,7 @@ select {
   overflow: hidden;
   text-overflow: ellipsis;
   color: #828282;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #main .mainContainer .items .item .info .price {
@@ -2928,7 +2928,7 @@ select {
   display: flex;
   align-items: flex-end;
   color: #333333;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 #main .mainContainer .items .item .info .price .point {
@@ -2944,7 +2944,7 @@ select {
 #main .mainContainer .items .item .info .price span.discount {
   color: #828282;
   text-decoration: line-through;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #main .mainContainer .items .item .image {
@@ -2963,7 +2963,7 @@ select {
   justify-content: center;
   color: white;
   background: rgba(0, 0, 0, 0.5);
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 #main .mainContainer .items .item .image img {
@@ -3075,7 +3075,7 @@ select {
   align-items: center;
   justify-content: center;
   color: #828282;
-  font-size: 24px !important;
+  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
 #paymentMain {
@@ -3135,7 +3135,7 @@ select {
 }
 #paymentMain #left .container .title {
   color: #333333;
-  font-size: 24px !important;
+  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #left .container .icon {
@@ -3157,17 +3157,17 @@ select {
 }
 #paymentMain #left .container .contentB {
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #left .container .contentG {
   color: #828282;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #left .container .contentR {
   color: #EB5757;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #left .container #items {
@@ -3194,7 +3194,7 @@ select {
   display: flex;
   justify-content: center;
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #left .container .item .right {
@@ -3284,14 +3284,14 @@ select {
 }
 #paymentMain #right #top .area .title {
   color: #333333;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 #paymentMain #right #top .area .content {
   margin-right: 10px;
   color: #333333;
   white-space: nowrap;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #right #top .area .content.full {
@@ -3318,7 +3318,7 @@ select {
   border-radius: 10px;
   color: #333333;
   background-color: #F5F6FA;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #right #top .area .dropdown .arrow {
@@ -3364,7 +3364,7 @@ select {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #right #top .area .switch .container .text {
@@ -3456,7 +3456,7 @@ select {
   width: 100%;
   border: 0;
   background-color: transparent;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #right #top .area .checkbox .container {
@@ -3470,23 +3470,23 @@ select {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #right #top .area .checkbox .container img {
   width: 30px;
   height: 30px;
-  margin-right: 10px;
+  margin-right: 2px;
 }
 #paymentMain #right #top .area .checkbox .container .text {
   width: fit-content;
   height: 20px;
-  margin-right: 20px;
+  margin-right: 10px;
   display: flex;
   align-items: center;
   white-space: nowrap;
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #right #top .area .checkbox .container .subText {
@@ -3570,7 +3570,7 @@ select {
 #paymentMain #right #top .area .item .input input {
   border: 0;
   background-color: transparent;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #right #top .area .error {
@@ -3600,7 +3600,7 @@ select {
 }
 #paymentMain #right #bottom #submit span {
   color: white;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 #paymentMain #right #bottom #submit .price {
@@ -3759,12 +3759,12 @@ select {
 #orderMain #left #top #info .header {
   margin: 5px 0;
   color: #333333;
-  font-size: 18px !important;
-  font-weight: 300 !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-weight: normal !important;
 }
 #orderMain #left #top #info .content {
   color: #828282;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #orderMain #left #top #states {
@@ -3781,7 +3781,7 @@ select {
 }
 #orderMain #left #top #states .state span {
   margin: 10px 0;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #orderMain #left #top #states .state .progressBar {
@@ -3827,7 +3827,7 @@ select {
 #orderMain #left #restaurant .header {
   margin-top: 10px;
   color: #333333;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 #orderMain #left #restaurant .icon {
@@ -3845,7 +3845,7 @@ select {
 }
 #orderMain #left #restaurant .content {
   color: #828282;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #orderMain #right {
@@ -3880,7 +3880,7 @@ select {
 }
 #orderMain #right .container .title {
   color: #333333;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 #orderMain #right .container .icon {
@@ -3925,17 +3925,17 @@ select {
 }
 #orderMain #right .container .contentB {
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #orderMain #right .container .contentG {
   color: #828282;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #orderMain #right .container .contentR {
   color: #EB5757;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #orderMain #right .container #items {
@@ -3957,7 +3957,7 @@ select {
   display: flex;
   justify-content: center;
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #orderMain #right .container .item .right {
@@ -4119,12 +4119,12 @@ select {
   }
 }
 #listMain .item .left span {
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 @media (max-width: 1199px) {
   #listMain .item .left span {
-    font-size: 14px !important;
+    font-size: clamp(1rem, 4vw, 1.1rem) !important;
     font-weight: normal !important;
   }
 }
@@ -4170,12 +4170,12 @@ select {
   align-items: center;
   text-align: center;
   line-height: 100%;
-  font-size: 18px !important;
-  font-weight: 300 !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-weight: normal !important;
 }
 @media (max-width: 1199px) {
   #listMain .item .center .container .title {
-    font-size: 14px !important;
+    font-size: clamp(1rem, 4vw, 1.1rem) !important;
     font-weight: normal !important;
   }
 }
@@ -4196,7 +4196,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 @media (max-width: 1199px) {
@@ -4204,14 +4204,14 @@ select {
     width: 26px;
     min-height: 26px;
     border-radius: 5px;
-    font-size: 14px !important;
+    font-size: clamp(1rem, 4vw, 1.1rem) !important;
     font-weight: normal !important;
   }
 }
 #listMain .item .center .container .time {
   height: 40px;
   text-align: center;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 @media (max-width: 1199px) {
@@ -4279,7 +4279,7 @@ select {
   box-shadow: 0px 50px 100px rgba(55, 84, 170, 0.1);
   text-align: center;
   white-space: nowrap;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 @media (max-width: 1199px) {
@@ -4331,7 +4331,7 @@ select {
   justify-content: center;
   color: #828282;
   background-color: white;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
   box-shadow: 0px 20px 40px rgba(55, 84, 170, 0.2);
 }
@@ -4352,7 +4352,7 @@ select {
 }
 #privacyMain span {
   color: #333333;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #privacyMain ul {
@@ -4361,21 +4361,21 @@ select {
 #privacyMain li {
   margin: 10px 0;
   color: #828282;
-  font-size: 14px !important;
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #privacyMain #title {
   width: 100%;
   margin-bottom: 20px;
   text-align: center;
-  font-size: 24px !important;
+  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
 #privacyMain .header {
   margin-top: 20px;
   color: #333333;
-  font-size: 18px !important;
-  font-weight: 300 !important;
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-weight: normal !important;
 }
 @keyframes progress {
   0% {
