@@ -20,6 +20,40 @@
         <a class="menu hide">
             <span>登入/註冊</span>
         </a>
+        <a onmouseover="popPoint()" onmouseleave="popClose('popPoint')" class="menu point">
+            <span>我的點數</span>
+            <!-- Popup (Point) -->
+            <section id="popPoint" class="popup popPoint">
+                <div class="popBody">
+                    <div class="flexH width between">
+                        <div class="flexV">
+                            <span class="header">我的點數</span>
+                            <div class="flexH">
+                                <img class="pointS" src="icon/point.svg">
+                                <span class="content">1 = NT$1</span>
+                            </div>
+                        </div>
+                        <div class="flexH">
+                            <img class="pointL" src="icon/point.svg">
+                            <span class="header">973</span>
+                        </div>
+                    </div>
+                    <div class="flexH width between">
+                        <div class="flexV">
+                            <span class="header">我的點數</span>
+                            <div class="flexH">
+                                <img class="pointS" src="icon/point.svg">
+                                <span class="content">1 = NT$1</span>
+                            </div>
+                        </div>
+                        <div class="flexH">
+                            <img class="pointL" src="icon/point.svg">
+                            <span class="header">973</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </a>
         <a href="list.html" class="menu">
             <span>我的訂單</span>
         </a>
@@ -33,6 +67,32 @@
                 <span>陳小明</span>
             </a>
             <div class="dropdown">
+                <div class="flexH width between">
+                    <div class="flexV">
+                        <span class="header">我的點數</span>
+                        <div class="flexH">
+                            <img class="pointS" src="icon/point.svg">
+                            <span class="content">1 = NT$1</span>
+                        </div>
+                    </div>
+                    <div class="flexH">
+                        <img class="pointL" src="icon/point.svg">
+                        <span class="header">973</span>
+                    </div>
+                </div>
+                <div class="flexH width between">
+                    <div class="flexV">
+                        <span class="header">我的點數</span>
+                        <div class="flexH">
+                            <img class="pointS" src="icon/point.svg">
+                            <span class="content">1 = NT$1</span>
+                        </div>
+                    </div>
+                    <div class="flexH">
+                        <img class="pointL" src="icon/point.svg">
+                        <span class="header">973</span>
+                    </div>
+                </div>
                 <a href="list.html">我的訂單</a>
                 <a>登出</a>
             </div>

@@ -37,6 +37,16 @@
 //     popVerify.style.display = "none";
 // }
 
+// Popup close
+function popClose(e) {
+    document.getElementById(e).style.display = "none";
+    document.body.style.overflow = "scroll"; }
+
+// Popup (Point)
+function popPoint() {
+    document.getElementById("popPoint").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
 // Profile Popup
 var popProfile = document.getElementById("popProfile");
 var buttonProfile = document.getElementById("profile");

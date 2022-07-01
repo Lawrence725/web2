@@ -1,4 +1,14 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+:root {
+  --gray-1: #333333;
+  --gray-2: #4F4F4F;
+  --gray-3: #828282;
+  --gray-4: #BDBDBD;
+  --gray-5: #E0E0E0;
+  --gray-6: #F2F2F2;
+  --red: #EB5757;
+  --background: #F5F6FA;
+}
 #fontTitle {
   font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
@@ -19,7 +29,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: 'Noto Sans TC';
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 a {
   text-decoration: none !important;
@@ -66,7 +76,7 @@ select {
 .spinner div {
   width: 60px;
   min-height: 60px;
-  border: 5px solid #BDBDBD;
+  border: 5px solid var(--gray-4);
   border-radius: 50%;
   -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
@@ -130,7 +140,7 @@ select {
 }
 @media (max-width: 374px) {
   #header #headerCenter {
-    width: 100px;
+    width: 120px;
   }
 }
 #header #headerCenter #search {
@@ -141,15 +151,15 @@ select {
   margin: 0 10px;
   display: flex;
   align-items: center;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   #header #headerCenter #search {
     width: 120px;
   }
 }
 #header #headerCenter #search i {
-  color: #828282;
+  color: var(--gray-3);
 }
 #header #headerCenter #search input {
   width: 100%;
@@ -157,7 +167,7 @@ select {
   padding: 0;
   margin-left: 5px;
   border-radius: 10px;
-  background-color: #F5F6FA;
+  background-color: var(--background);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -168,17 +178,18 @@ select {
 }
 #header #headerRight .menu {
   margin-right: 30px;
-  color: #333333;
+  color: var(--gray-1);
   white-space: nowrap;
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: normal !important;
+  position: relative;
 }
 @media (max-width: 1199px) {
   #header #headerRight .menu {
     margin-right: 20px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   #header #headerRight .menu {
     display: none;
   }
@@ -190,7 +201,7 @@ select {
   display: none;
   margin-right: 10px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   #header #headerRight #buttonSearch {
     display: block;
   }
@@ -199,7 +210,7 @@ select {
   position: relative;
   display: inline-block;
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   #header #headerRight #profile:hover .dropdown {
     display: block;
   }
@@ -218,7 +229,7 @@ select {
     padding-right: 20px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   #header #headerRight #profile .main {
     padding-right: 10px;
   }
@@ -234,19 +245,21 @@ select {
 }
 #header #headerRight #profile .main span {
   margin-left: 5px;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: normal !important;
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   #header #headerRight #profile .main span {
     display: none;
   }
 }
 #header #headerRight #profile .dropdown {
+  width: 250px;
   margin-top: -1.5px;
   min-width: max-content;
   display: none;
+  right: 20px;
   position: fixed;
   background-color: white;
   z-index: 3;
@@ -254,9 +267,33 @@ select {
 #header #headerRight #profile .dropdown a {
   padding: 10px 20px;
   display: block;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
+}
+#header #headerRight #profile .dropdown > div {
+  width: calc(250px - 40px);
+  padding: 10px 20px;
+}
+#header #headerRight #profile .dropdown > div .header {
+  color: var(--gray-1);
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
+  font-weight: normal !important;
+}
+#header #headerRight #profile .dropdown > div .content {
+  color: var(--gray-3);
+  font-size: 12px;
+}
+#header #headerRight #profile .dropdown > div img {
+  margin-right: 2px;
+}
+#header #headerRight #profile .dropdown > div img.pointS {
+  width: 12px;
+  height: 12px;
+}
+#header #headerRight #profile .dropdown > div img.pointL {
+  width: 18px;
+  height: 18px;
 }
 #header #headerRight #buttonCart {
   width: 70px;
@@ -279,7 +316,7 @@ select {
   display: flex;
   align-items: center;
   color: white;
-  background: #333333;
+  background: var(--gray-1);
 }
 @media (max-width: 1199px) {
   #footer {
@@ -317,10 +354,10 @@ select {
   position: relative;
   display: flex;
   align-items: center;
-  background: #4F4F4F;
+  background: var(--gray-2);
 }
 #footer #center:hover {
-  background: #828282;
+  background: var(--gray-3);
   cursor: pointer;
 }
 @media (max-width: 767px) {
@@ -391,6 +428,208 @@ select {
     display: none;
   }
 }
+.flexH {
+  width: fit-content;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.flexV {
+  width: fit-content;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.flexH.start,
+.flexV.start {
+  align-items: flex-start;
+}
+.flexH.center,
+.flexV.center {
+  align-items: center;
+}
+.flexH.end,
+.flexV.end {
+  align-items: flex-end;
+}
+.flexH.middle,
+.flexV.middle {
+  justify-content: center;
+}
+.flexH.between,
+.flexV.between {
+  justify-content: space-between;
+}
+.flexH.around,
+.flexV.around {
+  justify-content: space-around;
+}
+.flexH.right,
+.flexV.right {
+  justify-content: flex-end;
+}
+.flexH.radius,
+.flexV.radius {
+  border-radius: 0;
+}
+.flexH.full,
+.flexV.full {
+  width: 100vw;
+}
+.flexH.width,
+.flexV.width {
+  width: 100%;
+}
+.flexH.height,
+.flexV.height {
+  height: 100%;
+}
+.flexH.padding,
+.flexV.padding {
+  padding: 5px;
+}
+.flexH.padding.width,
+.flexV.padding.width {
+  width: 100%;
+}
+.flexH.padding.height,
+.flexV.padding.height {
+  height: 100%;
+}
+.flexH.margin,
+.flexV.margin {
+  margin: 5px;
+}
+.flexH.margin.width,
+.flexV.margin.width {
+  width: calc(100% - 10px);
+}
+.flexH.margin.height,
+.flexV.margin.height {
+  height: calc(100% - 10px);
+}
+.flexH.padding.margin.width,
+.flexV.padding.margin.width {
+  width: calc(100% - 10px);
+}
+.flexH.padding.margin.height,
+.flexV.padding.margin.height {
+  height: calc(100% - 10px);
+}
+.flexH.scroll,
+.flexV.scroll {
+  height: 150px;
+  min-height: 150px;
+  overflow-y: scroll;
+}
+.flexH.scroll::-webkit-scrollbar,
+.flexV.scroll::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.flexH.scroll::-webkit-scrollbar:vertical,
+.flexV.scroll::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+.flexH.scroll::-webkit-scrollbar-thumb,
+.flexV.scroll::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--cG4);
+  border: 2.5px solid var(--cBg);
+}
+.popup {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: 8;
+  pointer-events: none;
+}
+.popup.popPoint {
+  width: fit-content;
+  height: fit-content;
+  top: 20px;
+  left: unset;
+  right: 0;
+  position: absolute;
+}
+.popup.popPoint .popBody {
+  min-width: 250px;
+  max-height: none;
+  margin: 20px 0;
+  padding: 20px;
+}
+.popup.popPoint .header {
+  color: var(--gray-1);
+  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-weight: normal !important;
+}
+.popup.popPoint .content {
+  color: var(--gray-3);
+  font-size: clamp(1rem, 4vw, 1.1rem) !important;
+  font-weight: normal !important;
+}
+.popup.popPoint img {
+  margin-right: 2px;
+}
+.popup.popPoint img.pointS {
+  width: 18px;
+  height: 18px;
+}
+.popup.popPoint img.pointL {
+  width: 24px;
+  height: 24px;
+}
+.popup .close {
+  top: 15px;
+  right: 15px;
+  height: 20px;
+  width: 20px;
+  border-radius: 99px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-4);
+  z-index: 1;
+}
+.popup .close:hover,
+.popup .close:focus {
+  color: var(--gray-1);
+}
+.popup .popBody {
+  min-width: 300px;
+  max-width: 100%;
+  height: fit-content;
+  max-height: calc(100% - 40px);
+  padding: 10px;
+  margin: 20px;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  overflow-y: auto;
+}
+.popup .popBody > *:not(.close):not(:last-child) {
+  margin-bottom: 20px;
+}
+.popup .popBody::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.popup .popBody::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+.popup .popBody::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--gray-5);
+  border: 2.5px solid var(--background);
+}
 .modal {
   width: 100%;
   height: 100%;
@@ -412,19 +651,19 @@ select {
   top: 20px;
   right: 20px;
   position: absolute;
-  color: #BDBDBD;
+  color: var(--gray-4);
   z-index: 3;
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal .close:hover,
 .modal .close:focus {
-  color: #333333;
+  color: var(--gray-1);
   text-decoration: none;
   cursor: pointer;
 }
 .modal .title {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
@@ -450,7 +689,7 @@ select {
   margin: 20px 0;
 }
 .modal#popNotice .modal-content .content {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -495,12 +734,12 @@ select {
   justify-content: center;
 }
 .modal#popInfo .modal-content .content span {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popInfo .modal-content .content a {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -513,7 +752,7 @@ select {
 .modal#popInfo .modal-content .payment div {
   width: 78px;
   height: 78px;
-  border: 1px solid #F2F2F2;
+  border: 1px solid var(--gray-6);
   margin: 10px;
   border-radius: 99px;
   display: flex;
@@ -563,7 +802,7 @@ select {
 }
 .modal#popDelivery .modal-content .content {
   width: 100%;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -594,7 +833,7 @@ select {
   overflow-y: auto;
 }
 .modal#popSetting .modal-content .message {
-  color: #EB5757;
+  color: var(--red);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -607,7 +846,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 .modal#popSetting .modal-content #mode .mode {
   width: 100%;
@@ -616,13 +855,13 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #333333;
+  color: var(--gray-1);
 }
 .modal#popSetting .modal-content #mode .mode.active {
   color: white;
 }
 .modal#popSetting .modal-content #mode .mode.grayed {
-  color: #BDBDBD;
+  color: var(--gray-4);
 }
 .modal#popSetting .modal-content #mode .mode .icon {
   min-width: 20px;
@@ -649,12 +888,12 @@ select {
   width: calc(100% - 24px);
   height: 36px;
   padding: 0 10px;
-  border: 2px solid #F5F6FA;
+  border: 2px solid var(--background);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 .modal#popSetting .modal-content .delivery .address .left {
   width: 100%;
@@ -673,7 +912,7 @@ select {
   height: 100%;
   margin-left: 5px;
   border-radius: 10px;
-  background-color: #F5F6FA;
+  background-color: var(--background);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -683,13 +922,13 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #828282;
+  color: var(--gray-3);
 }
 .modal#popSetting .modal-content .delivery .conditions {
   width: 100%;
   margin: 0;
   padding-left: 20px;
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
   font-size: 12px !important;
@@ -719,12 +958,12 @@ select {
 .modal#popSetting .modal-content .time .left .select {
   width: calc(100% - 4px);
   height: 36px;
-  border: 2px solid #F5F6FA;
+  border: 2px solid var(--background);
   border-radius: 10px;
   position: relative;
   display: flex;
   align-items: center;
-  background: #F5F6FA;
+  background: var(--background);
 }
 .modal#popSetting .modal-content .time .left .select:hover {
   cursor: pointer;
@@ -737,7 +976,7 @@ select {
   height: 100%;
   padding-left: 36px;
   border: 0;
-  color: #333333;
+  color: var(--gray-1);
   background: transparent;
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
@@ -765,7 +1004,7 @@ select {
 }
 .modal#popSetting .modal-content .time .left .select i.right {
   right: 5px;
-  color: #828282;
+  color: var(--gray-3);
 }
 .modal#popSetting .modal-content .time .action {
   width: 50px;
@@ -783,11 +1022,11 @@ select {
   height: 36px;
   padding: 0 10px;
   margin-top: 10px;
-  border: 2px solid #F5F6FA;
+  border: 2px solid var(--background);
   border-radius: 10px;
   display: flex;
   align-items: center;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 .modal#popSetting .modal-content .chair .icon {
   min-width: 20px;
@@ -802,7 +1041,7 @@ select {
   padding: 0;
   margin-left: 5px;
   border-radius: 10px;
-  background-color: #F5F6FA;
+  background-color: var(--background);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -811,10 +1050,10 @@ select {
   min-height: 36px;
   padding: 10px;
   margin-top: 10px;
-  border: 2px solid #F5F6FA;
+  border: 2px solid var(--background);
   border-radius: 10px;
   display: flex;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 .modal#popSetting .modal-content .note div {
   width: 20px;
@@ -827,7 +1066,7 @@ select {
   width: 100%;
   height: 100%;
   margin-left: 5px;
-  background-color: #F5F6FA;
+  background-color: var(--background);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -848,7 +1087,7 @@ select {
   pointer-events: none;
 }
 .modal#popSetting .modal-content .error {
-  border: 2px solid #EB5757 !important;
+  border: 2px solid var(--red) !important;
 }
 .modal#popTime .modal-content {
   width: 300px;
@@ -871,7 +1110,7 @@ select {
   position: relative;
   display: flex;
   align-items: center;
-  background: #F5F6FA;
+  background: var(--background);
 }
 .modal#popTime .modal-content .container .select:hover {
   cursor: pointer;
@@ -881,7 +1120,7 @@ select {
   height: 100%;
   padding-left: 20px;
   border: 0;
-  color: #333333;
+  color: var(--gray-1);
   background: transparent;
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
@@ -912,7 +1151,7 @@ select {
   font-weight: 500 !important;
 }
 .modal#popTime .modal-content .container .submit.secondary {
-  color: #828282;
+  color: var(--gray-3);
 }
 .modal#popTime .modal-content .container .submit.secondary:hover {
   color: white;
@@ -936,7 +1175,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 .modal#popLocation .modal-content .address .container {
   width: 100%;
@@ -955,7 +1194,7 @@ select {
   height: 100%;
   margin-left: 5px;
   border-radius: 10px;
-  background-color: #F5F6FA;
+  background-color: var(--background);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -965,7 +1204,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #828282;
+  color: var(--gray-3);
 }
 .modal#popLocation .modal-content .note {
   width: calc(100% - 20px);
@@ -974,7 +1213,7 @@ select {
   margin-top: 20px;
   border-radius: 10px;
   display: flex;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 .modal#popLocation .modal-content .note div {
   width: 20px;
@@ -987,7 +1226,7 @@ select {
   width: 100%;
   height: 100%;
   margin-left: 5px;
-  background-color: #F5F6FA;
+  background-color: var(--background);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -1022,7 +1261,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 .modal#popVerify .modal-content .container .icon {
   width: 20px;
@@ -1036,7 +1275,7 @@ select {
   height: 100%;
   margin-left: 5px;
   border-radius: 10px;
-  background-color: #F5F6FA;
+  background-color: var(--background);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -1053,7 +1292,7 @@ select {
   font-weight: 500 !important;
 }
 .modal#popVerify .modal-content .button.secondary {
-  color: #828282;
+  color: var(--gray-3);
 }
 .modal#popVerify .modal-content .button.disabled {
   filter: grayscale(100%);
@@ -1079,7 +1318,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 .modal#popProfile .modal-content .container .icon {
   width: 20px;
@@ -1093,7 +1332,7 @@ select {
   height: 100%;
   margin-left: 5px;
   border-radius: 10px;
-  background-color: #F5F6FA;
+  background-color: var(--background);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -1126,7 +1365,7 @@ select {
   font-weight: normal !important;
 }
 .modal#popProfile .modal-content .button.secondary {
-  color: #828282;
+  color: var(--gray-3);
 }
 .modal#popProfile .modal-content .button.disabled {
   filter: grayscale(100%);
@@ -1162,7 +1401,7 @@ select {
 }
 .modal#popPrivacy .modal-content span,
 .modal#popTerms .modal-content span {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -1173,7 +1412,7 @@ select {
 .modal#popPrivacy .modal-content li,
 .modal#popTerms .modal-content li {
   margin: 10px 0;
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -1188,7 +1427,7 @@ select {
 .modal#popPrivacy .modal-content .header,
 .modal#popTerms .modal-content .header {
   margin-top: 20px;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: normal !important;
 }
@@ -1209,7 +1448,7 @@ select {
   position: absolute;
   display: flex;
   flex-direction: column;
-  background-color: #F5F6FA;
+  background-color: var(--background);
   box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.3);
 }
 @media (max-width: 1199px) {
@@ -1228,7 +1467,7 @@ select {
   }
 }
 .modal#popCart .modal-content .subTitle {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -1243,12 +1482,12 @@ select {
   background: white;
 }
 .modal#popCart .modal-content .container .contentB {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popCart .modal-content .container .contentG {
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -1257,7 +1496,7 @@ select {
   height: fit-content;
   padding: 10px 0;
   border-radius: 5px;
-  background: #F5F6FA;
+  background: var(--background);
 }
 .modal#popCart .modal-content .container .delivery ul {
   margin: 0;
@@ -1272,7 +1511,7 @@ select {
   cursor: pointer;
 }
 .modal#popCart .modal-content .container .item:hover {
-  background: #F5F6FA;
+  background: var(--background);
 }
 .modal#popCart .modal-content .container .item:hover .count {
   background-color: white !important;
@@ -1299,8 +1538,8 @@ select {
   display: flex;
   justify-content: center;
   text-align: center;
-  color: #333333;
-  background-color: #F5F6FA;
+  color: var(--gray-1);
+  background-color: var(--background);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -1342,7 +1581,7 @@ select {
   border-radius: 5px;
   flex-direction: column;
   align-items: center;
-  background: #F5F6FA;
+  background: var(--background);
 }
 .modal#popCart .modal-content .container .addon .header {
   margin-bottom: 5px;
@@ -1371,7 +1610,7 @@ select {
   background-color: white;
 }
 .modal#popCart .modal-content .container .addon label:hover .number {
-  background-color: #F5F6FA !important;
+  background-color: var(--background) !important;
 }
 .modal#popCart .modal-content .container .addon label .main {
   width: 100%;
@@ -1400,14 +1639,14 @@ select {
   justify-content: center;
 }
 .modal#popCart .modal-content .container .addon label .main .right .number .icon:hover {
-  color: #333333;
+  color: var(--gray-1);
 }
 .modal#popCart .modal-content .container .addon label .main .right .number span {
   margin: 0;
 }
 .modal#popCart .modal-content .container .addon label .main .right .price {
   width: 60px;
-  color: #333333;
+  color: var(--gray-1);
   text-align: end;
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
@@ -1424,7 +1663,7 @@ select {
   margin: 0 5px;
 }
 .modal#popCart .modal-content .container .addon label .main .right a:hover {
-  color: #333333;
+  color: var(--gray-1);
 }
 .modal#popCart .modal-content .container .addon label input {
   position: absolute;
@@ -1494,7 +1733,7 @@ select {
   padding: 10px;
   border-radius: 5px;
   display: flex;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 .modal#popCart .modal-content .container .note div {
   width: 20px;
@@ -1507,7 +1746,7 @@ select {
   width: 100%;
   height: 100%;
   margin-left: 5px;
-  background-color: #F5F6FA;
+  background-color: var(--background);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -1517,7 +1756,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: normal !important;
 }
@@ -1553,7 +1792,7 @@ select {
   border-radius: 15px;
   position: relative;
   display: flex;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 @media (max-width: 1199px) {
   .modal#popItem .modal-content {
@@ -1625,7 +1864,7 @@ select {
   margin-bottom: 5px;
   display: flex;
   align-items: center;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
@@ -1645,20 +1884,20 @@ select {
 }
 .modal#popItem .modal-content .container .top .header {
   margin-bottom: 5px;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 .modal#popItem .modal-content .container .top .content {
   margin-bottom: 5px;
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popItem .modal-content .container .top .price {
   display: flex;
   align-items: flex-end;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
@@ -1675,14 +1914,14 @@ select {
   margin: 0 2px;
 }
 .modal#popItem .modal-content .container .top .price span.discount {
-  color: #828282;
+  color: var(--gray-3);
   text-decoration: line-through;
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 .modal#popItem .modal-content .container .top hr {
   margin: 15px 0;
-  border: 0.5px solid #BDBDBD;
+  border: 0.5px solid var(--gray-4);
 }
 .modal#popItem .modal-content .container .top .area {
   display: flex;
@@ -1705,7 +1944,7 @@ select {
   /* Hide the browser's default radio button */
 }
 .modal#popItem .modal-content .container .top .area label:hover {
-  background: #F5F6FA;
+  background: var(--background);
 }
 .modal#popItem .modal-content .container .top .area label:hover input ~ .checkmark {
   background-color: white;
@@ -1733,7 +1972,7 @@ select {
   border-radius: 99px;
   display: flex;
   align-items: center;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 .modal#popItem .modal-content .container .top .area label .main .right .number .icon {
   width: 20px;
@@ -1743,7 +1982,7 @@ select {
   justify-content: center;
 }
 .modal#popItem .modal-content .container .top .area label .main .right .number .icon:hover {
-  color: #333333;
+  color: var(--gray-1);
 }
 .modal#popItem .modal-content .container .top .area label .main .right .number span {
   margin: 0;
@@ -1755,11 +1994,11 @@ select {
   margin: 0 5px;
 }
 .modal#popItem .modal-content .container .top .area label .main .right a:hover {
-  color: #333333;
+  color: var(--gray-1);
 }
 .modal#popItem .modal-content .container .top .area label .main .right .price {
   width: 60px;
-  color: #333333;
+  color: var(--gray-1);
   text-align: end;
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
@@ -1775,7 +2014,7 @@ select {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 .modal#popItem .modal-content .container .top .area label .text {
   height: 20px;
@@ -1850,7 +2089,7 @@ select {
   padding: 10px;
   border-radius: 10px;
   display: flex;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 .modal#popItem .modal-content .container .top .note div {
   width: 20px;
@@ -1863,7 +2102,7 @@ select {
   width: 100%;
   height: 100%;
   margin-left: 5px;
-  background-color: #F5F6FA;
+  background-color: var(--background);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -1881,7 +2120,7 @@ select {
   justify-content: center;
 }
 .modal#popItem .modal-content .container .buttom .icon:hover {
-  color: #333333;
+  color: var(--gray-1);
 }
 .modal#popItem .modal-content .container .buttom input {
   width: 40px;
@@ -2006,8 +2245,8 @@ select {
 }
 #portalMain #banner .prev:hover,
 #portalMain #banner .next:hover {
-  background-color: #F5F6FA;
-  color: #333333;
+  background-color: var(--background);
+  color: var(--gray-1);
 }
 #portalMain #banner .dots {
   width: 100%;
@@ -2057,7 +2296,7 @@ select {
   flex-direction: column;
 }
 #portalMain #info #store #text .title {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
@@ -2086,7 +2325,7 @@ select {
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  color: #333333;
+  color: var(--gray-1);
 }
 @media (max-width: 1199px) {
   #portalMain #info #buttonSetting {
@@ -2100,14 +2339,14 @@ select {
   }
 }
 #portalMain #info #buttonSetting.error {
-  border: 2px solid #EB5757;
-  color: #EB5757;
+  border: 2px solid var(--red);
+  color: var(--red);
 }
 #portalMain #info #buttonSetting.error i {
-  color: #EB5757;
+  color: var(--red);
 }
 #portalMain #info #buttonSetting.error span {
-  color: #EB5757;
+  color: var(--red);
 }
 #portalMain #info #buttonSetting .container {
   width: 100%;
@@ -2145,14 +2384,14 @@ select {
   justify-content: center;
 }
 #portalMain #info #buttonSetting #mode .grayed {
-  color: #BDBDBD;
+  color: var(--gray-4);
 }
 #portalMain #info #buttonSetting #mode .grayed .icon {
-  color: #BDBDBD;
+  color: var(--gray-4);
 }
 #portalMain #info #buttonSetting .separate {
   margin: 0 10px;
-  color: #BDBDBD;
+  color: var(--gray-4);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -2185,13 +2424,13 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #333333;
+  color: var(--gray-1);
 }
 #portalMain #info #mode .mode.active {
   color: white;
 }
 #portalMain #info #mode .mode.grayed {
-  color: #BDBDBD;
+  color: var(--gray-4);
 }
 #portalMain #info #mode .mode .icon {
   min-width: 20px;
@@ -2251,7 +2490,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #828282;
+  color: var(--gray-3);
 }
 #portalMain #info #address #confirm {
   width: 60px;
@@ -2266,14 +2505,14 @@ select {
   font-weight: normal !important;
 }
 #portalMain #info .error {
-  border: 2px solid #EB5757 !important;
+  border: 2px solid var(--red) !important;
 }
 #portalMain .mainContainer {
   width: 100%;
   margin: 20px 0;
 }
 #portalMain .mainContainer .title {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: normal !important;
 }
@@ -2347,17 +2586,17 @@ select {
   flex-direction: column;
 }
 #portalMain .mainContainer .stores .store .info.close > * > * {
-  color: #BDBDBD !important;
+  color: var(--gray-4) !important;
 }
 #portalMain .mainContainer .stores .store .info.close > * > * > * {
-  color: #BDBDBD !important;
+  color: var(--gray-4) !important;
 }
 #portalMain .mainContainer .stores .store .info.close > * > * > img {
   filter: grayscale(100%) !important;
 }
 #portalMain .mainContainer .stores .store .info .title {
   display: flex;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
@@ -2371,8 +2610,8 @@ select {
   justify-content: center;
 }
 #portalMain .mainContainer .stores .store .info .title .remark.close {
-  color: #BDBDBD !important;
-  background: #F2F2F2 !important;
+  color: var(--gray-4) !important;
+  background: var(--gray-6) !important;
 }
 #portalMain .mainContainer .stores .store .info .title .remark span {
   white-space: nowrap;
@@ -2384,7 +2623,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -2396,16 +2635,16 @@ select {
 #portalMain .mainContainer .stores .store .info .type div {
   width: calc(33% - 10px);
   margin: 5px;
-  border: 1px solid #F2F2F2;
+  border: 1px solid var(--gray-6);
   border-radius: 5px;
   display: flex;
   justify-content: center;
-  color: #F2F2F2;
+  color: var(--gray-6);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #portalMain .mainContainer .stores .store .info .type .off {
-  color: #F2F2F2;
+  color: var(--gray-6);
 }
 #portalMain .mainContainer .stores .store .info .payment {
   width: 100%;
@@ -2416,7 +2655,7 @@ select {
 #portalMain .mainContainer .stores .store .info .payment div {
   width: 33px;
   height: 33px;
-  border: 1px solid #F2F2F2;
+  border: 1px solid var(--gray-6);
   margin: 5px;
   border-radius: 99px;
   display: flex;
@@ -2441,7 +2680,7 @@ select {
   height: 1em;
   position: relative;
   overflow: hidden;
-  background-color: #BDBDBD;
+  background-color: var(--gray-4);
 }
 #portalMain .loading::after {
   position: absolute;
@@ -2533,7 +2772,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
@@ -2643,8 +2882,8 @@ select {
 }
 #main #banner .prev:hover,
 #main #banner .next:hover {
-  background-color: #F5F6FA;
-  color: #333333;
+  background-color: var(--background);
+  color: var(--gray-1);
 }
 #main #banner .dots {
   width: 100%;
@@ -2694,7 +2933,7 @@ select {
   flex-direction: column;
 }
 #main #info #store #text .title {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
@@ -2723,7 +2962,7 @@ select {
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  color: #333333;
+  color: var(--gray-1);
 }
 @media (max-width: 1199px) {
   #main #info #buttonSetting {
@@ -2737,14 +2976,14 @@ select {
   }
 }
 #main #info #buttonSetting.error {
-  border: 2px solid #EB5757;
-  color: #EB5757;
+  border: 2px solid var(--red);
+  color: var(--red);
 }
 #main #info #buttonSetting.error i {
-  color: #EB5757;
+  color: var(--red);
 }
 #main #info #buttonSetting.error span {
-  color: #EB5757;
+  color: var(--red);
 }
 #main #info #buttonSetting .container {
   width: 100%;
@@ -2788,14 +3027,14 @@ select {
   }
 }
 #main #info #buttonSetting #mode .grayed {
-  color: #BDBDBD;
+  color: var(--gray-4);
 }
 #main #info #buttonSetting #mode .grayed .icon {
-  color: #BDBDBD;
+  color: var(--gray-4);
 }
 #main #info #buttonSetting .separate {
   margin: 0 10px;
-  color: #BDBDBD;
+  color: var(--gray-4);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -2832,7 +3071,7 @@ select {
   padding: 10px;
   margin-right: 10px;
   border-radius: 5px;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -2850,7 +3089,7 @@ select {
   margin: 20px 0;
 }
 #main .mainContainer .title {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: normal !important;
 }
@@ -2887,12 +3126,12 @@ select {
   justify-content: space-between;
 }
 #main .mainContainer .items .item .info.sold > * > * {
-  color: #BDBDBD !important;
+  color: var(--gray-4) !important;
   filter: grayscale(100%);
 }
 #main .mainContainer .items .item .info .title {
   display: flex;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
@@ -2906,8 +3145,8 @@ select {
   justify-content: center;
 }
 #main .mainContainer .items .item .info .title .remark.sold {
-  color: #BDBDBD !important;
-  background: #F2F2F2 !important;
+  color: var(--gray-4) !important;
+  background: var(--gray-6) !important;
 }
 #main .mainContainer .items .item .info .title .remark span {
   white-space: nowrap;
@@ -2919,7 +3158,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -2927,7 +3166,7 @@ select {
   margin-top: 5px;
   display: flex;
   align-items: flex-end;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
@@ -2942,7 +3181,7 @@ select {
   margin: 0 2px;
 }
 #main .mainContainer .items .item .info .price span.discount {
-  color: #828282;
+  color: var(--gray-3);
   text-decoration: line-through;
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
@@ -2978,7 +3217,7 @@ select {
   height: 1em;
   position: relative;
   overflow: hidden;
-  background-color: #BDBDBD;
+  background-color: var(--gray-4);
 }
 #main .loading::after {
   position: absolute;
@@ -3074,7 +3313,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
@@ -3134,7 +3373,7 @@ select {
   }
 }
 #paymentMain #left .container .title {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
   font-weight: normal !important;
 }
@@ -3156,23 +3395,23 @@ select {
   flex-direction: column;
 }
 #paymentMain #left .container .contentB {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #left .container .contentG {
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #left .container .contentR {
-  color: #EB5757;
+  color: var(--red);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #paymentMain #left .container #items {
   padding-bottom: 10px;
-  border-bottom: solid 1px #BDBDBD;
+  border-bottom: solid 1px var(--gray-4);
 }
 @media (max-height: 705px) {
   #paymentMain #left .container #items {
@@ -3193,7 +3432,7 @@ select {
   min-width: 40px;
   display: flex;
   justify-content: center;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -3226,14 +3465,14 @@ select {
 #paymentMain #left .container .addon {
   margin-top: 10px;
   padding-bottom: 10px;
-  border-bottom: solid 1px #BDBDBD;
+  border-bottom: solid 1px var(--gray-4);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 #paymentMain #left .container .subTotal {
   padding-bottom: 10px;
-  border-bottom: solid 1px #BDBDBD;
+  border-bottom: solid 1px var(--gray-4);
 }
 #paymentMain #right {
   width: 40%;
@@ -3252,7 +3491,7 @@ select {
     width: 100%;
     height: fit-content;
     position: static;
-    background-color: #F5F6FA;
+    background-color: var(--background);
     box-shadow: none;
   }
 }
@@ -3283,13 +3522,13 @@ select {
   margin-top: 10px;
 }
 #paymentMain #right #top .area .title {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
 #paymentMain #right #top .area .content {
   margin-right: 10px;
-  color: #333333;
+  color: var(--gray-1);
   white-space: nowrap;
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
@@ -3316,8 +3555,8 @@ select {
   padding: 5px 10px;
   margin: 0;
   border-radius: 10px;
-  color: #333333;
-  background-color: #F5F6FA;
+  color: var(--gray-1);
+  background-color: var(--background);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -3340,7 +3579,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #F5F6FA;
+  background-color: var(--background);
   /* The container */
   /* Hide the browser's default radio button */
   /* Create a custom radio button */
@@ -3388,7 +3627,7 @@ select {
   border-radius: 50%;
 }
 #paymentMain #right #top .area .switch .container:hover input ~ .checkmark {
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 #paymentMain #right #top .area .switch .checkmark:after {
   content: "";
@@ -3410,7 +3649,7 @@ select {
   display: flex;
   justify-content: center;
   margin-left: 3px;
-  color: #EB5757;
+  color: var(--red);
   font-size: 10px;
 }
 #paymentMain #right #top .area .checkbox {
@@ -3440,7 +3679,7 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 @media (max-width: 1199px) {
   #paymentMain #right #top .area .checkbox .input {
@@ -3449,7 +3688,7 @@ select {
 }
 #paymentMain #right #top .area .checkbox .input span {
   margin-left: 3px;
-  color: #EB5757;
+  color: var(--red);
   font-size: 10px;
 }
 #paymentMain #right #top .area .checkbox .input input {
@@ -3485,7 +3724,7 @@ select {
   display: flex;
   align-items: center;
   white-space: nowrap;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -3495,7 +3734,7 @@ select {
   display: flex;
   align-items: center;
   white-space: nowrap;
-  color: #828282;
+  color: var(--gray-3);
   font-size: 14px;
 }
 #paymentMain #right #top .area .checkbox .container .subText img {
@@ -3520,7 +3759,7 @@ select {
   background-color: white;
 }
 #paymentMain #right #top .area .checkbox .container:hover input ~ .checkmark {
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 #paymentMain #right #top .area .checkbox .checkmark:after {
   content: "";
@@ -3562,7 +3801,7 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #F5F6FA;
+  background-color: var(--background);
 }
 @media (max-width: 1199px) {
   #paymentMain #right #top .area .item .input {
@@ -3571,7 +3810,7 @@ select {
 }
 #paymentMain #right #top .area .item .input span {
   margin-left: 3px;
-  color: #EB5757;
+  color: var(--red);
   font-size: 10px;
 }
 #paymentMain #right #top .area .item .input input {
@@ -3581,7 +3820,7 @@ select {
   font-weight: normal !important;
 }
 #paymentMain #right #top .area .error {
-  border: solid 2px #EB5757;
+  border: solid 2px var(--red);
 }
 #paymentMain #right #bottom {
   width: calc(100% - 40px);
@@ -3592,10 +3831,10 @@ select {
   font-size: 10px;
 }
 #paymentMain #right #bottom .policy span {
-  color: #828282;
+  color: var(--gray-3);
 }
 #paymentMain #right #bottom .policy a:hover {
-  color: #333333;
+  color: var(--gray-1);
 }
 #paymentMain #right #bottom #submit {
   height: 50px;
@@ -3632,7 +3871,7 @@ select {
   height: 1em;
   position: relative;
   overflow: hidden;
-  background-color: #BDBDBD;
+  background-color: var(--gray-4);
 }
 #paymentMain .loading::after {
   position: absolute;
@@ -3729,7 +3968,7 @@ select {
     height: fit-content;
     padding: 20px;
     position: static;
-    background-color: #F5F6FA;
+    background-color: var(--background);
     box-shadow: none;
   }
 }
@@ -3765,12 +4004,12 @@ select {
 }
 #orderMain #left #top #info .header {
   margin: 5px 0;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: normal !important;
 }
 #orderMain #left #top #info .content {
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -3795,7 +4034,7 @@ select {
   width: 95%;
   height: 5px;
   border-radius: 5px;
-  background-color: #F5F6FA;
+  background-color: var(--background);
   box-shadow: 0px 20px 40px rgba(55, 84, 170, 0.2);
 }
 @media (max-width: 767px) {
@@ -3818,13 +4057,13 @@ select {
   width: 100%;
   height: 5px;
   border-radius: 5px;
-  background-color: #EB5757;
+  background-color: var(--red);
 }
 #orderMain #left #top #states .wait {
-  color: #BDBDBD;
+  color: var(--gray-4);
 }
 #orderMain #left #top #states .cancel {
-  color: #EB5757;
+  color: var(--red);
 }
 #orderMain #left #restaurant {
   width: 100%;
@@ -3833,7 +4072,7 @@ select {
 }
 #orderMain #left #restaurant .header {
   margin-top: 10px;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
@@ -3851,7 +4090,7 @@ select {
   align-items: center;
 }
 #orderMain #left #restaurant .content {
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -3886,7 +4125,7 @@ select {
   }
 }
 #orderMain #right .container .title {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: 500 !important;
 }
@@ -3931,23 +4170,23 @@ select {
   align-items: flex-start;
 }
 #orderMain #right .container .contentB {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #orderMain #right .container .contentG {
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #orderMain #right .container .contentR {
-  color: #EB5757;
+  color: var(--red);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
 #orderMain #right .container #items {
   padding-bottom: 10px;
-  border-bottom: solid 1px #BDBDBD;
+  border-bottom: solid 1px var(--gray-4);
 }
 #orderMain #right .container .item {
   width: 100%;
@@ -3963,7 +4202,7 @@ select {
   min-width: 40px;
   display: flex;
   justify-content: center;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -3996,14 +4235,14 @@ select {
 #orderMain #right .container .addon {
   margin-top: 10px;
   padding-bottom: 10px;
-  border-bottom: solid 1px #BDBDBD;
+  border-bottom: solid 1px var(--gray-4);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 #orderMain #right .container .subTotal {
   padding-bottom: 10px;
-  border-bottom: solid 1px #BDBDBD;
+  border-bottom: solid 1px var(--gray-4);
 }
 #orderMain .loading {
   border-radius: 5px;
@@ -4011,7 +4250,7 @@ select {
   height: 1em;
   position: relative;
   overflow: hidden;
-  background-color: #BDBDBD;
+  background-color: var(--gray-4);
 }
 #orderMain .loading::after {
   position: absolute;
@@ -4148,16 +4387,16 @@ select {
   }
 }
 #listMain .item .center:not(.gray) {
-  color: #333333;
+  color: var(--gray-1);
 }
 #listMain .item .center:not(.gray) .container .id {
-  border: 2px solid #333333;
+  border: 2px solid var(--gray-1);
 }
 #listMain .item .center.gray {
-  color: #BDBDBD;
+  color: var(--gray-4);
 }
 #listMain .item .center.gray .container .id {
-  border: 2px solid #BDBDBD;
+  border: 2px solid var(--gray-4);
 }
 #listMain .item .center .container {
   width: 90px;
@@ -4168,7 +4407,7 @@ select {
   justify-content: center;
 }
 #listMain .item .center .container.red {
-  color: #EB5757;
+  color: var(--red);
 }
 #listMain .item .center .container .title {
   min-height: 36px;
@@ -4308,12 +4547,12 @@ select {
   color: white;
 }
 #listMain .item .right .button.again {
-  color: #333333;
+  color: var(--gray-1);
   background: white;
 }
 @media (max-width: 767px) {
   #listMain .item .right .button.again {
-    background: #F5F6FA;
+    background: var(--background);
   }
 }
 #listMain .item .right .button.again:hover {
@@ -4321,7 +4560,7 @@ select {
 }
 #listMain hr {
   margin: 10px 0;
-  border: 0.5px solid #BDBDBD;
+  border: 0.5px solid var(--gray-4);
 }
 @media (max-width: 767px) {
   #listMain hr {
@@ -4336,7 +4575,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #828282;
+  color: var(--gray-3);
   background-color: white;
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
@@ -4358,7 +4597,7 @@ select {
   }
 }
 #privacyMain span {
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -4367,7 +4606,7 @@ select {
 }
 #privacyMain li {
   margin: 10px 0;
-  color: #828282;
+  color: var(--gray-3);
   font-size: clamp(1rem, 4vw, 1.1rem) !important;
   font-weight: normal !important;
 }
@@ -4380,7 +4619,7 @@ select {
 }
 #privacyMain .header {
   margin-top: 20px;
-  color: #333333;
+  color: var(--gray-1);
   font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
   font-weight: normal !important;
 }
