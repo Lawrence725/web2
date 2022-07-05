@@ -584,6 +584,7 @@ select {
 .popup.popPoint img.pointL {
   width: 24px;
   height: 24px;
+  margin-left: 10px;
 }
 .popup .close {
   top: 15px;
