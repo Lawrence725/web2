@@ -14,17 +14,22 @@ html {
   --fM: clamp(1.2rem, 5vw, 1.3rem);
   --fS: clamp(1rem, 4vw, 1.1rem);
 }
-html:lang(zh) {
+html:lang(zh-TW) {
   --fL: clamp(1.4rem, 6vw, 1.5rem);
   --fM: clamp(1.2rem, 5vw, 1.3rem);
   --fS: clamp(1rem, 4vw, 1.1rem);
 }
-html:lang(en) {
+html:lang(ja-JP) {
+  --fL: clamp(1.4rem, 6vw, 1.5rem);
+  --fM: clamp(1.2rem, 5vw, 1.3rem);
+  --fS: clamp(1rem, 4vw, 1.1rem);
+}
+html:lang(en-US) {
   --fL: clamp(1.2rem, 5vw, 1.3rem);
   --fM: clamp(1rem, 4vw, 1.1rem);
   --fS: clamp(0.8rem, 3vw, 0.9rem);
 }
-html:lang(id) {
+html:lang(id-ID) {
   --fL: clamp(1.2rem, 5vw, 1.3rem);
   --fM: clamp(1rem, 4vw, 1.1rem);
   --fS: clamp(0.8rem, 3vw, 0.9rem);
