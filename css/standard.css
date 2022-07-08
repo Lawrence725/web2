@@ -9,21 +9,25 @@
   --red: #EB5757;
   --background: #F5F6FA;
 }
-#fontTitle {
-  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
-  font-weight: normal !important;
+html {
+  --fL: clamp(1.4rem, 6vw, 1.5rem);
+  --fM: clamp(1.2rem, 5vw, 1.3rem);
+  --fS: clamp(1rem, 4vw, 1.1rem);
 }
-#fontHeaderB {
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
-  font-weight: 500 !important;
+html:lang(zh) {
+  --fL: clamp(1.4rem, 6vw, 1.5rem);
+  --fM: clamp(1.2rem, 5vw, 1.3rem);
+  --fS: clamp(1rem, 4vw, 1.1rem);
 }
-#fontHeaderL {
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
-  font-weight: normal !important;
+html:lang(en) {
+  --fL: clamp(1.2rem, 5vw, 1.3rem);
+  --fM: clamp(1rem, 4vw, 1.1rem);
+  --fS: clamp(0.8rem, 3vw, 0.9rem);
 }
-#fontContent {
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+html:lang(id) {
+  --fL: clamp(1.2rem, 5vw, 1.3rem);
+  --fM: clamp(1rem, 4vw, 1.1rem);
+  --fS: clamp(0.8rem, 3vw, 0.9rem);
 }
 body {
   margin: 0;
@@ -168,8 +172,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: var(--background);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #header #headerRight {
   display: flex;
@@ -180,8 +183,7 @@ select {
   margin-right: 30px;
   color: var(--gray-1);
   white-space: nowrap;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fM) !important;
   position: relative;
 }
 @media (max-width: 1199px) {
@@ -246,8 +248,7 @@ select {
 #header #headerRight #profile .main span {
   margin-left: 5px;
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fM) !important;
 }
 @media (max-width: 1199px) {
   #header #headerRight #profile .main span {
@@ -268,8 +269,7 @@ select {
   padding: 10px 20px;
   display: block;
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #header #headerRight #profile .dropdown > div {
   width: calc(250px - 40px);
@@ -277,8 +277,7 @@ select {
 }
 #header #headerRight #profile .dropdown > div .header {
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #header #headerRight #profile .dropdown > div .content {
   color: var(--gray-3);
@@ -306,7 +305,7 @@ select {
 }
 #header #headerRight #buttonCart span {
   margin-left: 5px;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 #footer {
@@ -373,8 +372,7 @@ select {
   border: 0;
   color: white;
   background: transparent;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #footer #center select:hover {
   cursor: pointer;
@@ -394,8 +392,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 @media (max-width: 767px) {
   #footer #right {
@@ -566,13 +563,11 @@ select {
 }
 .popup.popPoint .header {
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fM) !important;
 }
 .popup.popPoint .content {
   color: var(--gray-3);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .popup.popPoint img {
   margin-right: 2px;
@@ -654,7 +649,7 @@ select {
   position: absolute;
   color: var(--gray-4);
   z-index: 3;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 .modal .close:hover,
@@ -665,8 +660,7 @@ select {
 }
 .modal .title {
   color: var(--gray-1);
-  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fL) !important;
 }
 .modal#popNotice .modal-content {
   width: 400px;
@@ -691,8 +685,7 @@ select {
 }
 .modal#popNotice .modal-content .content {
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popNotice .modal-content .submit {
   width: 100%;
@@ -703,7 +696,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 .modal#popInfo .modal-content {
@@ -736,13 +729,11 @@ select {
 }
 .modal#popInfo .modal-content .content span {
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popInfo .modal-content .content a {
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popInfo .modal-content .payment {
   width: 100%;
@@ -804,8 +795,7 @@ select {
 .modal#popDelivery .modal-content .content {
   width: 100%;
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popDelivery .modal-content .content li {
   margin-top: 5px;
@@ -835,8 +825,7 @@ select {
 }
 .modal#popSetting .modal-content .message {
   color: var(--red);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popSetting .modal-content #mode {
   width: calc(100% - 10px);
@@ -876,8 +865,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popSetting .modal-content .delivery {
   width: 100%;
@@ -914,8 +902,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: var(--background);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popSetting .modal-content .delivery .address a {
   width: 20px;
@@ -930,20 +917,18 @@ select {
   margin: 0;
   padding-left: 20px;
   color: var(--gray-3);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
   font-size: 12px !important;
 }
 .modal#popSetting .modal-content .delivery .action {
-  width: 50px;
+  min-width: 150px;
   height: 40px;
   margin-left: 10px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popSetting .modal-content .time {
   width: 100%;
@@ -979,8 +964,7 @@ select {
   border: 0;
   color: var(--gray-1);
   background: transparent;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popSetting .modal-content .time .left .select select:hover {
   cursor: pointer;
@@ -1008,15 +992,14 @@ select {
   color: var(--gray-3);
 }
 .modal#popSetting .modal-content .time .action {
-  width: 50px;
+  min-width: 150px;
   height: 90px;
   margin-left: 10px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popSetting .modal-content .chair {
   width: calc(100% - 24px);
@@ -1043,8 +1026,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: var(--background);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popSetting .modal-content .note {
   width: calc(100% - 24px);
@@ -1068,8 +1050,7 @@ select {
   height: 100%;
   margin-left: 5px;
   background-color: var(--background);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popSetting .modal-content .submit {
   width: 100%;
@@ -1080,7 +1061,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 .modal#popSetting .modal-content .submit.disabled {
@@ -1123,8 +1104,7 @@ select {
   border: 0;
   color: var(--gray-1);
   background: transparent;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popTime .modal-content .container .select select:hover {
   cursor: pointer;
@@ -1148,7 +1128,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 .modal#popTime .modal-content .container .submit.secondary {
@@ -1196,8 +1176,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: var(--background);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popLocation .modal-content .address a {
   width: 20px;
@@ -1228,8 +1207,7 @@ select {
   height: 100%;
   margin-left: 5px;
   background-color: var(--background);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popLocation .modal-content .submit {
   width: 100%;
@@ -1240,7 +1218,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 .modal#popVerify .modal-content {
@@ -1277,8 +1255,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: var(--background);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popVerify .modal-content .button {
   width: 100%;
@@ -1289,7 +1266,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 .modal#popVerify .modal-content .button.secondary {
@@ -1334,8 +1311,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: var(--background);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popProfile .modal-content .area {
   width: calc(100% - 40px);
@@ -1352,7 +1328,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 .modal#popProfile .modal-content .button.small {
@@ -1362,8 +1338,7 @@ select {
   margin: 0;
   border-radius: 5px;
   white-space: nowrap;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popProfile .modal-content .button.secondary {
   color: var(--gray-3);
@@ -1403,8 +1378,7 @@ select {
 .modal#popPrivacy .modal-content span,
 .modal#popTerms .modal-content span {
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popPrivacy .modal-content ul,
 .modal#popTerms .modal-content ul {
@@ -1414,23 +1388,20 @@ select {
 .modal#popTerms .modal-content li {
   margin: 10px 0;
   color: var(--gray-3);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popPrivacy .modal-content .title,
 .modal#popTerms .modal-content .title {
   width: 100%;
   margin-bottom: 20px;
   text-align: center;
-  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fL) !important;
 }
 .modal#popPrivacy .modal-content .header,
 .modal#popTerms .modal-content .header {
   margin-top: 20px;
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fM) !important;
 }
 @media (max-width: 767px) {
   .modal#popCart {
@@ -1469,8 +1440,7 @@ select {
 }
 .modal#popCart .modal-content .subTitle {
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popCart .modal-content .container {
   width: calc(100% - 20px);
@@ -1484,13 +1454,11 @@ select {
 }
 .modal#popCart .modal-content .container .contentB {
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popCart .modal-content .container .contentG {
   color: var(--gray-3);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popCart .modal-content .container .delivery {
   width: 100%;
@@ -1541,8 +1509,7 @@ select {
   text-align: center;
   color: var(--gray-1);
   background-color: var(--background);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popCart .modal-content .container .item .left .detail {
   margin-left: 10px;
@@ -1599,8 +1566,7 @@ select {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
   /* On mouse-over, add a grey background color */
   /* Hide the browser's default radio button */
 }
@@ -1649,8 +1615,7 @@ select {
   width: 60px;
   color: var(--gray-1);
   text-align: end;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 @media (max-width: 767px) {
   .modal#popCart .modal-content .container .addon label .main .right .price {
@@ -1748,8 +1713,7 @@ select {
   height: 100%;
   margin-left: 5px;
   background-color: var(--background);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popCart .modal-content .container .empty {
   width: calc(100% - 20px);
@@ -1758,8 +1722,7 @@ select {
   align-items: center;
   justify-content: center;
   color: var(--gray-3);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fM) !important;
 }
 .modal#popCart .modal-content .submit {
   width: calc(100% - 40px);
@@ -1771,7 +1734,7 @@ select {
   align-items: center;
   justify-content: space-between;
   color: white;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 .modal#popCart .modal-content .submit .price {
@@ -1866,8 +1829,7 @@ select {
   display: flex;
   align-items: center;
   color: var(--gray-1);
-  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fL) !important;
 }
 .modal#popItem .modal-content .container .top .title .remark {
   height: 25px;
@@ -1880,26 +1842,24 @@ select {
 }
 .modal#popItem .modal-content .container .top .title .remark span {
   white-space: nowrap;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popItem .modal-content .container .top .header {
   margin-bottom: 5px;
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 .modal#popItem .modal-content .container .top .content {
   margin-bottom: 5px;
   color: var(--gray-3);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popItem .modal-content .container .top .price {
   display: flex;
   align-items: flex-end;
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 .modal#popItem .modal-content .container .top .price .point {
@@ -1917,8 +1877,7 @@ select {
 .modal#popItem .modal-content .container .top .price span.discount {
   color: var(--gray-3);
   text-decoration: line-through;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popItem .modal-content .container .top hr {
   margin: 15px 0;
@@ -1939,8 +1898,7 @@ select {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
   /* On mouse-over, add a grey background color */
   /* Hide the browser's default radio button */
 }
@@ -2001,8 +1959,7 @@ select {
   width: 60px;
   color: var(--gray-1);
   text-align: end;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 @media (max-width: 767px) {
   .modal#popItem .modal-content .container .top .area label .main .right .price {
@@ -2104,8 +2061,7 @@ select {
   height: 100%;
   margin-left: 5px;
   background-color: var(--background);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 .modal#popItem .modal-content .container .buttom {
   height: 40px;
@@ -2129,7 +2085,7 @@ select {
   border-radius: 10px;
   margin: 0 10px;
   text-align: center;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 .modal#popItem .modal-content .container .buttom .submit {
@@ -2142,7 +2098,7 @@ select {
   align-items: center;
   justify-content: space-between;
   color: white;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 .modal#popItem .modal-content .container .buttom .submit .price {
@@ -2217,8 +2173,7 @@ select {
   justify-content: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fL) !important;
 }
 @media (max-width: 767px) {
   #portalMain #banner .mySlides .text {
@@ -2298,12 +2253,10 @@ select {
 }
 #portalMain #info #store #text .title {
   color: var(--gray-1);
-  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fL) !important;
 }
 #portalMain #info #store #text .content {
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #portalMain #info #store #buttons {
   display: flex;
@@ -2372,8 +2325,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #portalMain #info #buttonSetting #mode {
   justify-content: space-between;
@@ -2393,8 +2345,7 @@ select {
 #portalMain #info #buttonSetting .separate {
   margin: 0 10px;
   color: var(--gray-4);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 @media (max-width: 767px) {
   #portalMain #info #buttonSetting .separate {
@@ -2445,8 +2396,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #portalMain #info #address {
   width: calc(30% + 4px);
@@ -2482,8 +2432,7 @@ select {
   margin-left: 5px;
   border-radius: 10px;
   background-color: white;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #portalMain #info #address #location {
   width: 20px;
@@ -2502,8 +2451,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #portalMain #info .error {
   border: 2px solid var(--red) !important;
@@ -2514,8 +2462,7 @@ select {
 }
 #portalMain .mainContainer .title {
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fM) !important;
 }
 #portalMain .mainContainer .stores {
   width: calc(100% + 20px);
@@ -2557,8 +2504,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
   box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
 }
 #portalMain .mainContainer .stores .store .image .close {
@@ -2571,7 +2517,7 @@ select {
   justify-content: center;
   color: white;
   background: rgba(0, 0, 0, 0.5);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 #portalMain .mainContainer .stores .store .image img {
@@ -2598,7 +2544,7 @@ select {
 #portalMain .mainContainer .stores .store .info .title {
   display: flex;
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 #portalMain .mainContainer .stores .store .info .title .remark {
@@ -2616,8 +2562,7 @@ select {
 }
 #portalMain .mainContainer .stores .store .info .title .remark span {
   white-space: nowrap;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #portalMain .mainContainer .stores .store .info .detail {
   margin-top: 5px;
@@ -2625,8 +2570,7 @@ select {
   overflow: hidden;
   text-overflow: ellipsis;
   color: var(--gray-3);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #portalMain .mainContainer .stores .store .info .type {
   margin-top: 5px;
@@ -2641,8 +2585,7 @@ select {
   display: flex;
   justify-content: center;
   color: var(--gray-6);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #portalMain .mainContainer .stores .store .info .type .off {
   color: var(--gray-6);
@@ -2774,8 +2717,7 @@ select {
   align-items: center;
   justify-content: center;
   color: var(--gray-3);
-  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fL) !important;
 }
 #main {
   min-height: calc(100vh - 200px);
@@ -2854,8 +2796,7 @@ select {
   justify-content: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fL) !important;
 }
 @media (max-width: 767px) {
   #main #banner .mySlides .text {
@@ -2935,12 +2876,10 @@ select {
 }
 #main #info #store #text .title {
   color: var(--gray-1);
-  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fL) !important;
 }
 #main #info #store #text .content {
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #main #info #store #buttons {
   display: flex;
@@ -3010,8 +2949,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #main #info #buttonSetting #mode {
   justify-content: space-between;
@@ -3036,8 +2974,7 @@ select {
 #main #info #buttonSetting .separate {
   margin: 0 10px;
   color: var(--gray-4);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 @media (max-width: 767px) {
   #main #info #buttonSetting .separate {
@@ -3073,8 +3010,7 @@ select {
   margin-right: 10px;
   border-radius: 5px;
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #main #category a span {
   white-space: nowrap;
@@ -3091,8 +3027,7 @@ select {
 }
 #main .mainContainer .title {
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fM) !important;
 }
 #main .mainContainer .items {
   width: calc(100% + 20px);
@@ -3133,7 +3068,7 @@ select {
 #main .mainContainer .items .item .info .title {
   display: flex;
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 #main .mainContainer .items .item .info .title .remark {
@@ -3151,8 +3086,7 @@ select {
 }
 #main .mainContainer .items .item .info .title .remark span {
   white-space: nowrap;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #main .mainContainer .items .item .info .detail {
   margin-top: 5px;
@@ -3160,15 +3094,14 @@ select {
   overflow: hidden;
   text-overflow: ellipsis;
   color: var(--gray-3);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #main .mainContainer .items .item .info .price {
   margin-top: 5px;
   display: flex;
   align-items: flex-end;
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 #main .mainContainer .items .item .info .price .point {
@@ -3184,8 +3117,7 @@ select {
 #main .mainContainer .items .item .info .price span.discount {
   color: var(--gray-3);
   text-decoration: line-through;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #main .mainContainer .items .item .image {
   width: 120px;
@@ -3203,7 +3135,7 @@ select {
   justify-content: center;
   color: white;
   background: rgba(0, 0, 0, 0.5);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 #main .mainContainer .items .item .image img {
@@ -3315,8 +3247,7 @@ select {
   align-items: center;
   justify-content: center;
   color: var(--gray-3);
-  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fL) !important;
 }
 #paymentMain {
   width: 100vw;
@@ -3375,8 +3306,7 @@ select {
 }
 #paymentMain #left .container .title {
   color: var(--gray-1);
-  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fL) !important;
 }
 #paymentMain #left .container .icon {
   min-width: 30px;
@@ -3397,18 +3327,15 @@ select {
 }
 #paymentMain #left .container .contentB {
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #paymentMain #left .container .contentG {
   color: var(--gray-3);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #paymentMain #left .container .contentR {
   color: var(--red);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #paymentMain #left .container #items {
   padding-bottom: 10px;
@@ -3434,8 +3361,7 @@ select {
   display: flex;
   justify-content: center;
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #paymentMain #left .container .item .right {
   margin-left: 10px;
@@ -3524,15 +3450,14 @@ select {
 }
 #paymentMain #right #top .area .title {
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 #paymentMain #right #top .area .content {
   margin-right: 10px;
   color: var(--gray-1);
   white-space: nowrap;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #paymentMain #right #top .area .content.full {
   width: 100%;
@@ -3558,8 +3483,7 @@ select {
   border-radius: 10px;
   color: var(--gray-1);
   background-color: var(--background);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #paymentMain #right #top .area .dropdown .arrow {
   width: 20px;
@@ -3604,8 +3528,7 @@ select {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #paymentMain #right #top .area .switch .container .text {
   width: fit-content;
@@ -3696,8 +3619,7 @@ select {
   width: 100%;
   border: 0;
   background-color: transparent;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #paymentMain #right #top .area .checkbox .container {
   height: 30px;
@@ -3710,8 +3632,7 @@ select {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #paymentMain #right #top .area .checkbox .container img {
   width: 30px;
@@ -3726,8 +3647,7 @@ select {
   align-items: center;
   white-space: nowrap;
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #paymentMain #right #top .area .checkbox .container .subText {
   width: fit-content;
@@ -3817,8 +3737,7 @@ select {
 #paymentMain #right #top .area .item .input input {
   border: 0;
   background-color: transparent;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #paymentMain #right #top .area .error {
   border: solid 2px var(--red);
@@ -3847,7 +3766,7 @@ select {
 }
 #paymentMain #right #bottom #submit span {
   color: white;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 #paymentMain #right #bottom #submit .price {
@@ -4006,13 +3925,11 @@ select {
 #orderMain #left #top #info .header {
   margin: 5px 0;
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fM) !important;
 }
 #orderMain #left #top #info .content {
   color: var(--gray-3);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #orderMain #left #top #states {
   width: 100%;
@@ -4028,8 +3945,7 @@ select {
 }
 #orderMain #left #top #states .state span {
   margin: 10px 0;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #orderMain #left #top #states .state .progressBar {
   width: 95%;
@@ -4074,7 +3990,7 @@ select {
 #orderMain #left #restaurant .header {
   margin-top: 10px;
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 #orderMain #left #restaurant .icon {
@@ -4092,8 +4008,7 @@ select {
 }
 #orderMain #left #restaurant .content {
   color: var(--gray-3);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #orderMain #right {
   width: 60%;
@@ -4127,7 +4042,7 @@ select {
 }
 #orderMain #right .container .title {
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 #orderMain #right .container .icon {
@@ -4172,18 +4087,15 @@ select {
 }
 #orderMain #right .container .contentB {
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #orderMain #right .container .contentG {
   color: var(--gray-3);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #orderMain #right .container .contentR {
   color: var(--red);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #orderMain #right .container #items {
   padding-bottom: 10px;
@@ -4204,8 +4116,7 @@ select {
   display: flex;
   justify-content: center;
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #orderMain #right .container .item .right {
   margin-left: 10px;
@@ -4366,13 +4277,12 @@ select {
   }
 }
 #listMain .item .left span {
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 @media (max-width: 1199px) {
   #listMain .item .left span {
-    font-size: clamp(1rem, 4vw, 1.1rem) !important;
-    font-weight: normal !important;
+    font-size: var(--fS) !important;
   }
 }
 #listMain .item .center {
@@ -4417,13 +4327,11 @@ select {
   align-items: center;
   text-align: center;
   line-height: 100%;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fM) !important;
 }
 @media (max-width: 1199px) {
   #listMain .item .center .container .title {
-    font-size: clamp(1rem, 4vw, 1.1rem) !important;
-    font-weight: normal !important;
+    font-size: var(--fS) !important;
   }
 }
 @media (max-width: 767px) {
@@ -4443,7 +4351,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
+  font-size: var(--fM) !important;
   font-weight: 500 !important;
 }
 @media (max-width: 1199px) {
@@ -4451,15 +4359,13 @@ select {
     width: 26px;
     min-height: 26px;
     border-radius: 5px;
-    font-size: clamp(1rem, 4vw, 1.1rem) !important;
-    font-weight: normal !important;
+    font-size: var(--fS) !important;
   }
 }
 #listMain .item .center .container .time {
   height: 40px;
   text-align: center;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 @media (max-width: 1199px) {
   #listMain .item .center .container .time {
@@ -4526,8 +4432,7 @@ select {
   box-shadow: 0px 50px 100px rgba(55, 84, 170, 0.1);
   text-align: center;
   white-space: nowrap;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 @media (max-width: 1199px) {
   #listMain .item .right .button {
@@ -4578,8 +4483,7 @@ select {
   justify-content: center;
   color: var(--gray-3);
   background-color: white;
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
   box-shadow: 0px 20px 40px rgba(55, 84, 170, 0.2);
 }
 #privacyMain {
@@ -4599,8 +4503,7 @@ select {
 }
 #privacyMain span {
   color: var(--gray-1);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #privacyMain ul {
   margin-top: 0;
@@ -4608,21 +4511,18 @@ select {
 #privacyMain li {
   margin: 10px 0;
   color: var(--gray-3);
-  font-size: clamp(1rem, 4vw, 1.1rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fS) !important;
 }
 #privacyMain #title {
   width: 100%;
   margin-bottom: 20px;
   text-align: center;
-  font-size: clamp(1.4rem, 6vw, 1.5rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fL) !important;
 }
 #privacyMain .header {
   margin-top: 20px;
   color: var(--gray-1);
-  font-size: clamp(1.2rem, 5vw, 1.3rem) !important;
-  font-weight: normal !important;
+  font-size: var(--fM) !important;
 }
 @keyframes progress {
   0% {
