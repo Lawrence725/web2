@@ -421,6 +421,9 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                         /* On mouse-over, add a grey background color */
                         &:hover input ~ .checkmark { background-color: white; }
                         &:hover .number { background-color: var(--background) !important; }
+                        &.disabled  { color: var(--cG4) !important; filter: grayscale(100%); opacity: 0.5; pointer-events: none;
+                            *       { color: var(--cG4) !important; }
+                            img     { filter: grayscale(100%); opacity: 0.5; }}
                         .main { width: 100%; display: flex; align-items: center; justify-content: space-between;
                             .right { display: flex; align-items: center; height: 20px;
                                 .number { padding: 5px 0; margin: 0 5px; border-radius: 99px; display: flex; align-items: center; background-color: white;
@@ -506,6 +509,9 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                             &:hover input ~ .checkmark { background-color: white; }
                             &:hover .number { background-color: white !important; }
                             &:hover .sub { background-color: white !important; }
+                            &.disabled  { color: var(--cG4) !important; filter: grayscale(100%); opacity: 0.5; pointer-events: none;
+                                *       { color: var(--cG4) !important; }
+                                img     { filter: grayscale(100%); opacity: 0.5; }}
                             .main { width: 100%; display: flex; align-items: center; justify-content: space-between;
                                 .right { display: flex; align-items: center; height: 20px;
                                     .number { padding: 5px 0; margin: 0 5px; border-radius: 99px; display: flex; align-items: center; background-color: var(--background);

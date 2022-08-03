@@ -1584,6 +1584,19 @@ select {
 .modal#popCart .modal-content .container .addon label:hover .number {
   background-color: var(--background) !important;
 }
+.modal#popCart .modal-content .container .addon label.disabled {
+  color: var(--cG4) !important;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.modal#popCart .modal-content .container .addon label.disabled * {
+  color: var(--cG4) !important;
+}
+.modal#popCart .modal-content .container .addon label.disabled img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
 .modal#popCart .modal-content .container .addon label .main {
   width: 100%;
   display: flex;
@@ -1918,6 +1931,19 @@ select {
 }
 .modal#popItem .modal-content .container .top .area label:hover .sub {
   background-color: white !important;
+}
+.modal#popItem .modal-content .container .top .area label.disabled {
+  color: var(--cG4) !important;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.modal#popItem .modal-content .container .top .area label.disabled * {
+  color: var(--cG4) !important;
+}
+.modal#popItem .modal-content .container .top .area label.disabled img {
+  filter: grayscale(100%);
+  opacity: 0.5;
 }
 .modal#popItem .modal-content .container .top .area label .main {
   width: 100%;
