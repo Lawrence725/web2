@@ -275,7 +275,8 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                     a { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--gray-3); }
                 }
                 .conditions { width: 100%; margin: 0; padding-left: 20px; color: var(--gray-3); font-size: var(--fS) !important; font-size: 12px !important; }
-                .action { min-width: 150px; height: 40px; margin-left: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: var(--fS) !important; }
+                .action { min-width: 150px; height: 40px; margin-left: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: var(--fS) !important;
+                    @media @screen-mobile { min-width: 50px; }}
             }
             .time { width: 100%; margin-top: 10px; display: flex; align-items: flex-start;
                 .left { width: 100%; display: flex; flex-direction: column;
@@ -292,7 +293,8 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                         }
                     }
                 }
-                .action { min-width: 150px; height: 90px; margin-left: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: var(--fS) !important; }
+                .action { min-width: 150px; height: 90px; margin-left: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: var(--fS) !important;
+                    @media @screen-mobile { min-width: 50px; }}
             }
             .chair { width: calc(100% - 24px); height: 36px; padding: 0 10px; margin-top: 10px; border: 2px solid var(--background); border-radius: 10px; display: flex; align-items: center; background-color: var(--background);
                 .icon { min-width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }

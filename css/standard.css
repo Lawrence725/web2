@@ -935,6 +935,11 @@ select {
   justify-content: center;
   font-size: var(--fS) !important;
 }
+@media (max-width: 767px) {
+  .modal#popSetting .modal-content .delivery .action {
+    min-width: 50px;
+  }
+}
 .modal#popSetting .modal-content .time {
   width: 100%;
   margin-top: 10px;
@@ -1005,6 +1010,11 @@ select {
   align-items: center;
   justify-content: center;
   font-size: var(--fS) !important;
+}
+@media (max-width: 767px) {
+  .modal#popSetting .modal-content .time .action {
+    min-width: 50px;
+  }
 }
 .modal#popSetting .modal-content .chair {
   width: calc(100% - 24px);
