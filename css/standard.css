@@ -156,7 +156,7 @@ select {
   width: 200px;
   height: 40px;
   padding-left: 10px;
-  border-radius: 10px;
+  border-radius: 99px;
   margin: 0 10px;
   display: flex;
   align-items: center;
@@ -175,7 +175,7 @@ select {
   height: 100%;
   padding: 0;
   margin-left: 5px;
-  border-radius: 10px;
+  border-radius: 99px;
   background-color: var(--background);
   font-size: var(--fS) !important;
 }
@@ -264,11 +264,13 @@ select {
   width: 250px;
   margin-top: -1.5px;
   min-width: max-content;
+  border-radius: 0 0 20px 20px;
   display: none;
   right: 20px;
   position: fixed;
   background-color: white;
   z-index: 3;
+  overflow: hidden;
 }
 #header #headerRight #profile .dropdown a {
   padding: 10px 20px;
@@ -305,13 +307,12 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 99px;
   color: white;
 }
 #header #headerRight #buttonCart span {
   margin-left: 5px;
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 #footer {
   width: calc(100% - 160px);
@@ -655,7 +656,6 @@ select {
   color: var(--gray-4);
   z-index: 3;
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 .modal .close:hover,
 .modal .close:focus {
@@ -671,7 +671,7 @@ select {
   width: 400px;
   padding: 20px;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -696,19 +696,18 @@ select {
   width: 100%;
   height: 40px;
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 .modal#popInfo .modal-content {
   width: 400px;
   padding: 20px;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -780,7 +779,7 @@ select {
   width: 400px;
   padding: 20px;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -811,7 +810,7 @@ select {
   max-height: calc(100vh - 80px);
   padding: 20px;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -837,7 +836,7 @@ select {
   height: 30px;
   padding: 5px;
   margin: 20px 0 10px 0;
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -846,7 +845,7 @@ select {
 .modal#popSetting .modal-content #mode .mode {
   width: 100%;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -883,7 +882,7 @@ select {
   height: 36px;
   padding: 0 10px;
   border: 2px solid var(--background);
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -905,7 +904,7 @@ select {
   width: 100%;
   height: 100%;
   margin-left: 5px;
-  border-radius: 10px;
+  border-radius: 99px;
   background-color: var(--background);
   font-size: var(--fS) !important;
 }
@@ -955,7 +954,7 @@ select {
   width: calc(100% - 4px);
   height: 36px;
   border: 2px solid var(--background);
-  border-radius: 10px;
+  border-radius: 99px;
   position: relative;
   display: flex;
   align-items: center;
@@ -1022,7 +1021,7 @@ select {
   padding: 0 10px;
   margin-top: 10px;
   border: 2px solid var(--background);
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   background-color: var(--background);
@@ -1039,7 +1038,7 @@ select {
   height: 100%;
   padding: 0;
   margin-left: 5px;
-  border-radius: 10px;
+  border-radius: 99px;
   background-color: var(--background);
   font-size: var(--fS) !important;
 }
@@ -1049,7 +1048,7 @@ select {
   padding: 10px;
   margin-top: 10px;
   border: 2px solid var(--background);
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   background-color: var(--background);
 }
@@ -1071,13 +1070,12 @@ select {
   width: 100%;
   min-height: 40px;
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 .modal#popSetting .modal-content .submit.disabled {
   filter: grayscale(100%);
@@ -1090,7 +1088,7 @@ select {
   width: 300px;
   padding: 20px;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1144,7 +1142,6 @@ select {
   justify-content: center;
   color: white;
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 .modal#popTime .modal-content .container .submit.secondary {
   color: var(--gray-3);
@@ -1156,7 +1153,7 @@ select {
   width: 300px;
   padding: 20px;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1234,13 +1231,12 @@ select {
   justify-content: center;
   color: white;
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 .modal#popVerify .modal-content {
   width: 300px;
   padding: 20px;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1282,7 +1278,6 @@ select {
   justify-content: center;
   color: white;
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 .modal#popVerify .modal-content .button.secondary {
   color: var(--gray-3);
@@ -1296,7 +1291,7 @@ select {
   height: 300px;
   padding: 20px;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1307,7 +1302,7 @@ select {
   height: 40px;
   padding: 0 5px 0 10px;
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1324,7 +1319,7 @@ select {
   width: 100%;
   height: 100%;
   margin-left: 5px;
-  border-radius: 10px;
+  border-radius: 99px;
   background-color: var(--background);
   font-size: var(--fS) !important;
 }
@@ -1338,20 +1333,19 @@ select {
   width: 100%;
   height: 40px;
   margin-top: 10px;
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 .modal#popProfile .modal-content .button.small {
   width: fit-content;
   height: fit-content;
   padding: 5px 10px;
   margin: 0;
-  border-radius: 5px;
+  border-radius: 99px;
   white-space: nowrap;
   font-size: var(--fS) !important;
 }
@@ -1374,7 +1368,7 @@ select {
   width: 80vw;
   padding: 20px;
   margin: 50px auto;
-  border-radius: 10px;
+  border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1431,7 +1425,7 @@ select {
   max-height: calc(100vh - 80px);
   padding: 20px;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -1461,7 +1455,7 @@ select {
   width: calc(100% - 20px);
   padding: 10px;
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -1489,7 +1483,7 @@ select {
   width: calc(100% - 10px);
   padding: 5px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -1518,7 +1512,7 @@ select {
 .modal#popCart .modal-content .container .item .left .area .count {
   width: 30px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -1561,7 +1555,7 @@ select {
   display: flex;
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   flex-direction: column;
   align-items: center;
   background: var(--background);
@@ -1757,13 +1751,12 @@ select {
   min-height: 40px;
   margin-top: 20px;
   padding: 0 20px;
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: white;
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 .modal#popCart .modal-content .submit .price {
   display: flex;
@@ -1781,7 +1774,7 @@ select {
   max-width: 900px;
   padding: 10px;
   margin: auto;
-  border-radius: 15px;
+  border-radius: 20px;
   position: relative;
   display: flex;
   background-color: var(--background);
@@ -1803,7 +1796,7 @@ select {
 .modal#popItem .modal-content img {
   width: 450px;
   height: 450px;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 0 10px 0 0;
   object-fit: cover;
 }
@@ -1846,7 +1839,7 @@ select {
   width: calc(100% - 20px);
   height: calc(100% - 70px);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   background: white;
@@ -1876,7 +1869,6 @@ select {
   margin-bottom: 5px;
   color: var(--gray-1);
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 .modal#popItem .modal-content .container .top .content {
   margin-bottom: 5px;
@@ -1888,7 +1880,6 @@ select {
   align-items: flex-end;
   color: var(--gray-1);
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 .modal#popItem .modal-content .container .top .price .point {
   display: flex;
@@ -2010,7 +2001,7 @@ select {
 .modal#popItem .modal-content .container .top .area label .sub {
   padding: 10px;
   margin-top: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   background-color: var(--background);
@@ -2127,20 +2118,18 @@ select {
   margin: 0 10px;
   text-align: center;
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 .modal#popItem .modal-content .container .buttom .submit {
   width: 100%;
   height: 100%;
   margin-left: 10px;
   padding: 0 10px;
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: white;
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 .modal#popItem .modal-content .container .buttom .submit .price {
   display: flex;
@@ -2314,7 +2303,7 @@ select {
 }
 #portalMain #info #buttonSetting {
   width: 65%;
-  border-radius: 5px;
+  border-radius: 99px;
   border: 2px solid white;
   display: flex;
   align-items: center;
@@ -2559,7 +2548,6 @@ select {
   color: white;
   background: rgba(0, 0, 0, 0.5);
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 #portalMain .mainContainer .stores .store .image img {
   width: 100%;
@@ -2586,7 +2574,6 @@ select {
   display: flex;
   color: var(--gray-1);
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 #portalMain .mainContainer .stores .store .info .title .remark {
   height: 20px;
@@ -2937,7 +2924,7 @@ select {
 }
 #main #info #buttonSetting {
   width: 65%;
-  border-radius: 5px;
+  border-radius: 20px;
   border: 2px solid white;
   display: flex;
   align-items: center;
@@ -3026,7 +3013,7 @@ select {
   width: calc(100% - 10px);
   padding: 5px;
   margin: 20px 0;
-  border-radius: 5px;
+  border-radius: 99px;
   position: -webkit-sticky;
   position: sticky;
   top: 75px;
@@ -3049,7 +3036,7 @@ select {
 #main #category a {
   padding: 10px;
   margin-right: 10px;
-  border-radius: 5px;
+  border-radius: 99px;
   color: var(--gray-1);
   font-size: var(--fS) !important;
 }
@@ -3081,7 +3068,7 @@ select {
   padding: 10px;
   margin: 10px;
   border: 2px solid white;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
   background: white;
@@ -3110,7 +3097,6 @@ select {
   display: flex;
   color: var(--gray-1);
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 #main .mainContainer .items .item .info .title .remark {
   height: 20px;
@@ -3143,7 +3129,6 @@ select {
   align-items: flex-end;
   color: var(--gray-1);
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 #main .mainContainer .items .item .info .price .point {
   display: flex;
@@ -3169,7 +3154,7 @@ select {
 #main .mainContainer .items .item .image .sold {
   width: 100%;
   height: 100%;
-  border-radius: 7.5px;
+  border-radius: 10px;
   position: absolute;
   display: flex;
   align-items: center;
@@ -3177,12 +3162,11 @@ select {
   color: white;
   background: rgba(0, 0, 0, 0.5);
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 #main .mainContainer .items .item .image img {
   width: 120px;
   height: 120px;
-  border-radius: 7.5px;
+  border-radius: 10px;
   object-fit: cover;
 }
 #main .loading {
@@ -3492,7 +3476,6 @@ select {
 #paymentMain #right #top .area .title {
   color: var(--gray-1);
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 #paymentMain #right #top .area .content {
   margin-right: 10px;
@@ -3808,7 +3791,6 @@ select {
 #paymentMain #right #bottom #submit span {
   color: white;
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 #paymentMain #right #bottom #submit .price {
   display: flex;
@@ -4032,7 +4014,6 @@ select {
   margin-top: 10px;
   color: var(--gray-1);
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 #orderMain #left #restaurant .icon {
   min-width: 30px;
@@ -4084,7 +4065,6 @@ select {
 #orderMain #right .container .title {
   color: var(--gray-1);
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 #orderMain #right .container .icon {
   min-width: 30px;
@@ -4319,7 +4299,6 @@ select {
 }
 #listMain .item .left span {
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 @media (max-width: 1199px) {
   #listMain .item .left span {
@@ -4393,7 +4372,6 @@ select {
   align-items: center;
   justify-content: center;
   font-size: var(--fM) !important;
-  font-weight: 500 !important;
 }
 @media (max-width: 1199px) {
   #listMain .item .center .container .id {

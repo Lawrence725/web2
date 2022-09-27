@@ -19,7 +19,7 @@
   background-color: #FFEED8;
 }
 #header #headerRight #buttonCart {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 #header #headerRight #buttonCart:hover {
   background: #F0941D;
@@ -37,7 +37,7 @@
   color: #F0941D;
 }
 .modal#popNotice .modal-content .submit {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 .modal#popNotice .modal-content .submit:hover {
   background: #F0941D;
@@ -88,7 +88,7 @@
   color: #F0941D;
 }
 .modal#popSetting .modal-content .submit {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 .modal#popSetting .modal-content .submit:hover {
   background: #F0941D;
@@ -100,7 +100,7 @@
   color: #F0941D;
 }
 .modal#popTime .modal-content .container .submit {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 .modal#popTime .modal-content .container .submit:hover {
   background: #F0941D;
@@ -121,7 +121,7 @@
   color: #F0941D;
 }
 .modal#popLocation .modal-content .submit {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 .modal#popLocation .modal-content .submit:hover {
   background: #F0941D;
@@ -130,7 +130,7 @@
   color: #F0941D;
 }
 .modal#popVerify .modal-content .button {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 .modal#popVerify .modal-content .button:hover {
   background: #F0941D;
@@ -142,7 +142,7 @@
   color: #F0941D;
 }
 .modal#popProfile .modal-content .button {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 .modal#popProfile .modal-content .button:hover {
   background: #F0941D;
@@ -175,7 +175,7 @@
   color: #F0941D;
 }
 .modal#popCart .modal-content .submit {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 .modal#popCart .modal-content .submit:hover {
   background: #F0941D;
@@ -211,7 +211,7 @@
   color: #F0941D;
 }
 .modal#popItem .modal-content .container .buttom .submit {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 .modal#popItem .modal-content .container .buttom .submit:hover {
   background: #F0941D;
@@ -223,7 +223,7 @@
   color: #F0941D;
 }
 #portalMain #info #store #buttons .icon {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 #portalMain #info #store #buttons .icon:hover {
   background: #F0941D;
@@ -250,7 +250,7 @@
   background: #F0941D;
 }
 #portalMain #info #address #confirm:hover {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 #portalMain .mainContainer .stores .store:hover {
   border: 2px solid #FFEED8;
@@ -271,7 +271,7 @@
   color: #F0941D;
 }
 #main #info #store #buttons .icon {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 #main #info #store #buttons .icon:hover {
   background: #F0941D;
@@ -292,7 +292,7 @@
   }
 }
 #main #category .active {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 #main .mainContainer .items .item:hover {
   border: 2px solid #FFEED8;
@@ -337,7 +337,7 @@
   color: #F0941D;
 }
 #paymentMain #right #bottom #submit {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 #paymentMain #right #bottom #submit:hover {
   background: #F0941D;
@@ -374,11 +374,11 @@
   border: 0.5px solid #F0941D;
 }
 #listMain .item .right .button.payment {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
 #listMain .item .right .button.payment:hover {
   background: #F0941D;
 }
 #listMain .item .right .button.again:hover {
-  background: linear-gradient(135deg, #FF8008 0%, #FFC837 100%);
+  background: #F0941D;
 }
