@@ -94,6 +94,7 @@ select {
   width: calc(100% - 160px);
   height: 80px;
   padding: 0 80px;
+  border-radius: 0 0 20px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -318,6 +319,7 @@ select {
   width: calc(100% - 160px);
   height: 80px;
   padding: 0 80px;
+  border-radius: 20px 20px 0 0;
   display: flex;
   align-items: center;
   color: white;
@@ -355,7 +357,7 @@ select {
   width: 300px;
   height: 40px;
   margin: 0 10px;
-  border-radius: 10px;
+  border-radius: 99px;
   position: relative;
   display: flex;
   align-items: center;
@@ -2182,7 +2184,7 @@ select {
   width: 100%;
   height: 100%;
   max-height: 80vh;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 20px 20px;
   object-fit: cover;
 }
 @media (max-width: 767px) {
@@ -2196,7 +2198,7 @@ select {
   width: 100%;
   height: 100%;
   max-height: 80vh;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 20px 20px;
   position: absolute;
   display: flex;
   align-items: center;
@@ -2803,7 +2805,7 @@ select {
   width: 100%;
   height: 100%;
   max-height: 80vh;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 20px 20px;
   object-fit: cover;
 }
 @media (max-width: 767px) {
@@ -2817,7 +2819,7 @@ select {
   width: 100%;
   height: 100%;
   max-height: 80vh;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 20px 20px;
   position: absolute;
   display: flex;
   align-items: center;
@@ -2843,12 +2845,12 @@ select {
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 10px 10px 0;
   user-select: none;
 }
 #main #banner .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 10px 0 0 10px;
 }
 #main #banner .prev:hover,
 #main #banner .next:hover {
@@ -3170,7 +3172,7 @@ select {
   object-fit: cover;
 }
 #main .loading {
-  border-radius: 5px;
+  border-radius: 20px;
   display: inline-block;
   height: 1em;
   position: relative;
@@ -3196,7 +3198,7 @@ select {
 #main .loading.loadBanner {
   width: 100%;
   height: 40vh;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 20px 20px;
 }
 @media (max-width: 767px) {
   #main .loading.loadBanner {
@@ -3313,7 +3315,7 @@ select {
   width: calc(70% - 30px);
   padding: 15px;
   margin: 20px 0;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -3397,7 +3399,7 @@ select {
   width: 50px;
   height: 50px;
   margin-right: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 #paymentMain #left .container .item .right img.point {
   width: 20px;
@@ -3504,10 +3506,15 @@ select {
   border: 0;
   padding: 5px 10px;
   margin: 0;
-  border-radius: 10px;
+  border-radius: 99px;
   color: var(--gray-1);
   background-color: var(--background);
   font-size: var(--fS) !important;
+}
+@media (max-width: 1199px) {
+  #paymentMain #right #top .area .dropdown select {
+    background-color: white;
+  }
 }
 #paymentMain #right #top .area .dropdown .arrow {
   width: 20px;
@@ -3524,7 +3531,7 @@ select {
   width: 100%;
   height: 40px;
   margin-top: 10px;
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -3545,8 +3552,8 @@ select {
 #paymentMain #right #top .area .switch .container {
   display: block;
   position: relative;
-  padding: 5px 20px 5px 50px;
-  border-radius: 5px;
+  padding: 5px 15px 5px 45px;
+  border-radius: 99px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3559,6 +3566,7 @@ select {
   height: 20px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 #paymentMain #right #top .area .switch .container input {
   position: absolute;
@@ -3623,7 +3631,7 @@ select {
   width: calc(100% - 20px);
   height: 40px;
   padding: 0 10px;
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3635,12 +3643,14 @@ select {
   }
 }
 #paymentMain #right #top .area .checkbox .input span {
-  margin-left: 3px;
+  margin: 0 0 0 5px;
   color: var(--red);
   font-size: 10px;
 }
 #paymentMain #right #top .area .checkbox .input input {
   width: 100%;
+  margin: 0 0 0 5px;
+  padding: 0;
   border: 0;
   background-color: transparent;
   font-size: var(--fS) !important;
@@ -3742,7 +3752,7 @@ select {
   width: calc(100% - 20px);
   height: 40px;
   padding: 0 10px;
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3754,11 +3764,13 @@ select {
   }
 }
 #paymentMain #right #top .area .item .input span {
-  margin-left: 3px;
+  margin: 0 0 0 5px;
   color: var(--red);
   font-size: 10px;
 }
 #paymentMain #right #top .area .item .input input {
+  margin: 0 0 0 5px;
+  padding: 0;
   border: 0;
   background-color: transparent;
   font-size: var(--fS) !important;
@@ -3783,7 +3795,7 @@ select {
 #paymentMain #right #bottom #submit {
   height: 50px;
   padding: 0 20px;
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3809,7 +3821,7 @@ select {
   pointer-events: none;
 }
 #paymentMain .loading {
-  border-radius: 5px;
+  border-radius: 25px;
   display: inline-block;
   height: 1em;
   position: relative;
@@ -3934,7 +3946,7 @@ select {
 #orderMain #left #top #info #number {
   width: 60px;
   height: 60px;
-  border-radius: 10px;
+  border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4051,7 +4063,7 @@ select {
   width: calc(70% - 30px);
   padding: 15px;
   margin: 20px 0;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -4148,7 +4160,7 @@ select {
   width: 50px;
   height: 50px;
   margin-right: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 #orderMain #right .container .item .right img.point {
   width: 20px;
@@ -4178,7 +4190,7 @@ select {
   border-bottom: solid 1px var(--gray-4);
 }
 #orderMain .loading {
-  border-radius: 5px;
+  border-radius: 33px;
   display: inline-block;
   height: 1em;
   position: relative;
@@ -4260,7 +4272,7 @@ select {
 }
 #listMain .item {
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -4367,7 +4379,7 @@ select {
 #listMain .item .center .container .id {
   width: 36px;
   min-height: 36px;
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4377,7 +4389,7 @@ select {
   #listMain .item .center .container .id {
     width: 26px;
     min-height: 26px;
-    border-radius: 5px;
+    border-radius: 99px;
     font-size: var(--fS) !important;
   }
 }
@@ -4447,7 +4459,7 @@ select {
 #listMain .item .right .button {
   width: fit-content;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 99px;
   box-shadow: 0px 50px 100px rgba(55, 84, 170, 0.1);
   text-align: center;
   white-space: nowrap;
@@ -4464,7 +4476,7 @@ select {
   #listMain .item .right .button {
     width: fit-content;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 99px;
     white-space: nowrap;
   }
 }
@@ -4496,7 +4508,7 @@ select {
   margin: 50px auto;
   width: fit-content;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: center;

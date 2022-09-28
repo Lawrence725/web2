@@ -1,7 +1,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 :root {
-  --c1: #F0941D;
-  --c2: #FFEED8;
+  --c1: #EF6079;
+  --c2: #F3CBC7;
 }
 .spinner div {
   border-top: 5px solid var(--c1);
