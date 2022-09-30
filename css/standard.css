@@ -562,6 +562,7 @@ select {
   left: unset;
   right: 0;
   position: absolute;
+  z-index: 1;
 }
 .popup.popPoint .popBody {
   min-width: 250px;
@@ -2140,7 +2141,7 @@ select {
 }
 .modal#popItem .modal-content .container .buttom .submit .price img {
   width: 20px;
-  height: 20px;
+  height: fit-content;
   margin: 0;
 }
 .modal#popItem .modal-content .container .buttom .submit .price span {
