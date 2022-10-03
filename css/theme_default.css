@@ -298,6 +298,9 @@
 #main #category .active {
   background: var(--c1);
 }
+#main .mainContainer #search i {
+  color: var(--c1);
+}
 #main .mainContainer .items .item:hover {
   border: 2px solid var(--c2);
 }
@@ -350,6 +353,9 @@
   border: solid 3px var(--c1);
   color: var(--c1);
 }
+#orderMain #left #top #info i {
+  color: var(--c1);
+}
 #orderMain #left #top #info #time {
   color: var(--c1);
 }
@@ -370,6 +376,9 @@
 }
 #orderMain #right .container .icon {
   color: var(--c1);
+}
+#orderMain #right #submit {
+  background-color: var(--c1);
 }
 #listMain .item .left span {
   color: var(--c1);

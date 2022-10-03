@@ -222,10 +222,11 @@
         }
         .active { background: var(--c1); }
     }
-    .mainContainer .items .item {
-        &:hover { border: 2px solid var(--c2); }
-        .info .title .remark { color: var(--c1); background: var(--c2); }
-    }
+    .mainContainer {
+        #search i { color: var(--c1); }
+        .items .item {
+            &:hover { border: 2px solid var(--c2); }
+            .info .title .remark { color: var(--c1); background: var(--c2); }}}
 }
 
 // Payment Page
@@ -264,6 +265,7 @@
         #top {
             #info {
                 #number { border: solid 3px var(--c1); color: var(--c1); }
+                i { color: var(--c1); }
                 #time { color: var(--c1); }
             }
             #states {
@@ -277,7 +279,10 @@
         }
         #restaurant .icon { color: var(--c1); }
     }
-    #right .container .icon { color: var(--c1); }
+    #right {
+        .container .icon { color: var(--c1); }
+        #submit { background-color: var(--c1); }
+    }
 }
 
 // List Page

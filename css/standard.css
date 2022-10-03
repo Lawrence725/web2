@@ -1,11 +1,11 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 :root {
-  --gray-1: #333333;
-  --gray-2: #4F4F4F;
-  --gray-3: #828282;
-  --gray-4: #BDBDBD;
-  --gray-5: #E0E0E0;
-  --gray-6: #F2F2F2;
+  --cG1: #333333;
+  --cG2: #4F4F4F;
+  --cG3: #828282;
+  --cG4: #BDBDBD;
+  --cG5: #E0E0E0;
+  --cG6: #F2F2F2;
   --red: #EB5757;
   --background: #F5F6FA;
 }
@@ -85,7 +85,7 @@ select {
 .spinner div {
   width: 60px;
   min-height: 60px;
-  border: 5px solid var(--gray-4);
+  border: 5px solid var(--cG4);
   border-radius: 50%;
   -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
@@ -169,7 +169,7 @@ select {
   }
 }
 #header #headerCenter #search i {
-  color: var(--gray-3);
+  color: var(--cG3);
 }
 #header #headerCenter #search input {
   width: 100%;
@@ -187,7 +187,7 @@ select {
 }
 #header #headerRight .menu {
   margin-right: 30px;
-  color: var(--gray-1);
+  color: var(--cG1);
   white-space: nowrap;
   font-size: var(--fM) !important;
   position: relative;
@@ -213,6 +213,20 @@ select {
   #header #headerRight #buttonSearch {
     display: block;
   }
+}
+#header #headerRight .headerPoint {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1199px) {
+  #header #headerRight .headerPoint {
+    margin-right: 10px;
+  }
+}
+#header #headerRight .headerPoint img {
+  width: unset;
+  height: 24px;
 }
 #header #headerRight #profile {
   position: relative;
@@ -253,7 +267,7 @@ select {
 }
 #header #headerRight #profile .main span {
   margin-left: 5px;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 @media (max-width: 1199px) {
@@ -276,7 +290,7 @@ select {
 #header #headerRight #profile .dropdown a {
   padding: 10px 20px;
   display: block;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 #header #headerRight #profile .dropdown > div {
@@ -284,22 +298,22 @@ select {
   padding: 10px 20px;
 }
 #header #headerRight #profile .dropdown > div .header {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 #header #headerRight #profile .dropdown > div .content {
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: 12px;
 }
 #header #headerRight #profile .dropdown > div img {
   margin-right: 2px;
 }
 #header #headerRight #profile .dropdown > div img.pointS {
-  width: fit-content;
+  width: unset;
   height: 12px;
 }
 #header #headerRight #profile .dropdown > div img.pointL {
-  width: fit-content;
+  width: unset;
   height: 18px;
 }
 #header #headerRight #buttonCart {
@@ -323,7 +337,7 @@ select {
   display: flex;
   align-items: center;
   color: white;
-  background: var(--gray-1);
+  background: var(--cG1);
 }
 @media (max-width: 1199px) {
   #footer {
@@ -361,10 +375,10 @@ select {
   position: relative;
   display: flex;
   align-items: center;
-  background: var(--gray-2);
+  background: var(--cG2);
 }
 #footer #center:hover {
-  background: var(--gray-3);
+  background: var(--cG3);
   cursor: pointer;
 }
 @media (max-width: 767px) {
@@ -571,11 +585,11 @@ select {
   border-radius: 0 0 20px 20px;
 }
 .popup.popPoint .header {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 .popup.popPoint .content {
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fS) !important;
 }
 .popup.popPoint img {
@@ -600,12 +614,12 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-4);
+  color: var(--cG4);
   z-index: 1;
 }
 .popup .close:hover,
 .popup .close:focus {
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 .popup .popBody {
   min-width: 300px;
@@ -632,7 +646,7 @@ select {
 }
 .popup .popBody::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: var(--gray-5);
+  background-color: var(--cG5);
   border: 2.5px solid var(--background);
 }
 .modal {
@@ -656,18 +670,18 @@ select {
   top: 20px;
   right: 20px;
   position: absolute;
-  color: var(--gray-4);
+  color: var(--cG4);
   z-index: 3;
   font-size: var(--fM) !important;
 }
 .modal .close:hover,
 .modal .close:focus {
-  color: var(--gray-1);
+  color: var(--cG1);
   text-decoration: none;
   cursor: pointer;
 }
 .modal .title {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fL) !important;
 }
 .modal#popNotice .modal-content {
@@ -692,7 +706,7 @@ select {
   margin: 20px 0;
 }
 .modal#popNotice .modal-content .content {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 .modal#popNotice .modal-content .submit {
@@ -735,11 +749,11 @@ select {
   justify-content: center;
 }
 .modal#popInfo .modal-content .content span {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 .modal#popInfo .modal-content .content a {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 .modal#popInfo .modal-content .payment {
@@ -751,7 +765,7 @@ select {
 .modal#popInfo .modal-content .payment div {
   width: 78px;
   height: 78px;
-  border: 1px solid var(--gray-6);
+  border: 1px solid var(--cG6);
   margin: 10px;
   border-radius: 99px;
   display: flex;
@@ -801,7 +815,7 @@ select {
 }
 .modal#popDelivery .modal-content .content {
   width: 100%;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 .modal#popDelivery .modal-content .content li {
@@ -852,13 +866,13 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 .modal#popSetting .modal-content #mode .mode.active {
   color: white;
 }
 .modal#popSetting .modal-content #mode .mode.grayed {
-  color: var(--gray-4);
+  color: var(--cG4);
 }
 .modal#popSetting .modal-content #mode .mode .icon {
   min-width: 20px;
@@ -917,13 +931,13 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-3);
+  color: var(--cG3);
 }
 .modal#popSetting .modal-content .delivery .conditions {
   width: 100%;
   margin: 0;
   padding-left: 20px;
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fS) !important;
   font-size: 12px !important;
 }
@@ -974,7 +988,7 @@ select {
   height: 100%;
   padding-left: 36px;
   border: 0;
-  color: var(--gray-1);
+  color: var(--cG1);
   background: transparent;
   font-size: var(--fS) !important;
 }
@@ -1001,7 +1015,7 @@ select {
 }
 .modal#popSetting .modal-content .time .left .select i.right {
   right: 5px;
-  color: var(--gray-3);
+  color: var(--cG3);
 }
 .modal#popSetting .modal-content .time .action {
   min-width: 150px;
@@ -1118,7 +1132,7 @@ select {
   height: 100%;
   padding-left: 20px;
   border: 0;
-  color: var(--gray-1);
+  color: var(--cG1);
   background: transparent;
   font-size: var(--fS) !important;
 }
@@ -1147,7 +1161,7 @@ select {
   font-size: var(--fM) !important;
 }
 .modal#popTime .modal-content .container .submit.secondary {
-  color: var(--gray-3);
+  color: var(--cG3);
 }
 .modal#popTime .modal-content .container .submit.secondary:hover {
   color: white;
@@ -1199,7 +1213,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-3);
+  color: var(--cG3);
 }
 .modal#popLocation .modal-content .note {
   width: calc(100% - 20px);
@@ -1283,7 +1297,7 @@ select {
   font-size: var(--fM) !important;
 }
 .modal#popVerify .modal-content .button.secondary {
-  color: var(--gray-3);
+  color: var(--cG3);
 }
 .modal#popVerify .modal-content .button.disabled {
   filter: grayscale(100%);
@@ -1353,7 +1367,7 @@ select {
   font-size: var(--fS) !important;
 }
 .modal#popProfile .modal-content .button.secondary {
-  color: var(--gray-3);
+  color: var(--cG3);
 }
 .modal#popProfile .modal-content .button.disabled {
   filter: grayscale(100%);
@@ -1389,7 +1403,7 @@ select {
 }
 .modal#popPrivacy .modal-content span,
 .modal#popTerms .modal-content span {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 .modal#popPrivacy .modal-content ul,
@@ -1399,7 +1413,7 @@ select {
 .modal#popPrivacy .modal-content li,
 .modal#popTerms .modal-content li {
   margin: 10px 0;
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fS) !important;
 }
 .modal#popPrivacy .modal-content .title,
@@ -1412,7 +1426,7 @@ select {
 .modal#popPrivacy .modal-content .header,
 .modal#popTerms .modal-content .header {
   margin-top: 20px;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 @media (max-width: 767px) {
@@ -1451,7 +1465,7 @@ select {
   }
 }
 .modal#popCart .modal-content .subTitle {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 .modal#popCart .modal-content .container {
@@ -1465,11 +1479,11 @@ select {
   background: white;
 }
 .modal#popCart .modal-content .container .contentB {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 .modal#popCart .modal-content .container .contentG {
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fS) !important;
 }
 .modal#popCart .modal-content .container .delivery {
@@ -1519,7 +1533,7 @@ select {
   display: flex;
   justify-content: center;
   text-align: center;
-  color: var(--gray-1);
+  color: var(--cG1);
   background-color: var(--background);
   font-size: var(--fS) !important;
 }
@@ -1538,7 +1552,7 @@ select {
   border-radius: 5px;
 }
 .modal#popCart .modal-content .container .item .right img.point {
-  width: fit-content;
+  width: unset;
   height: 20px;
   margin: 0;
 }
@@ -1631,14 +1645,14 @@ select {
   justify-content: center;
 }
 .modal#popCart .modal-content .container .addon label .main .right .number .icon:hover {
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 .modal#popCart .modal-content .container .addon label .main .right .number span {
   margin: 0;
 }
 .modal#popCart .modal-content .container .addon label .main .right .price {
   width: 60px;
-  color: var(--gray-1);
+  color: var(--cG1);
   text-align: end;
   font-size: var(--fS) !important;
 }
@@ -1654,7 +1668,7 @@ select {
   margin: 0 5px;
 }
 .modal#popCart .modal-content .container .addon label .main .right a:hover {
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 .modal#popCart .modal-content .container .addon label input {
   position: absolute;
@@ -1746,7 +1760,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fM) !important;
 }
 .modal#popCart .modal-content .submit {
@@ -1766,7 +1780,7 @@ select {
   align-items: center;
 }
 .modal#popCart .modal-content .submit .price img {
-  width: fit-content;
+  width: unset;
   height: 20px;
   margin: 0;
 }
@@ -1852,7 +1866,7 @@ select {
   margin-bottom: 5px;
   display: flex;
   align-items: center;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fL) !important;
 }
 .modal#popItem .modal-content .container .top .title .remark {
@@ -1870,18 +1884,18 @@ select {
 }
 .modal#popItem .modal-content .container .top .header {
   margin-bottom: 5px;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 .modal#popItem .modal-content .container .top .content {
   margin-bottom: 5px;
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fS) !important;
 }
 .modal#popItem .modal-content .container .top .price {
   display: flex;
   align-items: flex-end;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 .modal#popItem .modal-content .container .top .price .point {
@@ -1889,7 +1903,7 @@ select {
   align-items: center;
 }
 .modal#popItem .modal-content .container .top .price .point img {
-  width: fit-content;
+  width: unset;
   height: 20px;
   margin: 0;
 }
@@ -1897,13 +1911,13 @@ select {
   margin: 0 2px;
 }
 .modal#popItem .modal-content .container .top .price span.discount {
-  color: var(--gray-3);
+  color: var(--cG3);
   text-decoration: line-through;
   font-size: var(--fS) !important;
 }
 .modal#popItem .modal-content .container .top hr {
   margin: 15px 0;
-  border: 0.5px solid var(--gray-4);
+  border: 0.5px solid var(--cG4);
 }
 .modal#popItem .modal-content .container .top .area {
   display: flex;
@@ -1976,7 +1990,7 @@ select {
   justify-content: center;
 }
 .modal#popItem .modal-content .container .top .area label .main .right .number .icon:hover {
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 .modal#popItem .modal-content .container .top .area label .main .right .number span {
   margin: 0;
@@ -1988,11 +2002,11 @@ select {
   margin: 0 5px;
 }
 .modal#popItem .modal-content .container .top .area label .main .right a:hover {
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 .modal#popItem .modal-content .container .top .area label .main .right .price {
   width: 60px;
-  color: var(--gray-1);
+  color: var(--cG1);
   text-align: end;
   font-size: var(--fS) !important;
 }
@@ -2112,7 +2126,7 @@ select {
   justify-content: center;
 }
 .modal#popItem .modal-content .container .buttom .icon:hover {
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 .modal#popItem .modal-content .container .buttom input {
   width: 40px;
@@ -2139,7 +2153,7 @@ select {
   align-items: center;
 }
 .modal#popItem .modal-content .container .buttom .submit .price img {
-  width: fit-content;
+  width: unset;
   height: 20px;
   margin: 0;
 }
@@ -2235,7 +2249,7 @@ select {
 #portalMain #banner .prev:hover,
 #portalMain #banner .next:hover {
   background-color: var(--background);
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 #portalMain #banner .dots {
   width: 100%;
@@ -2285,7 +2299,7 @@ select {
   flex-direction: column;
 }
 #portalMain #info #store #text .title {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fL) !important;
 }
 #portalMain #info #store #text .content {
@@ -2312,7 +2326,7 @@ select {
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 @media (max-width: 1199px) {
   #portalMain #info #buttonSetting {
@@ -2370,14 +2384,14 @@ select {
   justify-content: center;
 }
 #portalMain #info #buttonSetting #mode .grayed {
-  color: var(--gray-4);
+  color: var(--cG4);
 }
 #portalMain #info #buttonSetting #mode .grayed .icon {
-  color: var(--gray-4);
+  color: var(--cG4);
 }
 #portalMain #info #buttonSetting .separate {
   margin: 0 10px;
-  color: var(--gray-4);
+  color: var(--cG4);
   font-size: var(--fS) !important;
 }
 @media (max-width: 767px) {
@@ -2409,13 +2423,13 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 #portalMain #info #mode .mode.active {
   color: white;
 }
 #portalMain #info #mode .mode.grayed {
-  color: var(--gray-4);
+  color: var(--cG4);
 }
 #portalMain #info #mode .mode .icon {
   min-width: 20px;
@@ -2473,7 +2487,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-3);
+  color: var(--cG3);
 }
 #portalMain #info #address #confirm {
   width: 60px;
@@ -2494,7 +2508,7 @@ select {
   margin: 20px 0;
 }
 #portalMain .mainContainer .title {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 #portalMain .mainContainer .stores {
@@ -2565,17 +2579,17 @@ select {
   flex-direction: column;
 }
 #portalMain .mainContainer .stores .store .info.close > * > * {
-  color: var(--gray-4) !important;
+  color: var(--cG4) !important;
 }
 #portalMain .mainContainer .stores .store .info.close > * > * > * {
-  color: var(--gray-4) !important;
+  color: var(--cG4) !important;
 }
 #portalMain .mainContainer .stores .store .info.close > * > * > img {
   filter: grayscale(100%) !important;
 }
 #portalMain .mainContainer .stores .store .info .title {
   display: flex;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 #portalMain .mainContainer .stores .store .info .title .remark {
@@ -2588,8 +2602,8 @@ select {
   justify-content: center;
 }
 #portalMain .mainContainer .stores .store .info .title .remark.close {
-  color: var(--gray-4) !important;
-  background: var(--gray-6) !important;
+  color: var(--cG4) !important;
+  background: var(--cG6) !important;
 }
 #portalMain .mainContainer .stores .store .info .title .remark span {
   white-space: nowrap;
@@ -2600,7 +2614,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fS) !important;
 }
 #portalMain .mainContainer .stores .store .info .type {
@@ -2611,15 +2625,15 @@ select {
 #portalMain .mainContainer .stores .store .info .type div {
   width: calc(33% - 10px);
   margin: 5px;
-  border: 1px solid var(--gray-6);
+  border: 1px solid var(--cG6);
   border-radius: 5px;
   display: flex;
   justify-content: center;
-  color: var(--gray-6);
+  color: var(--cG6);
   font-size: var(--fS) !important;
 }
 #portalMain .mainContainer .stores .store .info .type .off {
-  color: var(--gray-6);
+  color: var(--cG6);
 }
 #portalMain .mainContainer .stores .store .info .payment {
   width: 100%;
@@ -2630,7 +2644,7 @@ select {
 #portalMain .mainContainer .stores .store .info .payment div {
   width: 33px;
   height: 33px;
-  border: 1px solid var(--gray-6);
+  border: 1px solid var(--cG6);
   margin: 5px;
   border-radius: 99px;
   display: flex;
@@ -2655,7 +2669,7 @@ select {
   height: 1em;
   position: relative;
   overflow: hidden;
-  background-color: var(--gray-4);
+  background-color: var(--cG4);
 }
 #portalMain .loading::after {
   position: absolute;
@@ -2747,7 +2761,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fL) !important;
 }
 #main {
@@ -2856,7 +2870,7 @@ select {
 #main #banner .prev:hover,
 #main #banner .next:hover {
   background-color: var(--background);
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 #main #banner .dots {
   width: 100%;
@@ -2906,7 +2920,7 @@ select {
   flex-direction: column;
 }
 #main #info #store #text .title {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fL) !important;
 }
 #main #info #store #text .content {
@@ -2933,7 +2947,7 @@ select {
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 @media (max-width: 1199px) {
   #main #info #buttonSetting {
@@ -2997,14 +3011,14 @@ select {
   }
 }
 #main #info #buttonSetting #mode .grayed {
-  color: var(--gray-4);
+  color: var(--cG4);
 }
 #main #info #buttonSetting #mode .grayed .icon {
-  color: var(--gray-4);
+  color: var(--cG4);
 }
 #main #info #buttonSetting .separate {
   margin: 0 10px;
-  color: var(--gray-4);
+  color: var(--cG4);
   font-size: var(--fS) !important;
 }
 @media (max-width: 767px) {
@@ -3040,7 +3054,7 @@ select {
   padding: 10px;
   margin-right: 10px;
   border-radius: 99px;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 #main #category a span {
@@ -3056,8 +3070,26 @@ select {
   width: 100%;
   margin: 20px 0;
 }
+#main .mainContainer #search {
+  width: 100%;
+  height: 40px;
+  padding: 0 5px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--cG5);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+#main .mainContainer #search input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin-left: 5px;
+  background-color: var(--background);
+  font-size: var(--fS) !important;
+}
 #main .mainContainer .title {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 #main .mainContainer .items {
@@ -3093,12 +3125,12 @@ select {
   justify-content: space-between;
 }
 #main .mainContainer .items .item .info.sold > * > * {
-  color: var(--gray-4) !important;
+  color: var(--cG4) !important;
   filter: grayscale(100%);
 }
 #main .mainContainer .items .item .info .title {
   display: flex;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 #main .mainContainer .items .item .info .title .remark {
@@ -3111,8 +3143,8 @@ select {
   justify-content: center;
 }
 #main .mainContainer .items .item .info .title .remark.sold {
-  color: var(--gray-4) !important;
-  background: var(--gray-6) !important;
+  color: var(--cG4) !important;
+  background: var(--cG6) !important;
 }
 #main .mainContainer .items .item .info .title .remark span {
   white-space: nowrap;
@@ -3123,14 +3155,14 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fS) !important;
 }
 #main .mainContainer .items .item .info .price {
   margin-top: 5px;
   display: flex;
   align-items: flex-end;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 #main .mainContainer .items .item .info .price .point {
@@ -3138,13 +3170,14 @@ select {
   align-items: center;
 }
 #main .mainContainer .items .item .info .price .point img {
+  width: unset;
   height: 20px;
 }
 #main .mainContainer .items .item .info .price span {
   margin: 0 2px;
 }
 #main .mainContainer .items .item .info .price span.discount {
-  color: var(--gray-3);
+  color: var(--cG3);
   text-decoration: line-through;
   font-size: var(--fS) !important;
 }
@@ -3178,7 +3211,7 @@ select {
   height: 1em;
   position: relative;
   overflow: hidden;
-  background-color: var(--gray-4);
+  background-color: var(--cG4);
 }
 #main .loading::after {
   position: absolute;
@@ -3274,7 +3307,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fL) !important;
 }
 #paymentMain {
@@ -3333,7 +3366,7 @@ select {
   }
 }
 #paymentMain #left .container .title {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fL) !important;
 }
 #paymentMain #left .container .icon {
@@ -3354,11 +3387,11 @@ select {
   flex-direction: column;
 }
 #paymentMain #left .container .contentB {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 #paymentMain #left .container .contentG {
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fS) !important;
 }
 #paymentMain #left .container .contentR {
@@ -3367,7 +3400,7 @@ select {
 }
 #paymentMain #left .container #items {
   padding-bottom: 10px;
-  border-bottom: solid 1px var(--gray-4);
+  border-bottom: solid 1px var(--cG4);
 }
 @media (max-height: 705px) {
   #paymentMain #left .container #items {
@@ -3388,7 +3421,7 @@ select {
   min-width: 40px;
   display: flex;
   justify-content: center;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 #paymentMain #left .container .item .right {
@@ -3403,7 +3436,7 @@ select {
   border-radius: 10px;
 }
 #paymentMain #left .container .item .right img.point {
-  width: fit-content;
+  width: unset;
   height: 20px;
   margin: 0;
 }
@@ -3420,14 +3453,14 @@ select {
 #paymentMain #left .container .addon {
   margin-top: 10px;
   padding-bottom: 10px;
-  border-bottom: solid 1px var(--gray-4);
+  border-bottom: solid 1px var(--cG4);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 #paymentMain #left .container .subTotal {
   padding-bottom: 10px;
-  border-bottom: solid 1px var(--gray-4);
+  border-bottom: solid 1px var(--cG4);
 }
 #paymentMain #right {
   width: 40%;
@@ -3477,12 +3510,12 @@ select {
   margin-top: 10px;
 }
 #paymentMain #right #top .area .title {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 #paymentMain #right #top .area .content {
   margin-right: 10px;
-  color: var(--gray-1);
+  color: var(--cG1);
   white-space: nowrap;
   font-size: var(--fS) !important;
 }
@@ -3508,7 +3541,7 @@ select {
   padding: 5px 10px;
   margin: 0;
   border-radius: 99px;
-  color: var(--gray-1);
+  color: var(--cG1);
   background-color: var(--background);
   font-size: var(--fS) !important;
 }
@@ -3670,7 +3703,7 @@ select {
   font-size: var(--fS) !important;
 }
 #paymentMain #right #top .area .checkbox .container img {
-  width: fit-content;
+  width: unset;
   height: 26px;
   margin-right: 2px;
 }
@@ -3681,7 +3714,7 @@ select {
   display: flex;
   align-items: center;
   white-space: nowrap;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 #paymentMain #right #top .area .checkbox .container .subText {
@@ -3690,11 +3723,11 @@ select {
   display: flex;
   align-items: center;
   white-space: nowrap;
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: 14px;
 }
 #paymentMain #right #top .area .checkbox .container .subText img {
-  width: fit-content;
+  width: unset;
   height: 15px;
   margin-right: 1px;
 }
@@ -3788,10 +3821,10 @@ select {
   font-size: 10px;
 }
 #paymentMain #right #bottom .policy span {
-  color: var(--gray-3);
+  color: var(--cG3);
 }
 #paymentMain #right #bottom .policy a:hover {
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 #paymentMain #right #bottom #submit {
   height: 50px;
@@ -3810,7 +3843,7 @@ select {
   align-items: center;
 }
 #paymentMain #right #bottom #submit .price img {
-  width: fit-content;
+  width: unset;
   height: 20px;
   margin: 0;
 }
@@ -3827,7 +3860,7 @@ select {
   height: 1em;
   position: relative;
   overflow: hidden;
-  background-color: var(--gray-4);
+  background-color: var(--cG4);
 }
 #paymentMain .loading::after {
   position: absolute;
@@ -3954,17 +3987,21 @@ select {
   background-color: white;
   font-size: 36px;
 }
+#orderMain #left #top #info i {
+  border-radius: 99px;
+  background-color: white;
+}
 #orderMain #left #top #info #time {
   font-size: 36px;
   text-align: center;
 }
 #orderMain #left #top #info .header {
   margin: 5px 0;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 #orderMain #left #top #info .content {
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fS) !important;
 }
 #orderMain #left #top #states {
@@ -4013,7 +4050,7 @@ select {
   background-color: var(--red);
 }
 #orderMain #left #top #states .wait {
-  color: var(--gray-4);
+  color: var(--cG4);
 }
 #orderMain #left #top #states .cancel {
   color: var(--red);
@@ -4025,7 +4062,7 @@ select {
 }
 #orderMain #left #restaurant .header {
   margin-top: 10px;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 #orderMain #left #restaurant .icon {
@@ -4042,7 +4079,7 @@ select {
   align-items: center;
 }
 #orderMain #left #restaurant .content {
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fS) !important;
 }
 #orderMain #right {
@@ -4076,7 +4113,7 @@ select {
   }
 }
 #orderMain #right .container .title {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 #orderMain #right .container .icon {
@@ -4096,7 +4133,7 @@ select {
   align-items: flex-start;
 }
 #orderMain #right .container .col.point img {
-  width: fit-content;
+  width: unset;
   height: 20px;
 }
 #orderMain #right .container .col.point span {
@@ -4120,11 +4157,11 @@ select {
   align-items: flex-start;
 }
 #orderMain #right .container .contentB {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 #orderMain #right .container .contentG {
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fS) !important;
 }
 #orderMain #right .container .contentR {
@@ -4133,7 +4170,7 @@ select {
 }
 #orderMain #right .container #items {
   padding-bottom: 10px;
-  border-bottom: solid 1px var(--gray-4);
+  border-bottom: solid 1px var(--cG4);
 }
 #orderMain #right .container .item {
   width: 100%;
@@ -4149,7 +4186,7 @@ select {
   min-width: 40px;
   display: flex;
   justify-content: center;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 #orderMain #right .container .item .right {
@@ -4164,7 +4201,7 @@ select {
   border-radius: 10px;
 }
 #orderMain #right .container .item .right img.point {
-  width: fit-content;
+  width: unset;
   height: 20px;
   margin: 0;
 }
@@ -4181,14 +4218,38 @@ select {
 #orderMain #right .container .addon {
   margin-top: 10px;
   padding-bottom: 10px;
-  border-bottom: solid 1px var(--gray-4);
+  border-bottom: solid 1px var(--cG4);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 #orderMain #right .container .subTotal {
   padding-bottom: 10px;
-  border-bottom: solid 1px var(--gray-4);
+  border-bottom: solid 1px var(--cG4);
+}
+#orderMain #right #submit {
+  width: calc(70% - 30px);
+  height: 50px;
+  margin: 20px 0;
+  padding: 0 20px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1199px) {
+  #orderMain #right #submit {
+    width: calc(100% - 70px);
+    margin: 10px 0;
+  }
+}
+#orderMain #right #submit span {
+  color: white;
+  font-size: var(--fM) !important;
+}
+#orderMain #right #submit.disabled {
+  filter: grayscale(100%);
+  pointer-events: none;
 }
 #orderMain .loading {
   border-radius: 33px;
@@ -4196,7 +4257,7 @@ select {
   height: 1em;
   position: relative;
   overflow: hidden;
-  background-color: var(--gray-4);
+  background-color: var(--cG4);
 }
 #orderMain .loading::after {
   position: absolute;
@@ -4331,16 +4392,16 @@ select {
   }
 }
 #listMain .item .center:not(.gray) {
-  color: var(--gray-1);
+  color: var(--cG1);
 }
 #listMain .item .center:not(.gray) .container .id {
-  border: 2px solid var(--gray-1);
+  border: 2px solid var(--cG1);
 }
 #listMain .item .center.gray {
-  color: var(--gray-4);
+  color: var(--cG4);
 }
 #listMain .item .center.gray .container .id {
-  border: 2px solid var(--gray-4);
+  border: 2px solid var(--cG4);
 }
 #listMain .item .center .container {
   width: 90px;
@@ -4485,7 +4546,7 @@ select {
   color: white;
 }
 #listMain .item .right .button.again {
-  color: var(--gray-1);
+  color: var(--cG1);
   background: white;
 }
 @media (max-width: 767px) {
@@ -4498,7 +4559,7 @@ select {
 }
 #listMain hr {
   margin: 10px 0;
-  border: 0.5px solid var(--gray-4);
+  border: 0.5px solid var(--cG4);
 }
 @media (max-width: 767px) {
   #listMain hr {
@@ -4513,7 +4574,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-3);
+  color: var(--cG3);
   background-color: white;
   font-size: var(--fS) !important;
   box-shadow: 0px 20px 40px rgba(55, 84, 170, 0.2);
@@ -4534,7 +4595,7 @@ select {
   }
 }
 #privacyMain span {
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fS) !important;
 }
 #privacyMain ul {
@@ -4542,7 +4603,7 @@ select {
 }
 #privacyMain li {
   margin: 10px 0;
-  color: var(--gray-3);
+  color: var(--cG3);
   font-size: var(--fS) !important;
 }
 #privacyMain #title {
@@ -4553,7 +4614,7 @@ select {
 }
 #privacyMain .header {
   margin-top: 20px;
-  color: var(--gray-1);
+  color: var(--cG1);
   font-size: var(--fM) !important;
 }
 @keyframes progress {
