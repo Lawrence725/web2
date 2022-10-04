@@ -1010,7 +1010,8 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             #logo { max-height: 60px; margin-bottom: 20px; }
             #info { margin: 20px 0; display: flex; flex-direction: column; align-items: center;
                 #number { width: 60px; height: 60px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background-color: white; font-size: 36px; }
-                i { border-radius: 99px; background-color: white; }
+                i { border-radius: 99px; background-color: white; animation: spark 1s linear infinite; }
+                @keyframes spark { 0% { opacity: 1; } 25% { opacity: 1; } 50% { opacity: 0; }100% { opacity: 1; }}
                 #time { font-size: 36px; text-align: center; }
                 .header { margin: 5px 0; color: var(--cG1); font-size: var(--fM) !important; }
                 .content { color: var(--cG3); font-size: var(--fS) !important; }

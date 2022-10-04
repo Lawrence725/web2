@@ -3994,6 +3994,21 @@ select {
 #orderMain #left #top #info i {
   border-radius: 99px;
   background-color: white;
+  animation: spark 1s linear infinite;
+}
+@keyframes spark {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #orderMain #left #top #info #time {
   font-size: 36px;
