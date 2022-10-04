@@ -1076,11 +1076,10 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             }
             .addon { margin-top: 10px; padding-bottom: 10px; border-bottom: solid 1px var(--cG4); display: flex; flex-direction: column; align-items: center; }
             .subTotal { padding-bottom: 10px; border-bottom: solid 1px var(--cG4); }
+            #submit { width: 100%; height: 50px; margin-top: 20px; padding: 0 20px; border-radius: 99px; display: flex; align-items: center; justify-content: center; box-sizing: border-box;
+                span { color: white; font-size: var(--fM) !important; }}
+            #submit.disabled{ filter: grayscale(100%); pointer-events: none; }
         }
-        #submit { width: calc(70% - 30px); height: 50px; margin: 20px 0; padding: 0 20px; border-radius: 99px; display: flex; align-items: center; justify-content: center;
-            @media @screen-tablet { width: calc(100% - 70px); margin: 10px 0; }
-            span { color: white; font-size: var(--fM) !important; }}
-        #submit.disabled{ filter: grayscale(100%); pointer-events: none; }
     }
     .loading { border-radius: 33px; display: inline-block; height: 1em; position: relative; overflow: hidden; background-color: var(--cG4);
         &::after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; transform: translateX(-100%); background-image: linear-gradient(90deg, rgba(#fff, 0) 0, rgba(#fff, 0.2) 20%, rgba(#fff, 0.5) 60%, rgba(#fff, 0)); animation: shimmer 1s infinite; content: ''; }
