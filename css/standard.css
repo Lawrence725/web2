@@ -3988,14 +3988,17 @@ select {
   align-items: center;
 }
 #orderMain #left #top #info #number {
-  width: 60px;
+  width: fit-content;
+  min-width: 60px;
   height: 60px;
+  padding: 0 10px;
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   font-size: 36px;
+  box-sizing: border-box;
 }
 #orderMain #left #top #info i {
   border-radius: 99px;
@@ -4464,18 +4467,22 @@ select {
   }
 }
 #listMain .item .center .container .id {
-  width: 36px;
+  width: fit-content;
+  min-width: 36px;
   min-height: 36px;
+  padding: 0 10px;
   border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: var(--fM) !important;
+  box-sizing: border-box;
 }
 @media (max-width: 1199px) {
   #listMain .item .center .container .id {
-    width: 26px;
+    min-width: 26px;
     min-height: 26px;
+    padding: 0 5px;
     border-radius: 99px;
     font-size: var(--fS) !important;
   }
