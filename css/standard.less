@@ -781,7 +781,9 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             }
         }
     }
-    #category { width: calc(100% - 10px); padding: 5px; margin: 20px 0; border-radius: 99px; position: -webkit-sticky; position: sticky; top: 75px; display: flex; align-items: center; background: white; overflow-x: auto; box-shadow: #shadows[far]; z-index: 2;
+    #category { width: 100vw; padding: 5px 80px; margin: 20px 0 20px -80px; position: -webkit-sticky; position: sticky; top: 75px; display: flex; align-items: center; background: var(--background); overflow-x: auto; z-index: 2; box-sizing: border-box;
+        @media @screen-tablet { padding: 5px 50px; margin-left: -50px; }
+        @media @screen-mobile { padding: 5px 25px; margin-left: -25px; }
         &::-webkit-scrollbar { -webkit-appearance: none; }
         &::-webkit-scrollbar:horizontal { height: 2px; }
         &::-webkit-scrollbar-thumb { border-radius: 10px; }
