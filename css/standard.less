@@ -492,8 +492,8 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                 @media @screen-tablet { width: 350px; height: unset; max-height: 100%; }
                 @media @screen-mobile { width: 100%; height: unset; max-height: 100%; display: flex; flex-direction: column; overflow-y: auto; }
                 .top { width: calc(100% - 20px); height: calc(100% - 70px); padding: 10px; border-radius: 15px; display: flex; flex-direction: column; background: white; overflow-y: auto;
-                    .title { margin-bottom: 5px; display: flex; align-items: center; color: var(--cG1); font-size: var(--fL) !important;
-                        .remark { height: 25px; padding: 2.5px 5px; margin-left: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center;
+                    .title { margin-bottom: 5px; display: flex; flex-direction: column; color: var(--cG1); font-size: var(--fL) !important;
+                        .remark { width: fit-content; height: 25px; padding: 2.5px 5px; margin-top: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center;
                             span { white-space: nowrap; font-size: var(--fS) !important; }
                         }
                     }
@@ -804,8 +804,8 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                 @media @screen-mobile { width: calc(100% - 44px); }
                 .info { width: calc(100% - 130px); display: flex; flex-direction: column; justify-content: space-between;
                     &.sold > * > * { color: var(--cG4) !important; filter: grayscale(100%); }
-                    .title { display: flex; color: var(--cG1); font-size: var(--fM) !important;
-                        .remark { height: 20px; padding: 2.5px 5px; margin-left: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center;
+                    .title { display: flex; flex-direction: column; color: var(--cG1); font-size: var(--fM) !important;
+                        .remark { width: fit-content; height: 20px; padding: 2.5px 5px; margin-top: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center;
                             &.sold { color: var(--cG4) !important; background: var(--cG6) !important; }
                             span { white-space: nowrap; font-size: var(--fS) !important; }
                         }

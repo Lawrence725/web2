@@ -1870,14 +1870,15 @@ select {
 .modal#popItem .modal-content .container .top .title {
   margin-bottom: 5px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   color: var(--cG1);
   font-size: var(--fL) !important;
 }
 .modal#popItem .modal-content .container .top .title .remark {
+  width: fit-content;
   height: 25px;
   padding: 2.5px 5px;
-  margin-left: 5px;
+  margin-top: 5px;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -3146,13 +3147,15 @@ select {
 }
 #main .mainContainer .items .item .info .title {
   display: flex;
+  flex-direction: column;
   color: var(--cG1);
   font-size: var(--fM) !important;
 }
 #main .mainContainer .items .item .info .title .remark {
+  width: fit-content;
   height: 20px;
   padding: 2.5px 5px;
-  margin-left: 5px;
+  margin-top: 5px;
   border-radius: 5px;
   display: flex;
   align-items: center;
