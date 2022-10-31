@@ -4402,14 +4402,13 @@ select {
   }
 }
 #listMain .item .left img {
-  width: 50px;
+  width: unset;
   height: 50px;
   margin-right: 10px;
   object-fit: cover;
 }
 @media (max-width: 1199px) {
   #listMain .item .left img {
-    width: 30px;
     height: 30px;
   }
 }

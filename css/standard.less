@@ -1111,8 +1111,8 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
         &:hover { background: white; }
         .left { width: 350px; display: flex; align-items: center;
             @media @screen-mobile { width: 70%; order: 1; }
-            img { width: 50px; height: 50px; margin-right: 10px; object-fit: cover;
-                @media @screen-tablet { width: 30px; height: 30px; }
+            img { width: unset; height: 50px; margin-right: 10px; object-fit: cover;
+                @media @screen-tablet { height: 30px; }
             }
             span { font-size: var(--fM) !important;
                 @media @screen-tablet { font-size: var(--fS) !important; }
