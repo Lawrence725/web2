@@ -4401,6 +4401,9 @@ select {
     order: 1;
   }
 }
+#listMain .item .left.v2 span {
+  color: #EF6079;
+}
 #listMain .item .left img {
   width: unset;
   height: 50px;
@@ -4443,6 +4446,44 @@ select {
 }
 #listMain .item .center.gray .container .id {
   border: 2px solid var(--cG4);
+}
+#listMain .item .center.v2 {
+  flex-direction: column;
+}
+#listMain .item .center.v2 hr {
+  display: none;
+}
+#listMain .item .center.v2 .container {
+  width: 100%;
+  height: 24px;
+  padding: 0 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+@media (min-width: 1200px) {
+  #listMain .item .center.v2 .container {
+    width: 534px;
+  }
+}
+@media (max-width: 1199px) {
+  #listMain .item .center.v2 .container {
+    width: 454px;
+  }
+}
+@media (max-width: 767px) {
+  #listMain .item .center.v2 .container {
+    width: 100%;
+  }
+}
+#listMain .item .center.v2 span {
+  height: fit-content !important;
+  margin: 0 !important;
+  font-size: var(--fXS) !important;
+}
+#listMain .item .center.v2 span.subtitle {
+  font-weight: bold;
 }
 #listMain .item .center .container {
   width: 90px;
