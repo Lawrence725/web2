@@ -4401,9 +4401,6 @@ select {
     order: 1;
   }
 }
-#listMain .item .left.v2 span {
-  color: #EF6079;
-}
 #listMain .item .left img {
   width: unset;
   height: 50px;
