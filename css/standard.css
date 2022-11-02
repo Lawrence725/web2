@@ -3998,7 +3998,7 @@ select {
 }
 #orderMain #left #top #info {
   width: 100%;
-  padding: 20px 0;
+  padding: 20px 0 0;
   margin: 20px 0;
   border-radius: 20px;
   display: flex;
@@ -4043,12 +4043,12 @@ select {
   text-align: center;
 }
 #orderMain #left #top #info .header {
-  margin: 0;
+  margin-bottom: 20px;
   color: var(--cG1);
   font-size: var(--fM) !important;
 }
 #orderMain #left #top #info .content {
-  margin-top: 20px;
+  margin-bottom: 20px;
   color: var(--red);
   font-size: var(--fL) !important;
   font-weight: bold;
@@ -4056,7 +4056,6 @@ select {
 }
 #orderMain #left #top #info img {
   width: 80%;
-  margin: 20px 0;
 }
 #orderMain #left #top #states {
   width: 100%;
