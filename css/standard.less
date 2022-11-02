@@ -14,6 +14,7 @@
 
 // Font
 html {
+    --fXL: clamp(1.6rem, 7vw, 1.7rem);
     --fL: clamp(1.4rem, 6vw, 1.5rem);
     --fM: clamp(1.2rem, 5vw, 1.3rem);
     --fS: clamp(1rem, 4vw, 1.1rem);
@@ -1012,13 +1013,14 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
         @media @screen-tablet { width: calc(100% - 40px); height: fit-content; padding: 20px; position: static; background-color: var(--background); box-shadow: none; }
         #top { width: 100%; display: flex; flex-direction: column; align-items: center;
             #logo { max-height: 60px; margin-bottom: 20px; }
-            #info { margin: 20px 0; display: flex; flex-direction: column; align-items: center;
+            #info { width: 100%; padding: 20px 0; margin: 20px 0; border-radius: 20px; display: flex; flex-direction: column; align-items: center; background-color: white;
                 #number { width: fit-content; min-width: 60px; height: 60px; padding: 0 10px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background-color: white; font-size: 36px; box-sizing: border-box; }
                 i { border-radius: 99px; background-color: white; animation: spark 1s linear infinite; }
                 @keyframes spark { 0% { opacity: 1; } 25% { opacity: 1; } 50% { opacity: 0; }100% { opacity: 1; }}
-                #time { font-size: 36px; text-align: center; }
-                .header { margin: 5px 0; color: var(--cG1); font-size: var(--fM) !important; }
-                .content { color: var(--cG3); font-size: var(--fS) !important; }
+                #time { font-size: var(--fXL); text-align: center; }
+                .header { margin: 0; color: var(--cG1); font-size: var(--fM) !important; }
+                .content { margin-top: 20px; color: var(--red); font-size: var(--fL) !important; font-weight: bold; text-align: center; }
+                img { width: 80%; margin: 20px 0; }
             }
             #states { width: 100%; margin: 20px 50px; display: flex; justify-content: center;
                 .state { width: 33%; display: flex; flex-direction: column; align-items: center;

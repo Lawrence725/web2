@@ -10,6 +10,7 @@
   --background: #F5F6FA;
 }
 html {
+  --fXL: clamp(1.6rem, 7vw, 1.7rem);
   --fL: clamp(1.4rem, 6vw, 1.5rem);
   --fM: clamp(1.2rem, 5vw, 1.3rem);
   --fS: clamp(1rem, 4vw, 1.1rem);
@@ -3996,10 +3997,14 @@ select {
   margin-bottom: 20px;
 }
 #orderMain #left #top #info {
+  width: 100%;
+  padding: 20px 0;
   margin: 20px 0;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
 #orderMain #left #top #info #number {
   width: fit-content;
@@ -4034,17 +4039,24 @@ select {
   }
 }
 #orderMain #left #top #info #time {
-  font-size: 36px;
+  font-size: var(--fXL);
   text-align: center;
 }
 #orderMain #left #top #info .header {
-  margin: 5px 0;
+  margin: 0;
   color: var(--cG1);
   font-size: var(--fM) !important;
 }
 #orderMain #left #top #info .content {
-  color: var(--cG3);
-  font-size: var(--fS) !important;
+  margin-top: 20px;
+  color: var(--red);
+  font-size: var(--fL) !important;
+  font-weight: bold;
+  text-align: center;
+}
+#orderMain #left #top #info img {
+  width: 80%;
+  margin: 20px 0;
 }
 #orderMain #left #top #states {
   width: 100%;
