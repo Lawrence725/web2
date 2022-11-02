@@ -4453,7 +4453,7 @@ select {
 #listMain .item .center.v2 .container {
   width: 100%;
   height: 24px;
-  padding: 0 20px;
+  padding: 0 0 0 10px;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
@@ -4480,10 +4480,19 @@ select {
   font-size: var(--fXS) !important;
 }
 #listMain .item .center.v2 span.count {
-  width: 20px;
+  min-width: 20px;
 }
 #listMain .item .center.v2 span.subtitle {
+  min-width: 60px;
   font-weight: bold;
+}
+#listMain .item .center.v2 span.item {
+  padding: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #listMain .item .center .container {
   width: 90px;
