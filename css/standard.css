@@ -4456,7 +4456,7 @@ select {
   padding: 0 20px;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   box-sizing: border-box;
 }
 @media (min-width: 1200px) {
@@ -4476,8 +4476,11 @@ select {
 }
 #listMain .item .center.v2 span {
   height: fit-content !important;
-  margin: 0 !important;
+  margin: 0 10px 0 0 !important;
   font-size: var(--fXS) !important;
+}
+#listMain .item .center.v2 span.count {
+  width: 20px;
 }
 #listMain .item .center.v2 span.subtitle {
   font-weight: bold;
