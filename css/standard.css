@@ -206,6 +206,14 @@ select {
 #header #headerRight .menu.hide {
   display: none;
 }
+#header #headerRight .iconButton {
+  margin-right: 30px;
+}
+@media (max-width: 1199px) {
+  #header #headerRight .iconButton {
+    margin-right: 10px;
+  }
+}
 #header #headerRight #buttonSearch {
   display: none;
   margin-right: 10px;
