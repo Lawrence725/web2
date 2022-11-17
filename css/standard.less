@@ -903,7 +903,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                 @media @screen-tablet { display: none; }
             }
             .area { width: 100%; margin-top: 10px;
-                .title { color: var(--cG1); font-size: var(--fM) !important; }
+                .title { color: var(--cG1); font-size: var(--fS) !important; font-weight: bold; }
                 .content { margin-right: 10px; color: var(--cG1); white-space: nowrap; font-size: var(--fS) !important;
                     &.full { width: 100%; }
                 }
@@ -914,16 +914,21 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                         @media @screen-tablet { background-color: white; }}
                     .arrow { width: 20px; height: 100%; top: 0; right: 5px; position: absolute; display: flex; align-items: center; justify-content: center; pointer-events: none; }
                 }
-                .switch { width: 100%; height: 40px; margin-top: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: space-around; background-color: var(--background);
-                    @media @screen-tablet { background-color: white; }
+                .switch { width: 100%; margin-top: 10px; gap: 10px; display: flex; flex-direction: column;
+                    &.error { border: none; }
+                    div.online { width: 180px; margin: -20px 0 0 auto; gap: 10px; display: flex; flex-wrap: wrap;
+                        div { width: 53.33px; display: flex; justify-content: center; }
+                        img { max-width: 53.33px; max-height: 16px; margin: 0 auto; }
+                    }
                     /* The container */
-                    .container { display: block; position: relative; padding: 5px 15px 5px 45px; border-radius: 99px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: var(--fS) !important;
+                    .container { display: block; position: relative; padding: 10px 15px 10px 40px; border-radius: 20px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: var(--fS) !important; background-color: var(--background);
+                        @media @screen-tablet { background-color: white; }
                         .text { width: fit-content; height: 20px; display: flex; align-items: center; white-space: nowrap; }
                     }
                     /* Hide the browser's default radio button */
                     .container input { position: absolute; opacity: 0; cursor: pointer; }
                     /* Create a custom radio button */
-                    .checkmark { position: absolute; top: 5px; left: 20px; height: 15px; width: 15px; background-color: white; border-radius: 50%; }
+                    .checkmark { position: absolute; top: 10px; left: 15px; height: 15px; width: 15px; background-color: white; border-radius: 50%; }
                     /* On mouse-over, add a grey background color */
                     .container:hover input ~ .checkmark { background-color: var(--background); }
                     /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -975,13 +980,17 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             }
         }
         #bottom { width: calc(100% - 40px); padding: 20px;
+            @media @screen-tablet { padding-bottom: 90px; }
             .policy { margin-bottom: 10px; font-size: 10px;
                 span { color: var(--cG3); }
                 a:hover { color: var(--cG1); }
             }
             #submit { height: 50px; padding: 0 20px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between;
+                @media @screen-tablet { width: 100%; height: 70px; padding: 15px; border-radius: 0; left: 0; bottom: 0; position: fixed; z-index: 3; box-sizing: border-box; background: rgba(255, 255, 255, 0.75) !important; box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); }
                 span { color: white; font-size: var(--fM) !important; }
-                .price { display: flex; align-items: center;
+                > span { width: 100%; height: 100%; border-radius: 99px 0 0 99px; line-height: 50px;
+                    @media @screen-tablet { padding-left: 20px; line-height: 40px; }}
+                .price { height: 100%; padding-right: 10px; margin-left: -5px; border-radius: 0 99px 99px 0; display: flex; align-items: center; justify-content: flex-end;
                     img { width: unset; height: 20px; margin: 0; }
                     span { margin: 0 2px; }
                 }

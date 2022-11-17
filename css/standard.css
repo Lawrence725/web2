@@ -3544,7 +3544,8 @@ select {
 }
 #paymentMain #right #top .area .title {
   color: var(--cG1);
-  font-size: var(--fM) !important;
+  font-size: var(--fS) !important;
+  font-weight: bold;
 }
 #paymentMain #right #top .area .content {
   margin-right: 10px;
@@ -3596,13 +3597,10 @@ select {
 }
 #paymentMain #right #top .area .switch {
   width: 100%;
-  height: 40px;
   margin-top: 10px;
-  border-radius: 99px;
+  gap: 10px;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: var(--background);
+  flex-direction: column;
   /* The container */
   /* Hide the browser's default radio button */
   /* Create a custom radio button */
@@ -3611,22 +3609,43 @@ select {
   /* Show the indicator (dot/circle) when checked */
   /* Style the indicator (dot/circle) */
 }
-@media (max-width: 1199px) {
-  #paymentMain #right #top .area .switch {
-    background-color: white;
-  }
+#paymentMain #right #top .area .switch.error {
+  border: none;
+}
+#paymentMain #right #top .area .switch div.online {
+  width: 180px;
+  margin: -20px 0 0 auto;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#paymentMain #right #top .area .switch div.online div {
+  width: 53.33px;
+  display: flex;
+  justify-content: center;
+}
+#paymentMain #right #top .area .switch div.online img {
+  max-width: 53.33px;
+  max-height: 16px;
+  margin: 0 auto;
 }
 #paymentMain #right #top .area .switch .container {
   display: block;
   position: relative;
-  padding: 5px 15px 5px 45px;
-  border-radius: 99px;
+  padding: 10px 15px 10px 40px;
+  border-radius: 20px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   font-size: var(--fS) !important;
+  background-color: var(--background);
+}
+@media (max-width: 1199px) {
+  #paymentMain #right #top .area .switch .container {
+    background-color: white;
+  }
 }
 #paymentMain #right #top .area .switch .container .text {
   width: fit-content;
@@ -3642,8 +3661,8 @@ select {
 }
 #paymentMain #right #top .area .switch .checkmark {
   position: absolute;
-  top: 5px;
-  left: 20px;
+  top: 10px;
+  left: 15px;
   height: 15px;
   width: 15px;
   background-color: white;
@@ -3849,6 +3868,11 @@ select {
   width: calc(100% - 40px);
   padding: 20px;
 }
+@media (max-width: 1199px) {
+  #paymentMain #right #bottom {
+    padding-bottom: 90px;
+  }
+}
 #paymentMain #right #bottom .policy {
   margin-bottom: 10px;
   font-size: 10px;
@@ -3867,13 +3891,45 @@ select {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 1199px) {
+  #paymentMain #right #bottom #submit {
+    width: 100%;
+    height: 70px;
+    padding: 15px;
+    border-radius: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 3;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.75) !important;
+    box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1);
+  }
+}
 #paymentMain #right #bottom #submit span {
   color: white;
   font-size: var(--fM) !important;
 }
+#paymentMain #right #bottom #submit > span {
+  width: 100%;
+  height: 100%;
+  border-radius: 99px 0 0 99px;
+  line-height: 50px;
+}
+@media (max-width: 1199px) {
+  #paymentMain #right #bottom #submit > span {
+    padding-left: 20px;
+    line-height: 40px;
+  }
+}
 #paymentMain #right #bottom #submit .price {
+  height: 100%;
+  padding-right: 10px;
+  margin-left: -5px;
+  border-radius: 0 99px 99px 0;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 #paymentMain #right #bottom #submit .price img {
   width: unset;

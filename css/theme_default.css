@@ -352,6 +352,12 @@
 #paymentMain #right #bottom #submit:hover {
   background: var(--c1);
 }
+#paymentMain #right #bottom #submit > span {
+  background: var(--c1);
+}
+#paymentMain #right #bottom #submit .price {
+  background: var(--c1);
+}
 #orderMain #left #top #info #number {
   border: solid 3px var(--c1);
   color: var(--c1);
