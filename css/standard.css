@@ -3597,10 +3597,13 @@ select {
 }
 #paymentMain #right #top .area .switch {
   width: 100%;
+  height: 40px;
   margin-top: 10px;
-  gap: 10px;
+  border-radius: 99px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--background);
   /* The container */
   /* Hide the browser's default radio button */
   /* Create a custom radio button */
@@ -3608,6 +3611,37 @@ select {
   /* Create the indicator (the dot/circle - hidden when not checked) */
   /* Show the indicator (dot/circle) when checked */
   /* Style the indicator (dot/circle) */
+}
+@media (max-width: 1199px) {
+  #paymentMain #right #top .area .switch {
+    background-color: white;
+  }
+}
+#paymentMain #right #top .area .switch.v2 {
+  height: unset;
+  border-radius: unset;
+  gap: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: transparent;
+}
+#paymentMain #right #top .area .switch.v2 .container {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  border-radius: 20px;
+  background-color: var(--background);
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  #paymentMain #right #top .area .switch.v2 .container {
+    background-color: white;
+  }
+}
+#paymentMain #right #top .area .switch.v2 .checkmark {
+  top: 10px;
+  left: 15px;
 }
 #paymentMain #right #top .area .switch.error {
   border: none;
@@ -3632,20 +3666,14 @@ select {
 #paymentMain #right #top .area .switch .container {
   display: block;
   position: relative;
-  padding: 10px 15px 10px 40px;
-  border-radius: 20px;
+  padding: 5px 15px 5px 45px;
+  border-radius: 99px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   font-size: var(--fS) !important;
-  background-color: var(--background);
-}
-@media (max-width: 1199px) {
-  #paymentMain #right #top .area .switch .container {
-    background-color: white;
-  }
 }
 #paymentMain #right #top .area .switch .container .text {
   width: fit-content;
@@ -3661,8 +3689,8 @@ select {
 }
 #paymentMain #right #top .area .switch .checkmark {
   position: absolute;
-  top: 10px;
-  left: 15px;
+  top: 5px;
+  left: 20px;
   height: 15px;
   width: 15px;
   background-color: white;
