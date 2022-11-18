@@ -3652,6 +3652,7 @@ select {
   gap: 10px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 #paymentMain #right #top .area .switch div.online div {
   width: 53.33px;
@@ -3969,7 +3970,7 @@ select {
 }
 #paymentMain #right #bottom #submit.disabled {
   filter: grayscale(100%);
-  pointer-events: none;
+  pointer-events: auto;
 }
 #paymentMain .loading {
   border-radius: 25px;

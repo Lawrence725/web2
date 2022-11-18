@@ -923,7 +923,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                         .checkmark { top: 10px; left: 15px; }
                     }
                     &.error { border: none; }
-                    div.online { width: 180px; margin: -20px 0 0 auto; gap: 10px; display: flex; flex-wrap: wrap;
+                    div.online { width: 180px; margin: -20px 0 0 auto; gap: 10px; display: flex; flex-wrap: wrap; justify-content: flex-end;
                         div { width: 53.33px; display: flex; justify-content: center; }
                         img { max-width: 53.33px; max-height: 16px; margin: 0 auto; }
                     }
@@ -1001,7 +1001,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                     span { margin: 0 2px; }
                 }
             }
-            #submit.disabled{ filter: grayscale(100%); pointer-events: none; }
+            #submit.disabled{ filter: grayscale(100%); pointer-events: auto; }
         }
     }
     .loading { border-radius: 25px; display: inline-block; height: 1em; position: relative; overflow: hidden; background-color: var(--cG4);
