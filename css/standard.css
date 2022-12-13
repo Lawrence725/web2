@@ -1,4 +1,31 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosanstc/v26/-nF7OG829Oofr2wohFbTp9iFOQ.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosanstc/v26/-nFkOG829Oofr2wohFbTp9i9gwQvDQ.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
+}
 :root {
   --c1: #F0941D;
   --c2: #FFEED8;
@@ -37,6 +64,30 @@ html:lang(id-ID) {
   --fL: clamp(1.2rem, 5vw, 1.3rem);
   --fM: clamp(1rem, 4vw, 1.1rem);
   --fS: clamp(0.8rem, 3vw, 0.9rem);
+}
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+select,
+input,
+textarea,
+button,
+ol,
+ul {
+  font-family: 'Noto Sans TC', 'Roboto', 'Arial', '微軟正黑體';
+}
+button {
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
 }
 body {
   margin: 0;
@@ -95,11 +146,24 @@ select {
   -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
 }
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: var(--c1);
+}
+button span {
+  color: white !important;
+  font-size: var(--fM);
+}
 #header {
   width: 100%;
-  height: 80px;
+  height: 60px;
   padding: 0 80px;
-  border-radius: 0 0 20px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -116,7 +180,7 @@ select {
 }
 @media (max-width: 767px) {
   #header {
-    padding: 0 25px;
+    padding: 0 20px;
     z-index: 3;
   }
 }
@@ -189,6 +253,11 @@ select {
   align-items: center;
   justify-content: flex-end;
 }
+@media (max-width: 767px) {
+  #header #headerRight {
+    gap: 10px;
+  }
+}
 #header #headerRight .menu {
   margin-right: 30px;
   color: var(--cG1);
@@ -244,7 +313,7 @@ select {
 }
 #header #headerRight .headerPoint img {
   width: unset;
-  height: 24px;
+  height: 20px;
 }
 #header #headerRight #profile {
   position: relative;
@@ -260,6 +329,7 @@ select {
 }
 #header #headerRight #profile .main {
   padding: 25px 30px 25px 0;
+  gap: 5px;
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -293,16 +363,11 @@ select {
 #header #headerRight #profile .main span {
   margin-left: 5px;
   color: var(--cG1);
-  font-size: var(--fM) !important;
-}
-@media (max-width: 1199px) {
-  #header #headerRight #profile .main span {
-    display: none;
-  }
+  font-size: var(--fS) !important;
 }
 #header #headerRight #profile .dropdown {
   width: 250px;
-  margin-top: -1.5px;
+  margin-top: -11px;
   min-width: max-content;
   border-radius: 0 0 20px 20px;
   display: none;
@@ -355,6 +420,11 @@ select {
   color: white;
   background: var(--c1);
 }
+@media (max-width: 767px) {
+  #header #headerRight #buttonCart {
+    display: none;
+  }
+}
 #header #headerRight #buttonCart:hover {
   background: var(--c1);
 }
@@ -381,7 +451,7 @@ select {
 }
 @media (max-width: 767px) {
   #footer {
-    padding: 20px 25px;
+    padding: 20px 20px 90px;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -2941,19 +3011,46 @@ select {
 #main {
   min-height: calc(100vh - 200px);
   width: calc(100% - 160px);
-  padding: 80px 80px 0;
+  padding: 60px 80px 0;
 }
 @media (max-width: 1199px) {
   #main {
     width: calc(100% - 100px);
-    padding: 80px 50px 0;
+    padding: 60px 50px 0;
   }
 }
 @media (max-width: 767px) {
   #main {
-    width: calc(100% - 50px);
-    padding: 80px 25px 0;
+    width: calc(100% - 40px);
+    padding: 60px 20px 0;
   }
+}
+#main .buttonCart {
+  display: none;
+}
+@media (max-width: 767px) {
+  #main .buttonCart {
+    width: 100vw;
+    padding: 15px 20px;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    z-index: 1;
+  }
+}
+#main .buttonCart button {
+  padding: 0 15px;
+  gap: 0;
+}
+#main .buttonCart button span {
+  white-space: nowrap;
+  text-align: left;
+}
+#main .buttonCart button span:first-child {
+  width: 100%;
 }
 #main .noticeBanner {
   width: 100%;
