@@ -89,9 +89,13 @@ window.onload = function() {
 // Cart Popup
 var popCart = document.getElementById("popCart");
 var buttonCart = document.getElementById("buttonCart");
+var buttonCart2 = document.getElementsByClassName("buttonCart")[0];
 var close = popCart.getElementsByClassName("close")[0];
 var submit = popCart.getElementsByClassName("submit")[0];
 buttonCart.onclick = function() {
+    popCart.style.display = "flex";
+}
+buttonCart2.onclick = function() {
     popCart.style.display = "flex";
 }
 close.onclick = function() {
