@@ -2,14 +2,16 @@
 
 // Color
 :root {
-    --cG1:     #333333;
-    --cG2:     #4F4F4F;
-    --cG3:     #828282;
-    --cG4:     #BDBDBD;
-    --cG5:     #E0E0E0;
-    --cG6:     #F2F2F2;
-    --red:        #EB5757;
-    --background: #F5F6FA;
+    --c1:           #F0941D;
+    --c2:           #FFEED8;
+    --cG1:          #333333;
+    --cG2:          #4F4F4F;
+    --cG3:          #828282;
+    --cG4:          #BDBDBD;
+    --cG5:          #E0E0E0;
+    --cG6:          #F2F2F2;
+    --red:          #EB5757;
+    --background:   #F5F6FA;
 }
 
 // Font
@@ -66,7 +68,7 @@ textarea { border: 0; }
 textarea:focus { box-shadow: none !important; outline: none; }
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; }
 .spinner { top: 0; left: 0; width: 100vw; height: 100vh; position: fixed; display: flex; align-items: center; justify-content: center; background: radial-gradient(200px 200px at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); z-index: 4; /* background-color: rgba(0,0,0,0.5); */
-    div { width: 60px; min-height: 60px; border: 5px solid var(--cG4); border-radius: 50%; -webkit-animation: spin 1s linear infinite; animation: spin 1s linear infinite; }
+    div { width: 60px; min-height: 60px; border: 5px solid var(--cG4); border-top: 5px solid var(--c1); border-radius: 50%; -webkit-animation: spin 1s linear infinite; animation: spin 1s linear infinite; }
 }
 
 // Header
@@ -96,10 +98,12 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
         .menu { margin-right: 30px; color: var(--cG1); white-space: nowrap; font-size: var(--fM) !important; position: relative;
             @media @screen-tablet { margin-right: 20px; }
             @media @screen-tablet { display: none; }
+            &:hover { color: var(--c1); }
         }
         .menu.hide { display: none; }
         .iconButton { margin-right: 30px;
-            @media @screen-tablet { margin-right: 10px; }}
+            @media @screen-tablet { margin-right: 10px; }
+            i { color: var(--c1); }}
         #buttonSearch { display: none; margin-right: 10px;
             @media @screen-tablet { display: block; }
         }
@@ -114,14 +118,17 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             .main { padding: 25px 30px 25px 0; display: flex; align-items: center; white-space: nowrap;
                 @media @screen-tablet { padding-right: 20px; }
                 @media @screen-tablet { padding-right: 10px; }
+                &:hover span { color: var(--c1); }
+                &:hover i { background: var(--c2); }
                 img { width: 30px; height: 30px; border-radius: 999px; object-fit: cover; }
-                i { border-radius: 99px; }
+                i { border-radius: 99px; color: var(--c1); }
                 span { margin-left: 5px; color: var(--cG1); font-size: var(--fM) !important;
                     @media @screen-tablet { display: none; }
                 }
             }
             .dropdown { width: 250px; margin-top: -1.5px; min-width: max-content; border-radius: 0 0 20px 20px; display: none; right: 20px; position: fixed; background-color: white; z-index: 3; overflow: hidden;
-                a { padding: 10px 20px; display: block; color: var(--cG1); font-size: var(--fS) !important; }
+                a { padding: 10px 20px; display: block; color: var(--cG1); font-size: var(--fS) !important;
+                    &:hover { color: var(--c1); background-color: var(--c2); }}
                 > div { width: calc(250px - 40px); padding: 10px 20px;
                     .header { color: var(--cG1); font-size: var(--fS) !important; }
                     .content { color: var(--cG3); font-size: 12px; }
@@ -130,7 +137,8 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                         &.pointL { width: unset; height: 18px; }}}
             }
         }
-        #buttonCart { width: 70px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 99px; color: white; 
+        #buttonCart { width: 70px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 99px; color: white; background: var(--c1);
+            &:hover { background: var(--c1); }
             span { margin-left: 5px; font-size: var(--fM) !important; }
         } 
     }
@@ -143,7 +151,9 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
     #left { width: 100%;
         @media @screen-mobile { width: calc(100% - 150px); display: flex; justify-content: center; }
         a { margin-right: 10px;
-            &:-webkit-any-link { color: white; }
+            &:-webkit-any-link { color: white;
+                &:hover { color: var(--c1); }}
+            &:hover { color: var(--c1); }
         }
     }
     #center { width: 300px; height: 40px; margin: 0 10px; border-radius: 99px; position: relative; display: flex; align-items: center; background: var(--cG2);
@@ -227,16 +237,18 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             @media @screen-mobile { width: 300px; }
             img { max-width: 300px; border-radius: 10px; margin: 20px 0; }
             .content { color: var(--cG1); font-size: var(--fS) !important; }
-            .submit { width: 100%; height: 40px; margin-top: 20px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important; }
+            .submit { width: 100%; height: 40px; margin-top: 20px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important; background: var(--c1);
+                &:hover { background: var(--c1); }}
         }
     }
     &#popInfo {
         .modal-content { width: 400px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
             @media @screen-mobile { width: 300px; }
             .content { margin-top: 10px; display: flex; align-items: center;
-                div { width: 20px; height: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center; }
+                div { width: 20px; height: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                 span { color: var(--cG1); font-size: var(--fS) !important; }
-                a { color: var(--cG1); font-size: var(--fS) !important; }
+                a { color: var(--cG1); font-size: var(--fS) !important;
+                    :hover { color: var(--c1); }}
             }
             .payment { width: 100%; margin-top: 20px; display: flex; flex-wrap: wrap;
                 div { width: 78px; height: 78px; border: 1px solid var(--cG6); margin: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: center;
@@ -267,7 +279,8 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             .message { color: var(--red); font-size: var(--fS) !important; }
             #mode { width: calc(100% - 10px); height: 30px; padding: 5px; margin: 20px 0 10px 0; border-radius: 99px; display: flex; align-items: center; justify-content: space-between; background-color: var(--background);
                 .mode { width: 100%; height: 30px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: var(--cG1);
-                    &.active { color: white; }
+                    &.active { color: white; background-color: var(--c1); }
+                    &:hover:not(.active) { background-color: var(--c2); } 
                     &.grayed { color: var(--cG4); }
                     .icon { min-width: 20px; min-height: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center; }
                     span { white-space: nowrap; overflow: hidden;  text-overflow: ellipsis; font-size: var(--fS) !important; }
@@ -276,43 +289,47 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             .delivery { width: 100%; margin-top: 10px; display: flex; align-items: flex-start;
                 .address { width: calc(100% - 24px); height: 36px; padding: 0 10px; border: 2px solid var(--background); border-radius: 99px; display: flex; align-items: center; justify-content: space-between; background-color: var(--background);
                     .left { width: 100%; display: flex; align-items: center;
-                        .icon { min-width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+                        .icon { min-width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                         input { width: 100%; height: 100%; margin-left: 5px; border-radius: 99px; background-color: var(--background); font-size: var(--fS) !important; }
                     }
-                    a { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--cG3); }
+                    a { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--cG3);
+                        &:hover { color: var(--c1); }}
                 }
                 .conditions { width: 100%; margin: 0; padding-left: 20px; color: var(--cG3); font-size: var(--fS) !important; font-size: 12px !important; }
-                .action { min-width: 150px; height: 40px; margin-left: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: var(--fS) !important;
-                    @media @screen-mobile { min-width: 50px; }}
+                .action { min-width: 150px; height: 40px; margin-left: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: var(--fS) !important; color: var(--c1); background-color: var(--c2);
+                    @media @screen-mobile { min-width: 50px; }
+                    &:hover { color: var(--c2); background-color: var(--c1); }}
             }
             .time { width: 100%; margin-top: 10px; display: flex; align-items: flex-start;
                 .left { width: 100%; display: flex; flex-direction: column;
                     .select { width: calc(100% - 4px); height: 36px; border: 2px solid var(--background); border-radius: 99px; position: relative; display: flex; align-items: center; background: var(--background);
-                        &:hover { cursor: pointer; }
+                        &:hover { cursor: pointer; background: var(--c2); border: 2px solid var(--c2); }
                         &:first-child { margin-bottom: 10px; }
                         select { width: 100%; height: 100%; padding-left: 36px; border: 0; color: var(--cG1); background: transparent; font-size: var(--fS) !important;
                             &:hover { cursor: pointer; }
                         }
                         select:focus-visible { border: 0 !important; }
-                        .icon { min-width: 20px; height: 20px; left: 10px; position: absolute; display: flex; align-items: center; justify-content: center; }
+                        .icon { min-width: 20px; height: 20px; left: 10px; position: absolute; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                         i { top: calc(50% - 8px); margin-right: 5px; position: absolute; pointer-events: none;
                             &.right { right: 5px; color: var(--cG3); }
                         }
                     }
                 }
-                .action { min-width: 150px; height: 90px; margin-left: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: var(--fS) !important;
-                    @media @screen-mobile { min-width: 50px; }}
+                .action { min-width: 150px; height: 90px; margin-left: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: var(--fS) !important; color: var(--c1); background-color: var(--c2);
+                    @media @screen-mobile { min-width: 50px; }
+                    &:hover { color: var(--c2); background-color: var(--c1); }}
             }
-            .chair { width: calc(100% - 24px); height: 36px; padding: 0 10px; margin-top: 10px; border: 2px solid var(--background); border-radius: 99px; display: flex; align-items: center; background-color: var(--background);
+            .chair { width: calc(100% - 24px); height: 36px; padding: 0 10px; margin-top: 10px; border: 2px solid var(--background); border-radius: 99px; display: flex; align-items: center; background-color: var(--background); color: var(--c1);
                 .icon { min-width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
                 input { width: 100%; height: 100%; padding: 0; margin-left: 5px; border-radius: 99px; background-color: var(--background); font-size: var(--fS) !important; }
             }
             .note { width: calc(100% - 24px); min-height: 36px; padding: 10px; margin-top: 10px; border: 2px solid var(--background); border-radius: 20px; display: flex; background-color: var(--background);
-                div { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+                div { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                 textarea { width: 100%; height: 100%; margin-left: 5px; background-color: var(--background); font-size: var(--fS) !important; }
             }
-            .submit { width: 100%; min-height: 40px; margin-top: 20px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important;
+            .submit { width: 100%; min-height: 40px; margin-top: 20px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important; background: var(--c1);
                 &.disabled { filter: grayscale(100%); pointer-events: none; }
+                &:hover { background: var(--c1); }
             }
             .error { border: 2px solid var(--red) !important; }
         }
@@ -323,14 +340,16 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                 .select { width: 100%; height: 40px; border-radius: 10px; margin-top: 10px; position: relative; display: flex; align-items: center; background: var(--background);
                     &:hover { cursor: pointer; }
                     select { width: 100%; height: 100%; padding-left: 20px; border: 0; color: var(--cG1); background: transparent; font-size: var(--fS) !important;
-                        &:hover { cursor: pointer; }
+                        &:hover { cursor: pointer; background: var(--c2); }
+                        i { color: var(--c1); }
                     }
                     select:focus-visible { border: 0 !important; }
                     i { top: calc(50% - 8px); right: 5px; margin-right: 5px; position: absolute; pointer-events: none; }
                 }
-                .submit { width: 100%; height: 40px; margin-top: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important;
-                    &.secondary { color: var(--cG3);
-                        &:hover { color: white; }
+                .submit { width: 100%; height: 40px; margin-top: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important; background: var(--c1);
+                    &:hover { background: var(--c1); }
+                    &.secondary { color: var(--cG3); background: var(--c2);
+                        &:hover { color: white; background: var(--c1); }
                     }
                 }
             }
@@ -340,26 +359,29 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
         .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
             .address { width: calc(100% - 20px); height: 40px; padding: 0 10px; margin-top: 20px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; background-color: var(--background);
                 .container { width: 100%; display: flex; align-items: center;
-                    .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+                    .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                     input { width: 100%; height: 100%; margin-left: 5px; border-radius: 10px; background-color: var(--background); font-size: var(--fS) !important; }
                 }
-                a { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--cG3); }
+                a { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--cG3);
+                    &:hover { color: var(--c1); }}
             }
             .note { width: calc(100% - 20px); min-height: 40px; padding: 10px; margin-top: 20px; border-radius: 10px; display: flex; background-color: var(--background);
-                div { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+                div { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                 textarea { width: 100%; height: 100%; margin-left: 5px; background-color: var(--background); font-size: var(--fS) !important; }
             }
-            .submit { width: 100%; height: 40px; margin-top: 20px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important; }
+            .submit { width: 100%; height: 40px; margin-top: 20px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important; background: var(--c1);
+                &:hover { background: var(--c1); }}
         }
     }
     &#popVerify {
         .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
             .container { width: calc(100% - 20px); height: 40px; padding: 0 10px; margin-top: 20px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; background-color: var(--background);
-                .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+                .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                 input { width: 100%; height: 100%; margin-left: 5px; border-radius: 10px; background-color: var(--background); font-size: var(--fS) !important; }
             }
-            .button { width: 100%; height: 40px; margin-top: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important;
-                &.secondary { color: var(--cG3); }
+            .button { width: 100%; height: 40px; margin-top: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important; background: var(--c1);
+                &:hover { background: var(--c1); }
+                &.secondary { color: var(--cG3); background: var(--c2); }
                 &.disabled { filter: grayscale(100%); pointer-events: none; }
             }
         }
@@ -367,13 +389,14 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
     &#popProfile {
         .modal-content { width: 300px; height: 300px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
             .container { width: calc(100% - 20px); height: 40px; padding: 0 5px 0 10px; margin-top: 20px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between; background-color: var(--background);
-                .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+                .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                 input { width: 100%; height: 100%; margin-left: 5px; border-radius: 99px; background-color: var(--background); font-size: var(--fS) !important; }
             }
             .area { width: calc(100% - 40px); bottom: 20px; position: absolute; display: flex; }
-            .button { width: 100%; height: 40px; margin-top: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important;
+            .button { width: 100%; height: 40px; margin-top: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important; background: var(--c1);
+                &:hover { background: var(--c1); }
                 &.small { width: fit-content; height: fit-content; padding: 5px 10px; margin: 0; border-radius: 99px; white-space: nowrap; font-size: var(--fS) !important; }
-                &.secondary { color: var(--cG3); }
+                &.secondary { color: var(--cG3); background: var(--c2); }
                 &.disabled { filter: grayscale(100%); pointer-events: none; }
                 &.submit { margin-left: 10px; }
             }
@@ -408,7 +431,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                     &:hover .count { background-color: white !important; }
                     .left { display: flex; align-items: center;
                         .area { display: flex; align-items: center;
-                            .icon { min-width: 20px; min-height: 20px; display: flex; align-items: center; justify-content: center; }
+                            .icon { min-width: 20px; min-height: 20px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                             .count { width: 30px; height: 30px; border-radius: 10px; display: flex; justify-content: center; text-align: center; color: var(--cG1); background-color: var(--background); font-size: var(--fS) !important; }
                         }
                         .detail { margin-left: 10px; }
@@ -436,7 +459,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                         .main { width: 100%; display: flex; align-items: center; justify-content: space-between;
                             .right { display: flex; align-items: center; height: 20px;
                                 .number { padding: 5px 0; margin: 0 5px; border-radius: 99px; display: flex; align-items: center; background-color: white;
-                                    .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;
+                                    .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--c1);
                                         &:hover { color: var(--cG1); }
                                     }
                                     span { margin: 0; }
@@ -445,24 +468,26 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                                     @media @screen-mobile { width: 40px; }
                                 }
                                 span { margin: 0 5px; }
-                                a { margin: 0 5px;
+                                a { margin: 0 5px; color: var(--c1);
                                     &:hover { color: var(--cG1); }
                                 }
                             }
                         }
                         /* Hide the browser's default radio button */
                         input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0;
+                            /* When the radio button is checked, add a blue background */
+                            &:checked ~ .checkmark { background-color: var(--c1); }
                             /* Show the indicator (dot/circle) when checked */
                             &:checked ~ .checkmark:after { display: block; }
                         }
                     }
-                    .checkmark.radio { position: absolute; top: 10px; left: 10px; height: 15px; width: 15px; background-color: white; border-radius: 50%;
+                    .checkmark.radio { position: absolute; top: 10px; left: 10px; height: 15px; width: 15px; background-color: white; border-radius: 50%; border: 2px solid var(--c1);
                         /* Create the indicator (the dot/circle - hidden when not checked) */
                         &:after { content: ""; position: absolute; display: none; }
                         /* Style the indicator (dot/circle) */
                         &:after { top: 5px; left: 5px; width: 5px; height: 5px; border-radius: 50%; background: white; }
                     }
-                    .checkmark.checkbox { position: absolute; top: 10px; left: 10px; height: 15px; width: 15px; border-radius: 4px; background-color: white;
+                    .checkmark.checkbox { position: absolute; top: 10px; left: 10px; height: 15px; width: 15px; border-radius: 4px; background-color: white; border: solid 2px var(--c1);
                         /* Create the checkmark/indicator (hidden when not checked) */
                         &:after { content: ""; position: absolute; display: none; }
                         /* Style the checkmark/indicator */
@@ -470,12 +495,13 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                     }
                 }
                 .note { width: calc(100% - 20px); min-height: 40px; padding: 10px; border-radius: 5px; display: flex; background-color: var(--background);
-                    div { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+                    div { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                     textarea { width: 100%; height: 100%; margin-left: 5px; background-color: var(--background); font-size: var(--fS) !important; }
                 }
                 .empty { width: calc(100% - 20px); min-height: 10vh; display: flex; align-items: center; justify-content: center; color: var(--cG3); font-size: var(--fM) !important; }
             }
-            .submit { width: calc(100% - 40px); min-height: 40px; margin-top: 20px; padding: 0 20px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between; color: white; font-size: var(--fM) !important;
+            .submit { width: calc(100% - 40px); min-height: 40px; margin-top: 20px; padding: 0 20px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between; color: white; font-size: var(--fM) !important; background: var(--c1);
+                &:hover { background: var(--c1); }
                 .price { display: flex; align-items: center;
                     img { width: unset; height: 20px; margin: 0; }
                     span { margin: 0 2px; }
@@ -496,8 +522,8 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                 @media @screen-mobile { width: 100%; height: unset; max-height: 100%; display: flex; flex-direction: column; overflow-y: auto; }
                 .top { width: calc(100% - 20px); height: calc(100% - 70px); padding: 10px; border-radius: 15px; display: flex; flex-direction: column; background: white; overflow-y: auto;
                     .title { margin-bottom: 5px; display: flex; flex-direction: column; color: var(--cG1); font-size: var(--fL) !important;
-                        .remark { width: fit-content; height: 25px; padding: 2.5px 5px; margin-top: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center;
-                            span { white-space: nowrap; font-size: var(--fS) !important; }
+                        .remark { width: fit-content; height: 25px; padding: 2.5px 5px; margin-top: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center; background: var(--c2);
+                            span { white-space: nowrap; font-size: var(--fS) !important; color: var(--c1); }
                         }
                     }
                     .header { margin-bottom: 5px; color: var(--cG1); font-size: var(--fM) !important; }
@@ -524,13 +550,13 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                             .main { width: 100%; display: flex; align-items: center; justify-content: space-between;
                                 .right { display: flex; align-items: center; height: 20px;
                                     .number { padding: 5px 0; margin: 0 5px; border-radius: 99px; display: flex; align-items: center; background-color: var(--background);
-                                        .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;
+                                        .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--c1);
                                             &:hover { color: var(--cG1); }
                                         }
                                         span { margin: 0; }
                                     }
                                     span { margin: 0 5px; }
-                                    a { margin: 0 5px;
+                                    a { margin: 0 5px; color: var(--c1);
                                         &:hover { color: var(--cG1); }
                                     }
                                     .price { width: 60px; color: var(--cG1); text-align: end; font-size: var(--fS) !important;
@@ -542,17 +568,19 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                             .text { height: 20px; display: flex; align-items: center; }
                             /* Hide the browser's default radio button */
                             input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0;
+                                /* When the radio button is checked, add a blue background */
+                                &:checked ~ .checkmark { background-color: var(--c1); }
                                 /* Show the indicator (dot/circle) when checked */
                                 &:checked ~ .checkmark:after { display: block; }
                             }
                         }
-                        .checkmark.radio { position: absolute; top: 10px; left: 10px; height: 15px; width: 15px; background-color: white; border-radius: 50%;
+                        .checkmark.radio { position: absolute; top: 10px; left: 10px; height: 15px; width: 15px; background-color: white; border-radius: 50%; border: 2px solid var(--c1);
                             /* Create the indicator (the dot/circle - hidden when not checked) */
                             &:after { content: ""; position: absolute; display: none; }
                             /* Style the indicator (dot/circle) */
                             &:after { top: 5px; left: 5px; width: 5px; height: 5px; border-radius: 50%; background: white; }
                         }
-                        .checkmark.checkbox { position: absolute; top: 10px; left: 10px; height: 15px; width: 15px; border-radius: 4px; background-color: white;
+                        .checkmark.checkbox { position: absolute; top: 10px; left: 10px; height: 15px; width: 15px; border-radius: 4px; background-color: white; border: solid 2px var(--c1);
                             /* Create the checkmark/indicator (hidden when not checked) */
                             &:after { content: ""; position: absolute; display: none; }
                             /* Style the checkmark/indicator */
@@ -560,16 +588,17 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                         }
                     }
                     .note { width: calc(100% - 20px); min-height: 40px; padding: 10px; border-radius: 10px; display: flex; background-color: var(--background);
-                        div { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+                        div { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                         textarea { width: 100%; height: 100%; margin-left: 5px; background-color: var(--background); font-size: var(--fS) !important; }
                     }
                 }
                 .buttom { height: 40px; margin-top: 10px; display: flex; align-items: center;
-                    .icon { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;
+                    .icon { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; color: var(--c1);
                         &:hover { color: var(--cG1); }
                     }
                     input { width: 40px; height: 40px; border-radius: 10px; margin: 0 10px; text-align: center; font-size: var(--fM) !important; }
-                    .submit { width: 100%; height: 100%; margin-left: 10px; padding: 0 10px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between; color: white; font-size: var(--fM) !important;
+                    .submit { width: 100%; height: 100%; margin-left: 10px; padding: 0 10px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between; color: white; font-size: var(--fM) !important; background: var(--c1);
+                        &:hover { background: var(--c1); }
                         .price { display: flex; align-items: center;
                             img { width: unset; height: 20px; margin: 0; }
                             span { margin: 0 2px; }
@@ -602,6 +631,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
         .prev:hover, .next:hover { background-color: var(--background); color: var(--cG1); }
         .dots { width: 100%; display: flex; justify-content: center; position: absolute; bottom: 10px;
             .dot { height: 10px; width: 10px; margin: 0 5px; background-color: white; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
+            .active { background-color: var(--c1); }
         }
     }
     #info { width: 100%; margin: 20px 0; display: flex; align-items: center; justify-content: space-between;
@@ -611,26 +641,30 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             @media @screen-mobile { justify-content: space-between; }
             #text { display: flex; flex-direction: column;
                 .title { color: var(--cG1); font-size: var(--fL) !important; }
-                .content { font-size: var(--fS) !important; }
+                .content { font-size: var(--fS) !important; color: var(--c1); }
             }
             #buttons { display: flex;
-                .icon { min-width: 30px; min-height: 30px; margin-left: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; }
+                .icon { min-width: 30px; min-height: 30px; margin-left: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; background: var(--c1);
+                    &:hover { background: var(--c1); }}
             }
         }
         #buttonSetting { width: 65%; border-radius: 99px; border: 2px solid white; display: flex; align-items: center; justify-content: space-between; background-color: white; color: var(--cG1);
             @media @screen-tablet { width: 100%; margin-top: 20px; }
             @media @screen-mobile { flex-direction: column; flex-direction: column; }
+            &:hover { border: 2px solid var(--c2); }
             &.error { border: 2px solid var(--red); color: var(--red);
                 i { color: var(--red); }
                 span { color: var(--red); }
             }
             .container { width: 100%; height: 40px; display: flex; align-items: center;
                 &:not(#mode) { @media @screen-mobile { padding-left: 20px; } }
-                .icon { min-width: 20px; min-height: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center; }
+                .icon { min-width: 20px; min-height: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                 span { white-space: nowrap; overflow: hidden;  text-overflow: ellipsis; font-size: var(--fS) !important; }
             }
             #mode { justify-content: space-between;
-                .mode { width: 33%; display: flex; align-items: center; justify-content: center; }
+                .mode { width: 33%; display: flex; align-items: center; justify-content: center;
+                    &.active { background-color: var(--c1); }
+                    &:hover:not(.active) { background-color: var(--c2); } }
                 .grayed { color: var(--cG4);
                     .icon { color: var(--cG4); }
                 }
@@ -651,11 +685,13 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
         #address { width: calc(30% + 4px); height: 26px; padding: 5px 10px; border: 2px solid white; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; background-color: white;
             @media @screen-tablet { width: calc(100% - 24px); }
             .left { width: 100%; display: flex; align-items: center;
-                .icon { min-width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+                .icon { min-width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                 input { width: 100%; height: 100%; margin-left: 5px; border-radius: 10px; background-color: white; font-size: var(--fS) !important; }
             }
-            #location { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--cG3); }
-            #confirm { width: 60px; height: 30px; margin-left: 10px; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fS) !important; }
+            #location { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--cG3);
+                &:hover { color: var(--c1); }}
+            #confirm { width: 60px; height: 30px; margin-left: 10px; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fS) !important; background: var(--c1);
+                &:hover { background: var(--c1); }}
         }
         .error { border: 2px solid var(--red) !important; }
     }
@@ -665,8 +701,9 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             .store { width: calc(25% - 24px); margin: 10px; border: 2px solid transparent; border-radius: 10px; display: flex; flex-direction: column; background: white;
                 @media @screen-tablet { width: calc(33% - 24px); }
                 @media @screen-mobile { width: calc(100% - 24px); }
+                &:hover { border: 2px solid var(--c2); }
                 .image { width: 100%; height: 150px; position: relative;
-                    .discount { left: 1px; top: 15px; padding: 5px 10px; border-radius: 0 5px 5px 0; position: absolute; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fS) !important; box-shadow: #shadows[close-s]; }
+                    .discount { left: 1px; top: 15px; padding: 5px 10px; border-radius: 0 5px 5px 0; position: absolute; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fS) !important; box-shadow: #shadows[close-s]; background-color: var(--c1); }
                     .close { width: 100%; height: 100%; border-radius: 7.5px 7.5px 0 0; position: absolute; display: flex; align-items: center; justify-content: center; color: white; background: rgba(#000, 0.5); font-size: var(--fM) !important; }
                     img { width: 100%; height: 150px; border-radius: 7.5px 7.5px 0 0; object-fit: cover; }
                 }
@@ -682,7 +719,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                     }
                     .detail { margin-top: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--cG3); font-size: var(--fS) !important; }
                     .type { margin-top: 5px; display: flex; justify-content: center;
-                        div { width: calc(33% - 10px); margin: 5px; border: 1px solid var(--cG6); border-radius: 5px; display: flex; justify-content: center; color: var(--cG6); font-size: var(--fS) !important; }
+                        div { width: calc(33% - 10px); margin: 5px; border: 1px solid var(--cG6); border-radius: 5px; display: flex; justify-content: center; color: var(--cG6); font-size: var(--fS) !important; color: var(--c1); }
                         .off { color: var(--cG6); }
                     }
                     .payment { width: 100%; margin-top: 5px; display: flex; flex-wrap: wrap;
@@ -724,7 +761,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
 #main { min-height: calc(100vh - 200px); width: calc(100% - 160px); padding: 80px 80px 0;
     @media @screen-tablet { width: calc(100% - 100px); padding: 80px 50px 0; }
     @media @screen-mobile { width: calc(100% - 50px); padding: 80px 25px 0; }
-    .noticeBanner { width: 100%; height: 40px; display: flex; align-items: center; justify-content: center;
+    .noticeBanner { width: 100%; height: 40px; display: flex; align-items: center; justify-content: center; background-color: var(--c1);
         @media @screen-mobile { margin-left: -25px; width: calc(100% + 50px); }
         span { font-size: 16px; color: white; }}
     #banner { width: 100%; position: relative;
@@ -744,6 +781,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
         .prev:hover, .next:hover { background-color: var(--background); color: var(--cG1); }
         .dots { width: 100%; display: flex; justify-content: center; position: absolute; bottom: 10px;
             .dot { height: 10px; width: 10px; margin: 0 5px; background-color: white; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
+            .active { background-color: var(--c1); }
         }
     }
     #info { width: 100%; margin: 20px 0; display: flex; align-items: center; justify-content: space-between;
@@ -753,22 +791,24 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             @media @screen-mobile { justify-content: space-between; }
             #text { display: flex; flex-direction: column;
                 .title { color: var(--cG1); font-size: var(--fL) !important; }
-                .content { font-size: var(--fS) !important; }
+                .content { font-size: var(--fS) !important; color: var(--c1); }
             }
             #buttons { display: flex;
-                .icon { min-width: 30px; min-height: 30px; margin-left: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; }
+                .icon { min-width: 30px; min-height: 30px; margin-left: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; background: var(--c1);
+                    &:hover { background: var(--c1); }}
             }
         }
         #buttonSetting { width: 65%; border-radius: 20px; border: 2px solid white; display: flex; align-items: center; justify-content: space-between; background-color: white; color: var(--cG1);
             @media @screen-tablet { width: 100%; margin-top: 20px; }
             @media @screen-mobile { flex-direction: column; flex-direction: column; }
+            &:hover { border: 2px solid var(--c2); }
             &.error { border: 2px solid var(--red); color: var(--red);
                 i { color: var(--red); }
                 span { color: var(--red); }
             }
             .container { width: 100%; height: 40px; display: flex; align-items: center;
                 @media @screen-mobile { width: calc(100% - 40px); padding: 0 20px; }
-                .icon { min-width: 20px; min-height: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center; }
+                .icon { min-width: 20px; min-height: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                 span { white-space: nowrap; overflow: hidden;  text-overflow: ellipsis; font-size: var(--fS) !important; }
             }
             #mode { justify-content: space-between;
@@ -789,26 +829,30 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
         @media @screen-mobile { padding: 5px 25px; margin-left: -25px; }
         &::-webkit-scrollbar { -webkit-appearance: none; }
         &::-webkit-scrollbar:horizontal { height: 2px; }
-        &::-webkit-scrollbar-thumb { border-radius: 10px; }
+        &::-webkit-scrollbar-thumb { border-radius: 10px; background: var(--c1); }
         a { padding: 10px; margin-right: 10px; border-radius: 99px; color: var(--cG1); font-size: var(--fS) !important;
             span { white-space: nowrap; }
+            @media (hover: hover) and (pointer: fine) {
+                &:hover:not(.active) { color: var(--c1); background: var(--c2); }}
         }
-        .active span { color: white;
-            &:hover { color: white; }
-        }
+        .active { background: var(--c1);
+            span { color: white;
+                &:hover { color: white; }}}
     }
     .mainContainer { width: 100%; margin: 20px 0;
         #search { width: 100%; height: 40px; padding: 0 5px; margin-bottom: 20px; border-bottom: 2px solid var(--cG5); display: flex; align-items: center; box-sizing: border-box;
-            input { width: 100%; height: 100%; padding: 0; margin-left: 5px; background-color: var(--background); font-size: var(--fS) !important; }}
+            input { width: 100%; height: 100%; padding: 0; margin-left: 5px; background-color: var(--background); font-size: var(--fS) !important; }
+            i { color: var(--c1); }}
         .title { color: var(--cG1); font-size: var(--fM) !important; }
         .items { width: calc(100% + 20px); margin-left: -10px; display: flex; flex-wrap: wrap;
             .item { width: calc(33% - 44px); padding: 10px; margin: 10px; border: 2px solid white; border-radius: 20px; display: flex; justify-content: space-between; background: white;
                 @media @screen-tablet { width: calc(50% - 44px); }
                 @media @screen-mobile { width: calc(100% - 44px); }
+                &:hover { border: 2px solid var(--c2); }
                 .info { width: calc(100% - 130px); display: flex; flex-direction: column; justify-content: space-between;
                     &.sold > * > * { color: var(--cG4) !important; filter: grayscale(100%); }
                     .title { display: flex; flex-direction: column; color: var(--cG1); font-size: var(--fM) !important;
-                        .remark { width: fit-content; height: 20px; padding: 2.5px 5px; margin-top: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center;
+                        .remark { width: fit-content; height: 20px; padding: 2.5px 5px; margin-top: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: var(--c1); background: var(--c2);
                             &.sold { color: var(--cG4) !important; background: var(--cG6) !important; }
                             span { white-space: nowrap; font-size: var(--fS) !important; }
                         }
@@ -866,7 +910,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             @media @screen-tablet { width: calc(100% - 70px); margin: 10px 0; }
             &.desktop { @media @screen-mobile { display: none; } }
             .title { color: var(--cG1); font-size: var(--fL) !important; }
-            .icon { min-width: 30px; height: 30px; margin-right: 2px; display: flex; align-items: center; justify-content: center; }
+            .icon { min-width: 30px; height: 30px; margin-right: 2px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
             .col { margin-top: 10px; display: flex; align-items: center;
                 .text { display: flex; flex-direction: column; }
             }
@@ -912,7 +956,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                     &.left { margin-right: 10px; }
                     select { width: 100%; height: 40px; border: 0; padding: 5px 10px; margin: 0; border-radius: 99px; color: var(--cG1); background-color: var(--background); font-size: var(--fS) !important;
                         @media @screen-tablet { background-color: white; }}
-                    .arrow { width: 20px; height: 100%; top: 0; right: 5px; position: absolute; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+                    .arrow { width: 20px; height: 100%; top: 0; right: 5px; position: absolute; display: flex; align-items: center; justify-content: center; pointer-events: none; color: var(--c1); }
                 }
                 .switch { width: 100%; height: 40px; margin-top: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: space-around; background-color: var(--background);
                     @media @screen-tablet { background-color: white; }
@@ -929,16 +973,19 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                     }
                     /* The container */
                     .container { display: block; position: relative; padding: 5px 15px 5px 45px; border-radius: 99px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: var(--fS) !important;
+                        &:hover { background: var(--c2); }
                         .text { width: fit-content; height: 20px; display: flex; align-items: center; white-space: nowrap; }
                     }
                     /* Hide the browser's default radio button */
                     .container input { position: absolute; opacity: 0; cursor: pointer; }
                     /* Create a custom radio button */
-                    .checkmark { position: absolute; top: 5px; left: 20px; height: 15px; width: 15px; background-color: white; border-radius: 50%; }
+                    .checkmark { position: absolute; top: 5px; left: 20px; height: 15px; width: 15px; background-color: white; border-radius: 50%; border: 2px solid var(--c1); }
                     /* On mouse-over, add a grey background color */
                     .container:hover input ~ .checkmark { background-color: var(--background); }
                     /* Create the indicator (the dot/circle - hidden when not checked) */
                     .checkmark:after { content: ""; position: absolute; display: none; }
+                    /* When the radio button is checked, add a blue background */
+                    .container input:checked ~ .checkmark { background-color: var(--c1); }
                     /* Show the indicator (dot/circle) when checked */
                     .container input:checked ~ .checkmark:after { display: block; }
                     /* Style the indicator (dot/circle) */
@@ -964,18 +1011,20 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                     /* Hide the browser's default checkbox */
                     .container input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; }
                     /* Create a custom checkbox */
-                    .checkmark { position: absolute; top: 5px; left: 0; height: 15px; width: 15px; border-radius: 4px; background-color: white; }
+                    .checkmark { position: absolute; top: 5px; left: 0; height: 15px; width: 15px; border-radius: 4px; background-color: white; border: solid 2px var(--c1); }
                     /* On mouse-over, add a grey background color */
                     .container:hover input ~ .checkmark { background-color: var(--background); }
                     /* Create the checkmark/indicator (hidden when not checked) */
                     .checkmark:after { content: ""; position: absolute; display: none; }
+                    /* When the checkbox is checked, add a blue background */
+                    .container input:checked ~ .checkmark { background-color: var(--c1); }
                     /* Show the checkmark when checked */
                     .container input:checked ~ .checkmark:after { display: block; }
                     /* Style the checkmark/indicator */
                     .container .checkmark:after { left: 4.5px; top: 2px; width: 3px; height: 6px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
                 }
                 .item { margin-top: 10px; display: flex; align-items: center;
-                    .icon { width: 30px; height: 30px; margin-right: 10px; display: flex; align-items: center; justify-content: center; }
+                    .icon { width: 30px; height: 30px; margin-right: 10px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
                     .input { width: calc(100% - 20px); height: 40px; padding: 0 10px; border-radius: 99px; display: flex; flex-direction: column; justify-content: center; background-color: var(--background);
                         @media @screen-tablet { background-color: white; }
                         span { margin: 0 0 0 5px; color: var(--red); font-size: 10px; }
@@ -989,14 +1038,16 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             @media @screen-tablet { padding-bottom: 90px; }
             .policy { margin-bottom: 10px; font-size: 10px;
                 span { color: var(--cG3); }
-                a:hover { color: var(--cG1); }
+                a { color: var(--c1);
+                    &:hover { color: var(--cG1); }}
             }
-            #submit { height: 50px; padding: 0 20px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between;
+            #submit { height: 50px; padding: 0 20px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between; background: var(--c1);
                 @media @screen-tablet { width: 100%; height: 70px; padding: 15px; border-radius: 0; left: 0; bottom: 0; position: fixed; z-index: 3; box-sizing: border-box; background: rgba(255, 255, 255, 0.75) !important; box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); }
+                &:hover { background: var(--c1); }
                 span { color: white; font-size: var(--fM) !important; }
-                > span { width: 100%; height: 100%; border-radius: 99px 0 0 99px; line-height: 50px;
+                > span { width: 100%; height: 100%; border-radius: 99px 0 0 99px; line-height: 50px; background: var(--c1);
                     @media @screen-tablet { padding-left: 20px; line-height: 40px; }}
-                .price { height: 100%; padding-right: 10px; margin-left: -5px; border-radius: 0 99px 99px 0; display: flex; align-items: center; justify-content: flex-end;
+                .price { height: 100%; padding-right: 10px; margin-left: -5px; border-radius: 0 99px 99px 0; display: flex; align-items: center; justify-content: flex-end; background: var(--c1);
                     img { width: unset; height: 20px; margin: 0; }
                     span { margin: 0 2px; }
                 }
@@ -1031,10 +1082,10 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
         #top { width: 100%; display: flex; flex-direction: column; align-items: center;
             #logo { max-height: 60px; margin-bottom: 20px; }
             #info { width: 100%; padding: 20px 0 0; margin: 20px 0; border-radius: 20px; display: flex; flex-direction: column; align-items: center; background-color: white;
-                #number { width: fit-content; min-width: 60px; height: 60px; padding: 0 10px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background-color: white; font-size: 36px; box-sizing: border-box; }
-                i { border-radius: 99px; background-color: white; animation: spark 1s linear infinite; }
+                #number { width: fit-content; min-width: 60px; height: 60px; padding: 0 10px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background-color: white; font-size: 36px; box-sizing: border-box; border: solid 3px var(--c1); color: var(--c1); }
+                i { border-radius: 99px; background-color: white; animation: spark 1s linear infinite; color: var(--c1); }
                 @keyframes spark { 0% { opacity: 1; } 25% { opacity: 1; } 50% { opacity: 0; }100% { opacity: 1; }}
-                #time { font-size: var(--fXL); text-align: center; }
+                #time { font-size: var(--fXL); text-align: center; color: var(--c1); }
                 .header { margin-bottom: 20px; color: var(--cG1); font-size: var(--fM) !important; }
                 .content { margin-bottom: 20px; color: var(--red); font-size: var(--fL) !important; font-weight: bold; text-align: center; }
                 img { width: 80%; }
@@ -1045,17 +1096,19 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                     .progressBar { width: 95%; height: 5px; border-radius: 5px; background-color: var(--background); box-shadow: #shadows[close-l];
                         @media @screen-mobile { background-color: white; }
                     }
-                    .done { width: 100%; height: 5px; border-radius: 5px; animation: none !important; }
-                    .now { animation: progress 1s ease-in-out infinite; height: 5px; border-radius: 5px; }
+                    .done { width: 100%; height: 5px; border-radius: 5px; animation: none !important; background-color: var(--c1); }
+                    .now { animation: progress 1s ease-in-out infinite; height: 5px; border-radius: 5px; background-color: var(--c1); }
                     .cancel { width: 100%; height: 5px; border-radius: 5px; background-color: var(--red); }
                 }
                 .wait { color: var(--cG4); }
                 .cancel { color: var(--red); }
+                .done { color: var(--c1) !important; }
+                .now { color: var(--c1) !important; }
             }
         }
         #restaurant { width: 100%; display: flex; flex-direction: column;
             .header { margin-top: 10px; color: var(--cG1); font-size: var(--fM) !important; }
-            .icon { min-width: 30px; height: 30px; margin-right: 2px; display: flex; align-items: center; justify-content: center; }
+            .icon { min-width: 30px; height: 30px; margin-right: 2px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
             .col { margin-top: 10px; display: flex; align-items: center; }
             .content { color: var(--cG3); font-size: var(--fS) !important; }
         }
@@ -1065,7 +1118,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
         .container { width: calc(70% - 30px); padding: 15px; margin: 20px 0; border-radius: 20px; display: flex; flex-direction: column; background-color: white;
             @media @screen-tablet { width: calc(100% - 70px); margin: 10px 0; }
             .title { color: var(--cG1); font-size: var(--fM) !important; }
-            .icon { min-width: 30px; height: 30px; margin-right: 2px; display: flex; align-items: center; justify-content: center; }
+            .icon { min-width: 30px; height: 30px; margin-right: 2px; display: flex; align-items: center; justify-content: center; color: var(--c1); }
             .col { margin-top: 10px; display: flex; align-items: center;
                 &.top { align-items: flex-start; }
                 &.point { 
@@ -1101,7 +1154,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             }
             .addon { margin-top: 10px; padding-bottom: 10px; border-bottom: solid 1px var(--cG4); display: flex; flex-direction: column; align-items: center; }
             .subTotal { padding-bottom: 10px; border-bottom: solid 1px var(--cG4); }
-            #submit { width: 100%; height: 50px; margin-top: 20px; padding: 0 20px; border-radius: 99px; display: flex; align-items: center; justify-content: center; box-sizing: border-box;
+            #submit { width: 100%; height: 50px; margin-top: 20px; padding: 0 20px; border-radius: 99px; display: flex; align-items: center; justify-content: center; box-sizing: border-box; background-color: var(--c1);
                 span { color: white; font-size: var(--fM) !important; }}
             #submit.disabled{ filter: grayscale(100%); pointer-events: none; }
         }
@@ -1133,7 +1186,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             img { width: unset; height: 50px; margin-right: 10px; object-fit: cover;
                 @media @screen-tablet { height: 30px; }
             }
-            span { font-size: var(--fM) !important;
+            span { font-size: var(--fM) !important; color: var(--c1);
                 @media @screen-tablet { font-size: var(--fS) !important; }
             }
         }
@@ -1175,7 +1228,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                     @media @screen-tablet { width: 30px; min-height: 30px; }
                 }
             }
-            hr { height: 90px; margin: 0 10px;
+            hr { height: 90px; margin: 0 10px; border: 0.5px solid var(--c1);
                 @media @screen-tablet { height: 30px; margin: 0; }
             }
         }
@@ -1185,10 +1238,11 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             .button { width: fit-content; padding: 10px 20px; border-radius: 99px; box-shadow: #shadows[far]; text-align: center; white-space: nowrap; font-size: var(--fS) !important;
                 @media @screen-tablet { width: 40px; padding: 10px; white-space: normal; }
                 @media @screen-mobile { width: fit-content; padding: 5px 10px; border-radius: 99px; white-space: nowrap; }
-                &.payment { color: white; }
+                &.payment { color: white; background: var(--c1);
+                    &:hover { background: var(--c1); }}
                 &.again { color: var(--cG1); background: white;
                     @media @screen-mobile { background: var(--background); }
-                    &:hover { color: white; }
+                    &:hover { color: white; background: var(--c1); }
                 }
             }
         }
