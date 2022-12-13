@@ -3317,7 +3317,7 @@ button span {
   margin: 20px 0 20px -80px;
   position: -webkit-sticky;
   position: sticky;
-  top: 75px;
+  top: 55px;
   display: flex;
   align-items: center;
   background: var(--background);
