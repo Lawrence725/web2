@@ -411,8 +411,9 @@ button span {
   height: 18px;
 }
 #header #headerRight #buttonCart {
-  width: 70px;
-  height: 40px;
+  width: fit-content;
+  height: 32px;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
