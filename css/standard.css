@@ -761,7 +761,7 @@ select {
   justify-content: center;
   overflow-x: hidden;
   overflow-y: auto;
-  z-index: 3;
+  z-index: 4;
 }
 .modal:not(#popCart) {
   background-color: #000000;
@@ -3025,7 +3025,7 @@ select {
     display: flex;
     background: rgba(255, 255, 255, 0.9);
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 3;
   }
 }
 #main .buttonCart button {
@@ -3920,6 +3920,7 @@ select {
 }
 #paymentMain #right #top .area .switch.v2 .container {
   width: 100%;
+  min-height: 40px;
   padding: 10px 15px 10px 40px;
   border-radius: 20px;
   background-color: var(--background);
@@ -4023,9 +4024,13 @@ select {
 }
 #paymentMain #right #top .area .checkbox {
   height: 40px;
-  margin-top: 10px;
+  margin: 10px 0 25px;
+  padding: 0 15px;
+  border-radius: 99px;
+  gap: 10px;
   display: flex;
   align-items: center;
+  background-color: var(--background);
   /* Customize the label (the container) */
   /* Hide the browser's default checkbox */
   /* Create a custom checkbox */
@@ -4035,6 +4040,11 @@ select {
   /* Show the checkmark when checked */
   /* Style the checkmark/indicator */
 }
+@media (max-width: 1199px) {
+  #paymentMain #right #top .area .checkbox {
+    background-color: white;
+  }
+}
 #paymentMain #right #top .area .checkbox.disabled {
   pointer-events: none;
 }
@@ -4042,14 +4052,15 @@ select {
   padding-left: 0;
 }
 #paymentMain #right #top .area .checkbox .input {
-  width: calc(100% - 20px);
   height: 40px;
-  padding: 0 10px;
+  margin-left: auto;
   border-radius: 99px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   justify-content: center;
   background-color: var(--background);
+  box-sizing: border-box;
 }
 @media (max-width: 1199px) {
   #paymentMain #right #top .area .checkbox .input {
@@ -4068,13 +4079,15 @@ select {
   border: 0;
   background-color: transparent;
   font-size: var(--fS) !important;
+  direction: rtl;
 }
 #paymentMain #right #top .area .checkbox .container {
   height: 30px;
+  gap: 2px;
   display: flex;
   align-items: center;
   position: relative;
-  padding-left: 30px;
+  padding-left: 25px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4082,15 +4095,17 @@ select {
   user-select: none;
   font-size: var(--fS) !important;
 }
+#paymentMain #right #top .area .checkbox .container > div:first-child {
+  order: 1;
+}
 #paymentMain #right #top .area .checkbox .container img {
   width: unset;
-  height: 26px;
-  margin-right: 2px;
+  height: 20px;
+  order: 0;
 }
 #paymentMain #right #top .area .checkbox .container .text {
   width: fit-content;
-  height: 20px;
-  margin-right: 10px;
+  order: 3;
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -4099,17 +4114,22 @@ select {
 }
 #paymentMain #right #top .area .checkbox .container .subText {
   width: fit-content;
-  margin-right: 20px;
+  left: 0px;
+  bottom: -25px;
+  position: absolute;
   display: flex;
   align-items: center;
   white-space: nowrap;
   color: var(--cG3);
-  font-size: 14px;
+  font-size: var(--fXS);
 }
 #paymentMain #right #top .area .checkbox .container .subText img {
   width: unset;
-  height: 15px;
+  height: 14px;
   margin-right: 1px;
+}
+#paymentMain #right #top .area .checkbox .container .subText span {
+  color: var(--red);
 }
 #paymentMain #right #top .area .checkbox .container input {
   position: absolute;
