@@ -4070,10 +4070,11 @@ select {
 }
 #paymentMain #right #top .area .checkbox .input span {
   right: 0;
-  bottom: -20px;
+  top: 45px;
   position: absolute;
   color: var(--red);
   font-size: var(--fXS);
+  text-align: right;
 }
 #paymentMain #right #top .area .checkbox .input input {
   width: 100%;
