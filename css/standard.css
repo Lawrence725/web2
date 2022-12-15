@@ -4055,6 +4055,7 @@ select {
   height: 40px;
   margin-left: auto;
   border-radius: 99px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -4068,9 +4069,11 @@ select {
   }
 }
 #paymentMain #right #top .area .checkbox .input span {
-  margin: 0 0 0 5px;
+  right: 0;
+  bottom: -20px;
+  position: absolute;
   color: var(--red);
-  font-size: 10px;
+  font-size: var(--fXS);
 }
 #paymentMain #right #top .area .checkbox .input input {
   width: 100%;
@@ -4080,6 +4083,9 @@ select {
   background-color: transparent;
   font-size: var(--fS) !important;
   direction: rtl;
+}
+#paymentMain #right #top .area .checkbox .input input::placeholder {
+  color: var(--cG4);
 }
 #paymentMain #right #top .area .checkbox .container {
   height: 30px;
@@ -4117,6 +4123,7 @@ select {
   left: 0px;
   bottom: -25px;
   position: absolute;
+  gap: 10px;
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -4126,7 +4133,7 @@ select {
 #paymentMain #right #top .area .checkbox .container .subText img {
   width: unset;
   height: 14px;
-  margin-right: 1px;
+  margin-right: -8px;
 }
 #paymentMain #right #top .area .checkbox .container .subText span {
   color: var(--red);

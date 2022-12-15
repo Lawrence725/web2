@@ -50,12 +50,17 @@ function popPoint() {
 // Profile Popup
 var popProfile = document.getElementById("popProfile");
 var buttonProfile = document.getElementById("profile");
+var profile = document.getElementsByClassName("main")[0];
+var dropdown = document.getElementsByClassName("dropdown")[0];
 var close = popProfile.getElementsByClassName("close")[0];
 var cancel = popProfile.getElementsByClassName("cancel")[0];
 var submit = popProfile.getElementsByClassName("submit")[0];
-buttonProfile.onclick = function() {
-    popProfile.style.display = "flex";
+profile.onclick = function() {
+    dropdown.style.display = "block";
 }
+// buttonProfile.onclick = function() {
+//     popProfile.style.display = "flex";
+// }
 close.onclick = function() {
     popProfile.style.display = "none";
 }
