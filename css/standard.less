@@ -121,9 +121,9 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                 // &:hover .dropdown { display: block; }
                 // &:active .dropdown { display: block; }
             }
-            .main { padding: 25px 30px 25px 0; gap: 5px; display: flex; align-items: center; white-space: nowrap;
-                @media @screen-tablet { padding-right: 20px; }
-                @media @screen-tablet { padding-right: 10px; }
+            .main { padding: 25px 30px 25px 0; gap: 5px; display: flex; align-items: center; white-space: nowrap; pointer-events: none;
+                @media @screen-tablet { padding-right: 10px; pointer-events: initial; }
+                @media @screen-mobile { padding-right: 0; }
                 &:hover span { color: var(--c1); }
                 &:hover i { background: var(--c2); }
                 img { width: 30px; height: 30px; border-radius: 999px; object-fit: cover; }
