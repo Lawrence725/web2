@@ -47,17 +47,18 @@ function popPoint() {
     document.getElementById("popPoint").style.display = "flex";
     document.body.style.overflow = "hidden"; }
 
+// Profile Dropdown
+var profile = document.getElementsByClassName("main")[0];
+var dropdown = document.getElementsByClassName("dropdown")[0];
+profile.onclick = function() {
+    dropdown.style.display = "block"; }
+
 // Profile Popup
 var popProfile = document.getElementById("popProfile");
 var buttonProfile = document.getElementById("profile");
-var profile = document.getElementsByClassName("main")[0];
-var dropdown = document.getElementsByClassName("dropdown")[0];
 var close = popProfile.getElementsByClassName("close")[0];
 var cancel = popProfile.getElementsByClassName("cancel")[0];
 var submit = popProfile.getElementsByClassName("submit")[0];
-profile.onclick = function() {
-    dropdown.style.display = "block";
-}
 // buttonProfile.onclick = function() {
 //     popProfile.style.display = "flex";
 // }
@@ -127,4 +128,5 @@ window.onclick = function(event) {
 }
 window.onscroll = function (event) {  
     popCart.style.display = "none";
+    dropdown.style.display = "none";
 } 

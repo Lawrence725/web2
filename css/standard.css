@@ -306,12 +306,6 @@ select {
   display: inline-block;
 }
 @media (max-width: 1199px) {
-  #header #headerRight #profile:hover .dropdown {
-    display: block;
-  }
-  #header #headerRight #profile:active .dropdown {
-    display: block;
-  }
 }
 #header #headerRight #profile .main {
   padding: 25px 30px 25px 0;
