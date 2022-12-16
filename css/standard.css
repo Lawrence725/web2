@@ -4052,6 +4052,9 @@ select {
 #paymentMain #right #top .area .checkbox.disabled .container {
   padding-left: 0;
 }
+#paymentMain #right #top .area .checkbox span.inputBox {
+  width: fit-content;
+}
 #paymentMain #right #top .area .checkbox .input {
   height: 40px;
   margin-left: auto;
