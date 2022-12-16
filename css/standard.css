@@ -4024,12 +4024,13 @@ select {
 }
 #paymentMain #right #top .area .checkbox {
   height: 40px;
-  margin: 10px 0 25px;
+  margin: 10px 0 35px;
   padding: 0 15px;
   border-radius: 99px;
   gap: 10px;
   display: flex;
   align-items: center;
+  position: relative;
   background-color: var(--background);
   /* Customize the label (the container) */
   /* Hide the browser's default checkbox */
@@ -4075,18 +4076,31 @@ select {
   color: var(--red);
   font-size: var(--fXS);
   text-align: right;
+  white-space: nowrap;
 }
 #paymentMain #right #top .area .checkbox .input input {
-  width: 100%;
+  width: 80px;
   margin: 0 0 0 5px;
   padding: 0;
   border: 0;
   background-color: transparent;
   font-size: var(--fS) !important;
-  direction: rtl;
+  text-align: right;
 }
 #paymentMain #right #top .area .checkbox .input input::placeholder {
   color: var(--cG4);
+}
+#paymentMain #right #top .area .checkbox div.info {
+  padding-left: 15px;
+  left: 0;
+  top: 60px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+#paymentMain #right #top .area .checkbox div.info span {
+  font-size: var(--fXS);
+  color: var(--cG3);
 }
 #paymentMain #right #top .area .checkbox .container {
   height: 30px;
@@ -4115,7 +4129,6 @@ select {
   order: 3;
   display: flex;
   align-items: center;
-  white-space: nowrap;
   color: var(--cG1);
   font-size: var(--fS) !important;
 }
@@ -4135,9 +4148,6 @@ select {
   width: unset;
   height: 14px;
   margin-right: -8px;
-}
-#paymentMain #right #top .area .checkbox .container .subText span {
-  color: var(--red);
 }
 #paymentMain #right #top .area .checkbox .container input {
   position: absolute;

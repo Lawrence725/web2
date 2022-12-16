@@ -1006,25 +1006,27 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                     .container .checkmark:after { top: 5px; left: 5px; width: 5px; height: 5px; border-radius: 50%; background: white; }
                 }
                 .message { display: flex; justify-content: center; margin-left: 3px; color: var(--red); font-size: 10px; }
-                .checkbox { height: 40px; margin: 10px 0 25px; padding: 0 15px; border-radius: 99px; gap: 10px; display: flex; align-items: center; background-color: var(--background);
+                .checkbox { height: 40px; margin: 10px 0 35px; padding: 0 15px; border-radius: 99px; gap: 10px; display: flex; align-items: center; position: relative; background-color: var(--background);
                     @media @screen-tablet { background-color: white; }
                     &.disabled { pointer-events: none;
                         .container { padding-left: 0; }
                     }
                     .input { height: 40px; margin-left: auto; border-radius: 99px; position: relative; display: flex; flex-direction: column; align-items: flex-end; justify-content: center; background-color: var(--background); box-sizing: border-box;
                         @media @screen-tablet { background-color: white; }
-                        span { right: 0; top: 45px; position: absolute; color: var(--red); font-size: var(--fXS); text-align: right; }
-                        input { width: 100%; margin: 0 0 0 5px; padding: 0; border: 0; background-color: transparent; font-size: var(--fS) !important; direction: rtl;
+                        span { right: 0; top: 45px; position: absolute; color: var(--red); font-size: var(--fXS); text-align: right; white-space: nowrap; }
+                        input { width: 80px; margin: 0 0 0 5px; padding: 0; border: 0; background-color: transparent; font-size: var(--fS) !important; text-align: right;
                             &::placeholder { color: var(--cG4); }}
+                    }
+                    div.info { padding-left: 15px; left: 0; top: 60px; position: absolute; display: flex; flex-direction: column;
+                        span { font-size: var(--fXS); color: var(--cG3); }
                     }
                     /* Customize the label (the container) */
                     .container { height: 30px; gap: 2px; display: flex; align-items: center; position: relative; padding-left: 25px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: var(--fS) !important;
                         > div:first-child { order: 1; }
                         img { width: unset; height: 20px; order: 0; }
-                        .text { width: fit-content; order: 3; display: flex; align-items: center; white-space: nowrap; color: var(--cG1); font-size: var(--fS) !important; }
+                        .text { width: fit-content; order: 3; display: flex; align-items: center; color: var(--cG1); font-size: var(--fS) !important; }
                         .subText { width: fit-content; left: 0px; bottom: -25px; position: absolute; gap: 10px; display: flex; align-items: center; white-space: nowrap; color: var(--cG3); font-size: var(--fXS);
-                            img { width: unset; height: 14px; margin-right: -8px; }
-                            span { color: var(--red); }}
+                            img { width: unset; height: 14px; margin-right: -8px; }}
                     }
                     /* Hide the browser's default checkbox */
                     .container input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; }
