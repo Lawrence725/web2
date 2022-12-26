@@ -808,6 +808,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             #text { display: flex; flex-direction: column;
                 .title { color: var(--cG1); font-size: var(--fL) !important; }
                 .content { font-size: var(--fS) !important; color: var(--c1); }
+                .remark { font-size: var(--fXS); color: var(--cG3); }
             }
             #buttons { display: flex;
                 .icon { min-width: 30px; min-height: 30px; margin-left: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; background: var(--c1);
@@ -1063,12 +1064,13 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                     &:hover { color: var(--cG1); }}
             }
             #submit { height: 50px; padding: 0 20px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between; background: var(--c1);
-                @media @screen-tablet { width: 100%; height: 70px; padding: 15px; border-radius: 0; left: 0; bottom: 0; position: fixed; z-index: 3; box-sizing: border-box; background: rgba(255, 255, 255, 0.75) !important; box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); }
+                @media @screen-tablet { width: 100%; height: 70px; padding: 15px; border-radius: 0; left: 0; bottom: 0; position: fixed; z-index: 3; box-sizing: border-box; background: transparent !important; }
                 &:hover { background: var(--c1); }
                 span { color: white; font-size: var(--fM) !important; }
                 > span { width: 100%; height: 100%; border-radius: 99px 0 0 99px; line-height: 50px; background: var(--c1);
-                    @media @screen-tablet { padding-left: 20px; line-height: 40px; }}
+                    @media @screen-tablet { padding-left: 20px; line-height: 40px; box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); }}
                 .price { height: 100%; padding-right: 10px; margin-left: -5px; border-radius: 0 99px 99px 0; display: flex; align-items: center; justify-content: flex-end; background: var(--c1);
+                    @media @screen-tablet { box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1); }
                     img { width: unset; height: 20px; margin: 0; }
                     span { margin: 0 2px; }
                 }
