@@ -77,7 +77,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
     div { width: 60px; min-height: 60px; border: 5px solid var(--cG4); border-top: 5px solid var(--c1); border-radius: 50%; -webkit-animation: spin 1s linear infinite; animation: spin 1s linear infinite; }}
 
 // Header
-#header { width: 100%; height: 60px; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; position: fixed; background-color: white; z-index: 1; box-shadow: #shadows[far]; box-sizing: border-box;
+#header { width: 100%; height: 60px; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; position: fixed; background-color: white; z-index: 3; box-shadow: #shadows[far]; box-sizing: border-box;
     @media @screen-tablet { padding: 0 50px; }
     @media @screen-mobile { padding: 0 20px; z-index: 3; }
     #headerLeft { display: flex; align-items: center; justify-content: flex-start;
@@ -101,6 +101,20 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
     }
     #headerRight { display: flex; align-items: center; justify-content: flex-end;
         @media @screen-mobile { gap: 10px; }
+        a.type { gap: 5px; display: flex; align-items: center;
+            @media @screen-mobile { max-width: 200px; }
+            div.left { display: flex; flex-direction: column; align-items: flex-end;
+                div.top { display: flex; align-items: center; }
+                > span { color: var(--cG3); }
+                span { font-size: var(--fXS); 
+                    &.title { font-size: var(--fS); white-space: nowrap; }
+                    &:not(.title) { text-align: right; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
+                    &.error { color: var(--red); }}}
+            div.right { min-width: 70px; min-height: 70px; margin-bottom: -10px; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: white;
+                div.icon { min-width: 53px; min-height: 53px; border: 3px solid var(--c1); border-radius: 99px; display: flex; align-items: center; justify-content: center;
+                    i, svg { color: var(--c1); }
+                    &.error { border-color: var(--red);
+                        i, svg { color: var(--red); }}}}}
         .menu { margin-right: 30px; color: var(--cG1); white-space: nowrap; font-size: var(--fM) !important; position: relative;
             @media @screen-tablet { margin-right: 20px; }
             @media @screen-tablet { display: none; }
@@ -780,6 +794,26 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
     .noticeBanner { width: 100%; height: 30px; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: var(--c1);
         // @media @screen-mobile { margin-left: -25px; width: calc(100% + 50px); }
         span { font-size: var(--fXS); color: white; }}
+    a.login { width: 100%; height: 50px; max-width: 500px; margin: 0 auto; padding: 2px 2px 2px 15px; gap: 10px; border-radius: 99px; display: flex; align-items: center; background-color: var(--c1); box-sizing: border-box;
+        > i, svg { color: white; }
+        div.right { width: 100%; height: 100%; padding: 0 15px; border-radius: 99px; gap: 10px; display: flex; align-items: center; background-color: white;
+            span.title { font-size: var(--fM); white-space: nowrap; }
+            span:not(.title) { width: 100%; text-align: right; font-size: var(--fS); color: var(--c1); display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
+            i, svg { color: var(--c1); }}}
+    div.account { width: 100%; max-width: 500px; margin: 0 auto; padding: 2px; border-radius: 20px; gap: 5px; display: flex; align-items: center; background-color: var(--c1); box-sizing: border-box;
+        @media @screen-mobile { flex-direction: column; }
+        span { font-size: var(--fS); }
+        div.top { margin: 0 10px; gap: 5px; display: flex; align-items: center; justify-content: center;
+            > * { color: white; }
+            span { white-space: nowrap; }}
+        div.bottom { width: 100%; border-radius: 19px; display: flex; align-items: center; background-color: white;
+            a { width: 100%; height: 60px; border-radius: 19px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+                span { color: var(--cG3); }
+                img { height: 16px; }
+                &:nth-child(1) { i, svg { color: #F5B7A6; }}
+                &:nth-child(2) { i, svg { color: #FFD965; }}
+                &:nth-child(3) { i, svg { color: #C5E0B3; }}
+                &:nth-child(4) { i, svg { color: #BDD7EE; }}}}}
     #banner { width: 100%; position: relative;
         // @media @screen-mobile { margin-left: -25px; width: calc(100% + 50px); }
         .mySlides { height: 100%; min-height: 150px; max-height: 80vh; display: none;
@@ -847,7 +881,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
         &::-webkit-scrollbar { -webkit-appearance: none; }
         &::-webkit-scrollbar:horizontal { height: 0px; }
         // &::-webkit-scrollbar-thumb { border-radius: 10px; background: var(--c1); }
-        a { padding: 5px 10px; margin-right: 10px; border: 1.5px solid var(--cG5); border-radius: 99px; color: var(--cG1); font-size: var(--fS) !important;
+        a { padding: 5px 10px; margin: 5px 10px 5px 0; border: 1.5px solid var(--cG5); border-radius: 99px; color: var(--cG1); font-size: var(--fS) !important;
             span { color: var(--cG3) !important; white-space: nowrap; }}
             // @media (hover: hover) and (pointer: fine) {
             //     &:hover:not(.active) { color: var(--c1); background: var(--c2); }}

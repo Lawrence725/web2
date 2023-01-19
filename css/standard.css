@@ -155,7 +155,7 @@ select {
   justify-content: space-between;
   position: fixed;
   background-color: white;
-  z-index: 1;
+  z-index: 3;
   box-shadow: 0px 50px 100px rgba(55, 84, 170, 0.1);
   box-sizing: border-box;
 }
@@ -243,6 +243,76 @@ select {
   #header #headerRight {
     gap: 10px;
   }
+}
+#header #headerRight a.type {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  #header #headerRight a.type {
+    max-width: 200px;
+  }
+}
+#header #headerRight a.type div.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#header #headerRight a.type div.left div.top {
+  display: flex;
+  align-items: center;
+}
+#header #headerRight a.type div.left > span {
+  color: var(--cG3);
+}
+#header #headerRight a.type div.left span {
+  font-size: var(--fXS);
+}
+#header #headerRight a.type div.left span.title {
+  font-size: var(--fS);
+  white-space: nowrap;
+}
+#header #headerRight a.type div.left span:not(.title) {
+  text-align: right;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#header #headerRight a.type div.left span.error {
+  color: var(--red);
+}
+#header #headerRight a.type div.right {
+  min-width: 70px;
+  min-height: 70px;
+  margin-bottom: -10px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+#header #headerRight a.type div.right div.icon {
+  min-width: 53px;
+  min-height: 53px;
+  border: 3px solid var(--c1);
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header #headerRight a.type div.right div.icon i,
+#header #headerRight a.type div.right div.icon svg {
+  color: var(--c1);
+}
+#header #headerRight a.type div.right div.icon.error {
+  border-color: var(--red);
+}
+#header #headerRight a.type div.right div.icon.error i,
+#header #headerRight a.type div.right div.icon.error svg {
+  color: var(--red);
 }
 #header #headerRight .menu {
   margin-right: 30px;
@@ -3070,6 +3140,123 @@ select {
   font-size: var(--fXS);
   color: white;
 }
+#main a.login {
+  width: 100%;
+  height: 50px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2px 2px 2px 15px;
+  gap: 10px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  background-color: var(--c1);
+  box-sizing: border-box;
+}
+#main a.login > i,
+#main a.login svg {
+  color: white;
+}
+#main a.login div.right {
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  border-radius: 99px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+#main a.login div.right span.title {
+  font-size: var(--fM);
+  white-space: nowrap;
+}
+#main a.login div.right span:not(.title) {
+  width: 100%;
+  text-align: right;
+  font-size: var(--fS);
+  color: var(--c1);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#main a.login div.right i,
+#main a.login div.right svg {
+  color: var(--c1);
+}
+#main div.account {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2px;
+  border-radius: 20px;
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  background-color: var(--c1);
+  box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  #main div.account {
+    flex-direction: column;
+  }
+}
+#main div.account span {
+  font-size: var(--fS);
+}
+#main div.account div.top {
+  margin: 0 10px;
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main div.account div.top > * {
+  color: white;
+}
+#main div.account div.top span {
+  white-space: nowrap;
+}
+#main div.account div.bottom {
+  width: 100%;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+#main div.account div.bottom a {
+  width: 100%;
+  height: 60px;
+  border-radius: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#main div.account div.bottom a span {
+  color: var(--cG3);
+}
+#main div.account div.bottom a img {
+  height: 16px;
+}
+#main div.account div.bottom a:nth-child(1) i,
+#main div.account div.bottom a:nth-child(1) svg {
+  color: #F5B7A6;
+}
+#main div.account div.bottom a:nth-child(2) i,
+#main div.account div.bottom a:nth-child(2) svg {
+  color: #FFD965;
+}
+#main div.account div.bottom a:nth-child(3) i,
+#main div.account div.bottom a:nth-child(3) svg {
+  color: #C5E0B3;
+}
+#main div.account div.bottom a:nth-child(4) i,
+#main div.account div.bottom a:nth-child(4) svg {
+  color: #BDD7EE;
+}
 #main #banner {
   width: 100%;
   position: relative;
@@ -3331,7 +3518,7 @@ select {
 }
 #main #category a {
   padding: 5px 10px;
-  margin-right: 10px;
+  margin: 5px 10px 5px 0;
   border: 1.5px solid var(--cG5);
   border-radius: 99px;
   color: var(--cG1);

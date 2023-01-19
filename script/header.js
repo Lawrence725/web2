@@ -42,6 +42,21 @@ function popClose(e) {
     document.getElementById(e).style.display = "none";
     document.body.style.overflow = "scroll"; }
 
+// Setting Popup
+var popSetting = document.getElementById("popSetting");
+var buttonSetting = document.getElementById("buttonSetting");
+var close = popSetting.getElementsByClassName("close")[0];
+var submit = popSetting.getElementsByClassName("submit")[0];
+buttonSetting.onclick = function() {
+    popSetting.style.display = "flex";
+}
+close.onclick = function() {
+    popSetting.style.display = "none";
+}
+submit.onclick = function() {
+    popSetting.style.display = "none";
+}
+
 // Popup (Point)
 function popPoint() {
     document.getElementById("popPoint").style.display = "flex";
