@@ -58,34 +58,34 @@ submit.onclick = function() {
 }
 
 // Popup (Point)
-function popPoint() {
-    document.getElementById("popPoint").style.display = "flex";
-    document.body.style.overflow = "hidden"; }
+// function popPoint() {
+//     document.getElementById("popPoint").style.display = "flex";
+//     document.body.style.overflow = "hidden"; }
 
 // Profile Dropdown
-var profile = document.getElementsByClassName("main")[0];
-var dropdown = document.getElementsByClassName("dropdown")[0];
-profile.onclick = function() {
-    dropdown.style.display = "block"; }
+// var profile = document.getElementsByClassName("main")[0];
+// var dropdown = document.getElementsByClassName("dropdown")[0];
+// profile.onclick = function() {
+//     dropdown.style.display = "block"; }
 
 // Profile Popup
-var popProfile = document.getElementById("popProfile");
-var buttonProfile = document.getElementById("profile");
-var close = popProfile.getElementsByClassName("close")[0];
-var cancel = popProfile.getElementsByClassName("cancel")[0];
-var submit = popProfile.getElementsByClassName("submit")[0];
+// var popProfile = document.getElementById("popProfile");
+// var buttonProfile = document.getElementById("profile");
+// var close = popProfile.getElementsByClassName("close")[0];
+// var cancel = popProfile.getElementsByClassName("cancel")[0];
+// var submit = popProfile.getElementsByClassName("submit")[0];
 // buttonProfile.onclick = function() {
 //     popProfile.style.display = "flex";
 // }
-close.onclick = function() {
-    popProfile.style.display = "none";
-}
-cancel.onclick = function() {
-    popProfile.style.display = "none";
-}
-submit.onclick = function() {
-    popProfile.style.display = "none";
-}
+// close.onclick = function() {
+//     popProfile.style.display = "none";
+// }
+// cancel.onclick = function() {
+//     popProfile.style.display = "none";
+// }
+// submit.onclick = function() {
+//     popProfile.style.display = "none";
+// }
 
 // Item Popup
 var popItem = document.getElementById("popItem");
@@ -109,13 +109,13 @@ window.onload = function() {
 
 // Cart Popup
 var popCart = document.getElementById("popCart");
-var buttonCart = document.getElementById("buttonCart");
+// var buttonCart = document.getElementById("buttonCart");
 var buttonCart2 = document.getElementsByClassName("buttonCart")[0];
 var close = popCart.getElementsByClassName("close")[0];
 var submit = popCart.getElementsByClassName("submit")[0];
-buttonCart.onclick = function() {
-    popCart.style.display = "flex";
-}
+// buttonCart.onclick = function() {
+//     popCart.style.display = "flex";
+// }
 buttonCart2.onclick = function() {
     popCart.style.display = "flex";
 }
@@ -131,10 +131,10 @@ window.onclick = function(event) {
     // if (event.target == popVerify) {
     //     popVerify.style.display = "none";
     // }
-    if (event.target == popProfile) {
-        popProfile.style.display = "none";
-    }
-    else if (event.target == popItem) {
+    // if (event.target == popProfile) {
+    //     popProfile.style.display = "none";
+    // }
+    if (event.target == popItem) {
         popItem.style.display = "none";
     }
     else if (event.target == popCart) {
@@ -143,5 +143,5 @@ window.onclick = function(event) {
 }
 window.onscroll = function (event) {  
     popCart.style.display = "none";
-    dropdown.style.display = "none";
+    // dropdown.style.display = "none";
 } 

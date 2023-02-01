@@ -75,6 +75,10 @@ textarea:focus { box-shadow: none !important; outline: none; }
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; }
 .spinner { top: 0; left: 0; width: 100vw; height: 100vh; position: fixed; display: flex; align-items: center; justify-content: center; background: radial-gradient(200px 200px at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); z-index: 4; /* background-color: rgba(0,0,0,0.5); */
     div { width: 60px; min-height: 60px; border: 5px solid var(--cG4); border-top: 5px solid var(--c1); border-radius: 50%; -webkit-animation: spin 1s linear infinite; animation: spin 1s linear infinite; }}
+.buttonCart { width: 100vw; padding: 15px 20px; left: 0; bottom: 0; position: fixed; display: flex; justify-content: center; box-sizing: border-box; z-index: 3; pointer-events: none;
+    button { width: 100%; height: 40px; padding: 0 15px; max-width: 500px; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: var(--c1); box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); pointer-events: all;
+        span { color: white !important; font-size: var(--fM); white-space: nowrap; text-align: left;
+            &:first-child { width: 100%; }}}}
 
 // Header
 #header { width: 100%; height: 60px; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; position: fixed; background-color: white; z-index: 3; box-shadow: #shadows[far]; box-sizing: border-box;
@@ -166,8 +170,8 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
 }
 
 // Footer
-#footer { width: 100%; height: fit-content; min-height: 80px; padding: 0 80px; border-radius: 20px 20px 0 0; display: flex; align-items: center; color: white; background: var(--cG1); box-sizing: border-box;
-    @media @screen-tablet { padding: 0 50px; }
+#footer { width: 100%; height: fit-content; min-height: 80px; padding: 20px 80px 90px; border-radius: 20px 20px 0 0; display: flex; align-items: center; color: white; background: var(--cG1); box-sizing: border-box;
+    @media @screen-tablet { padding: 20px 50px 90px; }
     @media @screen-mobile { padding: 20px 20px 90px; flex-direction: column; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
     #left { width: 100%;
         @media @screen-mobile { width: calc(100% - 150px); display: flex; justify-content: center; }
@@ -782,15 +786,6 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
 #main { min-height: calc(100vh - 200px); width: 100%; padding: 80px 80px 20px; gap: 20px; display: flex; flex-direction: column; box-sizing: border-box;
     @media @screen-tablet { padding: 80px 50px 20px; }
     @media @screen-mobile { padding: 80px 20px 20px; }
-    .buttonCart { display: none;
-        @media @screen-mobile { width: 100vw; padding: 15px 20px; left: 0; bottom: 0; position: fixed; display: flex; box-sizing: border-box; z-index: 3; }
-        button { width: 100%; height: 40px; border-radius: 99px; display: flex; align-items: center; justify-content: center; gap: 5px; background-color: var(--c1); box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
-            span { color: white !important; font-size: var(--fM); }}
-        button { padding: 0 15px; gap: 0;
-            span { white-space: nowrap; text-align: left;
-                &:first-child { width: 100%; }}
-        }
-    }
     .noticeBanner { width: 100%; height: 30px; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: var(--c1);
         // @media @screen-mobile { margin-left: -25px; width: calc(100% + 50px); }
         span { font-size: var(--fXS); color: white; }}

@@ -65,19 +65,19 @@ close.onclick = function() {
 // }
 
 // Setting Popup
-var popSetting = document.getElementById("popSetting");
-var buttonSetting = document.getElementById("buttonSetting");
-var close = popSetting.getElementsByClassName("close")[0];
-var submit = popSetting.getElementsByClassName("submit")[0];
-buttonSetting.onclick = function() {
-    popSetting.style.display = "flex";
-}
-close.onclick = function() {
-    popSetting.style.display = "none";
-}
-submit.onclick = function() {
-    popSetting.style.display = "none";
-}
+// var popSetting = document.getElementById("popSetting");
+// var buttonSetting = document.getElementById("buttonSetting");
+// var close = popSetting.getElementsByClassName("close")[0];
+// var submit = popSetting.getElementsByClassName("submit")[0];
+// buttonSetting.onclick = function() {
+//     popSetting.style.display = "flex";
+// }
+// close.onclick = function() {
+//     popSetting.style.display = "none";
+// }
+// submit.onclick = function() {
+//     popSetting.style.display = "none";
+// }
 
 // Time Popup
 // var popTime = document.getElementById("popTime");
@@ -124,9 +124,9 @@ window.onclick = function(event) {
     // else if (event.target == popDelivery) {
     //     popDelivery.style.display = "none";
     // }
-    else if (event.target == popSetting) {
-        popSetting.style.display = "none";
-    }
+    // else if (event.target == popSetting) {
+    //     popSetting.style.display = "none";
+    // }
     // else if (event.target == popTime) {
     //     popTime.style.display = "none";
     // }
