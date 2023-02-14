@@ -570,7 +570,7 @@ select {
   margin-right: 10px;
 }
 #footer #left a:-webkit-any-link {
-  color: white;
+  color: var(--cG1);
 }
 #footer #left a:-webkit-any-link:hover {
   color: var(--c1);
