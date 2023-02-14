@@ -36,7 +36,7 @@
   --cG5: #E0E0E0;
   --cG6: #F2F2F2;
   --red: #EB5757;
-  --bg: #F5F6FA;
+  --cBg: #F2F1F6;
 }
 html {
   --fXL: clamp(1.6rem, 7vw, 1.7rem);
@@ -93,7 +93,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: 'Noto Sans TC';
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 a {
   text-decoration: none !important;
@@ -256,7 +256,7 @@ select {
   margin: 0 10px;
   display: flex;
   align-items: center;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 @media (max-width: 767px) {
   #header #headerCenter #search {
@@ -272,7 +272,7 @@ select {
   padding: 0;
   margin-left: 5px;
   border-radius: 99px;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   font-size: var(--fS) !important;
 }
 #header #headerRight {
@@ -536,12 +536,11 @@ select {
   width: 100%;
   height: fit-content;
   min-height: 80px;
-  padding: 20px 80px 90px;
-  border-radius: 20px 20px 0 0;
+  padding: 25px;
   display: flex;
   align-items: center;
-  color: white;
-  background: var(--cG1);
+  color: var(--cG1);
+  background: white;
   box-sizing: border-box;
 }
 @media (max-width: 1199px) {
@@ -552,20 +551,19 @@ select {
 @media (max-width: 767px) {
   #footer {
     padding: 20px 20px 90px;
-    flex-direction: column;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
   }
 }
 #footer #left {
-  width: 100%;
+  width: fit-content;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 @media (max-width: 767px) {
   #footer #left {
-    width: calc(100% - 150px);
-    display: flex;
-    justify-content: center;
+    width: calc(100% - 170px);
+    margin: 0;
   }
 }
 #footer #left a {
@@ -581,17 +579,17 @@ select {
   color: var(--c1);
 }
 #footer #center {
-  width: 300px;
+  width: 200px;
   height: 40px;
   margin: 0 10px;
   border-radius: 99px;
   position: relative;
   display: flex;
   align-items: center;
-  background: var(--cG2);
+  background: var(--cBg);
+  box-sizing: border-box;
 }
 #footer #center:hover {
-  background: var(--cG3);
   cursor: pointer;
 }
 @media (max-width: 767px) {
@@ -605,7 +603,7 @@ select {
   height: 100%;
   padding-left: 10px;
   border: 0;
-  color: white;
+  color: var(--cG1);
   background: transparent;
   font-size: var(--fS) !important;
 }
@@ -632,7 +630,6 @@ select {
 @media (max-width: 767px) {
   #footer #right {
     width: 100%;
-    flex-direction: column;
     justify-content: space-between;
     gap: 10px;
   }
@@ -644,17 +641,22 @@ select {
 #footer #right .container a {
   margin-right: 10px;
   white-space: nowrap;
+  text-decoration: underline !important;
 }
 #footer #right .container a:-webkit-any-link {
-  color: white;
+  color: var(--cG1);
 }
 #footer #right .container span {
   margin-right: 10px;
+  color: var(--cG1);
   white-space: nowrap;
 }
 #footer #right .container img {
   width: 30px;
   height: 30px;
+}
+#footer #right .container #dot {
+  display: none;
 }
 @media (max-width: 767px) {
   #footer #right .container #dot {
@@ -861,7 +863,7 @@ select {
 .popup .popBody::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-color: var(--cG5);
-  border: 2.5px solid var(--bg);
+  border: 2.5px solid var(--cBg);
 }
 .modal {
   width: 100%;
@@ -1079,7 +1081,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 .modal#popSetting .modal-content #mode .mode {
   width: 100%;
@@ -1124,12 +1126,12 @@ select {
   width: calc(100% - 24px);
   height: 36px;
   padding: 0 10px;
-  border: 2px solid var(--bg);
+  border: 2px solid var(--cBg);
   border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 .modal#popSetting .modal-content .delivery .address .left {
   width: 100%;
@@ -1149,7 +1151,7 @@ select {
   height: 100%;
   margin-left: 5px;
   border-radius: 99px;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   font-size: var(--fS) !important;
 }
 .modal#popSetting .modal-content .delivery .address a {
@@ -1206,12 +1208,12 @@ select {
 .modal#popSetting .modal-content .time .left .select {
   width: calc(100% - 4px);
   height: 36px;
-  border: 2px solid var(--bg);
+  border: 2px solid var(--cBg);
   border-radius: 99px;
   position: relative;
   display: flex;
   align-items: center;
-  background: var(--bg);
+  background: var(--cBg);
 }
 .modal#popSetting .modal-content .time .left .select:hover {
   cursor: pointer;
@@ -1282,11 +1284,11 @@ select {
   height: 36px;
   padding: 0 10px;
   margin-top: 10px;
-  border: 2px solid var(--bg);
+  border: 2px solid var(--cBg);
   border-radius: 99px;
   display: flex;
   align-items: center;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   color: var(--c1);
 }
 .modal#popSetting .modal-content .chair .icon {
@@ -1302,7 +1304,7 @@ select {
   padding: 0;
   margin-left: 5px;
   border-radius: 99px;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   font-size: var(--fS) !important;
 }
 .modal#popSetting .modal-content .note {
@@ -1310,10 +1312,10 @@ select {
   min-height: 36px;
   padding: 10px;
   margin-top: 10px;
-  border: 2px solid var(--bg);
+  border: 2px solid var(--cBg);
   border-radius: 20px;
   display: flex;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 .modal#popSetting .modal-content .note div {
   width: 20px;
@@ -1327,7 +1329,7 @@ select {
   width: 100%;
   height: 100%;
   margin-left: 5px;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   font-size: var(--fS) !important;
 }
 .modal#popSetting .modal-content .submit {
@@ -1373,7 +1375,7 @@ select {
   position: relative;
   display: flex;
   align-items: center;
-  background: var(--bg);
+  background: var(--cBg);
 }
 .modal#popTime .modal-content .container .select:hover {
   cursor: pointer;
@@ -1446,7 +1448,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 .modal#popLocation .modal-content .address .container {
   width: 100%;
@@ -1466,7 +1468,7 @@ select {
   height: 100%;
   margin-left: 5px;
   border-radius: 10px;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   font-size: var(--fS) !important;
 }
 .modal#popLocation .modal-content .address a {
@@ -1487,7 +1489,7 @@ select {
   margin-top: 20px;
   border-radius: 10px;
   display: flex;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 .modal#popLocation .modal-content .note div {
   width: 20px;
@@ -1501,7 +1503,7 @@ select {
   width: 100%;
   height: 100%;
   margin-left: 5px;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   font-size: var(--fS) !important;
 }
 .modal#popLocation .modal-content .submit {
@@ -1538,7 +1540,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 .modal#popVerify .modal-content .container .icon {
   width: 20px;
@@ -1553,7 +1555,7 @@ select {
   height: 100%;
   margin-left: 5px;
   border-radius: 10px;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   font-size: var(--fS) !important;
 }
 .modal#popVerify .modal-content .button {
@@ -1599,7 +1601,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 .modal#popProfile .modal-content .container .icon {
   width: 20px;
@@ -1614,7 +1616,7 @@ select {
   height: 100%;
   margin-left: 5px;
   border-radius: 99px;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   font-size: var(--fS) !important;
 }
 .modal#popProfile .modal-content .area {
@@ -1725,7 +1727,7 @@ select {
   position: absolute;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.3);
 }
 @media (max-width: 767px) {
@@ -1765,7 +1767,7 @@ select {
   height: fit-content;
   padding: 10px 0;
   border-radius: 5px;
-  background: var(--bg);
+  background: var(--cBg);
 }
 .modal#popCart .modal-content .container .delivery ul {
   margin: 0;
@@ -1780,7 +1782,7 @@ select {
   cursor: pointer;
 }
 .modal#popCart .modal-content .container .item:hover {
-  background: var(--bg);
+  background: var(--cBg);
 }
 .modal#popCart .modal-content .container .item:hover .count {
   background-color: white !important;
@@ -1809,7 +1811,7 @@ select {
   justify-content: center;
   text-align: center;
   color: var(--cG1);
-  background-color: var(--bg);
+  background-color: var(--cBg);
   font-size: var(--fS) !important;
 }
 .modal#popCart .modal-content .container .item .left .detail {
@@ -1850,7 +1852,7 @@ select {
   border-radius: 10px;
   flex-direction: column;
   align-items: center;
-  background: var(--bg);
+  background: var(--cBg);
 }
 .modal#popCart .modal-content .container .addon .header {
   margin-bottom: 5px;
@@ -1878,7 +1880,7 @@ select {
   background-color: white;
 }
 .modal#popCart .modal-content .container .addon label:hover .number {
-  background-color: var(--bg) !important;
+  background-color: var(--cBg) !important;
 }
 .modal#popCart .modal-content .container .addon label.disabled {
   color: var(--cG4) !important;
@@ -2021,7 +2023,7 @@ select {
   padding: 10px;
   border-radius: 5px;
   display: flex;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 .modal#popCart .modal-content .container .note div {
   width: 20px;
@@ -2035,7 +2037,7 @@ select {
   width: 100%;
   height: 100%;
   margin-left: 5px;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   font-size: var(--fS) !important;
 }
 .modal#popCart .modal-content .container .empty {
@@ -2082,7 +2084,7 @@ select {
   border-radius: 20px;
   position: relative;
   display: flex;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 @media (max-width: 1199px) {
   .modal#popItem .modal-content {
@@ -2230,7 +2232,7 @@ select {
   /* Hide the browser's default radio button */
 }
 .modal#popItem .modal-content .container .top .area label:hover {
-  background: var(--bg);
+  background: var(--cBg);
 }
 .modal#popItem .modal-content .container .top .area label:hover input ~ .checkmark {
   background-color: white;
@@ -2271,7 +2273,7 @@ select {
   border-radius: 99px;
   display: flex;
   align-items: center;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 .modal#popItem .modal-content .container .top .area label .main .right .number .icon {
   width: 20px;
@@ -2314,7 +2316,7 @@ select {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 .modal#popItem .modal-content .container .top .area label .text {
   height: 20px;
@@ -2395,7 +2397,7 @@ select {
   padding: 10px;
   border-radius: 10px;
   display: flex;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 .modal#popItem .modal-content .container .top .note div {
   width: 20px;
@@ -2409,7 +2411,7 @@ select {
   width: 100%;
   height: 100%;
   margin-left: 5px;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   font-size: var(--fS) !important;
 }
 .modal#popItem .modal-content .container .buttom {
@@ -2553,7 +2555,7 @@ select {
 }
 #portalMain #banner .prev:hover,
 #portalMain #banner .next:hover {
-  background-color: var(--bg);
+  background-color: var(--cBg);
   color: var(--cG1);
 }
 #portalMain #banner .dots {
@@ -3304,7 +3306,7 @@ select {
 }
 #main #banner .prev:hover,
 #main #banner .next:hover {
-  background-color: var(--bg);
+  background-color: var(--cBg);
   color: var(--cG1);
 }
 #main #banner .dots {
@@ -3485,7 +3487,7 @@ select {
   top: 60px;
   display: flex;
   align-items: center;
-  background: var(--bg);
+  background: var(--cBg);
   overflow-x: auto;
   z-index: 2;
   box-sizing: border-box;
@@ -3544,7 +3546,7 @@ select {
   height: 100%;
   padding: 0;
   margin-left: 5px;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   font-size: var(--fS) !important;
 }
 #main .mainContainer #search input::placeholder {
@@ -3957,7 +3959,7 @@ select {
     width: 100%;
     height: fit-content;
     position: static;
-    background-color: var(--bg);
+    background-color: var(--cBg);
     box-shadow: none;
   }
 }
@@ -4021,7 +4023,7 @@ select {
   margin: 0;
   border-radius: 99px;
   color: var(--cG1);
-  background-color: var(--bg);
+  background-color: var(--cBg);
   font-size: var(--fS) !important;
 }
 @media (max-width: 1199px) {
@@ -4049,7 +4051,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   /* The container */
   /* Hide the browser's default radio button */
   /* Create a custom radio button */
@@ -4079,7 +4081,7 @@ select {
   min-height: 40px;
   padding: 10px 15px 10px 40px;
   border-radius: 20px;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   box-sizing: border-box;
 }
 @media (max-width: 1199px) {
@@ -4150,7 +4152,7 @@ select {
   border: 2px solid var(--c1);
 }
 #paymentMain #right #top .area .switch .container:hover input ~ .checkmark {
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 #paymentMain #right #top .area .switch .checkmark:after {
   content: "";
@@ -4187,7 +4189,7 @@ select {
   display: flex;
   align-items: center;
   position: relative;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   /* Customize the label (the container) */
   /* Hide the browser's default checkbox */
   /* Create a custom checkbox */
@@ -4220,7 +4222,7 @@ select {
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   box-sizing: border-box;
 }
 @media (max-width: 1199px) {
@@ -4326,7 +4328,7 @@ select {
   border: solid 2px var(--c1);
 }
 #paymentMain #right #top .area .checkbox .container:hover input ~ .checkmark {
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 #paymentMain #right #top .area .checkbox .checkmark:after {
   content: "";
@@ -4372,7 +4374,7 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--bg);
+  background-color: var(--cBg);
 }
 @media (max-width: 1199px) {
   #paymentMain #right #top .area .item .input {
@@ -4590,7 +4592,7 @@ select {
     height: fit-content;
     padding: 20px;
     position: static;
-    background-color: var(--bg);
+    background-color: var(--cBg);
     box-shadow: none;
   }
 }
@@ -4689,7 +4691,7 @@ select {
   width: 95%;
   height: 5px;
   border-radius: 5px;
-  background-color: var(--bg);
+  background-color: var(--cBg);
   box-shadow: 0px 20px 40px rgba(55, 84, 170, 0.2);
 }
 @media (max-width: 767px) {
@@ -5286,7 +5288,7 @@ select {
 }
 @media (max-width: 767px) {
   #listMain .item .right .button.again {
-    background: var(--bg);
+    background: var(--cBg);
   }
 }
 #listMain .item .right .button.again:hover {
