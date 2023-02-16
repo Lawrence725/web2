@@ -292,7 +292,7 @@ select {
 }
 @media (max-width: 767px) {
   #header #headerRight a.type {
-    max-width: 200px;
+    max-width: 250px;
   }
 }
 #header #headerRight a.type div.left {
