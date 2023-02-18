@@ -2319,7 +2319,7 @@ select {
   background-color: var(--cBg);
 }
 .modal#popItem .modal-content .container .top .area label .text {
-  height: 20px;
+  line-height: 20px;
   display: flex;
   align-items: center;
 }
