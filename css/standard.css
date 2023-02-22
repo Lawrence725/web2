@@ -2095,8 +2095,8 @@ select {
 @media (max-width: 767px) {
   .modal#popItem .modal-content {
     height: unset;
-    max-width: calc(100% - 40px);
-    max-height: calc(100% - 40px);
+    max-width: calc(100% - 60px);
+    max-height: calc(100% - 60px);
     flex-direction: column;
   }
 }
