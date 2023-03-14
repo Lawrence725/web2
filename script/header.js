@@ -126,6 +126,22 @@ submit.onclick = function() {
     popCart.style.display = "none";
 }
 
+// Cart Popup 揪團購物車
+var popCart2 = document.getElementById("popCartGroupbuying");
+var buttonCart3 = document.getElementById("buttonCartGroupbuying");
+var close = popCart2.getElementsByClassName("close")[0];
+var submit = popCart2.getElementsByClassName("submit")[0];
+
+buttonCart3.onclick = function() {
+    popCart2.style.display = "flex";
+}
+close.onclick = function() {
+    popCart2.style.display = "none";
+}
+submit.onclick = function() {
+    popCart2.style.display = "none";
+}
+
 // All Popup
 window.onclick = function(event) {
     // if (event.target == popVerify) {
@@ -140,8 +156,12 @@ window.onclick = function(event) {
     else if (event.target == popCart) {
         popCart.style.display = "none";
     }
+    else if (event.target == popCart2) {
+        popCart2.style.display = "none";
+    }
 }
 window.onscroll = function (event) {  
     popCart.style.display = "none";
+    popCart2.style.display = "none";
     // dropdown.style.display = "none";
 } 

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+        <meta name="format-detection" content="telephone=no">
+        <title>麥町吐司工房</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/standard.css">
+        <link rel="stylesheet" href="css/theme_default.css">
+        <!-- <link rel="stylesheet" href="css/theme_taoyuan.css"> -->
+        <!-- Awesome Icon -->
+        <link href="icon/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+        <!-- <script src="https://kit.fontawesome.com/bfebcca289.js" crossorigin="anonymous"></script> -->
+    </head>
+    <body>
+        <div id="orderMain">
+            <!-- 新版購物車按鈕 -->
+            <div class="bottombar bottombar--groupbuying">
+                <div class="bottombar__container">
+                    <button class="buttonCart">
+                        <span>Line Pay付款給團主</span>
+                        <span>$490</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Left -->
+            <div id="left">
+                <div id="top">
+                    <a href="index.html"><img id="logo" src="photo/logo.png"></a>
+
+                    <div class="groupbuying__title-image"><img src="photo/pop4.png"></div>
+                    
+                    <!-- 編號 -->
+                    <div id="info">
+                        <span id="number">9999</span>
+                        <i class="far fa-check-circle fa-3x"></i>
+                        <span class="header">取餐編號</span>
+                        <span class="content">請告知店家取餐標號取餐</span>
+                        <span id="time">10:00-10:15</span>
+                        <span class="header">預計送達時間</span>
+                    </div>
+                    <!-- 狀態 -->
+                    <div id="states">
+                        <div class="state done">
+                            <div><i class="fas fa-store fa-lg"></i></div>
+                            <span>店家確認</span>
+                            <div class="progressBar">
+                                <div class="done"></div>
+                            </div>
+                        </div>
+                        <div class="state now">
+                            <div><i class="fas fa-mitten fa-lg"></i></div>
+                            <span>準備餐點</span>
+                            <div class="progressBar">
+                                <div class="now"></div>
+                            </div>
+                        </div>
+                        <!-- <div class="state now">
+                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                            <span>司機取餐</span>
+                            <div class="progressBar">
+                                <div class="now"></div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="state cancel">
+                            <div><i class="fas fa-times-circle fa-lg"></i></div>
+                            <span>訂單取消</span>
+                            <div class="progressBar">
+                                <div class="cancel"></div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="state cancel">
+                            <div><i class="fas fa-times-circle fa-lg"></i></div>
+                            <span>司機取消物流</span>
+                            <div class="progressBar">
+                                <div class="cancel"></div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="state wait">
+                            <div><i class="fas fa-motorcycle fa-lg"></i></div>
+                            <span>餐點運送</span>
+                            <div class="progressBar">
+                                <div class=""></div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="state wait">
+                            <div><i class="fas fa-check-circle fa-lg"></i></div>
+                            <span>成功送達</span>
+                            <div class="progressBar">
+                                <div class=""></div>
+                            </div>
+                        </div> -->
+                        <div class="state wait">
+                            <div><i class="fas fa-check-circle fa-lg"></i></div>
+                            <span>已接單</span>
+                            <div class="progressBar">
+                                <div class=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loading loadLogo"></div>
+                    <div class="loading loadNo"></div>
+                    <div class="loading loadTime"></div>
+                    <div id="states">
+                        <div class="state">
+                            <div class="loading loadIcon"></div>
+                            <div class="loading loadBar"></div>
+                        </div>
+                        <div class="state">
+                            <div class="loading loadIcon"></div>
+                            <div class="loading loadBar"></div>
+                        </div>
+                        <div class="state">
+                            <div class="loading loadIcon"></div>
+                            <div class="loading loadBar"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 餐廳資訊 -->
+                <div id="restaurant">
+                    <span class="header">麥町吐司工房 新莊中原店</span>
+                    <div class="col">
+                        <div class="icon"><i class="fas fa-clock"></i></div>
+                        <span class="content">10:00 ~ 21:30</span>
+                    </div>
+                    <div class="col">
+                        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                        <a href="tel:0987654321" class="content">0987 654 321</a>
+                    </div>
+                    <div class="col">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=台北市大安區復興南路一段107巷29號" target="_blank" class="content">台北市大安區復興南路一段107巷29號</a>
+                    </div>
+                    <span class="header">客服資訊</span>
+                    <div class="col">
+                        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                        <a href="tel:+886-2-77515336" class="content">+886-2-77515336</a>
+                    </div>
+                    <div class="col">
+                        <div class="icon"><i class="fab fa-line"></i></div>
+                        <span class="content">Line ID: <a href="https://lin.ee/5cwTSpj" class="content">@dotdot888</a></span>
+                    </div>
+                    <div class="loading loadInfo"></div>
+                </div>
+            </div>
+            <!-- Right -->
+            <div id="right">
+                <!-- 訂單資訊 -->
+                <div class="container">
+                    <span class="title">訂單資訊</span>
+                    <div class="col top">
+                        <div class="row">
+                            <span class="header contentG">訂單編號</span>
+                            <span class="header contentG">取餐時間</span>
+                            <span class="header contentG">下單時間</span>
+                            <span class="header contentG">取餐方式</span>
+                            <span class="header contentG">外送地址</span>
+                            <span class="header contentG">訂單備註</span>
+                        </div>
+                        <div class="row">
+                            <span class="contentB">0004164706</span>
+                            <span class="contentB">2021-06-25 10:00-10:15</span>
+                            <span class="contentB">2021-06-25 9:00</span>
+                            <span class="contentB">外送</span>
+                            <span class="contentB">信義路一段1號</span>
+                            <span class="contentB">重媽在，上大其問同真告讓想地沒難講，斯生來本市議沒。不類備回夜書拿多，音之情等各實細民過下同受在，找地常的老酒年金久我往低許生。</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 餐點內容 -->
+                <div class="container">
+                    <span class="title">餐點內容</span>
+                    <div class="buyer-list">
+                        <div class="whos-order">您的餐點</div>
+                        <!-- 主要餐點 -->
+                        <div id="items">
+                            <!-- 餐點 -->
+                            <div class="item">
+                                <div class="left">
+                                    <div class="count"><span>1</span></div>
+                                    <div>
+                                        <span class="contentB">國王厚牛美式漢堡</span>
+                                        <div class="contentG">
+                                            <span>不加熱</span>
+                                            <span>・</span>
+                                            <span>蛋</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <!-- <img src="photo/item.png"> -->
+                                    <span class="contentB price">$245</span>
+                                </div>
+                            </div>
+                            <!-- 餐點 -->
+                            <div class="item">
+                                <div class="left">
+                                    <div class="count"><span>1</span></div>
+                                    <div>
+                                        <span class="contentB">國王厚牛美式漢堡</span>
+                                        <div class="contentG">
+                                            <span>不加熱</span>
+                                            <span>・</span>
+                                            <span>蛋</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <!-- <img src="photo/item.png"> -->
+                                    <span class="contentB price">$245</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buyer-list">
+                        <div class="whos-order">陳小明 (團主)</div>
+                        <!-- 主要餐點 -->
+                        <div id="items">
+                            <!-- 餐點 -->
+                            <div class="item">
+                                <div class="left">
+                                    <div class="count"><span>1</span></div>
+                                    <div>
+                                        <span class="contentB">國王厚牛美式漢堡</span>
+                                        <div class="contentG">
+                                            <span>不加熱</span>
+                                            <span>・</span>
+                                            <span>蛋</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <!-- <img src="photo/item.png"> -->
+                                    <span class="contentB price">$245</span>
+                                </div>
+                            </div>
+                            <!-- 餐點 -->
+                            <div class="item">
+                                <div class="left">
+                                    <div class="count"><span>1</span></div>
+                                    <div>
+                                        <span class="contentB">國王厚牛美式漢堡</span>
+                                        <div class="contentG">
+                                            <span>不加熱</span>
+                                            <span>・</span>
+                                            <span>蛋</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <!-- <img src="photo/item.png"> -->
+                                    <span class="contentB price">$245</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="buyer-list">
+                        <div class="whos-order">甲乙丙</div>
+                        <!-- 主要餐點 -->
+                        <div id="items">
+                            <!-- 餐點 -->
+                            <div class="item">
+                                <div class="left">
+                                    <div class="count"><span>1</span></div>
+                                    <div>
+                                        <span class="contentB">國王厚牛美式漢堡</span>
+                                        <div class="contentG">
+                                            <span>不加熱</span>
+                                            <span>・</span>
+                                            <span>蛋</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <!-- <img src="photo/item.png"> -->
+                                    <span class="contentB price">$245</span>
+                                </div>
+                            </div>
+                            <!-- 餐點 -->
+                            <div class="item">
+                                <div class="left">
+                                    <div class="count"><span>1</span></div>
+                                    <div>
+                                        <span class="contentB">國王厚牛美式漢堡</span>
+                                        <div class="contentG">
+                                            <span>不加熱</span>
+                                            <span>・</span>
+                                            <span>蛋</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <!-- <img src="photo/item.png"> -->
+                                    <span class="contentB price">$245</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 加購項目 -->
+                    <div class="addon">
+                        <span class="contentB">加購內容</span>
+                        <div class="item">
+                            <div class="left">
+                                <div class="count"><span>1</span></div>
+                                <div>
+                                    <span class="contentB">塑膠袋</span>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <span class="contentB price">$10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 小計 -->
+                    <div class="subTotal">
+                        <div class="item">
+                            <div class="left">
+                                <span class="contentB">小計</span>
+                            </div>
+                            <div class="right">
+                                <span class="contentB price">$680</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left">
+                                <span class="contentB">外送費</span>
+                            </div>
+                            <div class="right">
+                                <span class="contentB price">$19</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left">
+                                <span class="contentR">滿$500折$50</span>
+                            </div>
+                            <div class="right">
+                                <span class="contentR price">-$50</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left">
+                                <span class="contentR">點數折扣</span>
+                            </div>
+                            <div class="right">
+                                <img class="point" src="./icon/ptTaoyuan.svg">
+                                <span class="contentB point">8</span>
+                                <span class="contentR price">-$10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 總計 -->
+                    <div class="item">
+                        <div class="left">
+                            <span class="contentB">總計</span>
+                        </div>
+                        <div class="right">
+                            <img class="point" src="./icon/ptTaoyuan.svg">
+                            <span class="contentB point">10</span>
+                            <span class="contentB price">$949</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loading loadRight"></div>
+                <div class="loading loadRight"></div>
+                <div class="loading loadRight"></div>
+            </div>
+        </div>
+        <!-- Less -->
+        <script src="script/less.js" type="text/javascript"></script>
+        <!-- <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script> -->
+    </body>
+</html>

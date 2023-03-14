@@ -16,22 +16,45 @@
         <!-- <script src="https://kit.fontawesome.com/bfebcca289.js" crossorigin="anonymous"></script> -->
     </head>
     <body>
+        <!-- 揪團狀態bar -->
+        <div class="goupbuying-bar">
+            <div class="goupbuying-bar__container">
+                <div onclick="popOpen('popIng');"><i class="fas fa-solid fa-users"></i>
+                    <b>揪團中</b>
+                    <span>・</span>
+                    <span>李大文</span>
+                    <span>・</span>
+                    <span>14:59</span>
+                </div>
+                <a onclick="popOpen('popExitConfirm');">離開揪團</a>
+            </div>
+        </div>
+
         <!-- Header -->
         <div id="headerHtml"></div>
         <!-- Main -->
         <div id="main">
             <!-- 新版購物車按鈕 -->
-            <div class="bottombar">
+            <div class="bottombar bottombar--groupbuying">
                 <div class="bottombar__container">
-                    <button class="buttonCart">
-                        <span>購物車</span>
-                        <span>共2件</span>
+                    <button id="buttonCartGroupbuying" class="buttonCart">
+                        <span>揪團訂單</span>
+                        <span>您已點2件</span>
                         <span>・</span>
                         <span>$190</span>
                     </button>
 
                     <!-- 新版揪團按鈕 -->
-                    <button class="button--circle--green" onclick="popOpen('popStart');"><i class="fas fa-solid fa-users"></i><span>揪團</span></button>
+                    <button class="button--circle--green" onclick="popOpen('popShareUrl');"><i class="fas fa-solid fa-users"></i><span>分享</span></button>
+
+                    <!-- 及時通知 -->
+                    <div class="bottombar__msg">
+                        <div>
+                            <span class="bottombar__msg__name">李大文</span> 
+                            <span>已完成點餐</span>
+                            <!-- <span>已離開揪團</span> -->
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- 公告Banner -->
@@ -610,80 +633,36 @@
             </div>
         </div>
 
-        <!-- 開啟揪團設定 -->
-        <section id="popStart" class="pop">
+        <!-- 揪團資訊 -->
+        <section id="popIng" class="pop">
             <div class="pop__overlay-bg"></div>
 
             <div class="pop__container">
                 <a class="pop__close">×</a>
 
                 <div class="pop__icon"><img src="./photo/pop1.png"></div>
-                <div class="pop__title">開啟揪團？</div>
+                <div class="pop__title">揪團中</div>
                 <div class="pop__content">可邀請親朋好友一起點餐</div>
                 <div class="pop__set-list">
                     <div class="pop__set-list__option">
                         <span>姓名</span>
                         <span class="pop__set-list__option-right">
-                            <input id="initiatorName" type="text" value="" placeholder="輸入姓名">
-                            <a onclick="$('#initiatorName').val('豬隊長');"><i class="fas fa-solid fa-dice"></i></a>
+                            <input id="initiatorName" type="text" value="李大文" placeholder="輸入姓名">
+                            <a onclick="$('#initiatorName').val('豬隊友');"><i class="fas fa-solid fa-dice"></i></a>
                         </span>
                     </div>
 
-                    <div class="pop__set-list__option" onclick="popStayAndOpen('popSetTime');">
+                    <div class="pop__set-list__option">
                         <span>截單時間</span>
                         <span class="pop__set-list__option-right">
                             24小時
-                            <i class="fas fa-solid fa-sort-down"></i>
                         </span>
                     </div>
                 </div>
                 <div class="pop__button">
-                    <button class="button button--green" onclick="popOpen('popShareUrl');">開啟揪團</button>
+                    <button class="button button--green" onclick="popOpen('popShareUrl');">邀請揪團</button>
                 </div>
-            </div>
-        </section>
-
-        <!-- 截單時間設定 -->
-        <section id="popSetTime" class="pop pop--bottom">
-            <div class="pop__overlay-bg"></div>
-
-            <div class="pop__container">
-                <a class="pop__close">×</a>
-                <div class="pop__title--sticky">截單時間</div>
-                <div class="pop__set-list">
-                    <div class="pop__set-list__option">
-                        <span>截單日期</span>
-                        <span class="pop__set-list__option-right">
-                            <select>
-                                <option value="今天" selected>今天</option>
-                                <option value="明天">明天</option>
-                            </select>
-                        </span>
-                    </div>
-
-                    <div class="pop__set-list__option">
-                        <span>截單時間</span>
-                        <span class="pop__set-list__option-right">
-                            <select>
-                                <option value="12:30" selected>12:30</option>
-                                <option value="13:00">13:00</option>
-                            </select>
-                        </span>
-                    </div>
-
-                    <div class="pop__set-list__option">
-                        <span>截單時發送Line通知</span>
-                        <span class="pop__set-list__option-right">
-                            <label class="switch">
-                                <input type="checkbox" checked>
-                                <span class="slider"></span>
-                            </label>
-                        </span>
-                    </div>
-                </div>
-                <div class="pop__button">
-                    <button class="button button--green" onclick="popClose('popSetTime');">確認</button>
-                </div>
+                <p class="pop__content"><a class="red-text" onclick="popStayAndOpen('popExitConfirm');">離開揪團</a></p>
             </div>
         </section>
 
@@ -703,7 +682,57 @@
                 </div>
                 <div class="pop__button">
                     <button class="button"><i class="icon-line"></i>Line分享</button>
-                    <a class="button button--green" href="groupbuying-index-initiator.html">前往點餐</a>
+                    <a class="button button--green" href="groupbuying-index-buyer.html">前往點餐</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 確認離開揪團？ -->
+        <section id="popExitConfirm" class="pop">
+            <div class="pop__overlay-bg"></div>
+
+            <div class="pop__container">
+                <a class="pop__close">×</a>
+
+                <div class="pop__icon"><img src="./photo/pop3.png"></div>
+                <div class="pop__title">確認離開揪團？</div>
+                <div class="pop__content"><span class="red-text">您已選之商品將被清空</span></div>
+                <div class="pop__button">
+                    <button class="button" onclick="popClose('popExitConfirm');">取消</button>
+                    <a class="button button--red" href="index.html">確認離開</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 團主已關閉揪團 -->
+        <section id="popClosedMsg" class="pop">
+            <div class="pop__overlay-bg"></div>
+
+            <div class="pop__container">
+                <a class="pop__close">×</a>
+
+                <div class="pop__icon"><img src="./photo/pop3.png"></div>
+                <div class="pop__title">團主已關閉揪團</div>
+                <div class="pop__content">如需繼續點餐，請前往點餐頁</div>
+                <div class="pop__button">
+                    <a class="button button--green" href="index.html">前往點餐頁</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 團主已更新截單時間 -->
+        <section id="popUpdateEndTime" class="pop">
+            <div class="pop__overlay-bg"></div>
+
+            <div class="pop__container">
+                <a class="pop__close">×</a>
+
+                <div class="pop__icon"><img src="./photo/pop3.png"></div>
+                <div class="pop__title">團主已更新截單時間</div>
+                <div class="pop__content">最新截單時間為 12:30<br>
+                    您尚有 15分鐘 可以點餐</div>
+                <div class="pop__button">
+                    <a class="button button--green" href="groupbuying-index-buyer.html">確認</a>
                 </div>
             </div>
         </section>

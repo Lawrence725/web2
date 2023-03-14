@@ -4,6 +4,7 @@
 :root {
     --c1:           #FF9900;
     --c2:           #FFEED8;
+    --c3:           #96BE0B;
     --cG1:          #333333;
     --cG2:          #4F4F4F;
     --cG3:          #828282;
@@ -12,6 +13,7 @@
     --cG6:          #F2F2F2;
     --red:          #EB5757;
     --cBg:          #F2F1F6;
+    --white:        #FFFFFF;
 }
 
 // Font
@@ -75,10 +77,21 @@ textarea:focus { box-shadow: none !important; outline: none; }
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; }
 .spinner { top: 0; left: 0; width: 100vw; height: 100vh; position: fixed; display: flex; align-items: center; justify-content: center; background: radial-gradient(200px 200px at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); z-index: 4; /* background-color: rgba(0,0,0,0.5); */
     div { width: 60px; min-height: 60px; border: 5px solid var(--cG4); border-top: 5px solid var(--c1); border-radius: 50%; -webkit-animation: spin 1s linear infinite; animation: spin 1s linear infinite; }}
-.buttonCart { width: 100vw; padding: 15px 20px; left: 0; bottom: 0; position: fixed; display: flex; justify-content: center; box-sizing: border-box; z-index: 3; pointer-events: none;
-    button { width: 100%; height: 60px; padding: 0 10px 0 15px; max-width: 500px; border-radius: 20px; display: flex; align-items: center; justify-content: center; background-color: var(--c1); box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); pointer-events: all;
-        span { color: white !important; font-size: var(--fL); white-space: nowrap; text-align: left;
-            &:first-child { order: 1; height: 37px; padding: 0 10px; margin-left: auto; border: 1.5px solid rgba(255, 255, 255, 0.5); border-radius: 15px; font-size: var(--fM); line-height: 37px; }}}}
+.bottombar { width: 100vw; padding: 15px 20px; left: 0; bottom: 0; position: fixed; display: flex; justify-content: center; box-sizing: border-box; z-index: 3; pointer-events: none;
+    .bottombar__container { position: relative; width: 100%; max-width: 500px; margin: 0 auto;
+        button, a { display: block; position: relative; width: 100%; height: 54px; padding: 0 10px 0 15px; max-width: 500px; 
+            display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-size: var(--fS);
+            border-radius: 20px; background-color: var(--c1); box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); pointer-events: all; z-index: 2;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+            
+            span { color: white !important; font-size: var(--fL); white-space: nowrap; text-align: left;
+                &:first-child { order: 1; height: 37px; padding: 0 10px; margin-left: auto; border: 1.5px solid rgba(255, 255, 255, 0.5); border-radius: 15px; font-size: var(--fM); line-height: 37px; }
+            }
+        }
+        .bottombar__button--green { background: var(--c3); }
+    }
+}
 
 // Header
 #header { width: 100%; height: 60px; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; position: fixed; background-color: white; z-index: 3; box-shadow: #shadows[far]; box-sizing: border-box;
@@ -250,9 +263,77 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
         &::-webkit-scrollbar:vertical { width: 10px; }
         &::-webkit-scrollbar-thumb { border-radius: 5px; background-color: var(--cG5); border: 2.5px solid var(--cBg); }}}
 
+// Popup破格設計(置中)
+.pop { position: fixed; display: none; 
+    width: 100%; height: 100%; padding: 10px; top: 0; left: 0; right: 0; bottom: 0; 
+    align-items: center; justify-content: center; 
+    z-index: 8;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+    
+    .pop__overlay-bg { 
+        position: fixed; width: 100%; height: 100vh; left: 0; top: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.5);
+    }
+    .pop__container { position: relative; display: flex; flex-direction: column; 
+        width: 100%; max-width: 430px; max-height: 100%; padding: 20px;
+        color: var(--cG3); font-size: var(--fS);
+        background-color: var(--white); border-radius: 20px; /*overflow-y: auto;*/ 
+        animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
+        
+        .pop__close { position: sticky; display: flex; flex-flow: nowrap; justify-content: center; align-items: center;
+            width: 24px; height: 24px; top: 0; right: 0; margin: 0 0 0 auto;
+            font-size: 24px; border-radius: 99px; top: 0; color: var(--cG4); background-color: rgba(255, 255, 255, 0.75); }
+
+        .pop__icon { display: flex; flex-flow: nowrap; justify-content: center; align-items: center;
+            width: 130px; height: 130px; margin: -140px auto 0 auto; padding: 20px;text-align: center;
+            background: var(--white); border-radius: 99em; border: 5px solid var(--c3); box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); overflow: hidden;
+            > img { width: auto; height: 100%; }
+        }
+        .pop__icon-fas { width: 60px; height: 60px; margin-top: -100px; font-size: 40px; border-width: 8px; }
+
+        .pop__title { margin: 10px auto 5px auto; color: var(--cG1); font-size: var(--fM); text-align: center; }
+        .pop__title--sticky { position: sticky; width: calc(100% - 30px); top: 0; margin-top: -20px; }
+        .pop__content { text-align: center; 
+            img { max-width: 150px; height: auto; }
+            .red-text { color: var(--red); }
+        }
+
+        .pop__set-list { width: 100%; margin: 10px auto; 
+            .pop__set-list__option { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
+                padding: 10px 0; border-bottom: 1px solid var(--cG5); 
+                > * { width: 100%; }
+                .pop__set-list__option-right { display: flex; flex-flow: nowrap; justify-content: flex-end; align-items: center; color: var(--cG1); cursor: pointer; 
+                    > input { width: 100%; font-size: var(--fS); text-align: right; }
+                    ::-webkit-input-placeholder{ color: var(--cG4); }
+                    * input::-moz-placeholder{ color: var(--cG4); }
+                    * input::-moz-placeholder{ color: var(--cG4); }
+                    *:-ms-input-placeholder{ color: var(--cG4); }
+                    i { margin-left: 5px; color: var(--c3); font-size: var(--fM); }
+                    i.fa-sort-down { margin-top: -5px; }
+                    > select { width: 100%; padding-right: 20px; font-size: var(--fS); text-align: right; border: none; background: url('../icon/fontawesome-free-5.15.3-web/svgs/solid/sort-down-green.svg') no-repeat right center; background-size: 12px; cursor: pointer; }
+                }
+            }
+        }
+
+        .pop__button { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
+            width: calc(100% + 5px); margin-top: 15px; margin-left: -5px;
+            .button { display: flex; flex-flow: nowrap; justify-content: center; align-items: center;
+                width: calc(100% - 10px); margin: 0 5px; padding: 10px; 
+                font-size: var(--fS); text-align: center; text-decoration: none; border-radius: 99em; }
+            .button--green { color: var(--white); background: var(--c3); }
+            .button--red { color: var(--white); background: var(--red); }
+        }
+    }
+}
+@keyframes popup { 0% { margin-bottom: -100vh; } 100% { margin-bottom: 0; }}
+@keyframes popdown { 0% { margin-bottom: 0; } 100% { margin-bottom: -100vh; }}
+
+// popup置底
+.pop--bottom { align-items: flex-end; }
+
 // Modal
 .modal { width: 100%; height: 100%; left: 0; top: 0; display: none; position: fixed; align-items: center; justify-content: center; overflow-x: hidden; overflow-y: auto; z-index: 4;
-    &:not(#popCart) { background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.5); }
+    &:not(#popCart), &:not(#popCartGroupbuying) { background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.5); }
     .close { top: 20px; right: 20px; position: absolute; color: var(--cG4); z-index: 3; font-size: var(--fM) !important;
         &:hover, &:focus { color: var(--cG1); text-decoration: none; cursor: pointer; }
     }
@@ -438,7 +519,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             .header { margin-top: 20px; color: var(--cG1); font-size: var(--fM) !important; }
         }
     }
-    &#popCart { background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.5);
+    &#popCart, &#popCartGroupbuying { background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.5);
         .modal-content { top: 20px; width: 500px; max-height: calc(100vh - 40px); padding: 15px; margin: auto; border-radius: 20px; position: absolute; display: flex; flex-direction: column; background-color: var(--cBg); box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.3);
             @media @screen-mobile { top: 0; right: 0; width: unset; max-width: calc(100% - 60px); max-height: calc(100vh - 60px); position: relative; }
             // @media @screen-mobile { height: unset; max-width: calc(100% - 40px); max-height: calc(100% - 40px); flex-direction: column; }
@@ -941,7 +1022,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
 }
 
 // Payment Page
-#paymentMain { width: 100vw; height: 100vh; display: flex;
+#paymentMain, #orderMain { width: 100vw; height: 100vh; display: flex;
     @media @screen-tablet { display: block; }
     #left { width: 60%; height: fit-content; padding: 20px 0; display: flex; align-items: center; justify-content: flex-start; flex-direction: column;
         @media @screen-tablet { width: 100%; padding: 50px 0 0; }
@@ -1317,3 +1398,216 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
 @keyframes progress { 0% { width: 0%; } 100% { width: 100%; } }
 @-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); } 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+// 揪團
+// 揪團狀態, 購物車bar底色為綠色
+.bottombar--groupbuying .bottombar__container button { background-color: var(--c3); }
+
+// 開啟揪團圓形按鈕
+.bottombar .bottombar__container { 
+    .button--circle--green { 
+        display: flex; flex-flow: wrap; justify-content: center; align-items: center; align-content: center;
+        position: absolute; width: 58px; height: 58px; right: 0; top: -70px; padding: 0;
+        border: 3px solid var(--c3); border-radius: 99em; background: var(--white); box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); z-index: 3;
+        > * { width: 100%; }
+        > i { color: var(--c3); font-size: var(--fS); }
+        > span { color: var(--cG1) !important; font-size: var(--fS); text-align: center;  }
+    }
+
+    // 及時通知
+    .bottombar__msg { position: absolute; left: 0; right: 0; top: -48px; margin: 0 auto; text-align: center;
+        > div { display: inline-flex; justify-content: center; align-items: center; 
+            max-width: 55%; padding: 5px 15px; 
+            color: var(--white); font-size: var(--fS);
+            background: var(--c1); box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); border-radius: 99em; 
+            
+            .bottombar__msg__name { display: inline-block; max-width: 50%; margin-right: 5px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+        }
+
+        -webkit-animation: MoveUpDown 3s linear;
+        animation: MoveUpDown 3s linear;
+        z-index: 1; opacity: 0;
+    }
+}
+@-webkit-keyframes MoveUpDown {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes MoveUpDown {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+// switch開關
+.switch { position: relative; display: inline-block;
+    width: 42px; height: 22px;
+
+    input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+        background-color: var(--cG5); border-radius: 34px; cursor: pointer;
+        -webkit-transition: .4s; transition: .4s; }
+
+    .slider:before { position: absolute;
+        content: "";
+        height: 16px; width: 16px; left: 3px; top: 3px;
+        background-color: var(--white); border-radius: 99em;
+        -webkit-transition: .4s; transition: .4s; }
+      
+    input:checked + .slider { background-color: var(--c3); }
+      
+    input:checked+.slider:before {
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+    }
+}
+
+// 分享揪團url
+.popShareUrl {
+    .copy-link { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
+        > span { font-size: var(--fXS); }
+        > button { color: var(--cG3); font-size: var(--fM); background: none; 
+            i.icon-copy { display: inline-block; width: 24px; height: 24px;
+            background: url('../icon/fontawesome-free-5.15.3-web/svgs/solid/copy-solid-gray.svg') no-repeat center; background-size: contain; }
+        }
+    }
+    .pop__button {
+        i.icon-line { display: inline-block; width: 20px; height: 20px; margin-right: 5px; background: url('../icon/line-icon.svg') no-repeat center; background-size: contain; }
+    }
+}
+
+// 上方置頂揪團狀態bar
+.goupbuying-bar { position: sticky; width: 100%; top: 0; left: 0; bottom: 0; right: 0; z-index: 1;
+
+    .goupbuying-bar__container { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; padding: 5px 10px;
+        color: var(--white); font-size: var(--fXS); background: var(--c3);
+        -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        > div { width: calc(100% - 80px); display: flex; flex-flow: nowrap; align-items: center; cursor: pointer;
+            i { margin-right: 2px; font-size: var(--fS); }
+            b { font-size: var(--fS); }
+        }
+        a { display: block; width: 80px; text-align: right; text-decoration: underline !important; }
+    }
+}
+// 有揪團狀態bar時, 菜單分類選單置頂高度調整
+.goupbuying-bar + #headerHtml + #main {
+    #category { top: 92px; }
+}
+
+// 揪團購物車
+.modal--groupbuying {
+    .modal-content {
+        time { color: var(--cG3); font-size: var(--fXS); }
+        .submit--groupbuying { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
+            padding: 5px 5px 5px 15px; color: var(--white); font-size: var(--fM);
+            background: var(--c3); border-radius: 15px; 
+            > span { padding: 5px 10px; border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 11.25px; }
+        }
+        .container {
+            .whos-order { width: calc(100% - 100px); font-weight: bold; }
+            .whos-msg { width: calc(100% - 100px); color: var(--cG3); font-size: var(--fXS); }
+            .whos-state { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; 
+                position: absolute; width: auto; right: 0; top: 15px; padding: 4px 4px 4px 10px; 
+                color: var(--c1); font-size: var(--fXS); text-align: right;
+                background: var(--white); border: 2px solid var(--c1); border-radius: 99em;
+                > i { display: flex; flex-flow: nowrap; justify-content: center; align-items: center;
+                    width: 18px; height: 18px; margin-left: 3px; border-radius: 99em; }
+                i.icon-load { 
+                    font-weight: bold; text-indent: -3px;
+                    border: 2px solid var(--c1); }
+            }
+            .whos-state--ready { color: var(--white); border-color: var(--c3); background: var(--c3); 
+                i.fa-check { color: var(--c3); background: var(--white); }
+            }
+            .buyer-list { position: relative; padding: 10px 0; border-bottom: 1px solid var(--cG5); }
+            .buyer-list:last-child { border-bottom: none; }
+        }
+    }
+}
+
+// 揪團被邀請畫面
+.groupbuying__title-image { position: relative; max-width: 160px; margin: 0 auto; z-index: 2; 
+    > img { width: 100%; height: auto; }
+}
+
+.groupbuying-info { position: relative; width: 100%; max-width: 500px; padding: 10px 15px 20px 15px; margin: -40px auto 10px auto;
+    color: var(--cG1); font-size: var(--fS); text-align: center;
+    background: var(--white); border-radius: 20px;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; z-index: 1;
+
+    .groupbuying-info__title { margin: 10px auto; }
+    .groupbuying-info__store { margin: 0 auto; font-size: var(--fM); }
+    .groupbuying-info__detail { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
+        margin: 25px auto; 
+        > div { width: 100%; border-right: 1px solid var(--cG5); }
+        > div:last-child { border-right: none; }
+        
+        .groupbuying-info__detail__title { color: var(--cG3); font-size: var(--fXS); }
+    }
+
+    .groupbuying-info__name { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center;
+        padding: 0 8px 0 12px;
+        border-radius: 99em; background: var(--cBg); 
+        > input { width: calc(100% - 40px); padding: 8px 0; font-size: var(--fS); background: none; }
+        > a { width: 40px; padding: 8px 0; color: var(--c3); font-size: var(--fM); }
+        ::-webkit-input-placeholder{ color: var(--cG4); }
+        * input::-moz-placeholder{ color: var(--cG4); }
+        * input::-moz-placeholder{ color: var(--cG4); }
+        *:-ms-input-placeholder{ color: var(--cG4); }
+    }
+}
+
+.groupbuying-info__note { color: var(--cG3); font-size: var(--fXS); text-align: center; }
+
+// 揪團訂單明細
+#submit.groupbuying__submit, #submit.groupbuying__submit > span, #submit.groupbuying__submit .price { background-color: var(--c3) !important; }
+
+#paymentMain #left .container {
+    .whos-order { text-align: center; }
+    .buyer-list { padding: 10px 0; }
+}
+
+#orderMain { 
+    #left #top {
+        #info { position: relative; z-index: 1; }
+        .groupbuying__title-image + #info { margin-top: -27px; }
+    }
+
+    #right .container {
+        .whos-order { font-weight: bold; text-align: center; }
+        .whos-order--state { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; font-weight: bold; text-align: left;
+            > a { min-width: 110px; color: var(--c1); font-size: var(--fXS); font-weight: normal; text-decoration: underline !important; text-align: right; }
+            .whos-order--state--edit { color: var(--cG2); }
+
+            .whos-order--state--finish { min-width: 80px; color: var(--c3); font-size: var(--fXS); font-weight: normal; text-align: right; 
+
+                input[type=checkbox] { display: none; }
+                label { color: var(--cG4); cursor: pointer;
+                    i.fa-check { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center; width: 16px; height: 16px; padding: 2px; margin-left: 3px;
+                        color: var(--white); font-size: var(--fXS); 
+                        background: var(--cG4); border-radius: 99em; }
+                }
+
+                input[type=checkbox]:checked + label { color: var(--c3); 
+                    i.fa-check { background: var(--c3); }
+                }
+            }
+        }
+        .buyer-list { padding: 10px 0; }
+    }
+}
+
+#orderMain {
+    #left #top #info.groupbuying-info { margin-bottom: 0;
+        i.fa-3x.green { color: var(--c3); }
+        .header { margin-bottom: 5px; }
+        .gray-text { color: var(--cG3); font-size: var(--fXS); }
+        > time { margin-bottom: 20px; }
+    }
+    #right #bottom #submit.groupbuying__submit { flex-flow: column-reverse;
+    }
+}

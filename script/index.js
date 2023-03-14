@@ -134,3 +134,29 @@ window.onclick = function(event) {
     //     popLocation.style.display = "none";
     // }
 }
+
+// Popup破格設計(置中)
+// Popup close(點擊背景和×時)
+$('.pop__overlay-bg, .pop__close').click(function(){	
+    $(this).closest('.pop').stop(false,true).fadeOut(300);
+    document.body.style.overflow = 'auto'; 
+});
+
+// Popup close(要控制關掉某個popup時)
+function popClose(popID) {
+    $('#'+popID).stop(false,true).fadeOut(300);
+}
+        
+// popup open
+// 只留當前popup視窗
+function popOpen(popID) {
+    $('.pop').not('#'+popID).stop(false,true).fadeOut(300);
+    $('#'+popID).css('display','flex');
+    document.body.style.overflow = 'hidden'; 
+}
+
+// 保留當前和上一個popup視窗
+function popStayAndOpen(popID) {
+    $('#'+popID).css('display','flex');
+    document.body.style.overflow = 'hidden'; 
+}

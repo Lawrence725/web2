@@ -45,8 +45,8 @@
         </a>
         <a onmouseover="popPoint()" onmouseleave="popClose('popPoint')" class="menu point">
             <span>我的點數</span> -->
-            <!-- Popup (Point) -->
-            <!-- <section id="popPoint" class="popup popPoint">
+        <!-- Popup (Point) -->
+        <!-- <section id="popPoint" class="popup popPoint">
                 <div class="popBody">
                     <div class="flexH width between">
                         <div class="flexV">
@@ -94,8 +94,8 @@
             <a class="main">
                 <span>登入</span>
                 <i class="fas fa-user-circle fa-2x"></i> -->
-                <!-- <img src="photo/item.png"> -->
-            <!-- </a>
+        <!-- <img src="photo/item.png"> -->
+        <!-- </a>
             <div class="dropdown">
                 <div class="flexH width between">
                     <div class="flexV">
@@ -371,6 +371,261 @@
     </div>
 </div>
 
+<!-- 揪團購物車 Cart Popup -->
+<div id="popCartGroupbuying" class="modal modal--groupbuying">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <span class="title">揪團訂單</span>
+        <time>剩餘時間：14:59</time>
+        <div class="container">
+            <div class="buyer-list">
+                <div class="whos-order">您的餐點</div>
+                <!-- Item -->
+                <div class="item">
+                    <div class="left">
+                        <div class="area">
+                            <a class="icon"><i class="fas fa-minus fa-xs"></i></a>
+                            <input class="count" type="number" value="1">
+                            <a class="icon"><i class="fas fa-plus fa-xs"></i></a>
+                        </div>
+                        <div class="detail">
+                            <span class="contentB">橄欖油蔥雞低GI享瘦餐</span>
+                            <div class="contentG">
+                                <span>不加熱</span>
+                                <span>・</span>
+                                <span>蛋</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span class="contentB price">$245</span>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="item">
+                    <div class="left">
+                        <div class="area">
+                            <a class="icon"><i class="fas fa-minus fa-xs"></i></a>
+                            <input class="count" type="number" value="18">
+                            <a class="icon"><i class="fas fa-plus fa-xs"></i></a>
+                        </div>
+                        <div class="detail">
+                            <span class="contentB">國王厚牛美式漢堡</span>
+                            <div class="contentG">
+                                <span>不加熱</span>
+                                <span>・</span>
+                                <span>蛋</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span class="contentB price">$245</span>
+                    </div>
+                </div>
+
+                <!-- 只有團員可以寫 -->
+                <div class="note">
+                    <div><i class="fas fa-sticky-note"></i></div>
+                    <textarea placeholder="給團主的話"></textarea>
+                </div>
+            </div>
+
+            <div class="buyer-list">
+                <div class="whos-order">李大文</div>
+                <div class="whos-msg">感謝團主幫忙訂餐</div>
+                <div class="whos-state">點餐中<i class="icon-load">…</i></div>
+                <!-- Item -->
+                <div class="item">
+                    <div class="left">
+                        <div class="area">
+                            <a class="icon"><i class="fas fa-minus fa-xs"></i></a>
+                            <input class="count" type="number" value="1">
+                            <a class="icon"><i class="fas fa-plus fa-xs"></i></a>
+                        </div>
+                        <div class="detail">
+                            <span class="contentB">國王厚牛美式漢堡國王厚牛美式漢堡</span>
+                            <div class="contentG">
+                                <span>不加熱</span>
+                                <span>・</span>
+                                <span>蛋</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span class="contentB price">$245</span>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="item">
+                    <div class="left">
+                        <div class="area">
+                            <a class="icon"><i class="fas fa-minus fa-xs"></i></a>
+                            <input class="count" type="number" value="1">
+                            <a class="icon"><i class="fas fa-plus fa-xs"></i></a>
+                        </div>
+                        <div class="detail">
+                            <span class="contentB">橄欖油蔥雞低GI享瘦餐</span>
+                            <div class="contentG">
+                                <span>不加熱</span>
+                                <span>・</span>
+                                <span>蛋</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span class="contentB price">$245</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buyer-list">
+                <div class="whos-order">甲乙丙</div>
+                <div class="whos-msg">謝謝團主請客!謝謝團主請客!謝謝團主請客!謝謝團主請客!</div>
+                <div class="whos-state whos-state--ready">已準備<i class="fas fa-solid fa-check"></i></div>
+                <!-- Item -->
+                <div class="item">
+                    <div class="left">
+                        <div class="area">
+                            <a class="icon"><i class="fas fa-minus fa-xs"></i></a>
+                            <input class="count" type="number" value="1">
+                            <a class="icon"><i class="fas fa-plus fa-xs"></i></a>
+                        </div>
+                        <div class="detail">
+                            <span class="contentB">國王厚牛美式漢堡</span>
+                            <div class="contentG">
+                                <span>不加熱</span>
+                                <span>・</span>
+                                <span>蛋</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span class="contentB price">$245</span>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="item">
+                    <div class="left">
+                        <div class="area">
+                            <a class="icon"><i class="fas fa-minus fa-xs"></i></a>
+                            <input class="count" type="number" value="1">
+                            <a class="icon"><i class="fas fa-plus fa-xs"></i></a>
+                        </div>
+                        <div class="detail">
+                            <span class="contentB">橄欖油蔥雞低GI享瘦餐</span>
+                            <div class="contentG">
+                                <span>不加熱</span>
+                                <span>・</span>
+                                <span>蛋</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span class="contentB price">$245</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 以下加購區只有團主可以用 -->
+            <div class="addon">
+                <span class="contentB header">加購內容</span>
+                <label>
+                    <input type="radio" name="radio3"> <!-- checked="checked" -->
+                    <span class="checkmark radio"></span>
+                    <div class="contentB">加熱</div>
+                </label>
+                <label class="disabled">
+                    <input type="radio" name="radio3"> <!-- checked="checked" -->
+                    <span class="checkmark radio"></span>
+                    <div class="main">
+                        <div class="contentB">不加熱</div>
+                        <div class="right">
+                            <div class="number">
+                                <a class="icon"><i class="fas fa-minus fa-sm"></i></a>
+                                <span class="contentB">1</span>
+                                <a class="icon"><i class="fas fa-plus fa-sm"></i></a>
+                            </div>
+                            <span class="price">+$10</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="addon">
+                <span class="contentB header">加購內容</span>
+                <label>
+                    <input type="checkbox" name="checkbox3"> <!-- checked="checked" -->
+                    <span class="checkmark checkbox"></span>
+                    <div class="main">
+                        <div class="text">起司</div>
+                        <div class="right">
+                            <div class="number">
+                                <a class="icon"><i class="fas fa-minus fa-sm"></i></a>
+                                <span>1</span>
+                                <a class="icon"><i class="fas fa-plus fa-sm"></i></a>
+                            </div>
+                            <span class="price"></span>
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <input type="checkbox" name="checkbox3"> <!-- checked="checked" -->
+                    <span class="checkmark checkbox"></span>
+                    <div class="main">
+                        <div class="text">蛋</div>
+                        <div class="right">
+                            <div class="number">
+                                <a class="icon"><i class="fas fa-minus fa-sm"></i></a>
+                                <span>1</span>
+                                <a class="icon"><i class="fas fa-plus fa-sm"></i></a>
+                            </div>
+                            <span class="price">+$10</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="note">
+                <div><i class="fas fa-sticky-note"></i></div>
+                <textarea placeholder="訂單備註"></textarea>
+            </div>
+            <div class="empty">
+                <span>無商品</span>
+            </div>
+        </div>
+
+        <!-- 團主看到的訂單bar -->
+        <a class="submit--groupbuying" onclick="popOpen('popFinishConfirm');"> 
+            <div class="price">
+                <span>$1000</span>
+            </div>
+            <span>收單</span>
+        </a>
+
+        <!-- 團員看到的訂單bar -->
+        <a class="submit--groupbuying" href="groupbuying-payment-buyer"> 
+            <div class="price">
+                <span>$1000</span>
+            </div>
+            <span>確認您的餐點</span>
+        </a>
+    </div>
+</div>
+
+<!-- 確認收單？ -->
+<section id="popFinishConfirm" class="pop">
+    <div class="pop__overlay-bg"></div>
+
+    <div class="pop__container">
+        <a class="pop__close">×</a>
+
+        <div class="pop__icon pop__icon-fas"><img src="./icon/fontawesome-free-5.15.3-web/svgs/solid/exclamation-solid-green.svg"></div>
+        <div class="pop__title">確認收單？</div>
+        <div class="pop__content"><span class="red-text">收單後將無法更改餐點<br>請確認「點餐中」之團員已完成點餐</span></div>
+        <div class="pop__button">
+            <button class="button" onclick="popClose('popFinishConfirm');">取消</button>
+            <a class="button button--green" href="groupbuying-payment-initiator.html">確認收單</a>
+        </div>
+    </div>
+</section>
 
 <!-- Item Popup -->
 <div id="popItem" class="modal">
