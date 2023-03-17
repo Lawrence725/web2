@@ -131,10 +131,9 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                     &:not(.title) { text-align: right; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
                     &.error { color: var(--red); }}}
             div.right { min-width: 70px; min-height: 70px; margin-bottom: -10px; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: white;
-                div.icon { min-width: 53px; min-height: 53px; border: 3px solid var(--c1); border-radius: 99px; display: flex; align-items: center; justify-content: center;
-                    i, svg { color: var(--c1); }
-                    &.error { border-color: var(--red);
-                        i, svg { color: var(--red); }}}}}
+                div.icon { min-width: 60px; min-height: 60px; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: var(--c1);
+                    i, svg { color: white; }
+                    &.error { background-color: var(--red); }}}}
         .menu { margin-right: 30px; color: var(--cG1); white-space: nowrap; font-size: var(--fM) !important; position: relative;
             @media @screen-tablet { margin-right: 20px; }
             @media @screen-tablet { display: none; }

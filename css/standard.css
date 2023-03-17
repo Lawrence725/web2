@@ -371,24 +371,20 @@ select {
   background-color: white;
 }
 #header #headerRight a.type div.right div.icon {
-  min-width: 53px;
-  min-height: 53px;
-  border: 3px solid var(--c1);
+  min-width: 60px;
+  min-height: 60px;
   border-radius: 99px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--c1);
 }
 #header #headerRight a.type div.right div.icon i,
 #header #headerRight a.type div.right div.icon svg {
-  color: var(--c1);
+  color: white;
 }
 #header #headerRight a.type div.right div.icon.error {
-  border-color: var(--red);
-}
-#header #headerRight a.type div.right div.icon.error i,
-#header #headerRight a.type div.right div.icon.error svg {
-  color: var(--red);
+  background-color: var(--red);
 }
 #header #headerRight .menu {
   margin-right: 30px;
