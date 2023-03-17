@@ -3077,7 +3077,11 @@ select {
   color: var(--cG1);
 }
 #portalMain #info #mode .mode.active {
+  background-color: var(--c1);
   color: white;
+}
+#portalMain #info #mode .mode:hover:not(.active) {
+  background-color: var(--c2);
 }
 #portalMain #info #mode .mode.grayed {
   color: var(--cG4);

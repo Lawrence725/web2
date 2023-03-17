@@ -785,7 +785,8 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
         #mode { width: calc(30% + 20px); height: 30px; padding: 5px; margin: 0 10px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; background-color: white;
             @media @screen-tablet { width: calc(100% - 10px); margin: 10px 0; }
             .mode { width: 100%; height: 30px; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: var(--cG1);
-                &.active { color: white; }
+                &.active { background-color: var(--c1); color: white; }
+                &:hover:not(.active) { background-color: var(--c2); }
                 &.grayed { color: var(--cG4); }
                 .icon { min-width: 20px; min-height: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center; }
                 span { white-space: nowrap; overflow: hidden;  text-overflow: ellipsis; font-size: var(--fS) !important; }
