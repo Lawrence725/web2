@@ -78,6 +78,7 @@ input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
 textarea { border: 0; }
 textarea:focus { box-shadow: none !important; outline: none; }
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; }
+img { object-fit: cover; }
 .spinner { top: 0; left: 0; width: 100vw; height: 100vh; position: fixed; display: flex; align-items: center; justify-content: center; background: radial-gradient(200px 200px at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); z-index: 4; /* background-color: rgba(0,0,0,0.5); */
     div { width: 60px; min-height: 60px; border: 5px solid var(--cG4); border-top: 5px solid var(--c1); border-radius: 50%; -webkit-animation: spin 1s linear infinite; animation: spin 1s linear infinite; }}
 .bottombar { width: 100vw; padding: 15px 20px; left: 0; bottom: 0; position: fixed; display: flex; justify-content: center; box-sizing: border-box; z-index: 3; pointer-events: none;
@@ -620,7 +621,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
     &#popItem {
         .modal-content { max-width: 900px; padding: 10px; margin: auto; border-radius: 20px; position: relative; display: flex; background-color: var(--cBg);
             @media @screen-tablet { height: 60%; max-width: 700px; }
-            @media @screen-mobile { height: unset; max-width: calc(100% - 60px); max-height: calc(100% - 60px); flex-direction: column; }
+            @media @screen-mobile { height: unset; width: calc(100% - 60px); max-height: calc(100% - 60px); flex-direction: column; }
             img { width: 450px; height: 450px; border-radius: 15px; margin: 0 10px 0 0; object-fit: cover;
                 @media @screen-tablet { width: 350px; height: unset; max-height: 100%; }
                 @media @screen-mobile { width: 100%; height: 40vh; margin: 0 0 10px 0; }
@@ -700,12 +701,12 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
                         textarea { width: 100%; height: 100%; margin-left: 5px; background-color: var(--cBg); font-size: var(--fS) !important; }
                     }
                 }
-                .buttom { height: 40px; margin-top: 10px; display: flex; align-items: center;
-                    .icon { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; color: var(--c1);
+                .buttom { height: 50px; margin-top: 10px; display: flex; align-items: center;
+                    .icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: var(--c1); font-size: 1.5em;
                         &:hover { color: var(--cG1); }
                     }
-                    input { width: 40px; height: 40px; border-radius: 10px; margin: 0 10px; text-align: center; font-size: var(--fM) !important; }
-                    .submit { width: 100%; height: 100%; margin-left: 10px; padding: 0 10px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between; color: white; font-size: var(--fM) !important; background: var(--c1);
+                    input { width: 30px; height: 40px; border-radius: 10px; margin: 0 10px; text-align: center; font-size: var(--fM) !important; }
+                    .submit { width: 100%; height: 100%; margin-left: 10px; padding: 0 10px; border-radius: 15px; display: flex; align-items: center; justify-content: space-between; color: white; font-size: var(--fM) !important; background: var(--c1);
                         &:hover { background: var(--c1); }
                         .price { display: flex; align-items: center;
                             img { width: unset; height: 20px; margin: 0; }
@@ -869,7 +870,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
 // Store Page
 #main { min-height: calc(100vh - 200px); width: 100%; padding: 80px 80px 20px; gap: 20px; display: flex; flex-direction: column; box-sizing: border-box;
     @media @screen-tablet { padding: 80px 50px 20px; }
-    @media @screen-mobile { padding: 80px 20px 20px; }
+    @media @screen-mobile { padding: 80px 20px 20px; overflow-x: hidden; }
     .noticeBanner { width: 100%; height: 30px; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: var(--c1);
         // @media @screen-mobile { margin-left: -25px; width: calc(100% + 50px); }
         span { font-size: var(--fXS); color: white; }}
@@ -887,7 +888,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             span { white-space: nowrap; }}
         div.bottom { width: 100%; border-radius: 19px; display: flex; align-items: center; background-color: white;
             a { width: 100%; height: 60px; border-radius: 19px; display: flex; flex-direction: column; align-items: center; justify-content: center;
-                span { color: var(--cG3); }
+                span { color: var(--cG3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
                 img { height: 16px; }
                 &:nth-child(1) { i, svg { color: #F5B7A6; }}
                 &:nth-child(2) { i, svg { color: #FFD965; }}
@@ -976,7 +977,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outl
             .item { width: calc(33% - 44px); padding: 10px; margin: 10px; border: 2px solid white; border-radius: 20px; display: flex; justify-content: space-between; background: white;
                 @media @screen-tablet { width: calc(50% - 44px); }
                 @media @screen-mobile { width: calc(100% - 44px); }
-                &:hover { border: 2px solid var(--c2); }
+                // &:hover { border: 2px solid var(--c2); }
                 .info { width: calc(100% - 130px); display: flex; flex-direction: column; justify-content: space-between;
                     &.sold > * > * { color: var(--cG4) !important; filter: grayscale(100%); }
                     .title { display: flex; flex-direction: column; color: var(--cG1); font-size: var(--fM) !important;

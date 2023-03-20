@@ -139,6 +139,9 @@ select {
   appearance: none;
   outline: none;
 }
+img {
+  object-fit: cover;
+}
 .spinner {
   top: 0;
   left: 0;
@@ -2417,7 +2420,7 @@ select {
 @media (max-width: 767px) {
   .modal#popItem .modal-content {
     height: unset;
-    max-width: calc(100% - 60px);
+    width: calc(100% - 60px);
     max-height: calc(100% - 60px);
     flex-direction: column;
   }
@@ -2737,24 +2740,25 @@ select {
   font-size: var(--fS) !important;
 }
 .modal#popItem .modal-content .container .buttom {
-  height: 40px;
+  height: 50px;
   margin-top: 10px;
   display: flex;
   align-items: center;
 }
 .modal#popItem .modal-content .container .buttom .icon {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--c1);
+  font-size: 1.5em;
 }
 .modal#popItem .modal-content .container .buttom .icon:hover {
   color: var(--cG1);
 }
 .modal#popItem .modal-content .container .buttom input {
-  width: 40px;
+  width: 30px;
   height: 40px;
   border-radius: 10px;
   margin: 0 10px;
@@ -2766,7 +2770,7 @@ select {
   height: 100%;
   margin-left: 10px;
   padding: 0 10px;
-  border-radius: 99px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3445,6 +3449,7 @@ select {
 @media (max-width: 767px) {
   #main {
     padding: 80px 20px 20px;
+    overflow-x: hidden;
   }
 }
 #main .noticeBanner {
@@ -3557,6 +3562,9 @@ select {
 }
 #main div.account div.bottom a span {
   color: var(--cG3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #main div.account div.bottom a img {
   height: 16px;
@@ -3910,9 +3918,6 @@ select {
   #main .mainContainer .items .item {
     width: calc(100% - 44px);
   }
-}
-#main .mainContainer .items .item:hover {
-  border: 2px solid var(--c2);
 }
 #main .mainContainer .items .item .info {
   width: calc(100% - 130px);
