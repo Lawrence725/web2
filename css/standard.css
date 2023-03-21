@@ -5998,6 +5998,7 @@ img {
 }
 .popShareUrl .copy-link > span {
   font-size: var(--fXS);
+  word-break: break-all;
 }
 .popShareUrl .copy-link > button {
   color: var(--cG3);
@@ -6134,6 +6135,15 @@ img {
   color: var(--c3);
   background: var(--white);
 }
+.modal--groupbuying .modal-content .container .whos-state--finish {
+  color: var(--cG3);
+  border: none;
+  background: none;
+}
+.modal--groupbuying .modal-content .container .whos-state--finish i.fa-check {
+  color: var(--white);
+  background: var(--c3);
+}
 .modal--groupbuying .modal-content .container .buyer-list {
   position: relative;
   padding: 10px 0;
@@ -6141,6 +6151,58 @@ img {
 }
 .modal--groupbuying .modal-content .container .buyer-list:last-child {
   border-bottom: none;
+}
+.modal--groupbuying .modal-content .container .whos-order--state {
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  text-align: left;
+}
+.modal--groupbuying .modal-content .container .whos-order--state .whos-order--state--finish {
+  min-width: 80px;
+  font-size: var(--fXS);
+  font-weight: normal;
+  text-align: right;
+}
+.modal--groupbuying .modal-content .container .whos-order--state .whos-order--state--finish input[type=checkbox] {
+  display: none;
+}
+.modal--groupbuying .modal-content .container .whos-order--state .whos-order--state--finish label {
+  color: var(--c1);
+  cursor: pointer;
+}
+.modal--groupbuying .modal-content .container .whos-order--state .whos-order--state--finish label i.fa-check {
+  display: inline-flex;
+  flex-flow: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  padding: 2px;
+  margin-left: 3px;
+  color: var(--white);
+  font-size: var(--fXS);
+  background: var(--cG4);
+  border-radius: 99em;
+}
+.modal--groupbuying .modal-content .container .whos-order--state .whos-order--state--finish input[type=checkbox]:checked + label,
+.modal--groupbuying .modal-content .container .whos-order--state .whos-order--state--finish input[type=checkbox]:checked:disabled + label {
+  color: var(--c3);
+}
+.modal--groupbuying .modal-content .container .whos-order--state .whos-order--state--finish input[type=checkbox]:checked + label i.fa-check,
+.modal--groupbuying .modal-content .container .whos-order--state .whos-order--state--finish input[type=checkbox]:checked:disabled + label i.fa-check {
+  background: var(--c3);
+}
+.modal--groupbuying .modal-content .container .total {
+  padding: 0 10px 10px 10px;
+  text-align: right;
+  font-weight: bold;
+}
+.modal--groupbuying .modal-content .container .total .price {
+  margin-left: 5px;
 }
 .groupbuying__title-image {
   position: relative;
@@ -6279,7 +6341,6 @@ img {
 }
 #orderMain #right .container .whos-order--state .whos-order--state--finish {
   min-width: 80px;
-  color: var(--c3);
   font-size: var(--fXS);
   font-weight: normal;
   text-align: right;
@@ -6288,7 +6349,7 @@ img {
   display: none;
 }
 #orderMain #right .container .whos-order--state .whos-order--state--finish label {
-  color: var(--cG4);
+  color: var(--c1);
   cursor: pointer;
 }
 #orderMain #right .container .whos-order--state .whos-order--state--finish label i.fa-check {

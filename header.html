@@ -379,7 +379,30 @@
         <time>剩餘時間：14:59</time>
         <div class="container">
             <div class="buyer-list">
-                <div class="whos-order">您的餐點</div>
+                <!-- 是否提醒團主已完成點餐? -->
+                <div class="whos-order whos-order--state">
+                    <span>您的餐點</span>
+                    <span class="whos-order--state--finish">
+                        <input type="checkbox" name="object" id="check1" value="">
+                        <label for="check1">
+                            提醒團主您已完成點餐?
+                            <i class="fas fa-solid fa-check"></i>
+                        </label>
+                    </span>
+                </div>
+
+                <!-- 已提醒團主完成點餐 -->
+                <div class="whos-order whos-order--state">
+                    <span>您的餐點</span>
+                    <span class="whos-order--state--finish">
+                        <input type="checkbox" name="object" id="check2" value="" checked disabled>
+                        <label for="check2">
+                            您已提醒團主完成點餐
+                            <i class="fas fa-solid fa-check"></i>
+                        </label>
+                    </span>
+                </div>
+
                 <!-- Item -->
                 <div class="item">
                     <div class="left">
@@ -421,6 +444,11 @@
                     <div class="right">
                         <span class="contentB price">$245</span>
                     </div>
+                </div>
+
+                <!-- 小計 -->
+                <div class="total">
+                    小計 <span class="price">$490</span>
                 </div>
 
                 <!-- 只有團員可以寫 -->
@@ -482,6 +510,54 @@
                 <div class="whos-order">甲乙丙</div>
                 <div class="whos-msg">謝謝團主請客!謝謝團主請客!謝謝團主請客!謝謝團主請客!</div>
                 <div class="whos-state whos-state--ready">已準備<i class="fas fa-solid fa-check"></i></div>
+                <!-- Item -->
+                <div class="item">
+                    <div class="left">
+                        <div class="detail">
+                            <span class="contentB">國王厚牛美式漢堡</span>
+                            <div class="contentG">
+                                <span>不加熱</span>
+                                <span>・</span>
+                                <span>蛋</span>
+                            </div>
+                            <div class="area">
+                                <a class="icon"><i class="fas fa-minus fa-xs"></i></a>
+                                <input class="count" type="number" value="1">
+                                <a class="icon"><i class="fas fa-plus fa-xs"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span class="contentB price">$245</span>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="item">
+                    <div class="left">
+                        <div class="detail">
+                            <span class="contentB">橄欖油蔥雞低GI享瘦餐</span>
+                            <div class="contentG">
+                                <span>不加熱</span>
+                                <span>・</span>
+                                <span>蛋</span>
+                            </div>
+                            <div class="area">
+                                <a class="icon"><i class="fas fa-minus fa-xs"></i></a>
+                                <input class="count" type="number" value="1">
+                                <a class="icon"><i class="fas fa-plus fa-xs"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span class="contentB price">$245</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buyer-list">
+                <div class="whos-order">豬小妹</div>
+                <div class="whos-msg">謝謝團主請客!謝謝團主請客!謝謝團主請客!謝謝團主請客!</div>
+                <div class="whos-state whos-state--finish">已完成點餐<i class="fas fa-solid fa-check"></i></div>
                 <!-- Item -->
                 <div class="item">
                     <div class="left">

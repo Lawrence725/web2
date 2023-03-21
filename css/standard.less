@@ -1477,7 +1477,7 @@ img { object-fit: cover; }
 // 分享揪團url
 .popShareUrl {
     .copy-link { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; 
-        > span { font-size: var(--fXS); }
+        > span { font-size: var(--fXS); word-break: break-all; }
         > button { color: var(--cG3); font-size: var(--fM); background: none; 
             i.icon-copy { display: inline-block; width: 24px; height: 24px;
             background: url('../icon/fontawesome-free-5.15.3-web/svgs/solid/copy-solid-gray.svg') no-repeat center; background-size: contain; }
@@ -1531,8 +1531,30 @@ img { object-fit: cover; }
             .whos-state--ready { color: var(--white); border-color: var(--c3); background: var(--c3); 
                 i.fa-check { color: var(--c3); background: var(--white); }
             }
+            .whos-state--finish { color: var(--cG3); border: none; background: none; 
+                i.fa-check { color: var(--white); background: var(--c3); }
+            }
             .buyer-list { position: relative; padding: 10px 0; border-bottom: 1px solid var(--cG5); }
             .buyer-list:last-child { border-bottom: none; }
+            .whos-order--state { display: flex; flex-flow: nowrap; justify-content: space-between; align-items: center; width: 100%; font-weight: bold; text-align: left;
+    
+                .whos-order--state--finish { min-width: 80px; font-size: var(--fXS); font-weight: normal; text-align: right; 
+    
+                    input[type=checkbox] { display: none; }
+                    label { color: var(--c1); cursor: pointer;
+                        i.fa-check { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center; width: 16px; height: 16px; padding: 2px; margin-left: 3px;
+                            color: var(--white); font-size: var(--fXS); 
+                            background: var(--cG4); border-radius: 99em; }
+                    }
+    
+                    input[type=checkbox]:checked + label, input[type=checkbox]:checked:disabled + label { color: var(--c3); 
+                        i.fa-check { background: var(--c3); }
+                    }
+                }
+            }
+            .total { padding: 0 10px 10px 10px; text-align: right; font-weight: bold;
+                .price { margin-left: 5px; }
+            }
         }
     }
 }
@@ -1593,10 +1615,10 @@ img { object-fit: cover; }
             > a { min-width: 110px; color: var(--c1); font-size: var(--fXS); font-weight: normal; text-decoration: underline !important; text-align: right; }
             .whos-order--state--edit { color: var(--cG2); }
 
-            .whos-order--state--finish { min-width: 80px; color: var(--c3); font-size: var(--fXS); font-weight: normal; text-align: right; 
+            .whos-order--state--finish { min-width: 80px; font-size: var(--fXS); font-weight: normal; text-align: right; 
 
                 input[type=checkbox] { display: none; }
-                label { color: var(--cG4); cursor: pointer;
+                label { color: var(--c1); cursor: pointer;
                     i.fa-check { display: inline-flex; flex-flow: nowrap; justify-content: center; align-items: center; width: 16px; height: 16px; padding: 2px; margin-left: 3px;
                         color: var(--white); font-size: var(--fXS); 
                         background: var(--cG4); border-radius: 99em; }
