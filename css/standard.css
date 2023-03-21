@@ -2425,10 +2425,22 @@ img {
     flex-direction: column;
   }
 }
+.modal#popItem .modal-content .close {
+  width: 30px;
+  height: 30px;
+  padding-bottom: 2px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+}
 .modal#popItem .modal-content img {
   width: 450px;
   height: 450px;
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 0 10px 0 0;
   object-fit: cover;
 }
@@ -2449,6 +2461,9 @@ img {
 .modal#popItem .modal-content .container {
   width: 450px;
   height: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 @media (max-width: 1199px) {
   .modal#popItem .modal-content .container {
@@ -2638,7 +2653,7 @@ img {
 .modal#popItem .modal-content .container .top .area label .sub {
   padding: 10px;
   margin-top: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   background-color: var(--cBg);
@@ -2736,12 +2751,11 @@ img {
   width: 100%;
   height: 100%;
   margin-left: 5px;
-  background-color: var(--cBg);
+  background-color: transparent;
   font-size: var(--fS) !important;
 }
 .modal#popItem .modal-content .container .buttom {
   height: 50px;
-  margin-top: 10px;
   display: flex;
   align-items: center;
 }
@@ -2780,6 +2794,9 @@ img {
 }
 .modal#popItem .modal-content .container .buttom .submit:hover {
   background: var(--c1);
+}
+.modal#popItem .modal-content .container .buttom .submit > span {
+  font-size: var(--fS);
 }
 .modal#popItem .modal-content .container .buttom .submit .price {
   display: flex;
