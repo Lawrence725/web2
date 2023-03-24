@@ -1,8 +1,20 @@
 // Load Header and Footer
-$(function(){
-    $("#headerHtml").load("header.html");
-    $("#footerHtml").load("footer.html");
-});
+// $(function(){
+//     $("#headerHtml").load("header.html");
+//     $("#footerHtml").load("footer.html");
+// });
+const xhrHead = new XMLHttpRequest();
+xhrHead.open("GET", "./header.html", true);
+xhrHead.send();
+xhrHead.onreadystatechange=function(){
+    if(xhrHead.readyState == 4 && xhrHead.status == 200){
+        document.querySelectorAll("#headerHtml")[0].innerHTML = xhrHead.responseText; }};
+const xhrFoot = new XMLHttpRequest();
+xhrFoot.open("GET", "./footer.html", true);
+xhrFoot.send();
+xhrFoot.onreadystatechange=function(){
+    if(xhrFoot.readyState == 4 && xhrFoot.status == 200){
+        document.querySelectorAll("#footerHtml")[0].innerHTML = xhrFoot.responseText; }};
 
 // Slideshow
 var slideIndex = 1;
