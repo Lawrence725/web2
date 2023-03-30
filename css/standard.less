@@ -102,7 +102,7 @@ img { object-fit: cover; }
     input:checked~.switchButton:before { background-color: @c1; border: 1px solid @c1; }
     input:checked~.switchButton:after { left: 22px; }
 }
-.bottombar { width: 100vw; padding: 15px 20px; left: 0; bottom: 0; position: fixed; display: flex-root; justify-content: center; box-sizing: border-box; z-index: 20; pointer-events: none;
+.bottombar { width:100vw; padding: 15px 20px; left: 0; bottom: 0; position: fixed; display: flex-root; justify-content: center; box-sizing: border-box; z-index: 20; pointer-events: none;
     .bottombox{
          width: 100%; border:1px solid @c1; border-radius: 20px; background-color: #fff; max-width: 500px; margin: 0 auto;
     }
@@ -775,6 +775,57 @@ img { object-fit: cover; }
             }
         }
     }
+    &#popCoupon{
+        .modal-content { width:calc(100vw - 60px); max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white;
+        .topTitle{ padding-bottom: 10px;}
+        }
+        .storeCoupons { width: calc(100% + 20px); margin-left: -10px; display: flex; flex-wrap: wrap;
+            .coupon { width: calc(100% - 70px); padding: 5px 15px 5px 35px; margin:5px 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background:@cBg; position: relative;
+                &::before, &::after{ content: ""; position: absolute; width: 14px; height: 100%; left: -7px; top: 0; background: url(../photo/bg_dots.svg) center center no-repeat; background-size: contain;}
+                &::after{ left: initial; right: -7px;}
+                .checkbox{ position: absolute; left: 15px; top: calc(50% - 10px); width: 20px; height: 20px; border-radius: 50%; background-color: #fff;}
+                .info { width: calc(100% - 120px); padding:5px 10px; 
+                    .detail { margin-top: 5px; display: flex; flex-direction: column;color: @cG3; font-size: var(--fS) !important; 
+                        .subText{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+                        .price{ padding-top: 5px; font-size: var(--fXS);
+                            .off{ font-size: var(--fM); color: @cG1;}
+                            .lineThrough{ padding-left: 5px; text-decoration: line-through;}
+                        }
+                    }
+                    .title { display: flex; color: @cG1; font-size: var(--fM) !important;}
+                    .rule{ padding: 3px 0; color: @c1; text-decoration: underline !important; font-size: var(--fXS); pointer-events: all; z-index: 5;}
+                }
+                .noImg{ width: calc(100% - 20px);}
+                .image { display: flex; position: relative; width: 100px;
+                    height: 100px; border-radius: 15px; overflow: hidden;
+                    img { width: 98px; height: 98px; border-radius: 15px; object-fit: cover; border:1px solid transparent }
+                    .soldOut{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #00000050; color: #fff; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center; font-size: var(--fM);}}
+            }
+            .checked{ background: @c1;
+                .checkbox{ background: url(../icon/check-w.svg) center center no-repeat; background-size: cover;}
+                .info .detail{ color: @cBg;}
+                .image img{ border-color: #fff;}
+            }
+            .addRadio{ width: calc(33% - 40px); padding-left: 5px;
+                .info{ width: calc(100% - 180px);}
+            }
+        }
+    }
+    &#popActivity{
+        .modal-content { width:calc(100vw - 60px); max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white;}
+        .topTitle{ padding-bottom: 10px;}
+        .activity{ width: calc(100% + 20px); display: flex; flex-wrap: wrap;
+            .event { width: 100%; margin: 10px;  display: flex; flex-direction: column; border-bottom: 1px solid @cG5 ; padding-bottom: 10px;
+                .image { width: 100%; height: 150px; border-radius: 10px; position: relative;
+                    img { width: 100%; height: 150px; border-radius:10px; object-fit: cover; }
+                }
+                .info { width: calc(100% - 20px); padding: 10px; 
+                    .detail { margin-top: 5px; display: flex; flex-direction: column;color: @cG3; font-size: var(--fS) !important; }
+                    .rule{ padding: 3px 0; color: @c1; text-decoration: underline !important; font-size: var(--fXS);}
+                }
+            }
+        }
+    }
 }
 
 // Portal Page
@@ -836,6 +887,7 @@ img { object-fit: cover; }
                     .icon { color: @cG4; }
                 }
             }
+            
             .separate { margin: 0 10px; color: @cG4; font-size: var(--fS) !important; 
                 @media @screen-mobile { display: none; }
             }
@@ -862,6 +914,21 @@ img { object-fit: cover; }
                 &:hover { background: @c1; }}
         }
         .error { border: 2px solid @cRed !important; }
+        #modeRound { width: calc(30% + 20px); height: 40px; margin: 0 10px; border-radius: 60px; display: flex; align-items: center; justify-content: space-between; background-color:@cBg;
+            @media @screen-tablet { width: calc(100% - 10px); margin: 10px 0; }
+            .mode { width: 100%; height: 40px; border-radius: 60px; display: flex; align-items: center; justify-content: center; color: @cG1;
+                &.active { background-color: @c1; color: white; }
+                &:hover:not(.active) { background-color: @c2; }
+                &.grayed { color: @cG3; }
+                .icon { min-width: 20px; min-height: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center; }
+                span { white-space: nowrap; overflow: hidden;  text-overflow: ellipsis; font-size: var(--fS) !important; }
+            }
+        }
+        .fillinCoupons{ width: 100%; position: relative;
+            input{ width: 100%; line-height: 28px; border-bottom: 1px solid @cG5;
+                &::placeholder { color: @cG4; }}
+            a{ position: absolute; top: 0; right: 0; width: 28px; height: 28px; text-align: center; line-height: 28px; color: @c1; display: block;}
+        }
     }
     .mainContainer { width: 100%; margin: 20px 0;
         .title { color: @cG1; font-size: var(--fM) !important; }
@@ -901,50 +968,39 @@ img { object-fit: cover; }
                 }
             }
         }
-        .topTitle{ width: 100%; text-align: center; padding-bottom: 10px;
-            .title{ font-weight: bold;}}
-        .events { width: calc(100% + 20px); margin-left: -10px; display: flex; flex-wrap: wrap;
-            .event { width: calc(25% - 24px); margin: 10px;  display: flex; flex-direction: column; border-bottom: 1px solid @cG5 ; padding-bottom: 10px;
-                @media @screen-tablet { width: calc(33% - 24px); }
-                @media @screen-mobile { width: calc(100% - 24px); }
-                .image { width: 100%; height: 150px; border-radius: 10px; position: relative;
-                    img { width: 100%; height: 150px; border-radius:10px; object-fit: cover; }
-                }
-                .info { width: calc(100% - 20px); padding: 10px; 
-                    .detail { margin-top: 5px; display: flex; flex-direction: column;color: @cG3; font-size: var(--fS) !important; }
-                    .rule{ padding: 3px 0; color: @c1; text-decoration: underline !important; font-size: var(--fXS);}
-                }
-            }
-        }
-        .storeCoupons { width: calc(100% + 20px); margin-left: -10px; display: flex; flex-wrap: wrap;
-            .coupon { width: calc(33% - 70px); padding: 5px 15px 5px 35px; margin:5px 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background:#F2F1F6; position: relative;
-                &::before, &::after{ content: ""; position: absolute; width: 14px; height: 100%; left: -7px; top: 0; background: url(../photo/bg_dots.svg) center center no-repeat; background-size: contain;}
-                &::after{ left: initial; right: -7px;}
-                @media @screen-tablet { width: calc(50% - 70px); }
-                @media @screen-mobile { width: calc(100% - 70px); }
-                .checkbox{ position: absolute; left: 15px; top: calc(50% - 10px); width: 20px; height: 20px; border-radius: 50%; background-color: #fff;}
-                .info { width: calc(100% - 120px); padding:5px 10px; 
-                    .detail { margin-top: 5px; display: flex; flex-direction: column;color: @cG3; font-size: var(--fS) !important; 
-                        .subText{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
-                        .price{ padding-top: 5px; font-size: var(--fXS);
-                            .off{ font-size: var(--fM); color: @cG1;}
-                            .lineThrough{ padding-left: 5px; text-decoration: line-through;}
+        .switch { width: 30px; height: 40px; margin-top: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: space-around; background-color: @cBg;
+                    @media @screen-tablet { background-color: white; }
+                    &.v2 { height: unset; border-radius: unset; gap: 10px; display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; background-color: transparent;
+                        .container { width: 100%; min-height: 40px; padding: 10px 15px 10px 40px; border-radius: 20px; background-color: @cBg; box-sizing: border-box;
+                            @media @screen-tablet { background-color: white; }
                         }
+                        .checkmark { top: 10px; left: 15px; }
                     }
-                    .title { display: flex; color: @cG1; font-size: var(--fM) !important;}
+                    &.error { border: none; }
+                    div.online { width: 180px; margin: -20px 0 0 auto; gap: 10px; display: flex; flex-wrap: wrap; justify-content: flex-end;
+                        div { width: 53.33px; display: flex; justify-content: center; }
+                        img { max-width: 53.33px; max-height: 16px; margin: 0 auto; }
+                    }
+                    /* The container */
+                    .container { display: block; position: relative; padding: 5px 15px 5px 45px; border-radius: 99px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: var(--fS) !important;
+                        &:hover { background: @c2; }
+                        .text { width: fit-content; height: 20px; display: flex; align-items: center; white-space: nowrap; }
+                    }
+                    /* Hide the browser's default radio button */
+                    .container input { position: absolute; opacity: 0; cursor: pointer; }
+                    /* Create a custom radio button */
+                    .checkmark { position: absolute; top: 5px; left: 20px; height: 15px; width: 15px; background-color: white; border-radius: 50%; border: 2px solid @c1; }
+                    /* On mouse-over, add a grey background color */
+                    .container:hover input ~ .checkmark { background-color: @cBg; }
+                    /* Create the indicator (the dot/circle - hidden when not checked) */
+                    .checkmark:after { content: ""; position: absolute; display: none; }
+                    /* When the radio button is checked, add a blue background */
+                    .container input:checked ~ .checkmark { background-color: @c1; }
+                    /* Show the indicator (dot/circle) when checked */
+                    .container input:checked ~ .checkmark:after { display: block; }
+                    /* Style the indicator (dot/circle) */
+                    .container .checkmark:after { top: 5px; left: 5px; width: 5px; height: 5px; border-radius: 50%; background: white; }
                 }
-                .noImg{ width: calc(100% - 20px);}
-                .image { display: flex; position: relative; width: 100px;
-                    height: 100px; border-radius: 15px; overflow: hidden;
-                    img { width: 100px; height: 100px; border-radius: 15px; object-fit: cover; border:1px solid transparent }
-                    .soldOut{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #00000050; color: #fff; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center; font-size: var(--fM);}}
-            }
-            .checked{ background: @c1;
-                .checkbox{ background: url(../icon/check-w.svg) center center no-repeat; background-size: cover;}
-                .info .detail{ color: @cBg;}
-                .image img{ border-color: #fff;}
-            }
-        }
     }
     .loading { border-radius: 5px; display: inline-block; height: 1em; position: relative; overflow: hidden; background-color: @cG4;
         &::after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; transform: translateX(-100%); background-image: linear-gradient(90deg, rgba(#fff, 0) 0, rgba(#fff, 0.2) 20%, rgba(#fff, 0.5) 60%, rgba(#fff, 0)); animation: shimmer 1s infinite; content: ''; }

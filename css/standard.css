@@ -3032,6 +3032,220 @@ img {
 .modal#popItem .modal-content .container .buttom .submit .price span {
   margin: 0 2px;
 }
+.modal#popCoupon .modal-content {
+  width: calc(100vw - 60px);
+  max-width: 500px;
+  max-height: 85vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  margin: auto;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.modal#popCoupon .modal-content .topTitle {
+  padding-bottom: 10px;
+}
+.modal#popCoupon .storeCoupons {
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal#popCoupon .storeCoupons .coupon {
+  width: calc(100% - 70px);
+  padding: 5px 15px 5px 35px;
+  margin: 5px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F2F1F6;
+  position: relative;
+}
+.modal#popCoupon .storeCoupons .coupon::before,
+.modal#popCoupon .storeCoupons .coupon::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 100%;
+  left: -7px;
+  top: 0;
+  background: url(../photo/bg_dots.svg) center center no-repeat;
+  background-size: contain;
+}
+.modal#popCoupon .storeCoupons .coupon::after {
+  left: initial;
+  right: -7px;
+}
+.modal#popCoupon .storeCoupons .coupon .checkbox {
+  position: absolute;
+  left: 15px;
+  top: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.modal#popCoupon .storeCoupons .coupon .info {
+  width: calc(100% - 120px);
+  padding: 5px 10px;
+}
+.modal#popCoupon .storeCoupons .coupon .info .detail {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  color: #828282;
+  font-size: var(--fS) !important;
+}
+.modal#popCoupon .storeCoupons .coupon .info .detail .subText {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.modal#popCoupon .storeCoupons .coupon .info .detail .price {
+  padding-top: 5px;
+  font-size: var(--fXS);
+}
+.modal#popCoupon .storeCoupons .coupon .info .detail .price .off {
+  font-size: var(--fM);
+  color: #333333;
+}
+.modal#popCoupon .storeCoupons .coupon .info .detail .price .lineThrough {
+  padding-left: 5px;
+  text-decoration: line-through;
+}
+.modal#popCoupon .storeCoupons .coupon .info .title {
+  display: flex;
+  color: #333333;
+  font-size: var(--fM) !important;
+}
+.modal#popCoupon .storeCoupons .coupon .info .rule {
+  padding: 3px 0;
+  color: #FF9900;
+  text-decoration: underline !important;
+  font-size: var(--fXS);
+  pointer-events: all;
+  z-index: 5;
+}
+.modal#popCoupon .storeCoupons .coupon .noImg {
+  width: calc(100% - 20px);
+}
+.modal#popCoupon .storeCoupons .coupon .image {
+  display: flex;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.modal#popCoupon .storeCoupons .coupon .image img {
+  width: 98px;
+  height: 98px;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 1px solid transparent;
+}
+.modal#popCoupon .storeCoupons .coupon .image .soldOut {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000050;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: var(--fM);
+}
+.modal#popCoupon .storeCoupons .checked {
+  background: #FF9900;
+}
+.modal#popCoupon .storeCoupons .checked .checkbox {
+  background: url(../icon/check-w.svg) center center no-repeat;
+  background-size: cover;
+}
+.modal#popCoupon .storeCoupons .checked .info .detail {
+  color: #F2F1F6;
+}
+.modal#popCoupon .storeCoupons .checked .image img {
+  border-color: #fff;
+}
+.modal#popCoupon .storeCoupons .addRadio {
+  width: calc(33% - 40px);
+  padding-left: 5px;
+}
+.modal#popCoupon .storeCoupons .addRadio .info {
+  width: calc(100% - 180px);
+}
+.modal#popActivity .modal-content {
+  width: calc(100vw - 60px);
+  max-width: 500px;
+  max-height: 85vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  margin: auto;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.modal#popActivity .topTitle {
+  padding-bottom: 10px;
+}
+.modal#popActivity .activity {
+  width: calc(100% + 20px);
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal#popActivity .activity .event {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 10px;
+}
+.modal#popActivity .activity .event .image {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  position: relative;
+}
+.modal#popActivity .activity .event .image img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.modal#popActivity .activity .event .info {
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+.modal#popActivity .activity .event .info .detail {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  color: #828282;
+  font-size: var(--fS) !important;
+}
+.modal#popActivity .activity .event .info .rule {
+  padding: 3px 0;
+  color: #FF9900;
+  text-decoration: underline !important;
+  font-size: var(--fXS);
+}
 #portalMain {
   min-height: calc(100vh - 200px);
   width: calc(100% - 160px);
@@ -3405,6 +3619,78 @@ img {
 #portalMain #info .error {
   border: 2px solid #EB5757 !important;
 }
+#portalMain #info #modeRound {
+  width: calc(30% + 20px);
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F2F1F6;
+}
+@media (max-width: 1199px) {
+  #portalMain #info #modeRound {
+    width: calc(100% - 10px);
+    margin: 10px 0;
+  }
+}
+#portalMain #info #modeRound .mode {
+  width: 100%;
+  height: 40px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+}
+#portalMain #info #modeRound .mode.active {
+  background-color: #FF9900;
+  color: white;
+}
+#portalMain #info #modeRound .mode:hover:not(.active) {
+  background-color: #FFEED8;
+}
+#portalMain #info #modeRound .mode.grayed {
+  color: #828282;
+}
+#portalMain #info #modeRound .mode .icon {
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#portalMain #info #modeRound .mode span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--fS) !important;
+}
+#portalMain #info .fillinCoupons {
+  width: 100%;
+  position: relative;
+}
+#portalMain #info .fillinCoupons input {
+  width: 100%;
+  line-height: 28px;
+  border-bottom: 1px solid #E0E0E0;
+}
+#portalMain #info .fillinCoupons input::placeholder {
+  color: #BDBDBD;
+}
+#portalMain #info .fillinCoupons a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  color: #FF9900;
+  display: block;
+}
 #portalMain .mainContainer {
   width: 100%;
   margin: 20px 0;
@@ -3570,197 +3856,135 @@ img {
 #portalMain .mainContainer .stores .store .info .payment div img.lg {
   width: 22px;
 }
-#portalMain .mainContainer .topTitle {
-  width: 100%;
-  text-align: center;
-  padding-bottom: 10px;
-}
-#portalMain .mainContainer .topTitle .title {
-  font-weight: bold;
-}
-#portalMain .mainContainer .events {
-  width: calc(100% + 20px);
-  margin-left: -10px;
-  display: flex;
-  flex-wrap: wrap;
-}
-#portalMain .mainContainer .events .event {
-  width: calc(25% - 24px);
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid #E0E0E0;
-  padding-bottom: 10px;
-}
-@media (max-width: 1199px) {
-  #portalMain .mainContainer .events .event {
-    width: calc(33% - 24px);
-  }
-}
-@media (max-width: 767px) {
-  #portalMain .mainContainer .events .event {
-    width: calc(100% - 24px);
-  }
-}
-#portalMain .mainContainer .events .event .image {
-  width: 100%;
-  height: 150px;
-  border-radius: 10px;
-  position: relative;
-}
-#portalMain .mainContainer .events .event .image img {
-  width: 100%;
-  height: 150px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-#portalMain .mainContainer .events .event .info {
-  width: calc(100% - 20px);
-  padding: 10px;
-}
-#portalMain .mainContainer .events .event .info .detail {
-  margin-top: 5px;
-  display: flex;
-  flex-direction: column;
-  color: #828282;
-  font-size: var(--fS) !important;
-}
-#portalMain .mainContainer .events .event .info .rule {
-  padding: 3px 0;
-  color: #FF9900;
-  text-decoration: underline !important;
-  font-size: var(--fXS);
-}
-#portalMain .mainContainer .storeCoupons {
-  width: calc(100% + 20px);
-  margin-left: -10px;
-  display: flex;
-  flex-wrap: wrap;
-}
-#portalMain .mainContainer .storeCoupons .coupon {
-  width: calc(33% - 70px);
-  padding: 5px 15px 5px 35px;
-  margin: 5px 10px;
-  border-radius: 10px;
+#portalMain .mainContainer .switch {
+  width: 30px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 99px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: #F2F1F6;
-  position: relative;
+  justify-content: space-around;
+  background-color: #F2F1F6;
+  /* The container */
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* When the radio button is checked, add a blue background */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
 }
-#portalMain .mainContainer .storeCoupons .coupon::before,
-#portalMain .mainContainer .storeCoupons .coupon::after {
+@media (max-width: 1199px) {
+  #portalMain .mainContainer .switch {
+    background-color: white;
+  }
+}
+#portalMain .mainContainer .switch.v2 {
+  height: unset;
+  border-radius: unset;
+  gap: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: transparent;
+}
+#portalMain .mainContainer .switch.v2 .container {
+  width: 100%;
+  min-height: 40px;
+  padding: 10px 15px 10px 40px;
+  border-radius: 20px;
+  background-color: #F2F1F6;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  #portalMain .mainContainer .switch.v2 .container {
+    background-color: white;
+  }
+}
+#portalMain .mainContainer .switch.v2 .checkmark {
+  top: 10px;
+  left: 15px;
+}
+#portalMain .mainContainer .switch.error {
+  border: none;
+}
+#portalMain .mainContainer .switch div.online {
+  width: 180px;
+  margin: -20px 0 0 auto;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+#portalMain .mainContainer .switch div.online div {
+  width: 53.33px;
+  display: flex;
+  justify-content: center;
+}
+#portalMain .mainContainer .switch div.online img {
+  max-width: 53.33px;
+  max-height: 16px;
+  margin: 0 auto;
+}
+#portalMain .mainContainer .switch .container {
+  display: block;
+  position: relative;
+  padding: 5px 15px 5px 45px;
+  border-radius: 99px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: var(--fS) !important;
+}
+#portalMain .mainContainer .switch .container:hover {
+  background: #FFEED8;
+}
+#portalMain .mainContainer .switch .container .text {
+  width: fit-content;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+#portalMain .mainContainer .switch .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+#portalMain .mainContainer .switch .checkmark {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid #FF9900;
+}
+#portalMain .mainContainer .switch .container:hover input ~ .checkmark {
+  background-color: #F2F1F6;
+}
+#portalMain .mainContainer .switch .checkmark:after {
   content: "";
   position: absolute;
-  width: 14px;
-  height: 100%;
-  left: -7px;
-  top: 0;
-  background: url(../photo/bg_dots.svg) center center no-repeat;
-  background-size: contain;
+  display: none;
 }
-#portalMain .mainContainer .storeCoupons .coupon::after {
-  left: initial;
-  right: -7px;
+#portalMain .mainContainer .switch .container input:checked ~ .checkmark {
+  background-color: #FF9900;
 }
-@media (max-width: 1199px) {
-  #portalMain .mainContainer .storeCoupons .coupon {
-    width: calc(50% - 70px);
-  }
+#portalMain .mainContainer .switch .container input:checked ~ .checkmark:after {
+  display: block;
 }
-@media (max-width: 767px) {
-  #portalMain .mainContainer .storeCoupons .coupon {
-    width: calc(100% - 70px);
-  }
-}
-#portalMain .mainContainer .storeCoupons .coupon .checkbox {
-  position: absolute;
-  left: 15px;
-  top: calc(50% - 10px);
-  width: 20px;
-  height: 20px;
+#portalMain .mainContainer .switch .container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  background-color: #fff;
-}
-#portalMain .mainContainer .storeCoupons .coupon .info {
-  width: calc(100% - 120px);
-  padding: 5px 10px;
-}
-#portalMain .mainContainer .storeCoupons .coupon .info .detail {
-  margin-top: 5px;
-  display: flex;
-  flex-direction: column;
-  color: #828282;
-  font-size: var(--fS) !important;
-}
-#portalMain .mainContainer .storeCoupons .coupon .info .detail .subText {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-#portalMain .mainContainer .storeCoupons .coupon .info .detail .price {
-  padding-top: 5px;
-  font-size: var(--fXS);
-}
-#portalMain .mainContainer .storeCoupons .coupon .info .detail .price .off {
-  font-size: var(--fM);
-  color: #333333;
-}
-#portalMain .mainContainer .storeCoupons .coupon .info .detail .price .lineThrough {
-  padding-left: 5px;
-  text-decoration: line-through;
-}
-#portalMain .mainContainer .storeCoupons .coupon .info .title {
-  display: flex;
-  color: #333333;
-  font-size: var(--fM) !important;
-}
-#portalMain .mainContainer .storeCoupons .coupon .noImg {
-  width: calc(100% - 20px);
-}
-#portalMain .mainContainer .storeCoupons .coupon .image {
-  display: flex;
-  position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 15px;
-  overflow: hidden;
-}
-#portalMain .mainContainer .storeCoupons .coupon .image img {
-  width: 100px;
-  height: 100px;
-  border-radius: 15px;
-  object-fit: cover;
-  border: 1px solid transparent;
-}
-#portalMain .mainContainer .storeCoupons .coupon .image .soldOut {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #00000050;
-  color: #fff;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  font-size: var(--fM);
-}
-#portalMain .mainContainer .storeCoupons .checked {
-  background: #FF9900;
-}
-#portalMain .mainContainer .storeCoupons .checked .checkbox {
-  background: url(../icon/check-w.svg) center center no-repeat;
-  background-size: cover;
-}
-#portalMain .mainContainer .storeCoupons .checked .info .detail {
-  color: #F2F1F6;
-}
-#portalMain .mainContainer .storeCoupons .checked .image img {
-  border-color: #fff;
+  background: white;
 }
 #portalMain .loading {
   border-radius: 5px;

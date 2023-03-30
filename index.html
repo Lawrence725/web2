@@ -54,12 +54,12 @@
                             </div>
                         </div>
                     </div>
-                    <button class="couponItem">
+                    <button class="couponItem" id="buttonCoupon">
                         <span class="itemTitle">商品券</span>
                         <span class="coupon_nb_s arr_r">您有2張可用商品券</span>
                     </button>
-                    <button class="couponItem">
-                        <span class="itemTitle">商品券</span>
+                    <button class="couponItem" id="buttonActivity">
+                        <span class="itemTitle">商品券-測試到優惠活動</span>
                         <span class="coupon_nb arr_r">x2</span>
                     </button>
                     <button class="couponItem">
@@ -456,6 +456,168 @@
         <div id="footerHtml"></div>
         <!-- Loading Spinner -->
         <!-- <div class="spinner"><div></div></div> -->
+        <!-- Coupon Popup -->
+        <div id="popCoupon" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <span class="title topTitle">商品券</span>
+                <div class="storeCoupons">
+                    <!-- coupon -->
+                    <a class="coupon" href="#">
+                        <div class="checkbox"></div>
+                        <div class="info">
+                            <div class="title">
+                                <span>新春招待券</span>
+                            </div>
+                            <div class="detail">
+                                <span class="subText">香蒜荷蘭醬佐無骨烤雞堡套餐，雞堡套餐套香蒜荷蘭醬佐無骨烤雞堡套餐雞堡套餐套</span>
+                                <span>有效期限：2023-12-31</span>
+                                <div class="price">
+                                    <span class="off">$0</span>
+                                    <span class="lineThrough">$399</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img class="" src="photo/food2.jpg">
+                        </div>
+                    </a>
+                    <!-- coupon -->
+                    <!-- 確定 + checked -->
+                    <a class="coupon checked" href="#">
+                        <div class="checkbox"></div>
+                        <div class="info">
+                            <div class="title">
+                                <span>新戶招待券</span>
+                            </div>
+                            <div class="detail">
+                                <span class="subText">香蒜荷蘭醬佐無骨烤雞堡套餐，雞堡套餐套香蒜荷蘭醬佐無骨烤雞堡套餐雞堡套餐套</span>
+                                <span>有效期限：2023-12-31</span>
+                                <div class="price">
+                                    <span class="off">$0</span>
+                                    <span class="lineThrough">$399</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img class="" src="photo/food1.jpg">
+                        </div>
+                    </a>
+                    <!-- coupon -->
+                    <a class="coupon" href="#">
+                        <div class="checkbox"></div>
+                        <!-- 沒圖 + noImg -->
+                        <div class="info noImg">
+                            <div class="title">
+                                <span>新年招待券</span>
+                            </div>
+                            <div class="detail">
+                                <span class="subText">香蒜荷蘭醬佐無骨烤雞堡套餐，雞堡套餐套香蒜荷蘭醬佐無骨烤雞堡套餐雞堡套餐套</span>
+                                <span>有效期限：2023-12-31</span>
+                                <div class="price">
+                                    <span class="off">$0</span>
+                                    <span class="lineThrough">$399</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- coupon -->
+                    <a class="coupon checked" href="#">
+                        <div class="checkbox"></div>
+                        <div class="info">
+                            <div class="title">
+                                <span>情人節招待券</span>
+                            </div>
+                            <div class="detail">
+                                <span class="subText">香蒜荷蘭醬佐無骨烤雞堡套餐，雞堡套餐套香蒜荷蘭醬佐無骨烤雞堡套餐雞堡套餐套</span>
+                                <span>有效期限：2023-12-31</span>
+                                <div class="price">
+                                    <span class="off">$299</span>
+                                    <span class="lineThrough">$1599</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img class="" src="photo/food3.jpg">
+                        </div>
+                    </a>
+                    <!-- coupon -->
+                    <a class="coupon" href="#">
+                        <div class="checkbox"></div>
+                        <div class="info">
+                            <div class="title">
+                                <span>OL特惠券</span>
+                            </div>
+                            <div class="detail">
+                                <span class="subText">香蒜荷蘭醬佐無骨烤雞堡套餐，雞堡套餐套香蒜荷蘭醬佐無骨烤雞堡套餐雞堡套餐套</span>
+                                <span>有效期限：2023-12-31</span>
+                                <div class="price">
+                                    <span class="off">$199</span>
+                                    <span class="lineThrough">$399</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <div class="soldOut">
+                                <span>售完</span>
+                            </div>
+                            <img class="" src="photo/food2.jpg">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Activity Popup -->
+        <div id="popActivity" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <span class="title topTitle">優惠活動</span>
+                <div class="activity">
+                    <div class="event">
+                        <div class="image">
+                            <img class="" src="photo/event0.jpg">
+                        </div>
+                        <div class="info">
+                            <div class="detail">
+                                <span>情人節九五折優惠</span>
+                                <span>全品項九五折優惠</span>
+                                <span>有效期限：2023-12-31</span>
+                                <a class="rule" href="#">使用規則</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- event -->
+                    <div class="event">
+                        <div class="image">
+                            <img class="" src="photo/event1.jpg">
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                <span>優惠活動</span>
+                            </div>
+                            <div class="detail">
+                                <span>全品項九五折優惠</span>
+                                <span>有效期限：2023-12-31</span>
+                                <a class="rule" href="#">使用規則</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- event -->
+                    <div class="event">
+                        <div class="info">
+                            <div class="title">
+                                <span>優惠活動</span>
+                            </div>
+                            <div class="detail">
+                                <span>全品項九五折優惠</span>
+                                <span>有效期限：2023-12-31</span>
+                                <a class="rule" href="#">使用規則</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Notice Popup -->
         <div id="popNotice" class="modal">
             <div class="modal-content">
