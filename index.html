@@ -23,61 +23,62 @@
             <!-- 新版購物車按鈕 -->
             <div class="bottombar">
                 <div class="bottombox">
-                <div class="information__container">
-                    <a class="go_login" href="#">
-                        <div class="storeCover">
-                            <img src="photo/mt-toast_cover.png">
+                    <div class="information__container">
+                        <!-- 新版揪團按鈕 -->
+                        <div class="transparentTop">
+                            <button class="button--circle--green" onclick="popOpen('popStart');"><i class="fas fa-solid fa-users"></i><span>揪團</span></button>
                         </div>
-                        <span class="mainTitle">加入會員</span>
-                        <span class="subTitle">享有最新優惠及點數折抵</span>
-                    </a>
-                    <div class="pointsItem">
-                        <span class="itemTitle">麥町點 100</span>
-                        <div class="usePoints">
-                            <div class="switch_type">
-                                <input name="points.use" type="hidden" value="0">
-                                <input id="points.use" type="checkbox">
-                                <label class="switchButton" for="points.use"></label>
+                        <a class="go_login" href="#">
+                            <div class="storeCover">
+                                <img src="photo/mt-toast_cover.png">
+                            </div>
+                            <span class="mainTitle">加入會員</span>
+                            <span class="subTitle">享有最新優惠及點數折抵</span>
+                        </a>
+                        <div class="pointsItem">    
+                            <span class="itemTitle" id="buttonCouponRule">麥町點 100</span>
+                            <div class="usePoints">
+                                <div class="switch_type">
+                                    <input name="points.use" type="hidden" value="0">
+                                    <input id="points.use" type="checkbox">
+                                    <label class="switchButton" for="points.use"></label>
+                                </div>
                             </div>
                         </div>
+                        <div class="pointsItem">
+                            <span class="itemTitle">麥町點 100</span>
+                            <div class="usePoints">
+                                <div class="input">
+                                    <input type="text" placeholder="" value="100">
+                                </div>
+                                <div class="switch_type">
+                                    <input name="points.use" type="hidden" value="0">
+                                    <input id="points.use" type="checkbox" checked>
+                                    <label class="switchButton" for="points.use"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="couponItem" id="buttonCoupon">
+                            <span class="itemTitle">商品券</span>
+                            <span class="coupon_nb_s arr_r">您有2張可用商品券</span>
+                        </button>
+                        <button class="couponItem" id="buttonActivity">
+                            <span class="itemTitle">商品券-測試到優惠活動</span>
+                            <span class="coupon_nb arr_r">x2</span>
+                        </button>
+                        <button class="couponItem" id="buttonRule">
+                            <span class="itemTitle">商品券</span>
+                            <span class="couponTitle arr_r">新戶招待券新戶招待券新戶招待券新戶招待券</span>
+                        </button>   
                     </div>
-                    <div class="pointsItem">
-                        <span class="itemTitle">麥町點 100</span>
-                        <div class="usePoints">
-                            <div class="input">
-                                <input type="text" placeholder="" value="100">
-                            </div>
-                            <div class="switch_type">
-                                <input name="points.use" type="hidden" value="0">
-                                <input id="points.use" type="checkbox" checked>
-                                <label class="switchButton" for="points.use"></label>
-                            </div>
-                        </div>
+                    <div class="bottombar__container">
+                        <button class="buttonCart">
+                            <span>購物車</span>
+                            <span>共2件</span>
+                            <span>・</span>
+                            <span>$190</span>
+                        </button>
                     </div>
-                    <button class="couponItem" id="buttonCoupon">
-                        <span class="itemTitle">商品券</span>
-                        <span class="coupon_nb_s arr_r">您有2張可用商品券</span>
-                    </button>
-                    <button class="couponItem" id="buttonActivity">
-                        <span class="itemTitle">商品券-測試到優惠活動</span>
-                        <span class="coupon_nb arr_r">x2</span>
-                    </button>
-                    <button class="couponItem">
-                        <span class="itemTitle">商品券</span>
-                        <span class="couponTitle arr_r">新戶招待券新戶招待券新戶招待券新戶招待券</span>
-                    </button>   
-                </div>
-                <div class="bottombar__container">
-                    <button class="buttonCart">
-                        <span>購物車</span>
-                        <span>共2件</span>
-                        <span>・</span>
-                        <span>$190</span>
-                    </button>
-
-                    <!-- 新版揪團按鈕 -->
-                    <button class="button--circle--green" onclick="popOpen('popStart');"><i class="fas fa-solid fa-users"></i><span>揪團</span></button>
-                </div>
                 </div>
             </div>
             <!-- 公告Banner -->
@@ -456,15 +457,40 @@
         <div id="footerHtml"></div>
         <!-- Loading Spinner -->
         <!-- <div class="spinner"><div></div></div> -->
+
+        <!-- Rule Popup -->
+        <div id="popRule" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <span class="leftTitle">使用規則</span>
+                <span class="title topTitle">情人節九五折優惠</span>
+                <div class="info">
+                    <span class="subText">即日期至二月底，凡來店消費每筆滿台幣一百元，即可享有九五折優惠，數量有限，詳情請參考店內公告。<br>
+                        <br>
+                        考但我個一他球一！而行的不做，羅裡信下花金大受名自有達南一這生水樂冷魚有間像自心今有資集雖生呢果長；兩香對一物果兒感健國：是大較大看國大也主境戲黨間運近列己記就這說角參害。</span>
+                </div>
+            </div>
+        </div>
+        <!-- Coupon Rule Popup -->
+        <div id="popCouponRule" class="modal" style="display: block;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <span class="leftTitle">麥町點說明</span>
+                <span class="title topTitle"><img src="icon/point-line.svg">1 = NT$1<br>折抵上限：<img src="icon/point-line.svg">20</span>
+                <div class="info">
+                    <span class="subText">更多優惠說明，請參閱店內公告。考但我個一他球一！而行的不做，羅裡信下花金大受名自有達南一這生水樂冷魚有間像自心今有資集雖生呢果長；兩香對一物果兒感健國：是大較大看國大也主境戲黨間運近列己記就這說角參害。</span>
+                </div>
+            </div>
+        </div>
         <!-- Coupon Popup -->
-        <div id="popCoupon" class="modal">
+        <div id="popCoupon" class="modal">  
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <span class="title topTitle">商品券</span>
                 <div class="storeCoupons">
                     <!-- coupon -->
                     <a class="coupon" href="#">
-                        <div class="checkbox"></div>
+                        <div class="imgCheckbox"></div>
                         <div class="info">
                             <div class="title">
                                 <span>新春招待券</span>
@@ -485,7 +511,7 @@
                     <!-- coupon -->
                     <!-- 確定 + checked -->
                     <a class="coupon checked" href="#">
-                        <div class="checkbox"></div>
+                        <div class="imgCheckbox"></div>
                         <div class="info">
                             <div class="title">
                                 <span>新戶招待券</span>
@@ -505,7 +531,7 @@
                     </a>
                     <!-- coupon -->
                     <a class="coupon" href="#">
-                        <div class="checkbox"></div>
+                        <div class="imgCheckbox"></div>
                         <!-- 沒圖 + noImg -->
                         <div class="info noImg">
                             <div class="title">
@@ -523,7 +549,7 @@
                     </a>
                     <!-- coupon -->
                     <a class="coupon checked" href="#">
-                        <div class="checkbox"></div>
+                        <div class="imgCheckbox"></div>
                         <div class="info">
                             <div class="title">
                                 <span>情人節招待券</span>
@@ -543,7 +569,7 @@
                     </a>
                     <!-- coupon -->
                     <a class="coupon" href="#">
-                        <div class="checkbox"></div>
+                        <div class="imgCheckbox"></div>
                         <div class="info">
                             <div class="title">
                                 <span>OL特惠券</span>

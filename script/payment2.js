@@ -29,3 +29,18 @@ window.onclick = function(event) {
         popTerms.style.display = "none";
     }
 }
+
+// Coupon Popup
+var popCoupon = document.getElementById("popCoupon");
+var buttonCoupon = document.getElementById("buttonCoupon");
+var close = popCoupon.getElementsByClassName("close")[0];
+var submit = popCoupon.getElementsByClassName("submit")[0];
+buttonCoupon.onclick = function() {
+    popCoupon.style.display = "flex";
+}
+close.onclick = function() {
+    popCoupon.style.display = "none";
+}
+submit.onclick = function() {
+    popCoupon.style.display = "none";
+}

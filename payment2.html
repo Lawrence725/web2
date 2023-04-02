@@ -13,9 +13,42 @@
         <!-- Awesome Icon -->
         <link href="icon/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
         <!-- <script src="https://kit.fontawesome.com/bfebcca289.js" crossorigin="anonymous"></script> -->
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <div id="paymentMain">
+            <!-- 新版購物車按鈕 -->
+            <div class="bottombar">
+                <div class="bottombox">
+                    <div class="information__container">
+                        <div class="pointsItem">
+                            <span class="itemTitle">麥町點 100</span>
+                            <div class="usePoints">
+                                <div class="switch_type">
+                                    <input name="points.use" type="hidden" value="0">
+                                    <input id="points.use" type="checkbox">
+                                    <label class="switchButton" for="points.use"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="couponItem" id="buttonCoupon">
+                            <span class="itemTitle">優惠券</span>
+                            <span class="coupon_nb_s arr_r">選擇優惠券/輸入代碼</span>
+                        </button>
+                        <!-- <button class="couponItem" id="buttonActivity">
+                            <span class="itemTitle">優惠券</span>
+                            <span class="coupon_nb arr_r">x2</span>
+                        </button> -->
+                    </div>
+                    <div class="bottombar__container">
+                        <button class="buttonCart">
+                            <span>一鍵下單</span>
+                            <span>$245</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
             <!-- Left -->
             <div id="left">
                 <a href="index.html"><img id="logo" src="photo/logo.png"></a>
@@ -629,6 +662,131 @@
                     </ul>
                     <span>若您有任何關於訂購之問題，請使用線上客服系統與我們客服團隊聯繫，謝謝。</span>
                     <span>最後更新日期：2020年3月22日</span>
+                </div>
+            </div>
+        </div>
+        <!-- Coupon Popup -->
+        <div id="popCoupon" class="modal">
+            <div class="modal-content">
+                <div class="bottombar">
+                    <div class="bottombox">
+                        <div class="bottombar__container">
+                            <button class="buttonCart">
+                                <span>確認使用</span>
+                                <span>優惠券x1</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <span class="close">&times;</span>
+                <!-- 當沒有 mode 時 顯示標題 -->
+                <span class="title topTitle">優惠券</span>
+                <div id="modeRound">
+                    <a class="mode active">
+                        <span>優惠券</span>
+                    </a>
+                    <a class="mode grayed">
+                        <span>禮票券</span>
+                    </a>
+                </div>
+                <!-- 輸入優惠代碼 -->
+                <div class="fillinCoupons">
+                    <input type="text" placeholder="輸入優惠代碼">
+                    <a href="#" class=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="storeCoupons">
+                    <!-- coupon -->
+                    <!-- 確定 + checked -->
+                    <div class="coupon addCheckbox checked">
+                        <!-- <div class="checkbox"></div> -->
+                        <div class="checkbox">
+                            <label class="container">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                <span>新春九五折優惠新春九五折優惠</span>
+                            </div>
+                            <div class="detail">
+                                <span class="subText">全品項九五折優惠</span>
+                                <span>有效期限：2023-12-31</span>
+                                <a class="rule" href="#">使用規則</a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img class="" src="photo/food2.jpg">
+                        </div>
+                    </div>
+                    <!-- coupon -->
+                    <!-- 確定 + checked -->
+                    <div class="coupon addCheckbox">
+                        <div class="checkbox">
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                <span>新春九五折優惠新春九五折優惠</span>
+                            </div>
+                            <div class="detail">
+                                <span class="subText">全品項九五折優惠</span>
+                                <span>有效期限：2023-12-31</span>
+                                <a class="rule" href="#">使用規則</a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img class="" src="photo/food3.jpg">
+                        </div>
+                    </div>
+                    <!-- coupon -->
+                    <div class="coupon addCheckbox">
+                        <div class="checkbox">
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <!-- 沒圖 + noImg -->
+                        <div class="info noImg">
+                            <div class="title">
+                                <span>新年招待券</span>
+                            </div>
+                            <div class="detail">
+                                <span class="subText">香蒜荷蘭醬佐無骨烤雞堡套餐，雞堡套餐套香蒜荷蘭醬佐無骨烤雞堡套餐雞堡套餐套</span>
+                                <span>有效期限：2023-12-31</span>
+                                <a class="rule" href="#">使用規則</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- coupon -->
+                    <div class="coupon addCheckbox">
+                        <div class="checkbox">
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                <span>OL特惠券</span>
+                            </div>
+                            <div class="detail">
+                                <span class="subText">香蒜荷蘭醬佐無骨烤雞堡套餐，雞堡套餐套香蒜荷蘭醬佐無骨烤雞堡套餐雞堡套餐套</span>
+                                <span>有效期限：2023-12-31</span>
+                                <a class="rule" href="#">使用規則</a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <div class="soldOut">
+                                <span>售完</span>
+                            </div>
+                            <img class="" src="photo/food2.jpg">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -80,6 +80,36 @@ submit.onclick = function() {
     popCoupon.style.display = "none";
 }
 
+// Rule Popup
+var popRule = document.getElementById("popRule");
+var buttonRule = document.getElementById("buttonRule");
+var close = popRule.getElementsByClassName("close")[0];
+var submit = popRule.getElementsByClassName("submit")[0];
+buttonRule.onclick = function() {
+    popRule.style.display = "flex";
+}
+close.onclick = function() {
+    popRule.style.display = "none";
+}
+submit.onclick = function() {
+    popRule.style.display = "none";
+}
+
+// Coupon Rule Popup
+var popCouponRule = document.getElementById("popCouponRule");
+var buttonCouponRule = document.getElementById("buttonCouponRule");
+var close = popCouponRule.getElementsByClassName("close")[0];
+var submit = popCouponRule.getElementsByClassName("submit")[0];
+buttonCouponRule.onclick = function() {
+    popCouponRule.style.display = "flex";
+}
+close.onclick = function() {
+    popCouponRule.style.display = "none";
+}
+submit.onclick = function() {
+    popCouponRule.style.display = "none";
+}
+
 // Activity Popup
 var popActivity = document.getElementById("popActivity");
 var buttonActivity = document.getElementById("buttonActivity");
