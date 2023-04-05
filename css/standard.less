@@ -778,7 +778,7 @@ img { object-fit: cover; }
         }
     }
     &#popCoupon { align-items: flex-end;
-        .modal-content { width: 100vw; max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px 20px 86px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
+        .modal-content { width: 100vw; max-width: 500px; max-height: calc(80vh - 106px); overflow-y: auto; overflow-x: hidden; padding: 20px 20px 86px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
         .topTitle{ padding-bottom: 10px;}
         }
         .storeCoupons { width: calc(100% + 20px); margin-left: -10px; display: flex; flex-wrap: wrap;
@@ -866,7 +866,7 @@ img { object-fit: cover; }
         }
     }
     &#popActivity { align-items: flex-end;
-        .modal-content { width: 100vw; max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;}
+        .modal-content { width: 100vw; max-width: 500px; max-height: calc(80vh - 40px); overflow-y: auto; overflow-x: hidden; padding: 20px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;}
         .topTitle{ padding-bottom: 10px;}
         .activity{ width: calc(100% + 20px); display: flex; flex-wrap: wrap;
             .event { width: 100%; margin: 10px;  display: flex; flex-direction: column; border-bottom: 1px solid @cG5 ; padding-bottom: 10px;
@@ -1305,9 +1305,9 @@ img { object-fit: cover; }
                         .checkmark { top: 10px; left: 15px; }
                     }
                     &.error { border: none; }
-                    div.online { width: 180px; margin: -20px 0 0 auto; gap: 10px; display: flex; flex-wrap: wrap; justify-content: flex-end;
-                        div { width: 53.33px; display: flex; justify-content: center; }
-                        img { max-width: 53.33px; max-height: 16px; margin: 0 auto; }
+                    div.online { width: calc(100% - 64px); margin: -20px 0 0 auto; gap: 10px; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end;
+                        div { width: fit-content; height: 22px; display: flex; align-items: center; }
+                        img { max-height: 22px; margin: 0 auto; }
                     }
                     /* The container */
                     .container { display: block; position: relative; padding: 5px 15px 5px 45px; border-radius: 99px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: var(--fS) !important;

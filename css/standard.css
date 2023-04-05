@@ -3066,7 +3066,7 @@ img {
 .modal#popCoupon .modal-content {
   width: 100vw;
   max-width: 500px;
-  max-height: 85vh;
+  max-height: calc(80vh - 106px);
   overflow-y: auto;
   overflow-x: hidden;
   padding: 20px 20px 86px;
@@ -3452,7 +3452,7 @@ img {
 .modal#popActivity .modal-content {
   width: 100vw;
   max-width: 500px;
-  max-height: 85vh;
+  max-height: calc(80vh - 40px);
   overflow-y: auto;
   overflow-x: hidden;
   padding: 20px;
@@ -5340,21 +5340,22 @@ img {
   border: none;
 }
 #paymentMain #right #top .area .switch div.online {
-  width: 180px;
+  width: calc(100% - 64px);
   margin: -20px 0 0 auto;
   gap: 10px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: flex-end;
 }
 #paymentMain #right #top .area .switch div.online div {
-  width: 53.33px;
+  width: fit-content;
+  height: 22px;
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 #paymentMain #right #top .area .switch div.online img {
-  max-width: 53.33px;
-  max-height: 16px;
+  max-height: 22px;
   margin: 0 auto;
 }
 #paymentMain #right #top .area .switch .container {
