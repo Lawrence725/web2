@@ -36,7 +36,7 @@
                             <span class="subTitle">享有最新優惠及點數折抵</span>
                         </a>
                         <div class="pointsItem">    
-                            <span class="itemTitle" id="buttonCouponRule">麥町點 100</span>
+                            <span class="itemTitle" id="buttonCouponRule" onclick="popCouponRule()">麥町點 100</span>
                             <div class="usePoints">
                                 <div class="switch_type">
                                     <input name="points.use" type="hidden" value="0">
@@ -46,7 +46,7 @@
                             </div>
                         </div>
                         <div class="pointsItem">
-                            <span class="itemTitle" id="buttonCouponRule">麥町點 100</span>
+                            <span class="itemTitle" id="buttonCouponRule" onclick="popCouponRule()">麥町點 100</span>
                             <div class="usePoints">
                                 <div class="input">
                                     <input type="text" placeholder="" value="100">
@@ -58,21 +58,21 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="couponItem" id="buttonCoupon">
+                        <button class="couponItem" id="buttonCoupon" onclick="popCoupon()">
                             <span class="itemTitle">商品券</span>
                             <span class="coupon_nb_s arr_r">您有2張可用商品券</span>
                         </button>
-                        <button class="couponItem" id="buttonActivity">
+                        <button class="couponItem" id="buttonActivity" onclick="popActivity()">
                             <span class="itemTitle">商品券-測試到優惠活動</span>
                             <span class="coupon_nb arr_r">x2</span>
                         </button>
-                        <button class="couponItem" id="buttonRule">
+                        <button class="couponItem" id="buttonRule" onclick="popRule()">
                             <span class="itemTitle">商品券</span>
                             <span class="couponTitle arr_r">新戶招待券新戶招待券新戶招待券新戶招待券</span>
                         </button>   
                     </div>
                     <div class="bottombar__container">
-                        <button class="buttonCart">
+                        <button class="buttonCart" onclick="popCart()">
                             <span>購物車</span>
                             <span>共2件</span>
                             <span>・</span>
@@ -153,10 +153,10 @@
                         <span class="content">滿$1000 折$100</span>
                     </div>
                     <div id="buttons">
-                        <a class="icon" id="buttonInfo" title="商店資訊">
+                        <a class="icon" id="buttonInfo" title="商店資訊" onclick="popInfo()">
                             <i class="fas fa-info"></i>
                         </a>
-                        <a class="icon" id="buttonNotice" title="公告">
+                        <a class="icon" id="buttonNotice" title="公告" onclick="popNotice()">
                             <i class="fas fa-bullhorn"></i>
                         </a>
                         <!-- <a class="icon" id="buttonDelivery" title="外送條件">
@@ -239,7 +239,7 @@
                 <span class="title">優惠套餐</span>
                 <div class="items">
                     <!-- Item -->
-                    <a class="item">
+                    <a class="item" onclick="popItem()">
                         <div class="info">
                             <div>
                                 <div class="title">
@@ -272,7 +272,7 @@
                         </div>
                     </a>
                     <!-- Item -->
-                    <a class="item">
+                    <a class="item" onclick="popItem()">
                         <div class="info sold">
                             <div>
                                 <div class="title">
@@ -301,7 +301,7 @@
                         </div>
                     </a>
                     <!-- Item -->
-                    <a class="item">
+                    <a class="item" onclick="popItem()">
                         <div class="info sold">
                             <div>
                                 <div class="title">
@@ -335,7 +335,7 @@
                         </div>
                     </a>
                     <!-- Item -->
-                    <a class="item">
+                    <a class="item" onclick="popItem()">
                         <div class="info">
                             <div>
                                 <div class="title">
@@ -369,7 +369,7 @@
                 <span class="title">主餐</span>
                 <div class="items">
                     <!-- Item -->
-                    <a class="item">
+                    <a class="item" onclick="popItem()">
                         <div class="info">
                             <div>
                                 <div class="title">
@@ -397,7 +397,7 @@
                         </div>
                     </a>
                     <!-- Item -->
-                    <a class="item">
+                    <a class="item" onclick="popItem()">
                         <div class="info">
                             <div>
                                 <div class="title">
@@ -459,9 +459,9 @@
         <!-- <div class="spinner"><div></div></div> -->
 
         <!-- Rule Popup -->
-        <div id="popRule" class="modal">
+        <div id="popRule" class="modal" onclick="popClose(this)">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close" onclick="popClose(this)">&times;</span>
                 <span class="leftTitle">使用規則</span>
                 <span class="title topTitle">情人節九五折優惠</span>
                 <div class="info">
@@ -472,9 +472,9 @@
             </div>
         </div>
         <!-- Coupon Rule Popup -->
-        <div id="popCouponRule" class="modal">
+        <div id="popCouponRule" class="modal" onclick="popClose(this)">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close" onclick="popClose(this)">&times;</span>
                 <span class="leftTitle">麥町點說明</span>
                 <span class="title topTitle"><img src="icon/point-line.svg">1 = NT$1<br>折抵上限：<img src="icon/point-line.svg">20</span>
                 <div class="info">
@@ -483,9 +483,9 @@
             </div>
         </div>
         <!-- Coupon Popup -->
-        <div id="popCoupon" class="modal">  
+        <div id="popCoupon" class="modal" onclick="popClose(this)">  
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close" onclick="popClose(this)">&times;</span>
                 <span class="title topTitle">商品券</span>
                 <div class="storeCoupons">
                     <!-- coupon -->
@@ -594,9 +594,9 @@
             </div>
         </div>
         <!-- Activity Popup -->
-        <div id="popActivity" class="modal">
+        <div id="popActivity" class="modal" onclick="popClose(this)">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close" onclick="popClose(this)">&times;</span>
                 <span class="title topTitle">優惠活動</span>
                 <div class="activity">
                     <div class="event">
@@ -645,21 +645,21 @@
             </div>
         </div>
         <!-- Notice Popup -->
-        <div id="popNotice" class="modal">
+        <div id="popNotice" class="modal" onclick="popClose(this)">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close" onclick="popClose(this)">&times;</span>
                 <span class="title">公告</span>
                 <img src="photo/item.png">
                 <span class="content">像習對前細亮身乎英病見導，當思太黨、牛施接連看行念福小我他美，預乎禮錯以。他書際起華成數何為事而意前別規度代。後平來易都看著叫有子竟性識色快了今力的習中片黑？計原除了員細。合計備我低年世他來手開，細發目推院法電較次看是我下喜，數漸世什度的人故到驗？</span>
-                <a class="submit">
+                <a class="submit" onclick="popClose(this)">
                     <span>了解</span>
                 </a>
             </div>
         </div>
         <!-- Info Popup -->
-        <div id="popInfo" class="modal">
+        <div id="popInfo" class="modal" onclick="popClose(this)">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close" onclick="popClose(this)">&times;</span>
                 <span class="title">商店資訊</span>
                 <div class="content">
                     <div><i class="fas fa-clock"></i></div>
@@ -718,10 +718,10 @@
             </div>
         </div>
         <!-- Setting Popup -->
-        <div id="popSetting" class="modal">
+        <div id="popSetting" class="modal" onclick="popClose(this)">
             <div class="modal-content">
                 <div class="container">
-                    <span class="close">&times;</span>
+                    <span class="close" onclick="popClose(this)">&times;</span>
                     <span class="title">取餐方式</span>
                     <!-- <span class="message">錯誤訊息</span> -->
                     <div id="mode">
@@ -786,7 +786,7 @@
                         <textarea placeholder="給外送員的話"></textarea>
                     </div>
                 </div>
-                <a class="submit"> <!-- disabled -->
+                <a class="submit" onclick="popClose(this)"> <!-- disabled -->
                     <span>確認</span>
                 </a>
             </div>
@@ -949,5 +949,6 @@
         <!-- <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script> -->
         <!-- Script -->
         <script src="./script/index.js"></script>
+        <script src="./script/header.js"></script>
     </body>
 </html>

@@ -1399,13 +1399,15 @@ img {
 .modal#popNotice .modal-content {
   width: 400px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 @media (max-width: 767px) {
   .modal#popNotice .modal-content {
@@ -1439,12 +1441,14 @@ img {
 .modal#popInfo .modal-content {
   width: 400px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 @media (max-width: 767px) {
   .modal#popInfo .modal-content {
@@ -1515,7 +1519,6 @@ img {
 .modal#popDelivery .modal-content {
   width: 400px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -1546,13 +1549,15 @@ img {
   min-height: 550px;
   max-height: calc(100vh - 80px);
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 @media (max-width: 767px) {
   .modal#popSetting .modal-content {
@@ -1853,7 +1858,6 @@ img {
 .modal#popTime .modal-content {
   width: 300px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -1928,7 +1932,6 @@ img {
 .modal#popLocation .modal-content {
   width: 300px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -2020,7 +2023,6 @@ img {
 .modal#popVerify .modal-content {
   width: 300px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -2081,7 +2083,6 @@ img {
   width: 300px;
   height: 300px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -2220,7 +2221,6 @@ img {
   width: 500px;
   max-height: calc(100vh - 40px);
   padding: 10px;
-  margin: auto;
   border-radius: 15px;
   gap: 10px;
   position: absolute;
@@ -2228,6 +2228,9 @@ img {
   flex-direction: column;
   background-color: #F2F1F6;
   box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.3);
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 @media (max-width: 767px) {
   .modal#popCart .modal-content,
@@ -2644,11 +2647,13 @@ img {
 .modal#popItem .modal-content {
   max-width: 900px;
   padding: 10px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
   background-color: #F2F1F6;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 @media (max-width: 1199px) {
   .modal#popItem .modal-content {
@@ -3049,20 +3054,25 @@ img {
 .modal#popItem .modal-content .container .buttom .submit .price span {
   margin: 0 2px;
 }
+.modal#popCoupon {
+  align-items: flex-end;
+}
 .modal#popCoupon .modal-content {
-  width: calc(100vw - 60px);
+  width: 100vw;
   max-width: 500px;
   max-height: 85vh;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 20px;
-  margin: auto;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 .modal#popCoupon .modal-content .topTitle {
   padding-bottom: 10px;
@@ -3430,20 +3440,25 @@ img {
   color: #FF9900;
   display: block;
 }
+.modal#popActivity {
+  align-items: flex-end;
+}
 .modal#popActivity .modal-content {
-  width: calc(100vw - 60px);
+  width: 100vw;
   max-width: 500px;
   max-height: 85vh;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 20px;
-  margin: auto;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 .modal#popActivity .topTitle {
   padding-bottom: 10px;
@@ -3490,20 +3505,25 @@ img {
   text-decoration: underline !important;
   font-size: var(--fXS);
 }
+.modal#popRule {
+  align-items: flex-end;
+}
 .modal#popRule .modal-content {
-  width: calc(100vw - 80px);
+  width: 100vw;
   max-width: 500px;
   max-height: 85vh;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 20px;
-  margin: auto;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 .modal#popRule .title {
   padding-bottom: 10px;
@@ -3516,20 +3536,25 @@ img {
 .modal#popRule .info {
   color: #828282;
 }
+.modal#popCouponRule {
+  align-items: flex-end;
+}
 .modal#popCouponRule .modal-content {
-  width: calc(100vw - 80px);
+  width: 100vw;
   max-width: 500px;
   max-height: 85vh;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 20px;
-  margin: auto;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 .modal#popCouponRule .title {
   padding-bottom: 10px;

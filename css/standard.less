@@ -401,7 +401,7 @@ img { object-fit: cover; }
     }
     .title { color: @cG1; font-size: var(--fL) !important; }
     &#popNotice {
-        .modal-content { width: 400px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white;
+        .modal-content { width: 400px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
             @media @screen-mobile { width: 300px; }
             img { max-width: 300px; border-radius: 10px; margin: 20px 0; }
             .content { color: @cG1; font-size: var(--fS) !important; }
@@ -410,7 +410,7 @@ img { object-fit: cover; }
         }
     }
     &#popInfo {
-        .modal-content { width: 400px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
+        .modal-content { width: 400px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
             @media @screen-mobile { width: 300px; }
             .content { margin-top: 10px; display: flex; align-items: center;
                 div { width: 20px; height: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center; color: @c1; }
@@ -432,7 +432,7 @@ img { object-fit: cover; }
         }
     }
     &#popDelivery {
-        .modal-content { width: 400px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white;
+        .modal-content { width: 400px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white;
             @media @screen-mobile { width: 300px; }
             img { max-width: 300px; border-radius: 10px; margin-top: 20px; }
             .content { width: 100%; color: @cG1; font-size: var(--fS) !important;
@@ -441,7 +441,7 @@ img { object-fit: cover; }
         }
     }
     &#popSetting {
-        .modal-content { width: 400px; min-height: 550px; max-height: calc(100vh - 80px); padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; justify-content: space-between; background-color: white;
+        .modal-content { width: 400px; min-height: 550px; max-height: calc(100vh - 80px); padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; justify-content: space-between; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
             @media @screen-mobile { width: 300px; }
             .container { display: flex; flex-direction: column; overflow-y: auto; }
             .message { color: @cRed; font-size: var(--fS) !important; }
@@ -503,7 +503,7 @@ img { object-fit: cover; }
         }
     }
     &#popTime {
-        .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
+        .modal-content { width: 300px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
             .container { margin-top: 10px;
                 .select { width: 100%; height: 40px; border-radius: 10px; margin-top: 10px; position: relative; display: flex; align-items: center; background: @cBg;
                     &:hover { cursor: pointer; }
@@ -524,7 +524,7 @@ img { object-fit: cover; }
         }
     }
     &#popLocation {
-        .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
+        .modal-content { width: 300px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
             .address { width: calc(100% - 20px); height: 40px; padding: 0 10px; margin-top: 20px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; background-color: @cBg;
                 .container { width: 100%; display: flex; align-items: center;
                     .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: @c1; }
@@ -542,7 +542,7 @@ img { object-fit: cover; }
         }
     }
     &#popVerify {
-        .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
+        .modal-content { width: 300px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
             .container { width: calc(100% - 20px); height: 40px; padding: 0 10px; margin-top: 20px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; background-color: @cBg;
                 .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: @c1; }
                 input { width: 100%; height: 100%; margin-left: 5px; border-radius: 10px; background-color: @cBg; font-size: var(--fS) !important; }
@@ -555,7 +555,7 @@ img { object-fit: cover; }
         }
     }
     &#popProfile {
-        .modal-content { width: 300px; height: 300px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
+        .modal-content { width: 300px; height: 300px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
             .container { width: calc(100% - 20px); height: 40px; padding: 0 5px 0 10px; margin-top: 20px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between; background-color: @cBg;
                 .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: @c1; }
                 input { width: 100%; height: 100%; margin-left: 5px; border-radius: 99px; background-color: @cBg; font-size: var(--fS) !important; }
@@ -582,7 +582,7 @@ img { object-fit: cover; }
         }
     }
     &#popCart, &#popCartGroupbuying { background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.5);
-        .modal-content { top: 20px; width: 500px; max-height: calc(100vh - 40px); padding: 10px; margin: auto; border-radius: 15px; gap: 10px; position: absolute; display: flex; flex-direction: column; background-color: @cBg; box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.3);
+        .modal-content { top: 20px; width: 500px; max-height: calc(100vh - 40px); padding: 10px; border-radius: 15px; gap: 10px; position: absolute; display: flex; flex-direction: column; background-color: @cBg; box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.3); animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
             @media @screen-mobile { top: 0; right: 0; width: calc(100% - 60px); max-height: calc(100vh - 180px); position: relative; }
             // @media @screen-mobile { height: unset; max-width: calc(100% - 40px); max-height: calc(100% - 40px); flex-direction: column; }
             .subTitle { margin-top: -10px; color: @cG1; font-size: var(--fS) !important; }
@@ -677,7 +677,7 @@ img { object-fit: cover; }
         }
     }
     &#popItem {
-        .modal-content { max-width: 900px; padding: 10px; margin: auto; border-radius: 20px; position: relative; display: flex; background-color: @cBg;
+        .modal-content { max-width: 900px; padding: 10px; border-radius: 20px; position: relative; display: flex; background-color: @cBg; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
             @media @screen-tablet { height: 60%; max-width: 700px; }
             @media @screen-mobile { height: unset; width: calc(100% - 60px); max-height: calc(100% - 60px); flex-direction: column; }
             .close { width: 30px; height: 30px; padding-bottom: 2px; border-radius: 10px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.25); color: white; }
@@ -777,8 +777,8 @@ img { object-fit: cover; }
             }
         }
     }
-    &#popCoupon{
-        .modal-content { width:calc(100vw - 60px); max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white;
+    &#popCoupon { align-items: flex-end;
+        .modal-content { width: 100vw; max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
         .topTitle{ padding-bottom: 10px;}
         }
         .storeCoupons { width: calc(100% + 20px); margin-left: -10px; display: flex; flex-wrap: wrap;
@@ -865,8 +865,8 @@ img { object-fit: cover; }
             a{ position: absolute; top: 0; right: 0; width: 28px; height: 28px; text-align: center; line-height: 28px; color: @c1; display: block;}
         }
     }
-    &#popActivity{
-        .modal-content { width:calc(100vw - 60px); max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white;}
+    &#popActivity { align-items: flex-end;
+        .modal-content { width: 100vw; max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;}
         .topTitle{ padding-bottom: 10px;}
         .activity{ width: calc(100% + 20px); display: flex; flex-wrap: wrap;
             .event { width: 100%; margin: 10px;  display: flex; flex-direction: column; border-bottom: 1px solid @cG5 ; padding-bottom: 10px;
@@ -880,14 +880,14 @@ img { object-fit: cover; }
             }
         }
     }
-    &#popRule{
-        .modal-content { width:calc(100vw - 80px); max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white;}
+    &#popRule { align-items: flex-end;
+        .modal-content { width: 100vw; max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;}
         .title{ padding-bottom: 10px;}
         .leftTitle{ width: 100%; font-size: var(--fL); padding-bottom: 20px;}
         .info{ color: @cG3;}
     }
-    &#popCouponRule{
-        .modal-content { width:calc(100vw - 80px); max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white;}
+    &#popCouponRule { align-items: flex-end;
+        .modal-content { width: 100vw; max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;}
         .title{ padding-bottom: 10px; text-align: center;}
         .leftTitle{ width: 100%; font-size: var(--fL); padding-bottom: 20px;}
         .info{ color: @cG3;}
