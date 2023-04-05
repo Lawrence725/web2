@@ -1,7 +1,4 @@
 // Popup close
-// function popClose(e) {
-//     document.getElementById(e).style.display = "none";
-//     document.body.style.overflow = "scroll"; }
 function popClose(e) {
     if (e.classList.contains('modal'))
         window.onclick  = function(event) {

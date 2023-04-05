@@ -1,46 +1,42 @@
+// Popup close
+function popClose(e) {
+    if (e.classList.contains('modal'))
+        window.onclick  = function(event) {
+            if (event.target == e) {
+                e.children[0].style.animationName = "popdown";
+                setTimeout(function(){
+                    e.style.display = "none";
+                    e.children[0].style.animationName = "popup";
+                }, 500); }}
+    else if (!(e.classList.contains('modal-content'))) {
+        e.closest('.modal').children[0].style.animationName = "popdown";
+        setTimeout(function(){
+            e.closest('.modal').style.display = "none";
+            e.closest('.modal').children[0].style.animationName = "popup";
+        }, 500); }
+    document.body.style.overflow = "scroll"; }
+    
 // Privacy Popup
-var popPrivacy = document.getElementById("popPrivacy");
-var buttonPrivacy = document.getElementById("buttonPrivacy");
-var close = popPrivacy.getElementsByClassName("close")[0];
-buttonPrivacy.onclick = function() {
-    popPrivacy.style.display = "flex";
-}
-close.onclick = function() {
-    popPrivacy.style.display = "none";
-}
+function popPrivacy() {
+    document.getElementById("popPrivacy").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
 
 // Terms Popup
-var popTerms = document.getElementById("popTerms");
-var buttonTerms = document.getElementById("buttonTerms");
-var close = popTerms.getElementsByClassName("close")[0];
-buttonTerms.onclick = function() {
-    popTerms.style.display = "flex";
-}
-close.onclick = function() {
-    popTerms.style.display = "none";
-}
-
-// All Popup
-window.onclick = function(event) {
-    if (event.target == popPrivacy) {
-        popPrivacy.style.display = "none";
-    }
-    else if (event.target == popTerms) {
-        popTerms.style.display = "none";
-    }
-}
+function popTerms() {
+    document.getElementById("popTerms").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
 
 // Coupon Popup
-var popCoupon = document.getElementById("popCoupon");
-var buttonCoupon = document.getElementById("buttonCoupon");
-var close = popCoupon.getElementsByClassName("close")[0];
-var submit = popCoupon.getElementsByClassName("submit")[0];
-buttonCoupon.onclick = function() {
-    popCoupon.style.display = "flex";
-}
-close.onclick = function() {
-    popCoupon.style.display = "none";
-}
-submit.onclick = function() {
-    popCoupon.style.display = "none";
-}
+function popCoupon() {
+    document.getElementById("popCoupon").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
+// Coupon Rule Popup
+function popCouponRule() {
+    document.getElementById("popCouponRule").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
+// Rule Popup
+function popRule() {
+    document.getElementById("popRule").style.display = "flex";
+    document.body.style.overflow = "hidden"; }

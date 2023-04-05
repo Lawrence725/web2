@@ -571,7 +571,7 @@ img { object-fit: cover; }
         }
     }
     &#popPrivacy, &#popTerms { align-items: flex-start;
-        .modal-content { width: 80vw; padding: 20px; margin: 50px auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
+        .modal-content { width: 80vw; padding: 20px; margin: 50px auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white; animation-name: popup; animation-duration: 0s; animation-iteration-count: 1;
             div { padding: 20px; }
             img { max-width: 300px; border-radius: 10px; margin-top: 20px; }
             span { color: @cG1; font-size: var(--fS) !important; }
@@ -676,7 +676,7 @@ img { object-fit: cover; }
             }
         }
     }
-    &#popItem {
+    &#popItem { z-index: 22;
         .modal-content { max-width: 900px; padding: 10px; border-radius: 20px; position: relative; display: flex; background-color: @cBg; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
             @media @screen-tablet { height: 60%; max-width: 700px; }
             @media @screen-mobile { height: unset; width: calc(100% - 60px); max-height: calc(100% - 60px); flex-direction: column; }
@@ -778,7 +778,7 @@ img { object-fit: cover; }
         }
     }
     &#popCoupon { align-items: flex-end;
-        .modal-content { width: 100vw; max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
+        .modal-content { width: 100vw; max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px 20px 86px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
         .topTitle{ padding-bottom: 10px;}
         }
         .storeCoupons { width: calc(100% + 20px); margin-left: -10px; display: flex; flex-wrap: wrap;
@@ -880,7 +880,7 @@ img { object-fit: cover; }
             }
         }
     }
-    &#popRule { align-items: flex-end;
+    &#popRule { align-items: flex-end; z-index: 22;
         .modal-content { width: 100vw; max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;}
         .title{ padding-bottom: 10px;}
         .leftTitle{ width: 100%; font-size: var(--fL); padding-bottom: 20px;}

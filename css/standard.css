@@ -2171,6 +2171,9 @@ img {
   display: flex;
   flex-direction: column;
   background-color: white;
+  animation-name: popup;
+  animation-duration: 0s;
+  animation-iteration-count: 1;
 }
 .modal#popPrivacy .modal-content div,
 .modal#popTerms .modal-content div {
@@ -2644,6 +2647,9 @@ img {
 .modal#popCartGroupbuying .modal-content .submit .price span {
   margin: 0 2px;
 }
+.modal#popItem {
+  z-index: 22;
+}
 .modal#popItem .modal-content {
   max-width: 900px;
   padding: 10px;
@@ -3063,7 +3069,7 @@ img {
   max-height: 85vh;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 20px;
+  padding: 20px 20px 86px;
   border-radius: 20px 20px 0 0;
   position: relative;
   display: flex;
@@ -3507,6 +3513,7 @@ img {
 }
 .modal#popRule {
   align-items: flex-end;
+  z-index: 22;
 }
 .modal#popRule .modal-content {
   width: 100vw;
