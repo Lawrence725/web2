@@ -294,6 +294,9 @@ img {
   position: relative;
   padding: 0 17px 0 28px;
   font-size: var(--fM);
+  display: block;
+  cursor: pointer;
+  pointer-events: all;
 }
 .bottombar .information__container .pointsItem .itemTitle::after {
   content: "";
@@ -1147,7 +1150,7 @@ img {
   bottom: 0;
   align-items: center;
   justify-content: center;
-  z-index: 8;
+  z-index: 21;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1368,7 +1371,7 @@ img {
   justify-content: center;
   overflow-x: hidden;
   overflow-y: auto;
-  z-index: 4;
+  z-index: 21;
 }
 .modal:not(#popCart),
 .modal:not(#popCartGroupbuying) {
@@ -6716,6 +6719,9 @@ img {
 }
 .bottombar--groupbuying .bottombar__container button {
   background-color: #96BE0B;
+}
+.bottombar--groupbuying .bottombox {
+  border-color: #96BE0B;
 }
 .bottombar .button--circle--green {
   display: flex;
