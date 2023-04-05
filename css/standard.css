@@ -4995,20 +4995,17 @@ img {
   color: #828282;
   font-size: var(--fL) !important;
 }
-#paymentMain,
-#orderMain {
+#paymentMain {
   width: 100vw;
   height: 100vh;
   display: flex;
 }
 @media (max-width: 1199px) {
-  #paymentMain,
-  #orderMain {
+  #paymentMain {
     display: block;
   }
 }
-#paymentMain #left,
-#orderMain #left {
+#paymentMain #left {
   width: 60%;
   height: fit-content;
   padding: 20px 0;
@@ -5018,26 +5015,22 @@ img {
   flex-direction: column;
 }
 @media (max-width: 1199px) {
-  #paymentMain #left,
-  #orderMain #left {
+  #paymentMain #left {
     width: 100%;
     padding: 50px 0 0;
   }
 }
-#paymentMain #left #logo,
-#orderMain #left #logo {
+#paymentMain #left #logo {
   max-height: 60px;
   margin-bottom: 20px;
   display: none;
 }
 @media (max-width: 1199px) {
-  #paymentMain #left #logo,
-  #orderMain #left #logo {
+  #paymentMain #left #logo {
     display: block;
   }
 }
-#paymentMain #left .container,
-#orderMain #left .container {
+#paymentMain #left .container {
   width: calc(70% - 30px);
   padding: 15px;
   margin: 20px 0;
@@ -5047,25 +5040,21 @@ img {
   background-color: white;
 }
 @media (max-width: 1199px) {
-  #paymentMain #left .container,
-  #orderMain #left .container {
+  #paymentMain #left .container {
     width: calc(100% - 70px);
     margin: 10px 0;
   }
 }
 @media (max-width: 767px) {
-  #paymentMain #left .container.desktop,
-  #orderMain #left .container.desktop {
+  #paymentMain #left .container.desktop {
     display: none;
   }
 }
-#paymentMain #left .container .title,
-#orderMain #left .container .title {
+#paymentMain #left .container .title {
   color: #333333;
   font-size: var(--fL) !important;
 }
-#paymentMain #left .container .icon,
-#orderMain #left .container .icon {
+#paymentMain #left .container .icon {
   min-width: 30px;
   height: 30px;
   margin-right: 2px;
@@ -5074,103 +5063,85 @@ img {
   justify-content: center;
   color: #FF9900;
 }
-#paymentMain #left .container .col,
-#orderMain #left .container .col {
+#paymentMain #left .container .col {
   margin-top: 10px;
   display: flex;
   align-items: center;
 }
-#paymentMain #left .container .col .text,
-#orderMain #left .container .col .text {
+#paymentMain #left .container .col .text {
   display: flex;
   flex-direction: column;
 }
-#paymentMain #left .container .contentB,
-#orderMain #left .container .contentB {
+#paymentMain #left .container .contentB {
   color: #333333;
   font-size: var(--fS) !important;
 }
-#paymentMain #left .container .contentG,
-#orderMain #left .container .contentG {
+#paymentMain #left .container .contentG {
   color: #828282;
   font-size: var(--fS) !important;
 }
-#paymentMain #left .container .contentR,
-#orderMain #left .container .contentR {
+#paymentMain #left .container .contentR {
   color: #EB5757;
   font-size: var(--fS) !important;
 }
-#paymentMain #left .container .remark,
-#orderMain #left .container .remark {
+#paymentMain #left .container .remark {
   margin-bottom: 10px;
   color: #828282;
   font-size: var(--fXS) !important;
 }
-#paymentMain #left .container #items,
-#orderMain #left .container #items {
+#paymentMain #left .container #items {
   padding-bottom: 10px;
   border-bottom: solid 1px #BDBDBD;
 }
 @media (max-height: 705px) {
-  #paymentMain #left .container #items,
-  #orderMain #left .container #items {
+  #paymentMain #left .container #items {
     overflow-y: visible;
   }
 }
-#paymentMain #left .container .item,
-#orderMain #left .container .item {
+#paymentMain #left .container .item {
   width: 100%;
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
-#paymentMain #left .container .item .left,
-#orderMain #left .container .item .left {
+#paymentMain #left .container .item .left {
   display: flex;
   align-items: center;
 }
-#paymentMain #left .container .item .left .count,
-#orderMain #left .container .item .left .count {
+#paymentMain #left .container .item .left .count {
   min-width: 40px;
   display: flex;
   justify-content: center;
   color: #333333;
   font-size: var(--fS) !important;
 }
-#paymentMain #left .container .item .right,
-#orderMain #left .container .item .right {
+#paymentMain #left .container .item .right {
   margin-left: 10px;
   display: flex;
   align-items: center;
 }
-#paymentMain #left .container .item .right img,
-#orderMain #left .container .item .right img {
+#paymentMain #left .container .item .right img {
   width: 50px;
   height: 50px;
   margin-right: 10px;
   border-radius: 10px;
 }
-#paymentMain #left .container .item .right img.point,
-#orderMain #left .container .item .right img.point {
+#paymentMain #left .container .item .right img.point {
   width: unset;
   height: 20px;
   margin: 0;
 }
-#paymentMain #left .container .item .right span,
-#orderMain #left .container .item .right span {
+#paymentMain #left .container .item .right span {
   margin: 0 5px;
 }
-#paymentMain #left .container .item .right span.point,
-#orderMain #left .container .item .right span.point {
+#paymentMain #left .container .item .right span.point {
   min-width: 25px;
 }
-#paymentMain #left .container .item .right span.price,
-#orderMain #left .container .item .right span.price {
+#paymentMain #left .container .item .right span.price {
   text-align: end;
   min-width: 40px;
 }
-#paymentMain #left .container .addon,
-#orderMain #left .container .addon {
+#paymentMain #left .container .addon {
   margin-top: 10px;
   padding-bottom: 10px;
   border-bottom: solid 1px #BDBDBD;
@@ -5178,13 +5149,11 @@ img {
   flex-direction: column;
   align-items: center;
 }
-#paymentMain #left .container .subTotal,
-#orderMain #left .container .subTotal {
+#paymentMain #left .container .subTotal {
   padding-bottom: 10px;
   border-bottom: solid 1px #BDBDBD;
 }
-#paymentMain #right,
-#orderMain #right {
+#paymentMain #right {
   width: 40%;
   height: 100vh;
   right: 0;
@@ -5197,8 +5166,7 @@ img {
   box-shadow: 0px 20px 40px rgba(55, 84, 170, 0.2);
 }
 @media (max-width: 1199px) {
-  #paymentMain #right,
-  #orderMain #right {
+  #paymentMain #right {
     width: 100%;
     height: fit-content;
     position: static;
@@ -5206,8 +5174,7 @@ img {
     box-shadow: none;
   }
 }
-#paymentMain #right #top,
-#orderMain #right #top {
+#paymentMain #right #top {
   width: calc(100% - 100px);
   padding: 20px 50px 0;
   display: flex;
@@ -5216,61 +5183,50 @@ img {
   overflow-y: auto;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top,
-  #orderMain #right #top {
+  #paymentMain #right #top {
     width: calc(100% - 40px);
     padding: 0 20px 50px;
   }
 }
-#paymentMain #right #top #logo,
-#orderMain #right #top #logo {
+#paymentMain #right #top #logo {
   max-height: 60px;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top #logo,
-  #orderMain #right #top #logo {
+  #paymentMain #right #top #logo {
     display: none;
   }
 }
-#paymentMain #right #top .area,
-#orderMain #right #top .area {
+#paymentMain #right #top .area {
   width: 100%;
   margin-top: 10px;
 }
-#paymentMain #right #top .area .title,
-#orderMain #right #top .area .title {
+#paymentMain #right #top .area .title {
   color: #333333;
   font-size: var(--fS) !important;
   font-weight: bold;
 }
-#paymentMain #right #top .area .content,
-#orderMain #right #top .area .content {
+#paymentMain #right #top .area .content {
   margin-right: 10px;
   color: #333333;
   white-space: nowrap;
   font-size: var(--fS) !important;
 }
-#paymentMain #right #top .area .content.full,
-#orderMain #right #top .area .content.full {
+#paymentMain #right #top .area .content.full {
   width: 100%;
 }
-#paymentMain #right #top .area .inputBox,
-#orderMain #right #top .area .inputBox {
+#paymentMain #right #top .area .inputBox {
   width: 100%;
 }
-#paymentMain #right #top .area .dropdown,
-#orderMain #right #top .area .dropdown {
+#paymentMain #right #top .area .dropdown {
   width: 100%;
   position: relative;
   display: flex;
   align-items: center;
 }
-#paymentMain #right #top .area .dropdown.left,
-#orderMain #right #top .area .dropdown.left {
+#paymentMain #right #top .area .dropdown.left {
   margin-right: 10px;
 }
-#paymentMain #right #top .area .dropdown select,
-#orderMain #right #top .area .dropdown select {
+#paymentMain #right #top .area .dropdown select {
   width: 100%;
   height: 40px;
   border: 0;
@@ -5282,13 +5238,11 @@ img {
   font-size: var(--fS) !important;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top .area .dropdown select,
-  #orderMain #right #top .area .dropdown select {
+  #paymentMain #right #top .area .dropdown select {
     background-color: white;
   }
 }
-#paymentMain #right #top .area .dropdown .arrow,
-#orderMain #right #top .area .dropdown .arrow {
+#paymentMain #right #top .area .dropdown .arrow {
   width: 20px;
   height: 100%;
   top: 0;
@@ -5300,8 +5254,7 @@ img {
   pointer-events: none;
   color: #FF9900;
 }
-#paymentMain #right #top .area .switch,
-#orderMain #right #top .area .switch {
+#paymentMain #right #top .area .switch {
   width: 100%;
   height: 40px;
   margin-top: 10px;
@@ -5320,13 +5273,11 @@ img {
   /* Style the indicator (dot/circle) */
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top .area .switch,
-  #orderMain #right #top .area .switch {
+  #paymentMain #right #top .area .switch {
     background-color: white;
   }
 }
-#paymentMain #right #top .area .switch.v2,
-#orderMain #right #top .area .switch.v2 {
+#paymentMain #right #top .area .switch.v2 {
   height: unset;
   border-radius: unset;
   gap: 10px;
@@ -5336,8 +5287,7 @@ img {
   flex-direction: column;
   background-color: transparent;
 }
-#paymentMain #right #top .area .switch.v2 .container,
-#orderMain #right #top .area .switch.v2 .container {
+#paymentMain #right #top .area .switch.v2 .container {
   width: 100%;
   min-height: 40px;
   padding: 10px 15px 10px 40px;
@@ -5346,22 +5296,18 @@ img {
   box-sizing: border-box;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top .area .switch.v2 .container,
-  #orderMain #right #top .area .switch.v2 .container {
+  #paymentMain #right #top .area .switch.v2 .container {
     background-color: white;
   }
 }
-#paymentMain #right #top .area .switch.v2 .checkmark,
-#orderMain #right #top .area .switch.v2 .checkmark {
+#paymentMain #right #top .area .switch.v2 .checkmark {
   top: 10px;
   left: 15px;
 }
-#paymentMain #right #top .area .switch.error,
-#orderMain #right #top .area .switch.error {
+#paymentMain #right #top .area .switch.error {
   border: none;
 }
-#paymentMain #right #top .area .switch div.online,
-#orderMain #right #top .area .switch div.online {
+#paymentMain #right #top .area .switch div.online {
   width: 180px;
   margin: -20px 0 0 auto;
   gap: 10px;
@@ -5369,20 +5315,17 @@ img {
   flex-wrap: wrap;
   justify-content: flex-end;
 }
-#paymentMain #right #top .area .switch div.online div,
-#orderMain #right #top .area .switch div.online div {
+#paymentMain #right #top .area .switch div.online div {
   width: 53.33px;
   display: flex;
   justify-content: center;
 }
-#paymentMain #right #top .area .switch div.online img,
-#orderMain #right #top .area .switch div.online img {
+#paymentMain #right #top .area .switch div.online img {
   max-width: 53.33px;
   max-height: 16px;
   margin: 0 auto;
 }
-#paymentMain #right #top .area .switch .container,
-#orderMain #right #top .area .switch .container {
+#paymentMain #right #top .area .switch .container {
   display: block;
   position: relative;
   padding: 5px 15px 5px 45px;
@@ -5394,26 +5337,22 @@ img {
   user-select: none;
   font-size: var(--fS) !important;
 }
-#paymentMain #right #top .area .switch .container:hover,
-#orderMain #right #top .area .switch .container:hover {
+#paymentMain #right #top .area .switch .container:hover {
   background: #FFEED8;
 }
-#paymentMain #right #top .area .switch .container .text,
-#orderMain #right #top .area .switch .container .text {
+#paymentMain #right #top .area .switch .container .text {
   width: fit-content;
   height: 20px;
   display: flex;
   align-items: center;
   white-space: nowrap;
 }
-#paymentMain #right #top .area .switch .container input,
-#orderMain #right #top .area .switch .container input {
+#paymentMain #right #top .area .switch .container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
-#paymentMain #right #top .area .switch .checkmark,
-#orderMain #right #top .area .switch .checkmark {
+#paymentMain #right #top .area .switch .checkmark {
   position: absolute;
   top: 5px;
   left: 20px;
@@ -5423,26 +5362,21 @@ img {
   border-radius: 50%;
   border: 2px solid #FF9900;
 }
-#paymentMain #right #top .area .switch .container:hover input ~ .checkmark,
-#orderMain #right #top .area .switch .container:hover input ~ .checkmark {
+#paymentMain #right #top .area .switch .container:hover input ~ .checkmark {
   background-color: #F2F1F6;
 }
-#paymentMain #right #top .area .switch .checkmark:after,
-#orderMain #right #top .area .switch .checkmark:after {
+#paymentMain #right #top .area .switch .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-#paymentMain #right #top .area .switch .container input:checked ~ .checkmark,
-#orderMain #right #top .area .switch .container input:checked ~ .checkmark {
+#paymentMain #right #top .area .switch .container input:checked ~ .checkmark {
   background-color: #FF9900;
 }
-#paymentMain #right #top .area .switch .container input:checked ~ .checkmark:after,
-#orderMain #right #top .area .switch .container input:checked ~ .checkmark:after {
+#paymentMain #right #top .area .switch .container input:checked ~ .checkmark:after {
   display: block;
 }
-#paymentMain #right #top .area .switch .container .checkmark:after,
-#orderMain #right #top .area .switch .container .checkmark:after {
+#paymentMain #right #top .area .switch .container .checkmark:after {
   top: 5px;
   left: 5px;
   width: 5px;
@@ -5450,16 +5384,14 @@ img {
   border-radius: 50%;
   background: white;
 }
-#paymentMain #right #top .area .message,
-#orderMain #right #top .area .message {
+#paymentMain #right #top .area .message {
   display: flex;
   justify-content: center;
   margin-left: 3px;
   color: #EB5757;
   font-size: 10px;
 }
-#paymentMain #right #top .area .checkbox,
-#orderMain #right #top .area .checkbox {
+#paymentMain #right #top .area .checkbox {
   height: 40px;
   margin: 10px 0 35px;
   padding: 0 15px;
@@ -5479,25 +5411,20 @@ img {
   /* Style the checkmark/indicator */
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top .area .checkbox,
-  #orderMain #right #top .area .checkbox {
+  #paymentMain #right #top .area .checkbox {
     background-color: white;
   }
 }
-#paymentMain #right #top .area .checkbox.disabled,
-#orderMain #right #top .area .checkbox.disabled {
+#paymentMain #right #top .area .checkbox.disabled {
   pointer-events: none;
 }
-#paymentMain #right #top .area .checkbox.disabled .container,
-#orderMain #right #top .area .checkbox.disabled .container {
+#paymentMain #right #top .area .checkbox.disabled .container {
   padding-left: 0;
 }
-#paymentMain #right #top .area .checkbox span.inputBox,
-#orderMain #right #top .area .checkbox span.inputBox {
+#paymentMain #right #top .area .checkbox span.inputBox {
   width: fit-content;
 }
-#paymentMain #right #top .area .checkbox .input,
-#orderMain #right #top .area .checkbox .input {
+#paymentMain #right #top .area .checkbox .input {
   height: 40px;
   margin-left: auto;
   border-radius: 99px;
@@ -5510,13 +5437,11 @@ img {
   box-sizing: border-box;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top .area .checkbox .input,
-  #orderMain #right #top .area .checkbox .input {
+  #paymentMain #right #top .area .checkbox .input {
     background-color: white;
   }
 }
-#paymentMain #right #top .area .checkbox .input span,
-#orderMain #right #top .area .checkbox .input span {
+#paymentMain #right #top .area .checkbox .input span {
   right: 0;
   top: 45px;
   position: absolute;
@@ -5525,8 +5450,7 @@ img {
   text-align: right;
   white-space: nowrap;
 }
-#paymentMain #right #top .area .checkbox .input input,
-#orderMain #right #top .area .checkbox .input input {
+#paymentMain #right #top .area .checkbox .input input {
   width: 80px;
   margin: 0 0 0 5px;
   padding: 0;
@@ -5535,12 +5459,10 @@ img {
   font-size: var(--fS) !important;
   text-align: right;
 }
-#paymentMain #right #top .area .checkbox .input input::placeholder,
-#orderMain #right #top .area .checkbox .input input::placeholder {
+#paymentMain #right #top .area .checkbox .input input::placeholder {
   color: #BDBDBD;
 }
-#paymentMain #right #top .area .checkbox div.info,
-#orderMain #right #top .area .checkbox div.info {
+#paymentMain #right #top .area .checkbox div.info {
   padding-left: 15px;
   left: 0;
   top: 60px;
@@ -5548,13 +5470,11 @@ img {
   display: flex;
   flex-direction: column;
 }
-#paymentMain #right #top .area .checkbox div.info span,
-#orderMain #right #top .area .checkbox div.info span {
+#paymentMain #right #top .area .checkbox div.info span {
   font-size: var(--fXS);
   color: #828282;
 }
-#paymentMain #right #top .area .checkbox .container,
-#orderMain #right #top .area .checkbox .container {
+#paymentMain #right #top .area .checkbox .container {
   height: 30px;
   gap: 2px;
   display: flex;
@@ -5568,18 +5488,15 @@ img {
   user-select: none;
   font-size: var(--fS) !important;
 }
-#paymentMain #right #top .area .checkbox .container > div:first-child,
-#orderMain #right #top .area .checkbox .container > div:first-child {
+#paymentMain #right #top .area .checkbox .container > div:first-child {
   order: 1;
 }
-#paymentMain #right #top .area .checkbox .container img,
-#orderMain #right #top .area .checkbox .container img {
+#paymentMain #right #top .area .checkbox .container img {
   width: unset;
   height: 20px;
   order: 0;
 }
-#paymentMain #right #top .area .checkbox .container .text,
-#orderMain #right #top .area .checkbox .container .text {
+#paymentMain #right #top .area .checkbox .container .text {
   width: fit-content;
   order: 3;
   display: flex;
@@ -5587,8 +5504,7 @@ img {
   color: #333333;
   font-size: var(--fS) !important;
 }
-#paymentMain #right #top .area .checkbox .container .subText,
-#orderMain #right #top .area .checkbox .container .subText {
+#paymentMain #right #top .area .checkbox .container .subText {
   width: fit-content;
   left: 0px;
   bottom: -25px;
@@ -5600,22 +5516,19 @@ img {
   color: #828282;
   font-size: var(--fXS);
 }
-#paymentMain #right #top .area .checkbox .container .subText img,
-#orderMain #right #top .area .checkbox .container .subText img {
+#paymentMain #right #top .area .checkbox .container .subText img {
   width: unset;
   height: 14px;
   margin-right: -8px;
 }
-#paymentMain #right #top .area .checkbox .container input,
-#orderMain #right #top .area .checkbox .container input {
+#paymentMain #right #top .area .checkbox .container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-#paymentMain #right #top .area .checkbox .checkmark,
-#orderMain #right #top .area .checkbox .checkmark {
+#paymentMain #right #top .area .checkbox .checkmark {
   position: absolute;
   top: 5px;
   left: 0;
@@ -5625,26 +5538,21 @@ img {
   background-color: white;
   border: solid 2px #FF9900;
 }
-#paymentMain #right #top .area .checkbox .container:hover input ~ .checkmark,
-#orderMain #right #top .area .checkbox .container:hover input ~ .checkmark {
+#paymentMain #right #top .area .checkbox .container:hover input ~ .checkmark {
   background-color: #F2F1F6;
 }
-#paymentMain #right #top .area .checkbox .checkmark:after,
-#orderMain #right #top .area .checkbox .checkmark:after {
+#paymentMain #right #top .area .checkbox .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-#paymentMain #right #top .area .checkbox .container input:checked ~ .checkmark,
-#orderMain #right #top .area .checkbox .container input:checked ~ .checkmark {
+#paymentMain #right #top .area .checkbox .container input:checked ~ .checkmark {
   background-color: #FF9900;
 }
-#paymentMain #right #top .area .checkbox .container input:checked ~ .checkmark:after,
-#orderMain #right #top .area .checkbox .container input:checked ~ .checkmark:after {
+#paymentMain #right #top .area .checkbox .container input:checked ~ .checkmark:after {
   display: block;
 }
-#paymentMain #right #top .area .checkbox .container .checkmark:after,
-#orderMain #right #top .area .checkbox .container .checkmark:after {
+#paymentMain #right #top .area .checkbox .container .checkmark:after {
   left: 4.5px;
   top: 2px;
   width: 3px;
@@ -5655,14 +5563,12 @@ img {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-#paymentMain #right #top .area .item,
-#orderMain #right #top .area .item {
+#paymentMain #right #top .area .item {
   margin-top: 10px;
   display: flex;
   align-items: center;
 }
-#paymentMain #right #top .area .item .icon,
-#orderMain #right #top .area .item .icon {
+#paymentMain #right #top .area .item .icon {
   width: 30px;
   height: 30px;
   margin-right: 10px;
@@ -5671,8 +5577,7 @@ img {
   justify-content: center;
   color: #FF9900;
 }
-#paymentMain #right #top .area .item .input,
-#orderMain #right #top .area .item .input {
+#paymentMain #right #top .area .item .input {
   width: calc(100% - 20px);
   height: 40px;
   padding: 0 10px;
@@ -5683,59 +5588,48 @@ img {
   background-color: #F2F1F6;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top .area .item .input,
-  #orderMain #right #top .area .item .input {
+  #paymentMain #right #top .area .item .input {
     background-color: white;
   }
 }
-#paymentMain #right #top .area .item .input span,
-#orderMain #right #top .area .item .input span {
+#paymentMain #right #top .area .item .input span {
   margin: 0 0 0 5px;
   color: #EB5757;
   font-size: 10px;
 }
-#paymentMain #right #top .area .item .input input,
-#orderMain #right #top .area .item .input input {
+#paymentMain #right #top .area .item .input input {
   margin: 0 0 0 5px;
   padding: 0;
   border: 0;
   background-color: transparent;
   font-size: var(--fS) !important;
 }
-#paymentMain #right #top .area .error,
-#orderMain #right #top .area .error {
+#paymentMain #right #top .area .error {
   border: solid 2px #EB5757;
 }
-#paymentMain #right #bottom,
-#orderMain #right #bottom {
+#paymentMain #right #bottom {
   width: calc(100% - 40px);
   padding: 20px;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #bottom,
-  #orderMain #right #bottom {
+  #paymentMain #right #bottom {
     padding-bottom: 90px;
   }
 }
-#paymentMain #right #bottom .policy,
-#orderMain #right #bottom .policy {
+#paymentMain #right #bottom .policy {
   margin-bottom: 10px;
   font-size: 10px;
 }
-#paymentMain #right #bottom .policy span,
-#orderMain #right #bottom .policy span {
+#paymentMain #right #bottom .policy span {
   color: #828282;
 }
-#paymentMain #right #bottom .policy a,
-#orderMain #right #bottom .policy a {
+#paymentMain #right #bottom .policy a {
   color: #FF9900;
 }
-#paymentMain #right #bottom .policy a:hover,
-#orderMain #right #bottom .policy a:hover {
+#paymentMain #right #bottom .policy a:hover {
   color: #333333;
 }
-#paymentMain #right #bottom #submit,
-#orderMain #right #bottom #submit {
+#paymentMain #right #bottom #submit {
   height: 50px;
   padding: 0 20px;
   border-radius: 99px;
@@ -5745,8 +5639,7 @@ img {
   background: #FF9900;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #bottom #submit,
-  #orderMain #right #bottom #submit {
+  #paymentMain #right #bottom #submit {
     width: 100%;
     height: 70px;
     padding: 15px;
@@ -5759,17 +5652,14 @@ img {
     background: transparent !important;
   }
 }
-#paymentMain #right #bottom #submit:hover,
-#orderMain #right #bottom #submit:hover {
+#paymentMain #right #bottom #submit:hover {
   background: #FF9900;
 }
-#paymentMain #right #bottom #submit span,
-#orderMain #right #bottom #submit span {
+#paymentMain #right #bottom #submit span {
   color: white;
   font-size: var(--fM) !important;
 }
-#paymentMain #right #bottom #submit > span,
-#orderMain #right #bottom #submit > span {
+#paymentMain #right #bottom #submit > span {
   width: 100%;
   height: 100%;
   border-radius: 99px 0 0 99px;
@@ -5777,15 +5667,13 @@ img {
   background: #FF9900;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #bottom #submit > span,
-  #orderMain #right #bottom #submit > span {
+  #paymentMain #right #bottom #submit > span {
     padding-left: 20px;
     line-height: 40px;
     box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1);
   }
 }
-#paymentMain #right #bottom #submit .price,
-#orderMain #right #bottom #submit .price {
+#paymentMain #right #bottom #submit .price {
   height: 100%;
   padding-right: 10px;
   margin-left: -5px;
@@ -5796,28 +5684,23 @@ img {
   background: #FF9900;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #bottom #submit .price,
-  #orderMain #right #bottom #submit .price {
+  #paymentMain #right #bottom #submit .price {
     box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1);
   }
 }
-#paymentMain #right #bottom #submit .price img,
-#orderMain #right #bottom #submit .price img {
+#paymentMain #right #bottom #submit .price img {
   width: unset;
   height: 20px;
   margin: 0;
 }
-#paymentMain #right #bottom #submit .price span,
-#orderMain #right #bottom #submit .price span {
+#paymentMain #right #bottom #submit .price span {
   margin: 0 2px;
 }
-#paymentMain #right #bottom #submit.disabled,
-#orderMain #right #bottom #submit.disabled {
+#paymentMain #right #bottom #submit.disabled {
   filter: grayscale(100%);
   pointer-events: auto;
 }
-#paymentMain .loading,
-#orderMain .loading {
+#paymentMain .loading {
   border-radius: 25px;
   display: inline-block;
   height: 1em;
@@ -5825,8 +5708,7 @@ img {
   overflow: hidden;
   background-color: #BDBDBD;
 }
-#paymentMain .loading::after,
-#orderMain .loading::after {
+#paymentMain .loading::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -5842,60 +5724,51 @@ img {
     transform: translateX(100%);
   }
 }
-#paymentMain .loading.loadLeftIcon,
-#orderMain .loading.loadLeftIcon {
+#paymentMain .loading.loadLeftIcon {
   width: 250px;
   height: 50px;
   margin: 20px 0 10px;
   display: none;
 }
 @media (max-width: 1199px) {
-  #paymentMain .loading.loadLeftIcon,
-  #orderMain .loading.loadLeftIcon {
+  #paymentMain .loading.loadLeftIcon {
     display: block;
   }
 }
-#paymentMain .loading.loadLeft,
-#orderMain .loading.loadLeft {
+#paymentMain .loading.loadLeft {
   width: 70%;
   height: 25vh;
   margin: 20px 0;
 }
 @media (max-width: 1199px) {
-  #paymentMain .loading.loadLeft,
-  #orderMain .loading.loadLeft {
+  #paymentMain .loading.loadLeft {
     width: calc(100% - 40px);
     height: 25vh;
     margin: 10px 0;
   }
 }
-#paymentMain .loading.loadRightIcon,
-#orderMain .loading.loadRightIcon {
+#paymentMain .loading.loadRightIcon {
   width: 250px;
   min-height: 50px;
   margin-top: 20px;
   display: block;
 }
 @media (max-width: 1199px) {
-  #paymentMain .loading.loadRightIcon,
-  #orderMain .loading.loadRightIcon {
+  #paymentMain .loading.loadRightIcon {
     display: none;
   }
 }
-#paymentMain .loading.loadRight,
-#orderMain .loading.loadRight {
+#paymentMain .loading.loadRight {
   width: 100%;
   min-height: 25vh;
   margin-top: 20px;
 }
 @media (max-width: 1199px) {
-  #paymentMain .loading.loadRight,
-  #orderMain .loading.loadRight {
+  #paymentMain .loading.loadRight {
     display: none;
   }
 }
-#paymentMain .loading.loadSubmit,
-#orderMain .loading.loadSubmit {
+#paymentMain .loading.loadSubmit {
   width: 100%;
   height: 50px;
 }
