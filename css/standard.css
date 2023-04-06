@@ -95,7 +95,7 @@ button:hover {
   color: #BDBDBD !important;
   filter: grayscale(100%);
   opacity: 0.5;
-  pointer-events: none;
+  pointer-events: none !important;
 }
 .disabled * {
   color: #BDBDBD !important;
