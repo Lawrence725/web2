@@ -2648,7 +2648,7 @@ img {
 }
 .modal#popCart .modal-content .container .loading.loadContent,
 .modal#popCartGroupbuying .modal-content .container .loading.loadContent {
-  width: 150px;
+  width: 120px;
   min-height: 20px;
   margin-top: 5px;
 }
