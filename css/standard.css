@@ -5340,7 +5340,7 @@ img {
   border: none;
 }
 #paymentMain #right #top .area .switch div.online {
-  width: calc(100% - 64px);
+  width: calc(100% - 74px);
   margin: -20px 0 0 auto;
   gap: 10px;
   display: flex;
@@ -5350,12 +5350,12 @@ img {
 }
 #paymentMain #right #top .area .switch div.online div {
   width: fit-content;
-  height: 22px;
+  height: 20px;
   display: flex;
   align-items: center;
 }
 #paymentMain #right #top .area .switch div.online img {
-  max-height: 22px;
+  max-height: 20px;
   margin: 0 auto;
 }
 #paymentMain #right #top .area .switch .container {
