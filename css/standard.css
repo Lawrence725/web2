@@ -152,7 +152,7 @@ img {
   align-items: center;
   justify-content: center;
   background: radial-gradient(200px 200px at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 4;
+  z-index: 30;
   /* background-color: rgba(0,0,0,0.5); */
 }
 .spinner div {
