@@ -5713,7 +5713,7 @@ img {
 }
 @media (max-width: 1199px) {
   #paymentMain #right #bottom {
-    padding-bottom: 90px;
+    padding-bottom: 194px;
   }
 }
 #paymentMain #right #bottom .policy {
@@ -5728,6 +5728,13 @@ img {
 }
 #paymentMain #right #bottom .policy a:hover {
   color: #333333;
+}
+@media (min-width: 1200px) {
+  #paymentMain #right #bottom .bottombar {
+    width: 100%;
+    padding: 0;
+    position: static;
+  }
 }
 #paymentMain #right #bottom #submit {
   height: 50px;

@@ -1391,12 +1391,13 @@ img { object-fit: cover; }
             }
         }
         #bottom { width: calc(100% - 40px); padding: 20px;
-            @media @screen-tablet { padding-bottom: 90px; }
+            @media @screen-tablet { padding-bottom: 194px; }
             .policy { margin-bottom: 10px; font-size: 10px;
                 span { color: @cG3; }
                 a { color: @c1;
                     &:hover { color: @cG1; }}
             }
+            .bottombar { @media @screen-desktop { width: 100%; padding: 0; position: static; }}
             #submit { height: 50px; padding: 0 20px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between; background: @c1;
                 @media @screen-tablet { width: 100%; height: 70px; padding: 15px; border-radius: 0; left: 0; bottom: 0; position: fixed; z-index: 3; box-sizing: border-box; background: transparent !important; }
                 &:hover { background: @c1; }

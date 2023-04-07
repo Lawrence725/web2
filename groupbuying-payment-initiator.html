@@ -297,14 +297,15 @@
             <div id="right">
                 <div id="top">
                     <a href="index.html"><img id="logo" src="photo/logo.png"></a>
-                    <div class="area">
+                    <!-- 舊版點數 -->
+                    <!-- <div class="area">
                         <div class="item">
                             <span class="title">消費點數</span>
                             <div class="message">
                                 <span>點數不夠</span>
                             </div>
                         </div>
-                        <div class="checkbox"> <!-- class: error -->
+                        <div class="checkbox">
                             <label class="container">
                                 <div>
                                     <div class="text">紅利桃子</div>
@@ -315,7 +316,7 @@
                                 </div>
                                 <img src="icon/ptTaoyuan.svg">
                                 <div class="text">152</div>
-                                <input type="checkbox"> <!-- checked="checked" -->
+                                <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
                             <div class="input">
@@ -326,7 +327,7 @@
                                 <span>文字說明</span>
                             </div>
                         </div>
-                        <!-- <div class="checkbox disabled">
+                        <div class="checkbox disabled">
                             <label class="container">
                                 <div>
                                     <div class="text">我的點數</div>
@@ -338,8 +339,8 @@
                                 <img src="icon/ptTaoyuan.svg">
                                 <div class="text">152</div>
                             </label>
-                        </div> -->
-                    </div>
+                        </div>
+                    </div> -->
                     <div class="area">
                         <span class="title">付款設定</span>
                         <div class="switch v2"> <!-- class: error -->
@@ -353,13 +354,13 @@
                                 <input type="radio" name="radio"> <!-- checked="checked" -->
                                 <span class="checkmark"></span>
                                 <div class="online">
-                                    <div><img src="./icon/credit.svg"></div>
-                                    <div><img src="./icon/apple.svg"></div>
-                                    <div><img src="./icon/google.svg"></div>
-                                    <div><img src="./icon/linepay-1.svg"></div>
-                                    <div><img src="./icon/jkopay.svg"></div>
-                                    <div><img src="./icon/easywallet.svg"></div>
-                                    <div><img src="./icon/taiwanpay.svg"></div>
+                                    <div><i class="fas fa-credit-card fa-lg"></i></div>
+                                    <div><img src="./icon/pApple.svg"></div>
+                                    <div><img src="./icon/pGoogle.svg"></div>
+                                    <div><img src="./icon/line.svg"></div>
+                                    <div><img src="./icon/jko.svg"></div>
+                                    <div><img src="./icon/taiwan.png"></div>
+                                    <div><img src="./icon/easy.svg"></div>
                                 </div>
                             </label>
                         </div>
@@ -507,7 +508,38 @@
                     <div class="policy">
                         <span>下單後如要取消訂單請聯繫商家</span>
                     </div>
-                    <a class="groupbuying__submit" href="groupbuying-order-initiator.html" id="submit"> <!-- class="disabled" -->
+                    <!-- 新版購物車按鈕 -->
+                    <div class="bottombar bottombar--groupbuying">
+                        <div class="bottombox">
+                            <div class="information__container">
+                                <div class="pointsItem">
+                                    <span class="itemTitle" onclick="popCouponRule()">麥町點 100</span>
+                                    <div class="usePoints">
+                                        <div class="switch_type">
+                                            <input name="points.use" type="hidden" value="0">
+                                            <input id="points.use" type="checkbox">
+                                            <label class="switchButton" for="points.use"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="couponItem" id="buttonCoupon" onclick="popCoupon()">
+                                    <span class="itemTitle">優惠券</span>
+                                    <span class="coupon_nb_s arr_r">選擇優惠券/輸入代碼</span>
+                                </button>
+                                <!-- <button class="couponItem" id="buttonActivity">
+                                    <span class="itemTitle">優惠券</span>
+                                    <span class="coupon_nb arr_r">x2</span>
+                                </button> -->
+                            </div>
+                            <div class="bottombar__container">
+                                <button class="buttonCart" onclick="window.location.href='groupbuying-order-initiator.html'">
+                                    <span>一鍵下單</span>
+                                    <span>$245</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <a class="groupbuying__submit" href="groupbuying-order-initiator.html" id="submit">
                         <span>一鍵下訂單</span>
                         <div class="price">
                             <img src="./icon/ptTaoyuanW.svg">
@@ -516,7 +548,7 @@
                             <span>$1000</span>
                         </div>
                     </a>
-                    <div class="loading loadSubmit"></div>
+                    <div class="loading loadSubmit"></div> -->
                 </div>
             </div>
         </div>
