@@ -6722,6 +6722,13 @@ img {
   box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
   z-index: 3;
 }
+@media (min-width: 1200px) {
+  .bottombar .button--circle--green {
+    right: 15px;
+    top: calc(100vh - 73px);
+    position: fixed;
+  }
+}
 .bottombar .button--circle--green > * {
   width: 100%;
 }
