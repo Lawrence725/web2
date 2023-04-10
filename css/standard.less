@@ -1481,14 +1481,15 @@ img { object-fit: cover; }
                 &.top { align-items: flex-start; }
                 &.point { 
                     img { width: unset; height: 20px; }
-                    span { margin: 0 5px; }
-                }
+                    span { margin: 0 5px; }}
                 .row { display: flex; flex-direction: column;
                     span { margin-top: 10px;
-                        &:first-child { margin-top: 0px; }
-                    }
-                    .header { margin-right: 10px; white-space: nowrap; }
-                }
+                        &:first-child { margin-top: 0px; }}
+                    .header { margin-right: 10px; white-space: nowrap; }}}
+            table.order-info {
+                * { padding: 0; text-align: start; vertical-align: text-top; }
+                th { padding: 5px 10px 0 0; color: @cG3; font-size: var(--fS) !important; font-weight: normal; white-space: nowrap; }
+                td { color: @cG1; font-size: var(--fS) !important; }
             }
             .top { align-items: flex-start; }
             .contentB { color: @cG1; font-size: var(--fS) !important; }

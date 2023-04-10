@@ -6148,6 +6148,22 @@ img {
   margin-right: 10px;
   white-space: nowrap;
 }
+#orderMain #right .container table.order-info * {
+  padding: 0;
+  text-align: start;
+  vertical-align: text-top;
+}
+#orderMain #right .container table.order-info th {
+  padding: 5px 10px 0 0;
+  color: #828282;
+  font-size: var(--fS) !important;
+  font-weight: normal;
+  white-space: nowrap;
+}
+#orderMain #right .container table.order-info td {
+  color: #333333;
+  font-size: var(--fS) !important;
+}
 #orderMain #right .container .top {
   align-items: flex-start;
 }
