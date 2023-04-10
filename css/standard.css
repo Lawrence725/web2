@@ -95,7 +95,7 @@ button:hover {
   color: #BDBDBD !important;
   filter: grayscale(100%);
   opacity: 0.5;
-  pointer-events: none;
+  pointer-events: none !important;
 }
 .disabled * {
   color: #BDBDBD !important;
@@ -152,7 +152,7 @@ img {
   align-items: center;
   justify-content: center;
   background: radial-gradient(200px 200px at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 4;
+  z-index: 30;
   /* background-color: rgba(0,0,0,0.5); */
 }
 .spinner div {
@@ -164,23 +164,262 @@ img {
   -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
 }
+.switch_type {
+  position: relative;
+}
+.switch_type .switchButton {
+  display: inline-block;
+  position: relative;
+  height: 22px;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  background-color: #eee;
+  border-radius: 22px;
+}
+.switch_type .switchButton:before {
+  content: "";
+  display: inline-block;
+  width: 42px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 22px;
+  box-sizing: border-box;
+  border: 2px solid #eee;
+  transition: all 0.2s linear;
+}
+.switch_type .switchButton:after {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 18px;
+  transition: all 0.2s linear;
+  box-shadow: 0px 1px 3px #bbb;
+}
+.switch_type input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.switch_type input:checked ~ .switchButton:before {
+  background-color: #FF9900;
+  border: 1px solid #FF9900;
+}
+.switch_type input:checked ~ .switchButton:after {
+  left: 22px;
+}
 .bottombar {
   width: 100vw;
   padding: 15px 20px;
   left: 0;
   bottom: 0;
   position: fixed;
-  display: flex;
+  display: flex-root;
   justify-content: center;
   box-sizing: border-box;
-  z-index: 3;
+  z-index: 20;
   pointer-events: none;
+}
+.bottombar .bottombox {
+  width: 100%;
+  border: 1px solid #FF9900;
+  border-radius: 20px;
+  background-color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.bottombar .information__container {
+  width: 100%;
+}
+.bottombar .information__container .transparentTop {
+  width: 100%;
+  position: relative;
+}
+.bottombar .information__container a.go_login {
+  width: calc(70% - 40px);
+  padding: 5px 10px;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  padding-left: 33%;
+  position: relative;
+  pointer-events: all;
+}
+.bottombar .information__container a.go_login .storeCover {
+  position: absolute;
+  left: calc(33% - 55px);
+  top: 8px;
+  width: 48px;
+  height: 48px;
+}
+.bottombar .information__container a.go_login .storeCover img {
+  width: 100%;
+  height: 100%;
+}
+.bottombar .information__container a.go_login .mainTitle {
+  color: #333333;
+  font-size: var(--fM);
+}
+.bottombar .information__container a.go_login .subTitle {
+  color: #828282;
+  font-size: var(--fS);
+}
+.bottombar .information__container .pointsItem {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 54px;
+  padding: 0 10px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  color: #4F4F4F;
+  font-size: var(--fS);
+  border-radius: 20px 20px 0 0;
+  pointer-events: all;
+  z-index: 2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #E0E0E0;
+}
+.bottombar .information__container .pointsItem .itemTitle {
+  position: relative;
+  padding: 0 17px 0 28px;
+  font-size: var(--fM);
+  display: block;
+  cursor: pointer;
+  pointer-events: all;
+}
+.bottombar .information__container .pointsItem .itemTitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 9px);
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url(../icon/point-line.svg);
+}
+.bottombar .information__container .pointsItem .itemTitle::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: calc(50% - 6px);
+  width: 12px;
+  height: 12px;
+  display: block;
+  background: url(../icon/question.svg);
+}
+.bottombar .information__container .pointsItem .usePoints {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.bottombar .information__container .pointsItem .switch_type {
+  margin-left: 5px;
+  padding-top: 5px;
+}
+.bottombar .information__container .pointsItem .input {
+  width: 55px;
+  border-bottom: #333333 solid 1px;
+  padding: 0 3px;
+}
+.bottombar .information__container .pointsItem .input input {
+  width: 100%;
+  font-size: var(--fM);
+  text-align: center;
+}
+.bottombar .information__container button.couponItem {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 54px;
+  padding: 0 10px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  color: #4F4F4F;
+  font-size: var(--fS);
+  border-radius: 20px;
+  pointer-events: all;
+  z-index: 2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.bottombar .information__container button.couponItem .itemTitle {
+  position: relative;
+  padding-left: 28px;
+  font-size: var(--fM);
+}
+.bottombar .information__container button.couponItem .itemTitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 7px);
+  width: 20px;
+  height: 14px;
+  display: block;
+  background: url(../icon/ticket.svg);
+}
+.bottombar .information__container button.couponItem .couponTitle {
+  margin-left: auto;
+  color: #FF9900;
+  font-size: var(--fM);
+  max-width: calc(100% - 125px);
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  height: 50px;
+  overflow: hidden;
+}
+.bottombar .information__container button.couponItem .coupon_nb {
+  padding-right: 30px;
+}
+.bottombar .information__container button.couponItem .arr_r {
+  line-height: 50px;
+  height: 50px;
+  padding-right: 25px;
+  position: relative;
+}
+.bottombar .information__container button.couponItem .arr_r::before {
+  content: "";
+  position: absolute;
+  right: 5px;
+  top: calc(50% - 6px);
+  width: 10px;
+  height: 14px;
+  background: url(../icon/arr-org.svg) center center no-repeat;
+}
+.bottombar .information__container button.couponItem .coupon_nb {
+  margin-left: auto;
+  color: #FF9900;
+  font-size: var(--fL);
+}
+.bottombar .information__container button.couponItem .coupon_nb_s {
+  margin-left: auto;
+  color: #828282;
+}
+.bottombar .information__container button.couponItem .coupon_nb_s::before {
+  -webkit-filter: grayscale(1);
 }
 .bottombar .bottombar__container {
   position: relative;
   width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
 }
 .bottombar .bottombar__container button,
 .bottombar .bottombar__container a {
@@ -911,7 +1150,7 @@ img {
   bottom: 0;
   align-items: center;
   justify-content: center;
-  z-index: 8;
+  z-index: 21;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1132,7 +1371,7 @@ img {
   justify-content: center;
   overflow-x: hidden;
   overflow-y: auto;
-  z-index: 4;
+  z-index: 21;
 }
 .modal:not(#popCart),
 .modal:not(#popCartGroupbuying) {
@@ -1160,13 +1399,15 @@ img {
 .modal#popNotice .modal-content {
   width: 400px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 @media (max-width: 767px) {
   .modal#popNotice .modal-content {
@@ -1200,12 +1441,14 @@ img {
 .modal#popInfo .modal-content {
   width: 400px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 @media (max-width: 767px) {
   .modal#popInfo .modal-content {
@@ -1276,7 +1519,6 @@ img {
 .modal#popDelivery .modal-content {
   width: 400px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -1307,13 +1549,15 @@ img {
   min-height: 550px;
   max-height: calc(100vh - 80px);
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 @media (max-width: 767px) {
   .modal#popSetting .modal-content {
@@ -1614,7 +1858,6 @@ img {
 .modal#popTime .modal-content {
   width: 300px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -1689,7 +1932,6 @@ img {
 .modal#popLocation .modal-content {
   width: 300px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -1781,7 +2023,6 @@ img {
 .modal#popVerify .modal-content {
   width: 300px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -1842,7 +2083,6 @@ img {
   width: 300px;
   height: 300px;
   padding: 20px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -1931,6 +2171,9 @@ img {
   display: flex;
   flex-direction: column;
   background-color: white;
+  animation-name: popup;
+  animation-duration: 0s;
+  animation-iteration-count: 1;
 }
 .modal#popPrivacy .modal-content div,
 .modal#popTerms .modal-content div {
@@ -1981,7 +2224,6 @@ img {
   width: 500px;
   max-height: calc(100vh - 40px);
   padding: 10px;
-  margin: auto;
   border-radius: 15px;
   gap: 10px;
   position: absolute;
@@ -1989,6 +2231,9 @@ img {
   flex-direction: column;
   background-color: #F2F1F6;
   box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.3);
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 @media (max-width: 767px) {
   .modal#popCart .modal-content,
@@ -2370,6 +2615,61 @@ img {
   color: #828282;
   font-size: var(--fM) !important;
 }
+.modal#popCart .modal-content .container .loading,
+.modal#popCartGroupbuying .modal-content .container .loading {
+  border-radius: 20px;
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  overflow: hidden;
+  background-color: #BDBDBD;
+}
+.modal#popCart .modal-content .container .loading::after,
+.modal#popCartGroupbuying .modal-content .container .loading::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0));
+  animation: shimmer 1s infinite;
+  content: '';
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.modal#popCart .modal-content .container .loading.loadTitle,
+.modal#popCartGroupbuying .modal-content .container .loading.loadTitle {
+  width: 200px;
+  min-height: 20px;
+}
+.modal#popCart .modal-content .container .loading.loadContent,
+.modal#popCartGroupbuying .modal-content .container .loading.loadContent {
+  width: 120px;
+  min-height: 20px;
+  margin-top: 5px;
+}
+.modal#popCart .modal-content .container .loading.loadIcon,
+.modal#popCartGroupbuying .modal-content .container .loading.loadIcon {
+  width: 30px;
+  min-height: 30px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.modal#popCart .modal-content .container .loading.loadCount,
+.modal#popCartGroupbuying .modal-content .container .loading.loadCount {
+  width: 24px;
+  min-height: 24px;
+  margin: 5px 5px 0;
+}
+.modal#popCart .modal-content .container .loading.loadPrice,
+.modal#popCartGroupbuying .modal-content .container .loading.loadPrice {
+  width: 50px;
+  min-height: 20px;
+}
 .modal#popCart .modal-content .submit,
 .modal#popCartGroupbuying .modal-content .submit {
   width: calc(100% - 40px);
@@ -2402,14 +2702,19 @@ img {
 .modal#popCartGroupbuying .modal-content .submit .price span {
   margin: 0 2px;
 }
+.modal#popItem {
+  z-index: 22;
+}
 .modal#popItem .modal-content {
   max-width: 900px;
   padding: 10px;
-  margin: auto;
   border-radius: 20px;
   position: relative;
   display: flex;
   background-color: #F2F1F6;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 @media (max-width: 1199px) {
   .modal#popItem .modal-content {
@@ -2809,6 +3114,532 @@ img {
 }
 .modal#popItem .modal-content .container .buttom .submit .price span {
   margin: 0 2px;
+}
+.modal#popCoupon {
+  align-items: flex-end;
+}
+.modal#popCoupon .modal-content {
+  width: 100vw;
+  max-width: 500px;
+  max-height: calc(80vh - 106px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px 20px 86px;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.modal#popCoupon .modal-content .topTitle {
+  padding-bottom: 10px;
+}
+.modal#popCoupon .storeCoupons {
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal#popCoupon .storeCoupons .coupon {
+  width: calc(100% - 70px);
+  padding: 5px 15px 5px 35px;
+  margin: 5px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F2F1F6;
+  position: relative;
+}
+.modal#popCoupon .storeCoupons .coupon::before,
+.modal#popCoupon .storeCoupons .coupon::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 100%;
+  left: -7px;
+  top: 0;
+  background: url(../photo/bg_dots.svg) center center no-repeat;
+  background-size: contain;
+}
+.modal#popCoupon .storeCoupons .coupon::after {
+  left: initial;
+  right: -7px;
+}
+.modal#popCoupon .storeCoupons .coupon .imgCheckbox {
+  position: absolute;
+  left: 15px;
+  top: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.modal#popCoupon .storeCoupons .coupon .info {
+  width: calc(100% - 120px);
+  padding: 5px 10px;
+}
+.modal#popCoupon .storeCoupons .coupon .info .detail {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  color: #828282;
+  font-size: var(--fS) !important;
+}
+.modal#popCoupon .storeCoupons .coupon .info .detail .subText {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.modal#popCoupon .storeCoupons .coupon .info .detail .price {
+  padding-top: 5px;
+  font-size: var(--fXS);
+}
+.modal#popCoupon .storeCoupons .coupon .info .detail .price .off {
+  font-size: var(--fM);
+  color: #333333;
+}
+.modal#popCoupon .storeCoupons .coupon .info .detail .price .lineThrough {
+  padding-left: 5px;
+  text-decoration: line-through;
+}
+.modal#popCoupon .storeCoupons .coupon .info .title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #333333;
+  font-size: var(--fM) !important;
+}
+.modal#popCoupon .storeCoupons .coupon .info .rule {
+  padding: 3px 0;
+  color: #FF9900;
+  text-decoration: underline !important;
+  font-size: var(--fXS);
+  pointer-events: all;
+  z-index: 5;
+}
+.modal#popCoupon .storeCoupons .coupon .noImg {
+  width: calc(100% - 20px);
+}
+.modal#popCoupon .storeCoupons .coupon .image {
+  display: flex;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.modal#popCoupon .storeCoupons .coupon .image img {
+  width: 98px;
+  height: 98px;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 1px solid transparent;
+}
+.modal#popCoupon .storeCoupons .coupon .image .soldOut {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000050;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: var(--fM);
+}
+.modal#popCoupon .storeCoupons .checked {
+  background: #FF9900;
+}
+.modal#popCoupon .storeCoupons .checked .imgCheckbox {
+  background: url(../icon/check-w.svg) center center no-repeat;
+  background-size: cover;
+}
+.modal#popCoupon .storeCoupons .checked .info .detail {
+  color: #F2F1F6;
+}
+.modal#popCoupon .storeCoupons .checked .info .rule {
+  color: #fff;
+}
+.modal#popCoupon .storeCoupons .checked .image img {
+  border-color: #fff;
+}
+.modal#popCoupon .storeCoupons .addCheckbox {
+  width: calc(100% - 30px);
+  padding-left: 5px;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .info {
+  width: calc(100% - 160px);
+  padding: 5px;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .noImg {
+  width: calc(100% - 60px);
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox {
+  border-radius: 99px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* Customize the label (the contai  ner) */
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* When the checkbox is checked, add a blue background */
+  /* Show the checkmark when checked */
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox.disabled {
+  pointer-events: none;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox.disabled .container {
+  padding-left: 0;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox span.inputBox {
+  width: fit-content;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .input {
+  height: 40px;
+  margin-left: auto;
+  border-radius: 99px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #F2F1F6;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  .modal#popCoupon .storeCoupons .addCheckbox .checkbox .input {
+    background-color: white;
+  }
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .input span {
+  right: 0;
+  top: 45px;
+  position: absolute;
+  color: #EB5757;
+  font-size: var(--fXS);
+  text-align: right;
+  white-space: nowrap;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .input input {
+  width: 80px;
+  margin: 0 0 0 5px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  font-size: var(--fS) !important;
+  text-align: right;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .input input::placeholder {
+  color: #BDBDBD;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox div.info {
+  padding-left: 15px;
+  left: 0;
+  top: 60px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox div.info span {
+  font-size: var(--fXS);
+  color: #828282;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .container {
+  height: 30px;
+  gap: 2px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: var(--fS) !important;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .container > div:first-child {
+  order: 1;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .container img {
+  width: unset;
+  height: 20px;
+  order: 0;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .container .text {
+  width: fit-content;
+  order: 3;
+  display: flex;
+  align-items: center;
+  color: #333333;
+  font-size: var(--fS) !important;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .container .subText {
+  width: fit-content;
+  left: 0px;
+  bottom: -25px;
+  position: absolute;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  color: #828282;
+  font-size: var(--fXS);
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .container .subText img {
+  width: unset;
+  height: 14px;
+  margin-right: -8px;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .checkmark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 40px;
+  background-color: #fff;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .container:hover input ~ .checkmark {
+  background-color: #F2F1F6;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .container input:checked ~ .checkmark {
+  background: url(../icon/check-w.svg) center center no-repeat #FF9900;
+  background-size: cover;
+}
+.modal#popCoupon .storeCoupons .addCheckbox .checkbox .container input:checked ~ .checkmark:after {
+  display: block;
+}
+.modal#popCoupon .storeCoupons .couponNone {
+  width: 100%;
+  margin: 80px 0;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal#popCoupon .storeCoupons .couponNone span {
+  color: #828282;
+}
+.modal#popCoupon #modeRound {
+  width: 100%;
+  height: 40px;
+  margin: 15px 0 10px 0;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F2F1F6;
+}
+.modal#popCoupon #modeRound .mode {
+  width: 100%;
+  height: 40px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+}
+.modal#popCoupon #modeRound .mode.active {
+  background-color: #FF9900;
+  color: white;
+}
+.modal#popCoupon #modeRound .mode:hover:not(.active) {
+  background-color: #FFEED8;
+}
+.modal#popCoupon #modeRound .mode.grayed {
+  color: #828282;
+}
+.modal#popCoupon #modeRound .mode .icon {
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal#popCoupon #modeRound .mode span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--fS) !important;
+}
+.modal#popCoupon .fillinCoupons {
+  width: 100%;
+  position: relative;
+  padding-bottom: 10px;
+}
+.modal#popCoupon .fillinCoupons input {
+  width: 100%;
+  line-height: 28px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.modal#popCoupon .fillinCoupons input::placeholder {
+  color: #BDBDBD;
+}
+.modal#popCoupon .fillinCoupons a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  color: #FF9900;
+  display: block;
+}
+.modal#popActivity {
+  align-items: flex-end;
+}
+.modal#popActivity .modal-content {
+  width: 100vw;
+  max-width: 500px;
+  max-height: calc(80vh - 40px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.modal#popActivity .topTitle {
+  padding-bottom: 10px;
+}
+.modal#popActivity .activity {
+  width: calc(100% + 20px);
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal#popActivity .activity .event {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 10px;
+}
+.modal#popActivity .activity .event .image {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  position: relative;
+}
+.modal#popActivity .activity .event .image img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.modal#popActivity .activity .event .info {
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+.modal#popActivity .activity .event .info .detail {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  color: #828282;
+  font-size: var(--fS) !important;
+}
+.modal#popActivity .activity .event .info .rule {
+  padding: 3px 0;
+  color: #FF9900;
+  text-decoration: underline !important;
+  font-size: var(--fXS);
+}
+.modal#popRule {
+  align-items: flex-end;
+  z-index: 22;
+}
+.modal#popRule .modal-content {
+  width: 100vw;
+  max-width: 500px;
+  max-height: 85vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.modal#popRule .title {
+  padding-bottom: 10px;
+}
+.modal#popRule .leftTitle {
+  width: 100%;
+  font-size: var(--fL);
+  padding-bottom: 20px;
+}
+.modal#popRule .info {
+  color: #828282;
+}
+.modal#popCouponRule {
+  align-items: flex-end;
+}
+.modal#popCouponRule .modal-content {
+  width: 100vw;
+  max-width: 500px;
+  max-height: 85vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.modal#popCouponRule .title {
+  padding-bottom: 10px;
+  text-align: center;
+}
+.modal#popCouponRule .leftTitle {
+  width: 100%;
+  font-size: var(--fL);
+  padding-bottom: 20px;
+}
+.modal#popCouponRule .info {
+  color: #828282;
 }
 #portalMain {
   min-height: calc(100vh - 200px);
@@ -3347,6 +4178,136 @@ img {
 }
 #portalMain .mainContainer .stores .store .info .payment div img.lg {
   width: 22px;
+}
+#portalMain .mainContainer .switch {
+  width: 30px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #F2F1F6;
+  /* The container */
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* When the radio button is checked, add a blue background */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+}
+@media (max-width: 1199px) {
+  #portalMain .mainContainer .switch {
+    background-color: white;
+  }
+}
+#portalMain .mainContainer .switch.v2 {
+  height: unset;
+  border-radius: unset;
+  gap: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: transparent;
+}
+#portalMain .mainContainer .switch.v2 .container {
+  width: 100%;
+  min-height: 40px;
+  padding: 10px 15px 10px 40px;
+  border-radius: 20px;
+  background-color: #F2F1F6;
+  box-sizing: border-box;
+}
+@media (max-width: 1199px) {
+  #portalMain .mainContainer .switch.v2 .container {
+    background-color: white;
+  }
+}
+#portalMain .mainContainer .switch.v2 .checkmark {
+  top: 10px;
+  left: 15px;
+}
+#portalMain .mainContainer .switch.error {
+  border: none;
+}
+#portalMain .mainContainer .switch div.online {
+  width: 180px;
+  margin: -20px 0 0 auto;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+#portalMain .mainContainer .switch div.online div {
+  width: 53.33px;
+  display: flex;
+  justify-content: center;
+}
+#portalMain .mainContainer .switch div.online img {
+  max-width: 53.33px;
+  max-height: 16px;
+  margin: 0 auto;
+}
+#portalMain .mainContainer .switch .container {
+  display: block;
+  position: relative;
+  padding: 5px 15px 5px 45px;
+  border-radius: 99px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: var(--fS) !important;
+}
+#portalMain .mainContainer .switch .container:hover {
+  background: #FFEED8;
+}
+#portalMain .mainContainer .switch .container .text {
+  width: fit-content;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+#portalMain .mainContainer .switch .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+#portalMain .mainContainer .switch .checkmark {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid #FF9900;
+}
+#portalMain .mainContainer .switch .container:hover input ~ .checkmark {
+  background-color: #F2F1F6;
+}
+#portalMain .mainContainer .switch .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+#portalMain .mainContainer .switch .container input:checked ~ .checkmark {
+  background-color: #FF9900;
+}
+#portalMain .mainContainer .switch .container input:checked ~ .checkmark:after {
+  display: block;
+}
+#portalMain .mainContainer .switch .container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: white;
 }
 #portalMain .loading {
   border-radius: 5px;
@@ -4132,20 +5093,17 @@ img {
   color: #828282;
   font-size: var(--fL) !important;
 }
-#paymentMain,
-#orderMain {
+#paymentMain {
   width: 100vw;
   height: 100vh;
   display: flex;
 }
 @media (max-width: 1199px) {
-  #paymentMain,
-  #orderMain {
+  #paymentMain {
     display: block;
   }
 }
-#paymentMain #left,
-#orderMain #left {
+#paymentMain #left {
   width: 60%;
   height: fit-content;
   padding: 20px 0;
@@ -4155,26 +5113,22 @@ img {
   flex-direction: column;
 }
 @media (max-width: 1199px) {
-  #paymentMain #left,
-  #orderMain #left {
+  #paymentMain #left {
     width: 100%;
     padding: 50px 0 0;
   }
 }
-#paymentMain #left #logo,
-#orderMain #left #logo {
+#paymentMain #left #logo {
   max-height: 60px;
   margin-bottom: 20px;
   display: none;
 }
 @media (max-width: 1199px) {
-  #paymentMain #left #logo,
-  #orderMain #left #logo {
+  #paymentMain #left #logo {
     display: block;
   }
 }
-#paymentMain #left .container,
-#orderMain #left .container {
+#paymentMain #left .container {
   width: calc(70% - 30px);
   padding: 15px;
   margin: 20px 0;
@@ -4184,25 +5138,21 @@ img {
   background-color: white;
 }
 @media (max-width: 1199px) {
-  #paymentMain #left .container,
-  #orderMain #left .container {
+  #paymentMain #left .container {
     width: calc(100% - 70px);
     margin: 10px 0;
   }
 }
 @media (max-width: 767px) {
-  #paymentMain #left .container.desktop,
-  #orderMain #left .container.desktop {
+  #paymentMain #left .container.desktop {
     display: none;
   }
 }
-#paymentMain #left .container .title,
-#orderMain #left .container .title {
+#paymentMain #left .container .title {
   color: #333333;
   font-size: var(--fL) !important;
 }
-#paymentMain #left .container .icon,
-#orderMain #left .container .icon {
+#paymentMain #left .container .icon {
   min-width: 30px;
   height: 30px;
   margin-right: 2px;
@@ -4211,103 +5161,85 @@ img {
   justify-content: center;
   color: #FF9900;
 }
-#paymentMain #left .container .col,
-#orderMain #left .container .col {
+#paymentMain #left .container .col {
   margin-top: 10px;
   display: flex;
   align-items: center;
 }
-#paymentMain #left .container .col .text,
-#orderMain #left .container .col .text {
+#paymentMain #left .container .col .text {
   display: flex;
   flex-direction: column;
 }
-#paymentMain #left .container .contentB,
-#orderMain #left .container .contentB {
+#paymentMain #left .container .contentB {
   color: #333333;
   font-size: var(--fS) !important;
 }
-#paymentMain #left .container .contentG,
-#orderMain #left .container .contentG {
+#paymentMain #left .container .contentG {
   color: #828282;
   font-size: var(--fS) !important;
 }
-#paymentMain #left .container .contentR,
-#orderMain #left .container .contentR {
+#paymentMain #left .container .contentR {
   color: #EB5757;
   font-size: var(--fS) !important;
 }
-#paymentMain #left .container .remark,
-#orderMain #left .container .remark {
+#paymentMain #left .container .remark {
   margin-bottom: 10px;
   color: #828282;
   font-size: var(--fXS) !important;
 }
-#paymentMain #left .container #items,
-#orderMain #left .container #items {
+#paymentMain #left .container #items {
   padding-bottom: 10px;
   border-bottom: solid 1px #BDBDBD;
 }
 @media (max-height: 705px) {
-  #paymentMain #left .container #items,
-  #orderMain #left .container #items {
+  #paymentMain #left .container #items {
     overflow-y: visible;
   }
 }
-#paymentMain #left .container .item,
-#orderMain #left .container .item {
+#paymentMain #left .container .item {
   width: 100%;
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
-#paymentMain #left .container .item .left,
-#orderMain #left .container .item .left {
+#paymentMain #left .container .item .left {
   display: flex;
   align-items: center;
 }
-#paymentMain #left .container .item .left .count,
-#orderMain #left .container .item .left .count {
+#paymentMain #left .container .item .left .count {
   min-width: 40px;
   display: flex;
   justify-content: center;
   color: #333333;
   font-size: var(--fS) !important;
 }
-#paymentMain #left .container .item .right,
-#orderMain #left .container .item .right {
+#paymentMain #left .container .item .right {
   margin-left: 10px;
   display: flex;
   align-items: center;
 }
-#paymentMain #left .container .item .right img,
-#orderMain #left .container .item .right img {
+#paymentMain #left .container .item .right img {
   width: 50px;
   height: 50px;
   margin-right: 10px;
   border-radius: 10px;
 }
-#paymentMain #left .container .item .right img.point,
-#orderMain #left .container .item .right img.point {
+#paymentMain #left .container .item .right img.point {
   width: unset;
   height: 20px;
   margin: 0;
 }
-#paymentMain #left .container .item .right span,
-#orderMain #left .container .item .right span {
+#paymentMain #left .container .item .right span {
   margin: 0 5px;
 }
-#paymentMain #left .container .item .right span.point,
-#orderMain #left .container .item .right span.point {
+#paymentMain #left .container .item .right span.point {
   min-width: 25px;
 }
-#paymentMain #left .container .item .right span.price,
-#orderMain #left .container .item .right span.price {
+#paymentMain #left .container .item .right span.price {
   text-align: end;
   min-width: 40px;
 }
-#paymentMain #left .container .addon,
-#orderMain #left .container .addon {
+#paymentMain #left .container .addon {
   margin-top: 10px;
   padding-bottom: 10px;
   border-bottom: solid 1px #BDBDBD;
@@ -4315,13 +5247,11 @@ img {
   flex-direction: column;
   align-items: center;
 }
-#paymentMain #left .container .subTotal,
-#orderMain #left .container .subTotal {
+#paymentMain #left .container .subTotal {
   padding-bottom: 10px;
   border-bottom: solid 1px #BDBDBD;
 }
-#paymentMain #right,
-#orderMain #right {
+#paymentMain #right {
   width: 40%;
   height: 100vh;
   right: 0;
@@ -4334,8 +5264,7 @@ img {
   box-shadow: 0px 20px 40px rgba(55, 84, 170, 0.2);
 }
 @media (max-width: 1199px) {
-  #paymentMain #right,
-  #orderMain #right {
+  #paymentMain #right {
     width: 100%;
     height: fit-content;
     position: static;
@@ -4343,8 +5272,7 @@ img {
     box-shadow: none;
   }
 }
-#paymentMain #right #top,
-#orderMain #right #top {
+#paymentMain #right #top {
   width: calc(100% - 100px);
   padding: 20px 50px 0;
   display: flex;
@@ -4353,61 +5281,50 @@ img {
   overflow-y: auto;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top,
-  #orderMain #right #top {
+  #paymentMain #right #top {
     width: calc(100% - 40px);
     padding: 0 20px 50px;
   }
 }
-#paymentMain #right #top #logo,
-#orderMain #right #top #logo {
+#paymentMain #right #top #logo {
   max-height: 60px;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top #logo,
-  #orderMain #right #top #logo {
+  #paymentMain #right #top #logo {
     display: none;
   }
 }
-#paymentMain #right #top .area,
-#orderMain #right #top .area {
+#paymentMain #right #top .area {
   width: 100%;
   margin-top: 10px;
 }
-#paymentMain #right #top .area .title,
-#orderMain #right #top .area .title {
+#paymentMain #right #top .area .title {
   color: #333333;
   font-size: var(--fS) !important;
   font-weight: bold;
 }
-#paymentMain #right #top .area .content,
-#orderMain #right #top .area .content {
+#paymentMain #right #top .area .content {
   margin-right: 10px;
   color: #333333;
   white-space: nowrap;
   font-size: var(--fS) !important;
 }
-#paymentMain #right #top .area .content.full,
-#orderMain #right #top .area .content.full {
+#paymentMain #right #top .area .content.full {
   width: 100%;
 }
-#paymentMain #right #top .area .inputBox,
-#orderMain #right #top .area .inputBox {
+#paymentMain #right #top .area .inputBox {
   width: 100%;
 }
-#paymentMain #right #top .area .dropdown,
-#orderMain #right #top .area .dropdown {
+#paymentMain #right #top .area .dropdown {
   width: 100%;
   position: relative;
   display: flex;
   align-items: center;
 }
-#paymentMain #right #top .area .dropdown.left,
-#orderMain #right #top .area .dropdown.left {
+#paymentMain #right #top .area .dropdown.left {
   margin-right: 10px;
 }
-#paymentMain #right #top .area .dropdown select,
-#orderMain #right #top .area .dropdown select {
+#paymentMain #right #top .area .dropdown select {
   width: 100%;
   height: 40px;
   border: 0;
@@ -4419,13 +5336,11 @@ img {
   font-size: var(--fS) !important;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top .area .dropdown select,
-  #orderMain #right #top .area .dropdown select {
+  #paymentMain #right #top .area .dropdown select {
     background-color: white;
   }
 }
-#paymentMain #right #top .area .dropdown .arrow,
-#orderMain #right #top .area .dropdown .arrow {
+#paymentMain #right #top .area .dropdown .arrow {
   width: 20px;
   height: 100%;
   top: 0;
@@ -4437,8 +5352,7 @@ img {
   pointer-events: none;
   color: #FF9900;
 }
-#paymentMain #right #top .area .switch,
-#orderMain #right #top .area .switch {
+#paymentMain #right #top .area .switch {
   width: 100%;
   height: 40px;
   margin-top: 10px;
@@ -4457,13 +5371,11 @@ img {
   /* Style the indicator (dot/circle) */
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top .area .switch,
-  #orderMain #right #top .area .switch {
+  #paymentMain #right #top .area .switch {
     background-color: white;
   }
 }
-#paymentMain #right #top .area .switch.v2,
-#orderMain #right #top .area .switch.v2 {
+#paymentMain #right #top .area .switch.v2 {
   height: unset;
   border-radius: unset;
   gap: 10px;
@@ -4473,8 +5385,7 @@ img {
   flex-direction: column;
   background-color: transparent;
 }
-#paymentMain #right #top .area .switch.v2 .container,
-#orderMain #right #top .area .switch.v2 .container {
+#paymentMain #right #top .area .switch.v2 .container {
   width: 100%;
   min-height: 40px;
   padding: 10px 15px 10px 40px;
@@ -4483,43 +5394,38 @@ img {
   box-sizing: border-box;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top .area .switch.v2 .container,
-  #orderMain #right #top .area .switch.v2 .container {
+  #paymentMain #right #top .area .switch.v2 .container {
     background-color: white;
   }
 }
-#paymentMain #right #top .area .switch.v2 .checkmark,
-#orderMain #right #top .area .switch.v2 .checkmark {
+#paymentMain #right #top .area .switch.v2 .checkmark {
   top: 10px;
   left: 15px;
 }
-#paymentMain #right #top .area .switch.error,
-#orderMain #right #top .area .switch.error {
+#paymentMain #right #top .area .switch.error {
   border: none;
 }
-#paymentMain #right #top .area .switch div.online,
-#orderMain #right #top .area .switch div.online {
-  width: 180px;
-  margin: -20px 0 0 auto;
+#paymentMain #right #top .area .switch div.online {
+  width: 100%;
+  margin: 15px 0 0 auto;
   gap: 10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-start;
 }
-#paymentMain #right #top .area .switch div.online div,
-#orderMain #right #top .area .switch div.online div {
-  width: 53.33px;
+#paymentMain #right #top .area .switch div.online div {
+  width: fit-content;
+  height: 28px;
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
-#paymentMain #right #top .area .switch div.online img,
-#orderMain #right #top .area .switch div.online img {
-  max-width: 53.33px;
-  max-height: 16px;
+#paymentMain #right #top .area .switch div.online img {
+  max-height: 28px;
   margin: 0 auto;
+  object-fit: contain;
 }
-#paymentMain #right #top .area .switch .container,
-#orderMain #right #top .area .switch .container {
+#paymentMain #right #top .area .switch .container {
   display: block;
   position: relative;
   padding: 5px 15px 5px 45px;
@@ -4531,26 +5437,22 @@ img {
   user-select: none;
   font-size: var(--fS) !important;
 }
-#paymentMain #right #top .area .switch .container:hover,
-#orderMain #right #top .area .switch .container:hover {
+#paymentMain #right #top .area .switch .container:hover {
   background: #FFEED8;
 }
-#paymentMain #right #top .area .switch .container .text,
-#orderMain #right #top .area .switch .container .text {
+#paymentMain #right #top .area .switch .container .text {
   width: fit-content;
   height: 20px;
   display: flex;
   align-items: center;
   white-space: nowrap;
 }
-#paymentMain #right #top .area .switch .container input,
-#orderMain #right #top .area .switch .container input {
+#paymentMain #right #top .area .switch .container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
-#paymentMain #right #top .area .switch .checkmark,
-#orderMain #right #top .area .switch .checkmark {
+#paymentMain #right #top .area .switch .checkmark {
   position: absolute;
   top: 5px;
   left: 20px;
@@ -4560,26 +5462,21 @@ img {
   border-radius: 50%;
   border: 2px solid #FF9900;
 }
-#paymentMain #right #top .area .switch .container:hover input ~ .checkmark,
-#orderMain #right #top .area .switch .container:hover input ~ .checkmark {
+#paymentMain #right #top .area .switch .container:hover input ~ .checkmark {
   background-color: #F2F1F6;
 }
-#paymentMain #right #top .area .switch .checkmark:after,
-#orderMain #right #top .area .switch .checkmark:after {
+#paymentMain #right #top .area .switch .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-#paymentMain #right #top .area .switch .container input:checked ~ .checkmark,
-#orderMain #right #top .area .switch .container input:checked ~ .checkmark {
+#paymentMain #right #top .area .switch .container input:checked ~ .checkmark {
   background-color: #FF9900;
 }
-#paymentMain #right #top .area .switch .container input:checked ~ .checkmark:after,
-#orderMain #right #top .area .switch .container input:checked ~ .checkmark:after {
+#paymentMain #right #top .area .switch .container input:checked ~ .checkmark:after {
   display: block;
 }
-#paymentMain #right #top .area .switch .container .checkmark:after,
-#orderMain #right #top .area .switch .container .checkmark:after {
+#paymentMain #right #top .area .switch .container .checkmark:after {
   top: 5px;
   left: 5px;
   width: 5px;
@@ -4587,16 +5484,14 @@ img {
   border-radius: 50%;
   background: white;
 }
-#paymentMain #right #top .area .message,
-#orderMain #right #top .area .message {
+#paymentMain #right #top .area .message {
   display: flex;
   justify-content: center;
   margin-left: 3px;
   color: #EB5757;
   font-size: 10px;
 }
-#paymentMain #right #top .area .checkbox,
-#orderMain #right #top .area .checkbox {
+#paymentMain #right #top .area .checkbox {
   height: 40px;
   margin: 10px 0 35px;
   padding: 0 15px;
@@ -4616,25 +5511,20 @@ img {
   /* Style the checkmark/indicator */
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top .area .checkbox,
-  #orderMain #right #top .area .checkbox {
+  #paymentMain #right #top .area .checkbox {
     background-color: white;
   }
 }
-#paymentMain #right #top .area .checkbox.disabled,
-#orderMain #right #top .area .checkbox.disabled {
+#paymentMain #right #top .area .checkbox.disabled {
   pointer-events: none;
 }
-#paymentMain #right #top .area .checkbox.disabled .container,
-#orderMain #right #top .area .checkbox.disabled .container {
+#paymentMain #right #top .area .checkbox.disabled .container {
   padding-left: 0;
 }
-#paymentMain #right #top .area .checkbox span.inputBox,
-#orderMain #right #top .area .checkbox span.inputBox {
+#paymentMain #right #top .area .checkbox span.inputBox {
   width: fit-content;
 }
-#paymentMain #right #top .area .checkbox .input,
-#orderMain #right #top .area .checkbox .input {
+#paymentMain #right #top .area .checkbox .input {
   height: 40px;
   margin-left: auto;
   border-radius: 99px;
@@ -4647,13 +5537,11 @@ img {
   box-sizing: border-box;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top .area .checkbox .input,
-  #orderMain #right #top .area .checkbox .input {
+  #paymentMain #right #top .area .checkbox .input {
     background-color: white;
   }
 }
-#paymentMain #right #top .area .checkbox .input span,
-#orderMain #right #top .area .checkbox .input span {
+#paymentMain #right #top .area .checkbox .input span {
   right: 0;
   top: 45px;
   position: absolute;
@@ -4662,8 +5550,7 @@ img {
   text-align: right;
   white-space: nowrap;
 }
-#paymentMain #right #top .area .checkbox .input input,
-#orderMain #right #top .area .checkbox .input input {
+#paymentMain #right #top .area .checkbox .input input {
   width: 80px;
   margin: 0 0 0 5px;
   padding: 0;
@@ -4672,12 +5559,10 @@ img {
   font-size: var(--fS) !important;
   text-align: right;
 }
-#paymentMain #right #top .area .checkbox .input input::placeholder,
-#orderMain #right #top .area .checkbox .input input::placeholder {
+#paymentMain #right #top .area .checkbox .input input::placeholder {
   color: #BDBDBD;
 }
-#paymentMain #right #top .area .checkbox div.info,
-#orderMain #right #top .area .checkbox div.info {
+#paymentMain #right #top .area .checkbox div.info {
   padding-left: 15px;
   left: 0;
   top: 60px;
@@ -4685,13 +5570,11 @@ img {
   display: flex;
   flex-direction: column;
 }
-#paymentMain #right #top .area .checkbox div.info span,
-#orderMain #right #top .area .checkbox div.info span {
+#paymentMain #right #top .area .checkbox div.info span {
   font-size: var(--fXS);
   color: #828282;
 }
-#paymentMain #right #top .area .checkbox .container,
-#orderMain #right #top .area .checkbox .container {
+#paymentMain #right #top .area .checkbox .container {
   height: 30px;
   gap: 2px;
   display: flex;
@@ -4705,18 +5588,15 @@ img {
   user-select: none;
   font-size: var(--fS) !important;
 }
-#paymentMain #right #top .area .checkbox .container > div:first-child,
-#orderMain #right #top .area .checkbox .container > div:first-child {
+#paymentMain #right #top .area .checkbox .container > div:first-child {
   order: 1;
 }
-#paymentMain #right #top .area .checkbox .container img,
-#orderMain #right #top .area .checkbox .container img {
+#paymentMain #right #top .area .checkbox .container img {
   width: unset;
   height: 20px;
   order: 0;
 }
-#paymentMain #right #top .area .checkbox .container .text,
-#orderMain #right #top .area .checkbox .container .text {
+#paymentMain #right #top .area .checkbox .container .text {
   width: fit-content;
   order: 3;
   display: flex;
@@ -4724,8 +5604,7 @@ img {
   color: #333333;
   font-size: var(--fS) !important;
 }
-#paymentMain #right #top .area .checkbox .container .subText,
-#orderMain #right #top .area .checkbox .container .subText {
+#paymentMain #right #top .area .checkbox .container .subText {
   width: fit-content;
   left: 0px;
   bottom: -25px;
@@ -4737,22 +5616,19 @@ img {
   color: #828282;
   font-size: var(--fXS);
 }
-#paymentMain #right #top .area .checkbox .container .subText img,
-#orderMain #right #top .area .checkbox .container .subText img {
+#paymentMain #right #top .area .checkbox .container .subText img {
   width: unset;
   height: 14px;
   margin-right: -8px;
 }
-#paymentMain #right #top .area .checkbox .container input,
-#orderMain #right #top .area .checkbox .container input {
+#paymentMain #right #top .area .checkbox .container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-#paymentMain #right #top .area .checkbox .checkmark,
-#orderMain #right #top .area .checkbox .checkmark {
+#paymentMain #right #top .area .checkbox .checkmark {
   position: absolute;
   top: 5px;
   left: 0;
@@ -4762,26 +5638,21 @@ img {
   background-color: white;
   border: solid 2px #FF9900;
 }
-#paymentMain #right #top .area .checkbox .container:hover input ~ .checkmark,
-#orderMain #right #top .area .checkbox .container:hover input ~ .checkmark {
+#paymentMain #right #top .area .checkbox .container:hover input ~ .checkmark {
   background-color: #F2F1F6;
 }
-#paymentMain #right #top .area .checkbox .checkmark:after,
-#orderMain #right #top .area .checkbox .checkmark:after {
+#paymentMain #right #top .area .checkbox .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-#paymentMain #right #top .area .checkbox .container input:checked ~ .checkmark,
-#orderMain #right #top .area .checkbox .container input:checked ~ .checkmark {
+#paymentMain #right #top .area .checkbox .container input:checked ~ .checkmark {
   background-color: #FF9900;
 }
-#paymentMain #right #top .area .checkbox .container input:checked ~ .checkmark:after,
-#orderMain #right #top .area .checkbox .container input:checked ~ .checkmark:after {
+#paymentMain #right #top .area .checkbox .container input:checked ~ .checkmark:after {
   display: block;
 }
-#paymentMain #right #top .area .checkbox .container .checkmark:after,
-#orderMain #right #top .area .checkbox .container .checkmark:after {
+#paymentMain #right #top .area .checkbox .container .checkmark:after {
   left: 4.5px;
   top: 2px;
   width: 3px;
@@ -4792,14 +5663,12 @@ img {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-#paymentMain #right #top .area .item,
-#orderMain #right #top .area .item {
+#paymentMain #right #top .area .item {
   margin-top: 10px;
   display: flex;
   align-items: center;
 }
-#paymentMain #right #top .area .item .icon,
-#orderMain #right #top .area .item .icon {
+#paymentMain #right #top .area .item .icon {
   width: 30px;
   height: 30px;
   margin-right: 10px;
@@ -4808,8 +5677,7 @@ img {
   justify-content: center;
   color: #FF9900;
 }
-#paymentMain #right #top .area .item .input,
-#orderMain #right #top .area .item .input {
+#paymentMain #right #top .area .item .input {
   width: calc(100% - 20px);
   height: 40px;
   padding: 0 10px;
@@ -4820,59 +5688,55 @@ img {
   background-color: #F2F1F6;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #top .area .item .input,
-  #orderMain #right #top .area .item .input {
+  #paymentMain #right #top .area .item .input {
     background-color: white;
   }
 }
-#paymentMain #right #top .area .item .input span,
-#orderMain #right #top .area .item .input span {
+#paymentMain #right #top .area .item .input span {
   margin: 0 0 0 5px;
   color: #EB5757;
   font-size: 10px;
 }
-#paymentMain #right #top .area .item .input input,
-#orderMain #right #top .area .item .input input {
+#paymentMain #right #top .area .item .input input {
   margin: 0 0 0 5px;
   padding: 0;
   border: 0;
   background-color: transparent;
   font-size: var(--fS) !important;
 }
-#paymentMain #right #top .area .error,
-#orderMain #right #top .area .error {
+#paymentMain #right #top .area .error {
   border: solid 2px #EB5757;
 }
-#paymentMain #right #bottom,
-#orderMain #right #bottom {
+#paymentMain #right #bottom {
   width: calc(100% - 40px);
   padding: 20px;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #bottom,
-  #orderMain #right #bottom {
-    padding-bottom: 90px;
+  #paymentMain #right #bottom {
+    padding-bottom: 194px;
   }
 }
-#paymentMain #right #bottom .policy,
-#orderMain #right #bottom .policy {
+#paymentMain #right #bottom .policy {
   margin-bottom: 10px;
   font-size: 10px;
 }
-#paymentMain #right #bottom .policy span,
-#orderMain #right #bottom .policy span {
+#paymentMain #right #bottom .policy span {
   color: #828282;
 }
-#paymentMain #right #bottom .policy a,
-#orderMain #right #bottom .policy a {
+#paymentMain #right #bottom .policy a {
   color: #FF9900;
 }
-#paymentMain #right #bottom .policy a:hover,
-#orderMain #right #bottom .policy a:hover {
+#paymentMain #right #bottom .policy a:hover {
   color: #333333;
 }
-#paymentMain #right #bottom #submit,
-#orderMain #right #bottom #submit {
+@media (min-width: 1200px) {
+  #paymentMain #right #bottom .bottombar {
+    width: 100%;
+    padding: 0;
+    position: static;
+  }
+}
+#paymentMain #right #bottom #submit {
   height: 50px;
   padding: 0 20px;
   border-radius: 99px;
@@ -4882,8 +5746,7 @@ img {
   background: #FF9900;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #bottom #submit,
-  #orderMain #right #bottom #submit {
+  #paymentMain #right #bottom #submit {
     width: 100%;
     height: 70px;
     padding: 15px;
@@ -4896,17 +5759,14 @@ img {
     background: transparent !important;
   }
 }
-#paymentMain #right #bottom #submit:hover,
-#orderMain #right #bottom #submit:hover {
+#paymentMain #right #bottom #submit:hover {
   background: #FF9900;
 }
-#paymentMain #right #bottom #submit span,
-#orderMain #right #bottom #submit span {
+#paymentMain #right #bottom #submit span {
   color: white;
   font-size: var(--fM) !important;
 }
-#paymentMain #right #bottom #submit > span,
-#orderMain #right #bottom #submit > span {
+#paymentMain #right #bottom #submit > span {
   width: 100%;
   height: 100%;
   border-radius: 99px 0 0 99px;
@@ -4914,15 +5774,13 @@ img {
   background: #FF9900;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #bottom #submit > span,
-  #orderMain #right #bottom #submit > span {
+  #paymentMain #right #bottom #submit > span {
     padding-left: 20px;
     line-height: 40px;
     box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1);
   }
 }
-#paymentMain #right #bottom #submit .price,
-#orderMain #right #bottom #submit .price {
+#paymentMain #right #bottom #submit .price {
   height: 100%;
   padding-right: 10px;
   margin-left: -5px;
@@ -4933,28 +5791,23 @@ img {
   background: #FF9900;
 }
 @media (max-width: 1199px) {
-  #paymentMain #right #bottom #submit .price,
-  #orderMain #right #bottom #submit .price {
+  #paymentMain #right #bottom #submit .price {
     box-shadow: 0px -10px 20px rgba(55, 84, 170, 0.1);
   }
 }
-#paymentMain #right #bottom #submit .price img,
-#orderMain #right #bottom #submit .price img {
+#paymentMain #right #bottom #submit .price img {
   width: unset;
   height: 20px;
   margin: 0;
 }
-#paymentMain #right #bottom #submit .price span,
-#orderMain #right #bottom #submit .price span {
+#paymentMain #right #bottom #submit .price span {
   margin: 0 2px;
 }
-#paymentMain #right #bottom #submit.disabled,
-#orderMain #right #bottom #submit.disabled {
+#paymentMain #right #bottom #submit.disabled {
   filter: grayscale(100%);
   pointer-events: auto;
 }
-#paymentMain .loading,
-#orderMain .loading {
+#paymentMain .loading {
   border-radius: 25px;
   display: inline-block;
   height: 1em;
@@ -4962,8 +5815,7 @@ img {
   overflow: hidden;
   background-color: #BDBDBD;
 }
-#paymentMain .loading::after,
-#orderMain .loading::after {
+#paymentMain .loading::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -4979,60 +5831,51 @@ img {
     transform: translateX(100%);
   }
 }
-#paymentMain .loading.loadLeftIcon,
-#orderMain .loading.loadLeftIcon {
+#paymentMain .loading.loadLeftIcon {
   width: 250px;
   height: 50px;
   margin: 20px 0 10px;
   display: none;
 }
 @media (max-width: 1199px) {
-  #paymentMain .loading.loadLeftIcon,
-  #orderMain .loading.loadLeftIcon {
+  #paymentMain .loading.loadLeftIcon {
     display: block;
   }
 }
-#paymentMain .loading.loadLeft,
-#orderMain .loading.loadLeft {
+#paymentMain .loading.loadLeft {
   width: 70%;
   height: 25vh;
   margin: 20px 0;
 }
 @media (max-width: 1199px) {
-  #paymentMain .loading.loadLeft,
-  #orderMain .loading.loadLeft {
+  #paymentMain .loading.loadLeft {
     width: calc(100% - 40px);
     height: 25vh;
     margin: 10px 0;
   }
 }
-#paymentMain .loading.loadRightIcon,
-#orderMain .loading.loadRightIcon {
+#paymentMain .loading.loadRightIcon {
   width: 250px;
   min-height: 50px;
   margin-top: 20px;
   display: block;
 }
 @media (max-width: 1199px) {
-  #paymentMain .loading.loadRightIcon,
-  #orderMain .loading.loadRightIcon {
+  #paymentMain .loading.loadRightIcon {
     display: none;
   }
 }
-#paymentMain .loading.loadRight,
-#orderMain .loading.loadRight {
+#paymentMain .loading.loadRight {
   width: 100%;
   min-height: 25vh;
   margin-top: 20px;
 }
 @media (max-width: 1199px) {
-  #paymentMain .loading.loadRight,
-  #orderMain .loading.loadRight {
+  #paymentMain .loading.loadRight {
     display: none;
   }
 }
-#paymentMain .loading.loadSubmit,
-#orderMain .loading.loadSubmit {
+#paymentMain .loading.loadSubmit {
   width: 100%;
   height: 50px;
 }
@@ -5304,6 +6147,22 @@ img {
 #orderMain #right .container .col .row .header {
   margin-right: 10px;
   white-space: nowrap;
+}
+#orderMain #right .container table.order-info * {
+  padding: 0;
+  text-align: start;
+  vertical-align: text-top;
+}
+#orderMain #right .container table.order-info th {
+  padding: 5px 10px 0 0;
+  color: #828282;
+  font-size: var(--fS) !important;
+  font-weight: normal;
+  white-space: nowrap;
+}
+#orderMain #right .container table.order-info td {
+  color: #333333;
+  font-size: var(--fS) !important;
 }
 #orderMain #right .container .top {
   align-items: flex-start;
@@ -5857,12 +6716,16 @@ img {
 .bottombar--groupbuying .bottombar__container button {
   background-color: #96BE0B;
 }
-.bottombar .bottombar__container .button--circle--green {
+.bottombar--groupbuying .bottombox {
+  border-color: #96BE0B;
+}
+.bottombar .button--circle--green {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
+  pointer-events: all;
   position: absolute;
   width: 58px;
   height: 58px;
@@ -5875,19 +6738,26 @@ img {
   box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
   z-index: 3;
 }
-.bottombar .bottombar__container .button--circle--green > * {
+@media (min-width: 1200px) {
+  .bottombar .button--circle--green {
+    right: 15px;
+    top: calc(100vh - 73px);
+    position: fixed;
+  }
+}
+.bottombar .button--circle--green > * {
   width: 100%;
 }
-.bottombar .bottombar__container .button--circle--green > i {
+.bottombar .button--circle--green > i {
   color: #96BE0B;
   font-size: var(--fS);
 }
-.bottombar .bottombar__container .button--circle--green > span {
+.bottombar .button--circle--green > span {
   color: #333333 !important;
   font-size: var(--fS);
   text-align: center;
 }
-.bottombar .bottombar__container .bottombar__msg {
+.bottombar .bottombar__msg {
   position: absolute;
   left: 0;
   right: 0;
@@ -5899,7 +6769,7 @@ img {
   z-index: 1;
   opacity: 0;
 }
-.bottombar .bottombar__container .bottombar__msg > div {
+.bottombar .bottombar__msg > div {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -5911,7 +6781,7 @@ img {
   box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
   border-radius: 99em;
 }
-.bottombar .bottombar__container .bottombar__msg > div .bottombar__msg__name {
+.bottombar .bottombar__msg > div .bottombar__msg__name {
   display: inline-block;
   max-width: 50%;
   margin-right: 5px;

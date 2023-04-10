@@ -75,7 +75,7 @@ button                                  { border: none; }
 button:hover                            { cursor: pointer; box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2); }
 
 // Common
-.disabled   { color: @cG4 !important; filter: grayscale(100%); opacity: 0.5; pointer-events: none;
+.disabled   { color: @cG4 !important; filter: grayscale(100%); opacity: 0.5; pointer-events: none !important;
     *       { color: @cG4 !important; }
     img     { filter: grayscale(100%); opacity: 0.5; }}
 body { margin: 0; overflow-x: hidden; font-family: 'Noto Sans TC'; background-color: @cBg; }
@@ -91,10 +91,56 @@ textarea { border: 0; }
 textarea:focus { box-shadow: none !important; outline: none; }
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; }
 img { object-fit: cover; }
-.spinner { top: 0; left: 0; width: 100vw; height: 100vh; position: fixed; display: flex; align-items: center; justify-content: center; background: radial-gradient(200px 200px at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); z-index: 4; /* background-color: rgba(0,0,0,0.5); */
+.spinner { top: 0; left: 0; width: 100vw; height: 100vh; position: fixed; display: flex; align-items: center; justify-content: center; background: radial-gradient(200px 200px at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); z-index: 30; /* background-color: rgba(0,0,0,0.5); */
     div { width: 60px; min-height: 60px; border: 5px solid @cG4; border-top: 5px solid @c1; border-radius: 50%; -webkit-animation: spin 1s linear infinite; animation: spin 1s linear infinite; }}
-.bottombar { width: 100vw; padding: 15px 20px; left: 0; bottom: 0; position: fixed; display: flex; justify-content: center; box-sizing: border-box; z-index: 3; pointer-events: none;
-    .bottombar__container { position: relative; width: 100%; max-width: 500px; margin: 0 auto;
+
+.switch_type{ position: relative;
+    .switchButton { display: inline-block; position: relative; height: 22px; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; cursor: pointer;  background-color: #eee;  border-radius: 22px; 
+        &:before { content: ""; display: inline-block; width: 42px; height: 22px; background-color: #fff; border-radius: 22px; box-sizing: border-box; border: 2px solid #eee; transition: all 0.2s linear; }
+        &:after { position: absolute; left: 2px; top: 2px; content: ""; display: inline-block; width: 18px; height: 18px; background-color: #fff; border-radius: 18px; transition: all 0.2s linear; box-shadow: 0px 1px 3px #bbb; }}
+    input { opacity: 0; position: absolute;  top: 0; left: 0; }
+    input:checked~.switchButton:before { background-color: @c1; border: 1px solid @c1; }
+    input:checked~.switchButton:after { left: 22px; }
+}
+.bottombar { width:100vw; padding: 15px 20px; left: 0; bottom: 0; position: fixed; display: flex-root; justify-content: center; box-sizing: border-box; z-index: 20; pointer-events: none;
+    .bottombox{
+         width: 100%; border:1px solid @c1; border-radius: 20px; background-color: #fff; max-width: 500px; margin: 0 auto;
+    }
+    .information__container{ width: 100%; 
+        .transparentTop{ width: 100%; position: relative;}
+        a.go_login{ width: calc(70% - 40px); padding:5px 10px; display: block; display: flex; flex-direction: column; padding-left: 33%; position: relative; pointer-events: all;
+            .storeCover{ position: absolute; left: calc(33% - 55px); top: 8px; width: 48px; height: 48px; img{ width: 100%; height: 100%;}}
+            .mainTitle{ color: @cG1; font-size: var(--fM);}
+            .subTitle{ color:@cG3; font-size: var(--fS);}
+        }
+        .pointsItem{ display: block; position: relative; width: 100%; height: 54px; padding: 0 10px 0 15px; display: flex; align-items: center; justify-content: center; background-color: @cWhite;
+            color: @cG2; font-size: var(--fS); border-radius: 20px 20px 0 0; pointer-events: all; z-index: 2; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border-bottom: 1px solid #E0E0E0;
+            .itemTitle{ position: relative; padding: 0 17px 0 28px; font-size: var(--fM) ; display: block; cursor: pointer; pointer-events:all;
+                &::after{ content: ""; position: absolute; left: 0; top:calc(50% - 9px); width: 20px; height: 20px; display: block; background: url(../icon/point-line.svg);}
+                &::before{ content: ""; position: absolute; right: 0; top: calc(50% - 6px); width: 12px; height: 12px; display: block; background: url(../icon/question.svg);}}
+            .usePoints{ margin-left: auto; display: flex; align-items: center; justify-content: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+            .switch_type{ margin-left: 5px; padding-top: 5px;}
+            .input{ width: 55px; border-bottom: @cG1 solid 1px; padding: 0 3px;
+                input{ width: 100%; font-size: var(--fM); text-align: center;}}
+        }
+        button.couponItem{ display: block; position: relative; width: 100%; height: 54px; padding: 0 10px 0 15px;
+            display: flex; align-items: center; justify-content: center; background-color: @cWhite;
+            color: @cG2; font-size: var(--fS);border-radius: 20px; pointer-events: all; z-index: 2;
+            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+            .itemTitle{ position: relative; padding-left: 28px; font-size: var(--fM) ;
+                &::after{ content: ""; position: absolute; left: 0; top:calc(50% - 7px); width: 20px; height: 14px; display: block; background: url(../icon/ticket.svg); }
+            }
+            .couponTitle{ margin-left: auto;color: @c1; font-size: var(--fM); max-width: calc(100% - 125px); display: block; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;  height: 50px * 1; overflow:hidden;}
+            .coupon_nb{ padding-right: 30px;}
+            .arr_r{ line-height: 50px; height: 50px; padding-right: 25px; position: relative;
+                &::before{content: ""; position: absolute; right: 5px; top: calc(50% - 6px); width: 10px; height: 14px; background: url(../icon/arr-org.svg) center center no-repeat;}
+            }
+            .coupon_nb{ margin-left: auto; color: @c1; font-size: var(--fL); }
+            .coupon_nb_s{margin-left: auto; color: @cG3;
+                &::before{-webkit-filter: grayscale(1);}}
+        }
+    }
+    .bottombar__container { position: relative; width: 100%;
         button, a { display: block; position: relative; width: 100%; height: 54px; padding: 0 10px 0 15px; max-width: 500px; 
             display: flex; align-items: center; justify-content: center;
             color: @cWhite; font-size: var(--fS);
@@ -282,7 +328,7 @@ img { object-fit: cover; }
 .pop { position: fixed; display: none; 
     width: 100%; height: 100%; padding: 10px; top: 0; left: 0; right: 0; bottom: 0; 
     align-items: center; justify-content: center; 
-    z-index: 8;
+    z-index: 21;
     -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
     
     .pop__overlay-bg { 
@@ -348,14 +394,14 @@ img { object-fit: cover; }
 .pop--bottom { align-items: flex-end; }
 
 // Modal
-.modal { width: 100%; height: 100%; left: 0; top: 0; display: none; position: fixed; align-items: center; justify-content: center; overflow-x: hidden; overflow-y: auto; z-index: 4;
+.modal { width: 100%; height: 100%; left: 0; top: 0; display: none; position: fixed; align-items: center; justify-content: center; overflow-x: hidden; overflow-y: auto; z-index: 21;
     &:not(#popCart), &:not(#popCartGroupbuying) { background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.5); }
     .close { top: 20px; right: 20px; position: absolute; color: @cG4; z-index: 3; font-size: var(--fM) !important;
         &:hover, &:focus { color: @cG1; text-decoration: none; cursor: pointer; }
     }
     .title { color: @cG1; font-size: var(--fL) !important; }
     &#popNotice {
-        .modal-content { width: 400px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white;
+        .modal-content { width: 400px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
             @media @screen-mobile { width: 300px; }
             img { max-width: 300px; border-radius: 10px; margin: 20px 0; }
             .content { color: @cG1; font-size: var(--fS) !important; }
@@ -364,7 +410,7 @@ img { object-fit: cover; }
         }
     }
     &#popInfo {
-        .modal-content { width: 400px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
+        .modal-content { width: 400px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
             @media @screen-mobile { width: 300px; }
             .content { margin-top: 10px; display: flex; align-items: center;
                 div { width: 20px; height: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center; color: @c1; }
@@ -386,7 +432,7 @@ img { object-fit: cover; }
         }
     }
     &#popDelivery {
-        .modal-content { width: 400px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white;
+        .modal-content { width: 400px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white;
             @media @screen-mobile { width: 300px; }
             img { max-width: 300px; border-radius: 10px; margin-top: 20px; }
             .content { width: 100%; color: @cG1; font-size: var(--fS) !important;
@@ -395,7 +441,7 @@ img { object-fit: cover; }
         }
     }
     &#popSetting {
-        .modal-content { width: 400px; min-height: 550px; max-height: calc(100vh - 80px); padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; justify-content: space-between; background-color: white;
+        .modal-content { width: 400px; min-height: 550px; max-height: calc(100vh - 80px); padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; justify-content: space-between; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
             @media @screen-mobile { width: 300px; }
             .container { display: flex; flex-direction: column; overflow-y: auto; }
             .message { color: @cRed; font-size: var(--fS) !important; }
@@ -457,7 +503,7 @@ img { object-fit: cover; }
         }
     }
     &#popTime {
-        .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
+        .modal-content { width: 300px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
             .container { margin-top: 10px;
                 .select { width: 100%; height: 40px; border-radius: 10px; margin-top: 10px; position: relative; display: flex; align-items: center; background: @cBg;
                     &:hover { cursor: pointer; }
@@ -478,7 +524,7 @@ img { object-fit: cover; }
         }
     }
     &#popLocation {
-        .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
+        .modal-content { width: 300px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
             .address { width: calc(100% - 20px); height: 40px; padding: 0 10px; margin-top: 20px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; background-color: @cBg;
                 .container { width: 100%; display: flex; align-items: center;
                     .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: @c1; }
@@ -496,7 +542,7 @@ img { object-fit: cover; }
         }
     }
     &#popVerify {
-        .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
+        .modal-content { width: 300px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
             .container { width: calc(100% - 20px); height: 40px; padding: 0 10px; margin-top: 20px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; background-color: @cBg;
                 .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: @c1; }
                 input { width: 100%; height: 100%; margin-left: 5px; border-radius: 10px; background-color: @cBg; font-size: var(--fS) !important; }
@@ -509,7 +555,7 @@ img { object-fit: cover; }
         }
     }
     &#popProfile {
-        .modal-content { width: 300px; height: 300px; padding: 20px; margin: auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
+        .modal-content { width: 300px; height: 300px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
             .container { width: calc(100% - 20px); height: 40px; padding: 0 5px 0 10px; margin-top: 20px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between; background-color: @cBg;
                 .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: @c1; }
                 input { width: 100%; height: 100%; margin-left: 5px; border-radius: 99px; background-color: @cBg; font-size: var(--fS) !important; }
@@ -525,7 +571,7 @@ img { object-fit: cover; }
         }
     }
     &#popPrivacy, &#popTerms { align-items: flex-start;
-        .modal-content { width: 80vw; padding: 20px; margin: 50px auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
+        .modal-content { width: 80vw; padding: 20px; margin: 50px auto; border-radius: 20px; position: relative; display: flex; flex-direction: column; background-color: white; animation-name: popup; animation-duration: 0s; animation-iteration-count: 1;
             div { padding: 20px; }
             img { max-width: 300px; border-radius: 10px; margin-top: 20px; }
             span { color: @cG1; font-size: var(--fS) !important; }
@@ -536,7 +582,7 @@ img { object-fit: cover; }
         }
     }
     &#popCart, &#popCartGroupbuying { background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.5);
-        .modal-content { top: 20px; width: 500px; max-height: calc(100vh - 40px); padding: 10px; margin: auto; border-radius: 15px; gap: 10px; position: absolute; display: flex; flex-direction: column; background-color: @cBg; box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.3);
+        .modal-content { top: 20px; width: 500px; max-height: calc(100vh - 40px); padding: 10px; border-radius: 15px; gap: 10px; position: absolute; display: flex; flex-direction: column; background-color: @cBg; box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.3); animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
             @media @screen-mobile { top: 0; right: 0; width: calc(100% - 60px); max-height: calc(100vh - 180px); position: relative; }
             // @media @screen-mobile { height: unset; max-width: calc(100% - 40px); max-height: calc(100% - 40px); flex-direction: column; }
             .subTitle { margin-top: -10px; color: @cG1; font-size: var(--fS) !important; }
@@ -620,6 +666,15 @@ img { object-fit: cover; }
                     textarea { width: 100%; height: 100%; margin-left: 5px; background-color: @cBg; font-size: var(--fS) !important; }
                 }
                 .empty { width: calc(100% - 20px); min-height: 10vh; display: flex; align-items: center; justify-content: center; color: @cG3; font-size: var(--fM) !important; }
+                .loading { border-radius: 20px; display: inline-block; height: 1em; position: relative; overflow: hidden; background-color: @cG4;
+                    &::after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; transform: translateX(-100%); background-image: linear-gradient(90deg, rgba(#fff, 0) 0, rgba(#fff, 0.2) 20%, rgba(#fff, 0.5) 60%, rgba(#fff, 0)); animation: shimmer 1s infinite; content: ''; }
+                    @keyframes shimmer { 100% { transform: translateX(100%); } }
+                    &.loadTitle { width: 200px; min-height: 20px; }
+                    &.loadContent { width: 120px; min-height: 20px; margin-top: 5px; }
+                    &.loadIcon { width: 30px; min-height: 30px; margin-top: 5px; border-radius: 5px; }
+                    &.loadCount { width: 24px; min-height: 24px; margin: 5px 5px 0; }
+                    &.loadPrice { width: 50px; min-height: 20px; }
+                }
             }
             .submit { width: calc(100% - 40px); min-height: 50px; padding: 0 20px; border-radius: 15px; display: flex; align-items: center; justify-content: space-between; color: white; font-size: var(--fM) !important; background: @c1;
                 &:hover { background: @c1; }
@@ -630,8 +685,8 @@ img { object-fit: cover; }
             }
         }
     }
-    &#popItem {
-        .modal-content { max-width: 900px; padding: 10px; margin: auto; border-radius: 20px; position: relative; display: flex; background-color: @cBg;
+    &#popItem { z-index: 22;
+        .modal-content { max-width: 900px; padding: 10px; border-radius: 20px; position: relative; display: flex; background-color: @cBg; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
             @media @screen-tablet { height: 60%; max-width: 700px; }
             @media @screen-mobile { height: unset; width: calc(100% - 60px); max-height: calc(100% - 60px); flex-direction: column; }
             .close { width: 30px; height: 30px; padding-bottom: 2px; border-radius: 10px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.25); color: white; }
@@ -731,6 +786,123 @@ img { object-fit: cover; }
             }
         }
     }
+    &#popCoupon { align-items: flex-end;
+        .modal-content { width: 100vw; max-width: 500px; max-height: calc(80vh - 106px); overflow-y: auto; overflow-x: hidden; padding: 20px 20px 86px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
+        .topTitle{ padding-bottom: 10px;}
+        }
+        .storeCoupons { width: calc(100% + 20px); margin-left: -10px; display: flex; flex-wrap: wrap;
+            .coupon { width: calc(100% - 70px); padding: 5px 15px 5px 35px; margin:5px 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background:@cBg; position: relative;
+                &::before, &::after{ content: ""; position: absolute; width: 14px; height: 100%; left: -7px; top: 0; background: url(../photo/bg_dots.svg) center center no-repeat; background-size: contain;}
+                &::after{ left: initial; right: -7px;}
+                .imgCheckbox{ position: absolute; left: 15px; top: calc(50% - 10px); width: 20px; height: 20px; border-radius: 50%; background-color: #fff;}
+                .info { width: calc(100% - 120px); padding:5px 10px; 
+                    .detail { margin-top: 5px; display: flex; flex-direction: column;color: @cG3; font-size: var(--fS) !important; 
+                        .subText{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+                        .price{ padding-top: 5px; font-size: var(--fXS);
+                            .off{ font-size: var(--fM); color: @cG1;}
+                            .lineThrough{ padding-left: 5px; text-decoration: line-through;}
+                        }
+                    }
+                    .title {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: @cG1; font-size: var(--fM) !important;}
+                    .rule{ padding: 3px 0; color: @c1; text-decoration: underline !important; font-size: var(--fXS); pointer-events: all; z-index: 5;}
+                }
+                .noImg{ width: calc(100% - 20px);}
+                .image { display: flex; position: relative; width: 100px;
+                    height: 100px; border-radius: 15px; overflow: hidden;
+                    img { width: 98px; height: 98px; border-radius: 15px; object-fit: cover; border:1px solid transparent }
+                    .soldOut{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #00000050; color: #fff; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center; font-size: var(--fM);}}
+            }
+            .checked{ background: @c1;
+                .imgCheckbox{ background: url(../icon/check-w.svg) center center no-repeat; background-size: cover;}
+                .info {
+                    .detail{ color: @cBg;}
+                    .rule{ color: #fff;}
+                }
+                .image img{ border-color: #fff;}
+                
+            }
+            .addCheckbox{ width: calc(100% - 30px); padding-left: 5px;
+                .info{ width: calc(100% - 160px); padding: 5px;}
+                .noImg{ width: calc(100% - 60px);}
+                .checkbox { border-radius: 99px; gap: 10px; display: flex; align-items: center; position: relative;
+                    &.disabled { pointer-events: none;
+                        .container { padding-left: 0; }}
+                    span.inputBox { width: fit-content; }
+                    .input { height: 40px; margin-left: auto; border-radius: 99px; position: relative; display: flex; flex-direction: column; align-items: flex-end; justify-content: center; background-color: @cBg; box-sizing: border-box;
+                        @media @screen-tablet { background-color: white; }
+                        span { right: 0; top: 45px; position: absolute; color: @cRed; font-size: var(--fXS); text-align: right; white-space: nowrap; }
+                        input { width: 80px; margin: 0 0 0 5px; padding: 0; border: 0; background-color: transparent; font-size: var(--fS) !important; text-align: right;
+                            &::placeholder { color: @cG4; }}
+                    }
+                    div.info { padding-left: 15px; left: 0; top: 60px; position: absolute; display: flex; flex-direction: column;
+                        span { font-size: var(--fXS); color: @cG3; }
+                    }
+                    /* Customize the label (the contai  ner) */
+                    .container { height: 30px; gap: 2px; display: flex; align-items: center; position: relative; padding-left: 25px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: var(--fS) !important;
+                        > div:first-child { order: 1; }
+                        img { width: unset; height: 20px; order: 0; }
+                        .text { width: fit-content; order: 3; display: flex; align-items: center; color: @cG1; font-size: var(--fS) !important; }
+                        .subText { width: fit-content; left: 0px; bottom: -25px; position: absolute; gap: 10px; display: flex; align-items: center; white-space: nowrap; color: @cG3; font-size: var(--fXS);
+                            img { width: unset; height: 14px; margin-right: -8px; }}
+                    }
+                    /* Hide the browser's default checkbox */
+                    .container input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; }
+                    /* Create a custom checkbox */
+                    .checkmark { position: absolute; top: 5px; left: 0; height: 20px; width: 20px; border-radius: 40px; background-color: #fff; }
+                    /* On mouse-over, add a grey background color */
+                    .container:hover input ~ .checkmark { background-color: @cBg; }
+                    /* Create the checkmark/indicator (hidden when not checked) */
+                    .checkmark:after { content: ""; position: absolute; display: none; }
+                    /* When the checkbox is checked, add a blue background */
+                    .container input:checked ~ .checkmark {background: url(../icon/check-w.svg) center center no-repeat #FF9900; background-size: cover; }
+                    /* Show the checkmark when checked */
+                    .container input:checked ~ .checkmark:after { display: block; }
+                }
+            }
+            .couponNone { width: 100%; margin: 80px 0; gap: 10px; display: flex; flex-direction: column; align-items: center;
+                span { color: @cG3; }}
+        }
+        #modeRound { width: 100%; height: 40px; margin:15px 0 10px 0; border-radius: 60px; display: flex; align-items: center; justify-content: space-between; background-color:@cBg;
+            .mode { width: 100%; height: 40px; border-radius: 60px; display: flex; align-items: center; justify-content: center; color: @cG1;
+                &.active { background-color: @c1; color: white; }
+                &:hover:not(.active) { background-color: @c2; }
+                &.grayed { color: @cG3; }
+                .icon { min-width: 20px; min-height: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center; }
+                span { white-space: nowrap; overflow: hidden;  text-overflow: ellipsis; font-size: var(--fS) !important; }}
+        }
+        .fillinCoupons{ width: 100%; position: relative; padding-bottom: 10px;
+            input{ width: 100%; line-height: 28px; border-bottom: 1px solid @cG5;
+                &::placeholder { color: @cG4; }}
+            a{ position: absolute; top: 0; right: 0; width: 28px; height: 28px; text-align: center; line-height: 28px; color: @c1; display: block;}
+        }
+    }
+    &#popActivity { align-items: flex-end;
+        .modal-content { width: 100vw; max-width: 500px; max-height: calc(80vh - 40px); overflow-y: auto; overflow-x: hidden; padding: 20px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;}
+        .topTitle{ padding-bottom: 10px;}
+        .activity{ width: calc(100% + 20px); display: flex; flex-wrap: wrap;
+            .event { width: 100%; margin: 10px;  display: flex; flex-direction: column; border-bottom: 1px solid @cG5 ; padding-bottom: 10px;
+                .image { width: 100%; height: 150px; border-radius: 10px; position: relative;
+                    img { width: 100%; height: 150px; border-radius:10px; object-fit: cover; }
+                }
+                .info { width: calc(100% - 20px); padding: 10px; 
+                    .detail { margin-top: 5px; display: flex; flex-direction: column;color: @cG3; font-size: var(--fS) !important; }
+                    .rule{ padding: 3px 0; color: @c1; text-decoration: underline !important; font-size: var(--fXS);}
+                }
+            }
+        }
+    }
+    &#popRule { align-items: flex-end; z-index: 22;
+        .modal-content { width: 100vw; max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;}
+        .title{ padding-bottom: 10px;}
+        .leftTitle{ width: 100%; font-size: var(--fL); padding-bottom: 20px;}
+        .info{ color: @cG3;}
+    }
+    &#popCouponRule { align-items: flex-end;
+        .modal-content { width: 100vw; max-width: 500px; max-height: 85vh; overflow-y: auto; overflow-x: hidden; padding: 20px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;}
+        .title{ padding-bottom: 10px; text-align: center;}
+        .leftTitle{ width: 100%; font-size: var(--fL); padding-bottom: 20px;}
+        .info{ color: @cG3;}
+    }
 }
 
 // Portal Page
@@ -792,6 +964,7 @@ img { object-fit: cover; }
                     .icon { color: @cG4; }
                 }
             }
+            
             .separate { margin: 0 10px; color: @cG4; font-size: var(--fS) !important; 
                 @media @screen-mobile { display: none; }
             }
@@ -857,6 +1030,39 @@ img { object-fit: cover; }
                 }
             }
         }
+        .switch { width: 30px; height: 40px; margin-top: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: space-around; background-color: @cBg;
+                    @media @screen-tablet { background-color: white; }
+                    &.v2 { height: unset; border-radius: unset; gap: 10px; display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; background-color: transparent;
+                        .container { width: 100%; min-height: 40px; padding: 10px 15px 10px 40px; border-radius: 20px; background-color: @cBg; box-sizing: border-box;
+                            @media @screen-tablet { background-color: white; }
+                        }
+                        .checkmark { top: 10px; left: 15px; }
+                    }
+                    &.error { border: none; }
+                    div.online { width: 180px; margin: -20px 0 0 auto; gap: 10px; display: flex; flex-wrap: wrap; justify-content: flex-end;
+                        div { width: 53.33px; display: flex; justify-content: center; }
+                        img { max-width: 53.33px; max-height: 16px; margin: 0 auto; }
+                    }
+                    /* The container */
+                    .container { display: block; position: relative; padding: 5px 15px 5px 45px; border-radius: 99px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: var(--fS) !important;
+                        &:hover { background: @c2; }
+                        .text { width: fit-content; height: 20px; display: flex; align-items: center; white-space: nowrap; }
+                    }
+                    /* Hide the browser's default radio button */
+                    .container input { position: absolute; opacity: 0; cursor: pointer; }
+                    /* Create a custom radio button */
+                    .checkmark { position: absolute; top: 5px; left: 20px; height: 15px; width: 15px; background-color: white; border-radius: 50%; border: 2px solid @c1; }
+                    /* On mouse-over, add a grey background color */
+                    .container:hover input ~ .checkmark { background-color: @cBg; }
+                    /* Create the indicator (the dot/circle - hidden when not checked) */
+                    .checkmark:after { content: ""; position: absolute; display: none; }
+                    /* When the radio button is checked, add a blue background */
+                    .container input:checked ~ .checkmark { background-color: @c1; }
+                    /* Show the indicator (dot/circle) when checked */
+                    .container input:checked ~ .checkmark:after { display: block; }
+                    /* Style the indicator (dot/circle) */
+                    .container .checkmark:after { top: 5px; left: 5px; width: 5px; height: 5px; border-radius: 50%; background: white; }
+                }
     }
     .loading { border-radius: 5px; display: inline-block; height: 1em; position: relative; overflow: hidden; background-color: @cG4;
         &::after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; transform: translateX(-100%); background-image: linear-gradient(90deg, rgba(#fff, 0) 0, rgba(#fff, 0.2) 20%, rgba(#fff, 0.5) 60%, rgba(#fff, 0)); animation: shimmer 1s infinite; content: ''; }
@@ -1042,7 +1248,7 @@ img { object-fit: cover; }
 }
 
 // Payment Page
-#paymentMain, #orderMain { width: 100vw; height: 100vh; display: flex;
+#paymentMain { width: 100vw; height: 100vh; display: flex;
     @media @screen-tablet { display: block; }
     #left { width: 60%; height: fit-content; padding: 20px 0; display: flex; align-items: center; justify-content: flex-start; flex-direction: column;
         @media @screen-tablet { width: 100%; padding: 50px 0 0; }
@@ -1110,9 +1316,9 @@ img { object-fit: cover; }
                         .checkmark { top: 10px; left: 15px; }
                     }
                     &.error { border: none; }
-                    div.online { width: 180px; margin: -20px 0 0 auto; gap: 10px; display: flex; flex-wrap: wrap; justify-content: flex-end;
-                        div { width: 53.33px; display: flex; justify-content: center; }
-                        img { max-width: 53.33px; max-height: 16px; margin: 0 auto; }
+                    div.online { width: 100%; margin: 15px 0 0 auto; gap: 10px; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start;
+                        div { width: fit-content; height: 28px; display: flex; align-items: center; }
+                        img { max-height: 28px; margin: 0 auto; object-fit: contain; }
                     }
                     /* The container */
                     .container { display: block; position: relative; padding: 5px 15px 5px 45px; border-radius: 99px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: var(--fS) !important;
@@ -1185,12 +1391,13 @@ img { object-fit: cover; }
             }
         }
         #bottom { width: calc(100% - 40px); padding: 20px;
-            @media @screen-tablet { padding-bottom: 90px; }
+            @media @screen-tablet { padding-bottom: 194px; }
             .policy { margin-bottom: 10px; font-size: 10px;
                 span { color: @cG3; }
                 a { color: @c1;
                     &:hover { color: @cG1; }}
             }
+            .bottombar { @media @screen-desktop { width: 100%; padding: 0; position: static; }}
             #submit { height: 50px; padding: 0 20px; border-radius: 99px; display: flex; align-items: center; justify-content: space-between; background: @c1;
                 @media @screen-tablet { width: 100%; height: 70px; padding: 15px; border-radius: 0; left: 0; bottom: 0; position: fixed; z-index: 3; box-sizing: border-box; background: transparent !important; }
                 &:hover { background: @c1; }
@@ -1274,14 +1481,15 @@ img { object-fit: cover; }
                 &.top { align-items: flex-start; }
                 &.point { 
                     img { width: unset; height: 20px; }
-                    span { margin: 0 5px; }
-                }
+                    span { margin: 0 5px; }}
                 .row { display: flex; flex-direction: column;
                     span { margin-top: 10px;
-                        &:first-child { margin-top: 0px; }
-                    }
-                    .header { margin-right: 10px; white-space: nowrap; }
-                }
+                        &:first-child { margin-top: 0px; }}
+                    .header { margin-right: 10px; white-space: nowrap; }}}
+            table.order-info {
+                * { padding: 0; text-align: start; vertical-align: text-top; }
+                th { padding: 5px 10px 0 0; color: @cG3; font-size: var(--fS) !important; font-weight: normal; white-space: nowrap; }
+                td { color: @cG1; font-size: var(--fS) !important; }
             }
             .top { align-items: flex-start; }
             .contentB { color: @cG1; font-size: var(--fS) !important; }
@@ -1421,12 +1629,16 @@ img { object-fit: cover; }
 
 // 揪團
 // 揪團狀態, 購物車bar底色為綠色
-.bottombar--groupbuying .bottombar__container button { background-color: @c3; }
+.bottombar--groupbuying {
+    .bottombar__container button { background-color: @c3; }
+    .bottombox{ border-color: @c3;}
+}
 
 // 開啟揪團圓形按鈕
-.bottombar .bottombar__container { 
+.bottombar { 
     .button--circle--green { 
-        display: flex; flex-flow: wrap; justify-content: center; align-items: center; align-content: center;
+        @media @screen-desktop { right: 15px; top: calc(100vh - 73px); position: fixed; }
+        display: flex; flex-flow: wrap; justify-content: center; align-items: center; align-content: center; pointer-events: all;
         position: absolute; width: 58px; height: 58px; right: 0; top: -70px; padding: 0;
         border: 3px solid @c3; border-radius: 99em; background: @cWhite; box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2); z-index: 3;
         > * { width: 100%; }

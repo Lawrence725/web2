@@ -1,5 +1,5 @@
 <!-- Script -->
-<script src="./script/header.js"></script>
+
 
 <!-- Main -->
 <div id="header">
@@ -14,7 +14,7 @@
         </div>
     </div> -->
     <div id="headerRight">
-        <a id="buttonSetting" class="type">
+        <a id="buttonSetting" class="type" onclick="popSetting()">
             <div class="left">
                 <div class="top">
                     <span class="title">內用</span>
@@ -192,9 +192,9 @@
 </div>
 
 <!-- Cart Popup -->
-<div id="popCart" class="modal">
+<div id="popCart" class="modal" onclick="popClose(this)">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" onclick="popClose(this)">&times;</span>
         <span class="title">購物車</span>
         <span class="subTitle">麥町吐司工房 新莊中原店</span>
         <div class="container">
@@ -206,7 +206,7 @@
                 </ul>
             </div> -->
             <!-- Item -->
-            <div class="item">
+            <div class="item" onclick="popItem()">
                 <div class="left">
                     <div class="detail">
                         <span class="contentB">國王厚牛美式漢堡</span>
@@ -230,7 +230,7 @@
                 </div>
             </div>
             <!-- Item -->
-            <div class="item">
+            <div class="item" onclick="popItem()">
                 <div class="left">
                     <div class="detail">
                         <span class="contentB">國王厚牛美式漢堡</span>
@@ -252,7 +252,7 @@
                 </div>
             </div>
             <!-- Item -->
-            <div class="item">
+            <div class="item" onclick="popItem()">
                 <div class="left">
                     <div class="detail">
                         <span class="contentB">國王厚牛美式漢堡國王厚牛美式漢堡</span>
@@ -274,7 +274,7 @@
                 </div>
             </div>
             <!-- Item -->
-            <div class="item">
+            <div class="item" onclick="popItem()">
                 <div class="left">
                     <div class="detail">
                         <span class="contentB">國王厚牛美式漢堡</span>
@@ -358,8 +358,45 @@
             <div class="empty">
                 <span>無商品</span>
             </div>
+            <!-- Loading -->
+            <div class="item">
+                <div class="left">
+                    <div class="detail">
+                        <div class="loading loadTitle"></div>
+                        <div class="contentG">
+                            <div class="loading loadContent"></div>
+                        </div>
+                        <div class="area">
+                            <div class="loading loadIcon"></div>
+                            <div class="loading loadCount"></div>
+                            <div class="loading loadIcon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="loading loadPrice"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="left">
+                    <div class="detail">
+                        <div class="loading loadTitle"></div>
+                        <div class="contentG">
+                            <div class="loading loadContent"></div>
+                        </div>
+                        <div class="area">
+                            <div class="loading loadIcon"></div>
+                            <div class="loading loadCount"></div>
+                            <div class="loading loadIcon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="loading loadPrice"></div>
+                </div>
+            </div>
         </div>
-        <a class="submit" href="payment2.html">
+        <a class="submit" href="payment.html">
             <span>前往結帳</span>
             <div class="price">
                 <img src="./icon/ptTaoyuanW.svg">
@@ -372,9 +409,9 @@
 </div>
 
 <!-- 揪團購物車 Cart Popup -->
-<div id="popCartGroupbuying" class="modal modal--groupbuying">
+<div id="popCartGroupbuying" class="modal modal--groupbuying" onclick="popClose(this)">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" onclick="popClose(this)">&times;</span>
         <span class="title">揪團訂單</span>
         <time>剩餘時間：14:59</time>
         <div class="container">
@@ -404,7 +441,7 @@
                 </div>
 
                 <!-- Item -->
-                <div class="item">
+                <div class="item" onclick="popItem()">
                     <div class="left">
                         <div class="detail">
                             <span class="contentB">橄欖油蔥雞低GI享瘦餐</span>
@@ -425,7 +462,7 @@
                     </div>
                 </div>
                 <!-- Item -->
-                <div class="item">
+                <div class="item" onclick="popItem()">
                     <div class="left">
                         <div class="detail">
                             <span class="contentB">國王厚牛美式漢堡</span>
@@ -463,7 +500,7 @@
                 <div class="whos-msg">感謝團主幫忙訂餐</div>
                 <div class="whos-state">點餐中<i class="icon-load">…</i></div>
                 <!-- Item -->
-                <div class="item">
+                <div class="item" onclick="popItem()">
                     <div class="left">
                         <div class="detail">
                             <span class="contentB">國王厚牛美式漢堡國王厚牛美式漢堡</span>
@@ -484,7 +521,7 @@
                     </div>
                 </div>
                 <!-- Item -->
-                <div class="item">
+                <div class="item" onclick="popItem()">
                     <div class="left">
                         <div class="detail">
                             <span class="contentB">橄欖油蔥雞低GI享瘦餐</span>
@@ -511,7 +548,7 @@
                 <div class="whos-msg">謝謝團主請客!謝謝團主請客!謝謝團主請客!謝謝團主請客!</div>
                 <div class="whos-state whos-state--ready">已準備<i class="fas fa-solid fa-check"></i></div>
                 <!-- Item -->
-                <div class="item">
+                <div class="item" onclick="popItem()">
                     <div class="left">
                         <div class="detail">
                             <span class="contentB">國王厚牛美式漢堡</span>
@@ -532,7 +569,7 @@
                     </div>
                 </div>
                 <!-- Item -->
-                <div class="item">
+                <div class="item" onclick="popItem()">
                     <div class="left">
                         <div class="detail">
                             <span class="contentB">橄欖油蔥雞低GI享瘦餐</span>
@@ -559,7 +596,7 @@
                 <div class="whos-msg">謝謝團主請客!謝謝團主請客!謝謝團主請客!謝謝團主請客!</div>
                 <div class="whos-state whos-state--finish">已完成點餐<i class="fas fa-solid fa-check"></i></div>
                 <!-- Item -->
-                <div class="item">
+                <div class="item" onclick="popItem()">
                     <div class="left">
                         <div class="detail">
                             <span class="contentB">國王厚牛美式漢堡</span>
@@ -580,7 +617,7 @@
                     </div>
                 </div>
                 <!-- Item -->
-                <div class="item">
+                <div class="item" onclick="popItem()">
                     <div class="left">
                         <div class="detail">
                             <span class="contentB">橄欖油蔥雞低GI享瘦餐</span>
@@ -704,9 +741,9 @@
 </section>
 
 <!-- Item Popup -->
-<div id="popItem" class="modal">
+<div id="popItem" class="modal" onclick="popClose(this)">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" onclick="popClose(this)">&times;</span>
         <div class="container">
             <div class="top">
                 <img src="photo/item.png">
@@ -860,7 +897,7 @@
                 <a class="icon"><i class="fas fa-minus fa-sm"></i></a>
                 <input type="number" value="1">
                 <a class="icon"><i class="fas fa-plus fa-sm"></i></a>
-                <a class="submit">
+                <a class="submit" onclick="popClose(this)">
                     <span>加入購物車</span>
                     <div class="price">
                         <img src="./icon/ptTaoyuanW.svg">

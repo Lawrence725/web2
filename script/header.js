@@ -1,3 +1,43 @@
+// Popup close
+function popClose(e) {
+    if (e.classList.contains('modal'))
+        window.onclick  = function(event) {
+            if (event.target == e) {
+                e.children[0].style.animationName = "popdown";
+                setTimeout(function(){
+                    e.style.display = "none";
+                    e.children[0].style.animationName = "popup";
+                }, 500); }}
+    else if (!(e.classList.contains('modal-content'))) {
+        e.closest('.modal').children[0].style.animationName = "popdown";
+        setTimeout(function(){
+            e.closest('.modal').style.display = "none";
+            e.closest('.modal').children[0].style.animationName = "popup";
+        }, 500); }
+    document.body.style.overflow = "scroll"; }
+
+// Setting Popup
+function popSetting() {
+    document.getElementById("popSetting").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
+// Item Popup
+function popItem() {
+    document.getElementById("popItem").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
+// Cart Popup
+function popCart() {
+    document.getElementById("popCart").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
+// Cart Popup 揪團購物車
+function popCartGroupbuying() {
+    document.getElementById("popCartGroupbuying").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
+// ******************** Old ********************
+
 // Mobile Search
 // var logo = document.getElementById("headerLeft");
 // var search = document.getElementById("headerCenter");
@@ -37,26 +77,6 @@
 //     popVerify.style.display = "none";
 // }
 
-// Popup close
-function popClose(e) {
-    document.getElementById(e).style.display = "none";
-    document.body.style.overflow = "scroll"; }
-
-// Setting Popup
-var popSetting = document.getElementById("popSetting");
-var buttonSetting = document.getElementById("buttonSetting");
-var close = popSetting.getElementsByClassName("close")[0];
-var submit = popSetting.getElementsByClassName("submit")[0];
-buttonSetting.onclick = function() {
-    popSetting.style.display = "flex";
-}
-close.onclick = function() {
-    popSetting.style.display = "none";
-}
-submit.onclick = function() {
-    popSetting.style.display = "none";
-}
-
 // Popup (Point)
 // function popPoint() {
 //     document.getElementById("popPoint").style.display = "flex";
@@ -86,82 +106,3 @@ submit.onclick = function() {
 // submit.onclick = function() {
 //     popProfile.style.display = "none";
 // }
-
-// Item Popup
-var popItem = document.getElementById("popItem");
-var close = popItem.getElementsByClassName("close")[0];
-var submit = popItem.getElementsByClassName("submit")[0];
-close.onclick = function() {
-    popItem.style.display = "none";
-}
-submit.onclick = function() {
-    popItem.style.display = "none";
-}
-window.onload = function() {
-    var items = document.getElementsByClassName('item');
-    for(var i = 0; i < items.length; i++) {
-        var item = items[i];
-        item.onclick = function() {
-            popItem.style.display = "flex";
-        }
-    }
-}
-
-// Cart Popup
-var popCart = document.getElementById("popCart");
-// var buttonCart = document.getElementById("buttonCart");
-var buttonCart2 = document.getElementsByClassName("buttonCart")[0];
-var close = popCart.getElementsByClassName("close")[0];
-var submit = popCart.getElementsByClassName("submit")[0];
-// buttonCart.onclick = function() {
-//     popCart.style.display = "flex";
-// }
-buttonCart2.onclick = function() {
-    popCart.style.display = "flex";
-}
-close.onclick = function() {
-    popCart.style.display = "none";
-}
-submit.onclick = function() {
-    popCart.style.display = "none";
-}
-
-// Cart Popup 揪團購物車
-var popCart2 = document.getElementById("popCartGroupbuying");
-var buttonCart3 = document.getElementById("buttonCartGroupbuying");
-var close = popCart2.getElementsByClassName("close")[0];
-var submit = popCart2.getElementsByClassName("submit")[0];
-
-buttonCart3.onclick = function() {
-    popCart2.style.display = "flex";
-}
-close.onclick = function() {
-    popCart2.style.display = "none";
-}
-submit.onclick = function() {
-    popCart2.style.display = "none";
-}
-
-// All Popup
-window.onclick = function(event) {
-    // if (event.target == popVerify) {
-    //     popVerify.style.display = "none";
-    // }
-    // if (event.target == popProfile) {
-    //     popProfile.style.display = "none";
-    // }
-    if (event.target == popItem) {
-        popItem.style.display = "none";
-    }
-    else if (event.target == popCart) {
-        popCart.style.display = "none";
-    }
-    else if (event.target == popCart2) {
-        popCart2.style.display = "none";
-    }
-}
-window.onscroll = function (event) {  
-    popCart.style.display = "none";
-    popCart2.style.display = "none";
-    // dropdown.style.display = "none";
-} 

@@ -20,8 +20,7 @@ xhrFoot.onreadystatechange=function(){
 var slideIndex = 1;
 showSlides(1);
 function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
+    showSlides(slideIndex += n); }
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
@@ -40,30 +39,58 @@ function showSlides(n) {
 }
 
 // Notice Popup
-var popNotice = document.getElementById("popNotice");
-var buttonNotice = document.getElementById("buttonNotice");
-var close = popNotice.getElementsByClassName("close")[0];
-var submit = popNotice.getElementsByClassName("submit")[0];
-buttonNotice.onclick = function() {
-    popNotice.style.display = "flex";
-}
-close.onclick = function() {
-    popNotice.style.display = "none";
-}
-submit.onclick = function() {
-    popNotice.style.display = "none";
-}
+function popNotice() {
+    document.getElementById("popNotice").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
 
 // Info Popup
-var popInfo = document.getElementById("popInfo");
-var buttonInfo = document.getElementById("buttonInfo");
-var close = popInfo.getElementsByClassName("close")[0];
-buttonInfo.onclick = function() {
-    popInfo.style.display = "flex";
-}
-close.onclick = function() {
-    popInfo.style.display = "none";
-}
+function popInfo() {
+    document.getElementById("popInfo").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
+// Coupon Popup
+function popCoupon() {
+    document.getElementById("popCoupon").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
+// Rule Popup
+function popRule() {
+    document.getElementById("popRule").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
+// Coupon Rule Popup
+function popCouponRule() {
+    document.getElementById("popCouponRule").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
+// Activity Popup
+function popActivity() {
+    document.getElementById("popActivity").style.display = "flex";
+    document.body.style.overflow = "hidden"; }
+
+// Popup破格設計(置中)
+// Popup close(點擊背景和×時)
+$('.pop__overlay-bg, .pop__close').click(function(){	
+    $(this).closest('.pop').stop(false,true).fadeOut(300);
+    document.body.style.overflow = 'auto'; });
+
+// Popup close(要控制關掉某個popup時)
+function popClose(popID) {
+    $('#'+popID).stop(false,true).fadeOut(300); }
+        
+// popup open
+// 只留當前popup視窗
+function popOpen(popID) {
+    $('.pop').not('#'+popID).stop(false,true).fadeOut(300);
+    $('#'+popID).css('display','flex');
+    document.body.style.overflow = 'hidden'; }
+
+// 保留當前和上一個popup視窗
+function popStayAndOpen(popID) {
+    $('#'+popID).css('display','flex');
+    document.body.style.overflow = 'hidden'; }
+
+// ******************** Old ********************
 
 // Delivery Popup
 // var popDelivery = document.getElementById("popDelivery");
@@ -124,51 +151,3 @@ close.onclick = function() {
 // submit.onclick = function() {
 //     popLocation.style.display = "none";
 // }
-
-// All Popup
-window.onclick = function(event) {
-    if (event.target == popNotice) {
-        popNotice.style.display = "none";
-    }
-    else if (event.target == popInfo) {
-        popInfo.style.display = "none";
-    }
-    // else if (event.target == popDelivery) {
-    //     popDelivery.style.display = "none";
-    // }
-    // else if (event.target == popSetting) {
-    //     popSetting.style.display = "none";
-    // }
-    // else if (event.target == popTime) {
-    //     popTime.style.display = "none";
-    // }
-    // else if (event.target == popLocation) {
-    //     popLocation.style.display = "none";
-    // }
-}
-
-// Popup破格設計(置中)
-// Popup close(點擊背景和×時)
-$('.pop__overlay-bg, .pop__close').click(function(){	
-    $(this).closest('.pop').stop(false,true).fadeOut(300);
-    document.body.style.overflow = 'auto'; 
-});
-
-// Popup close(要控制關掉某個popup時)
-function popClose(popID) {
-    $('#'+popID).stop(false,true).fadeOut(300);
-}
-        
-// popup open
-// 只留當前popup視窗
-function popOpen(popID) {
-    $('.pop').not('#'+popID).stop(false,true).fadeOut(300);
-    $('#'+popID).css('display','flex');
-    document.body.style.overflow = 'hidden'; 
-}
-
-// 保留當前和上一個popup視窗
-function popStayAndOpen(popID) {
-    $('#'+popID).css('display','flex');
-    document.body.style.overflow = 'hidden'; 
-}
