@@ -434,7 +434,7 @@ img {
   justify-content: center;
   color: #FFFFFF;
   font-size: var(--fS);
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: #FF9900;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   pointer-events: all;
@@ -3511,6 +3511,12 @@ img {
   line-height: 28px;
   color: #FF9900;
   display: block;
+}
+.modal#popCoupon .bottombar {
+  max-width: 540px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 16.15%, #FFFFFF 100%);
 }
 .modal#popActivity {
   align-items: flex-end;

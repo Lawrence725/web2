@@ -144,7 +144,7 @@ img { object-fit: cover; }
         button, a { display: block; position: relative; width: 100%; height: 54px; padding: 0 10px 0 15px; max-width: 500px; 
             display: flex; align-items: center; justify-content: center;
             color: @cWhite; font-size: var(--fS);
-            border-radius: 20px; background-color: @c1; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); pointer-events: all; z-index: 2;
+            border-radius: 15px; background-color: @c1; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); pointer-events: all; z-index: 2;
             -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
             
             span { color: white !important; font-size: var(--fL); white-space: nowrap; text-align: left;
@@ -875,6 +875,7 @@ img { object-fit: cover; }
                 &::placeholder { color: @cG4; }}
             a{ position: absolute; top: 0; right: 0; width: 28px; height: 28px; text-align: center; line-height: 28px; color: @c1; display: block;}
         }
+        .bottombar { max-width: 540px; left: 50%; transform: translate(-50%, 0); background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 16.15%, #FFFFFF 100%); }
     }
     &#popActivity { align-items: flex-end;
         .modal-content { width: 100vw; max-width: 500px; max-height: calc(80vh - 40px); overflow-y: auto; overflow-x: hidden; padding: 20px; border-radius: 20px 20px 0 0; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;}
