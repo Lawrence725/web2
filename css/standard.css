@@ -1344,17 +1344,21 @@ img {
 @keyframes popup {
   0% {
     margin-bottom: -100vh;
+    opacity: 0;
   }
   100% {
     margin-bottom: 0;
+    opacity: 1;
   }
 }
 @keyframes popdown {
   0% {
     margin-bottom: 0;
+    opacity: 1;
   }
   100% {
     margin-bottom: -100vh;
+    opacity: 0;
   }
 }
 .pop--bottom {
