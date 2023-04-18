@@ -2711,6 +2711,7 @@ img {
 }
 .modal#popItem .modal-content {
   max-width: 900px;
+  max-height: calc(100% - 60px);
   padding: 10px;
   border-radius: 20px;
   position: relative;
@@ -2720,15 +2721,8 @@ img {
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
-@media (max-width: 1199px) {
-  .modal#popItem .modal-content {
-    height: 60%;
-    max-width: 700px;
-  }
-}
 @media (max-width: 767px) {
   .modal#popItem .modal-content {
-    height: unset;
     width: calc(100% - 60px);
     max-height: calc(100% - 60px);
     flex-direction: column;
@@ -2749,16 +2743,9 @@ img {
 .modal#popItem .modal-content img {
   width: 450px;
   height: 450px;
+  margin-bottom: 15px;
   border-radius: 10px;
-  margin: 0 10px 0 0;
   object-fit: cover;
-}
-@media (max-width: 1199px) {
-  .modal#popItem .modal-content img {
-    width: 350px;
-    height: unset;
-    max-height: 100%;
-  }
 }
 @media (max-width: 767px) {
   .modal#popItem .modal-content img {
@@ -2768,18 +2755,9 @@ img {
   }
 }
 .modal#popItem .modal-content .container {
-  width: 450px;
-  height: 450px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-@media (max-width: 1199px) {
-  .modal#popItem .modal-content .container {
-    width: 350px;
-    height: unset;
-    max-height: 100%;
-  }
 }
 @media (max-width: 767px) {
   .modal#popItem .modal-content .container {

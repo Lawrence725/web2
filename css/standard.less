@@ -686,16 +686,13 @@ img { object-fit: cover; }
         }
     }
     &#popItem { z-index: 22;
-        .modal-content { max-width: 900px; padding: 10px; border-radius: 20px; position: relative; display: flex; background-color: @cBg; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
-            @media @screen-tablet { height: 60%; max-width: 700px; }
-            @media @screen-mobile { height: unset; width: calc(100% - 60px); max-height: calc(100% - 60px); flex-direction: column; }
+        .modal-content { max-width: 900px; max-height: calc(100% - 60px); padding: 10px; border-radius: 20px; position: relative; display: flex; background-color: @cBg; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
+            @media @screen-mobile { width: calc(100% - 60px); max-height: calc(100% - 60px); flex-direction: column; }
             .close { width: 30px; height: 30px; padding-bottom: 2px; border-radius: 10px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.25); color: white; }
-            img { width: 450px; height: 450px; border-radius: 10px; margin: 0 10px 0 0; object-fit: cover;
-                @media @screen-tablet { width: 350px; height: unset; max-height: 100%; }
+            img { width: 450px; height: 450px; margin-bottom: 15px; border-radius: 10px; object-fit: cover;
                 @media @screen-mobile { width: 100%; height: 40vh; margin: 0 0 10px 0; }
             }
-            .container { width: 450px; height: 450px; display: flex; flex-direction: column; gap: 10px;
-                @media @screen-tablet { width: 350px; height: unset; max-height: 100%; }
+            .container { display: flex; flex-direction: column; gap: 10px;
                 @media @screen-mobile { width: 100%; height: unset; max-height: 100%; display: flex; flex-direction: column; overflow-y: auto; }
                 .top { width: calc(100% - 20px); height: calc(100% - 70px); padding: 10px; border-radius: 15px; display: flex; flex-direction: column; background: white; overflow-y: auto;
                     .title { margin-bottom: 5px; display: flex; flex-direction: column; color: @cG1; font-size: var(--fL) !important;
