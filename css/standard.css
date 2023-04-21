@@ -2391,6 +2391,7 @@ img {
   min-width: 40px;
   margin-right: 5px;
   font-weight: bold;
+  font-size: var(--fM) !important;
 }
 .modal#popCart .modal-content .container .item .right span.point,
 .modal#popCartGroupbuying .modal-content .container .item .right span.point {
