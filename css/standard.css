@@ -229,7 +229,7 @@ img {
 .bottombar .bottombox {
   width: 100%;
   border: 1px solid #FF9900;
-  border-radius: 20px;
+  border-radius: 16px;
   background-color: #fff;
   max-width: 500px;
   margin: 0 auto;
@@ -2310,6 +2310,21 @@ img {
 .modal#popCartGroupbuying .modal-content .container .item .left {
   display: flex;
   align-items: center;
+}
+.modal#popCart .modal-content .container .item .left .detail,
+.modal#popCartGroupbuying .modal-content .container .item .left .detail {
+  display: flex;
+  flex-direction: column;
+}
+.modal#popCart .modal-content .container .item .left .contentB,
+.modal#popCartGroupbuying .modal-content .container .item .left .contentB {
+  font-size: var(--fM) !important;
+}
+.modal#popCart .modal-content .container .item .left .tag,
+.modal#popCartGroupbuying .modal-content .container .item .left .tag {
+  color: #FF9900;
+  font-weight: bold;
+  font-size: var(--fS);
 }
 .modal#popCart .modal-content .container .item .left .area,
 .modal#popCartGroupbuying .modal-content .container .item .left .area {
@@ -5724,6 +5739,9 @@ img {
     position: static;
   }
 }
+#paymentMain #right #bottom .bottombar--groupbuying .bottombox {
+  border: 1px solid #96BE0B !important;
+}
 #paymentMain #right #bottom #submit {
   height: 50px;
   padding: 0 20px;
@@ -6705,7 +6723,7 @@ img {
   background-color: #96BE0B;
 }
 .bottombar--groupbuying .bottombox {
-  border-color: #96BE0B;
+  border: none;
 }
 .bottombar .button--circle--green {
   display: flex;
