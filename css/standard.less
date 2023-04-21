@@ -699,6 +699,7 @@ img { object-fit: cover; }
                 @media @screen-mobile { width: 100%; height: unset; max-height: 100%; display: flex; flex-direction: column; overflow-y: auto; }
                 .top { width: calc(100% - 20px); height: calc(100% - 70px); padding: 10px; border-radius: 15px; display: flex; flex-direction: column; background: white; overflow-y: auto;
                     .title { margin-bottom: 5px; display: flex; flex-direction: column; color: @cG1; font-size: var(--fL) !important;
+                        .discount { font-size: var(--fS); font-weight: bold; color: @c1; }
                         .remark { width: fit-content; height: 25px; padding: 2.5px 5px; margin-top: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center; background: @c2;
                             span { white-space: nowrap; font-size: var(--fS) !important; color: @c1; }
                         }
@@ -1270,10 +1271,15 @@ img { object-fit: cover; }
             .remark { margin-bottom: 10px; color: @cG3; font-size: var(--fXS) !important; }
             #items { padding-bottom: 10px; border-bottom: solid 1px @cG4;
                 @media @screen-landscape { overflow-y: visible; }
+                .item { align-items: flex-start;
+                    .left { align-items: flex-start;
+                        > div:not(.count) { display: flex; flex-direction: column; }}
+                    .right { align-items: flex-start; }}
             }
             .item { width: 100%; margin-top: 10px; display: flex; justify-content: space-between;
                 .left { display: flex; align-items: center;
                     .count { min-width: 40px; display: flex; justify-content: center; color: @cG1; font-size: var(--fS) !important; }
+                    .discount { font-size: var(--fXS); font-weight: bold; color: @c1; }
                 }
                 .right { margin-left: 10px; display: flex; align-items: center;
                     img { width: 50px; height: 50px; margin-right: 10px; border-radius: 10px;
@@ -1498,10 +1504,15 @@ img { object-fit: cover; }
             .contentG { color: @cG3; font-size: var(--fS) !important; }
             .contentR { color: @cRed; font-size: var(--fS) !important; }
             .remark { margin-bottom: 10px; color: @cG3; font-size: var(--fXS) !important; }
-            #items { padding-bottom: 10px; border-bottom: solid 1px @cG4; }
+            #items { padding-bottom: 10px; border-bottom: solid 1px @cG4;
+                .item { align-items: flex-start;
+                    .left { align-items: flex-start;
+                        > div:not(.count) { display: flex; flex-direction: column; }}
+                    .right { align-items: flex-start; }}}
             .item { width: 100%; margin-top: 10px; display: flex; justify-content: space-between;
                 .left { display: flex; align-items: center;
                     .count { min-width: 40px; display: flex; justify-content: center; color: @cG1; font-size: var(--fS) !important; }
+                    .discount { font-size: var(--fXS); font-weight: bold; color: @c1; }
                 }
                 .right { margin-left: 10px; display: flex; align-items: center;
                     img { width: 50px; height: 50px; margin-right: 10px; border-radius: 10px;
