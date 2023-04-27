@@ -607,6 +607,7 @@ img {
   min-height: 70px;
   margin-bottom: -10px;
   border-radius: 99px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -627,6 +628,35 @@ img {
 }
 #header #headerRight a.type div.right div.icon.error {
   background-color: #EB5757;
+}
+#header #headerRight a.type div.right div#settingHint {
+  padding: 5px 10px;
+  border-radius: 99px;
+  top: 58px;
+  right: 58px;
+  position: absolute;
+  display: flex;
+  background: #22798C;
+  opacity: 0.9;
+}
+#header #headerRight a.type div.right div#settingHint span {
+  color: white;
+  font-size: var(--fXS);
+  white-space: nowrap;
+}
+#header #headerRight a.type div.right div#settingHint span b {
+  font-size: var(--fS);
+}
+#header #headerRight a.type div.right div#settingHint div.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid #22798C;
+  top: -2px;
+  right: -5px;
+  position: absolute;
+  transform: rotate(45deg);
 }
 #header #headerRight .menu {
   margin-right: 30px;

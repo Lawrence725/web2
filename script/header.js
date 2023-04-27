@@ -1,3 +1,7 @@
+// Hide hint onscroll
+function hintHide() {
+    document.getElementById("settingHint").style.display = "none"; }
+
 // Popup close
 function popClose(e) {
     if (e.classList.contains('modal'))
