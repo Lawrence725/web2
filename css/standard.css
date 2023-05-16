@@ -182,10 +182,10 @@ img {
   display: inline-block;
   width: 42px;
   height: 22px;
-  background-color: #fff;
+  background-color: #E0E0E0;
   border-radius: 22px;
   box-sizing: border-box;
-  border: 2px solid #eee;
+  border: 2px solid #E0E0E0;
   transition: all 0.2s linear;
 }
 .switch_type .switchButton:after {
@@ -337,6 +337,11 @@ img {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+@media (min-width: 1200px) {
+  .pointsItem {
+    background-color: #F2F1F6;
+  }
+}
 .pointsItem .itemTitle {
   position: relative;
   padding: 0 17px 0 28px;
@@ -406,6 +411,11 @@ button.couponItem {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+@media (min-width: 1200px) {
+  button.couponItem {
+    background-color: #F2F1F6;
+  }
 }
 button.couponItem .itemTitle {
   position: relative;
@@ -5493,9 +5503,6 @@ button.couponItem .coupon_nb_s::before {
   -ms-user-select: none;
   user-select: none;
   font-size: var(--fS) !important;
-}
-#paymentMain #right #top .area .switch .container:hover {
-  background: #FFEED8;
 }
 #paymentMain #right #top .area .switch .container .text {
   width: fit-content;

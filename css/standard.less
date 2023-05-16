@@ -96,7 +96,7 @@ img { object-fit: cover; }
 
 .switch_type{ position: relative;
     .switchButton { display: inline-block; position: relative; height: 22px; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; cursor: pointer;  background-color: #eee;  border-radius: 22px; 
-        &:before { content: ""; display: inline-block; width: 42px; height: 22px; background-color: #fff; border-radius: 22px; box-sizing: border-box; border: 2px solid #eee; transition: all 0.2s linear; }
+        &:before { content: ""; display: inline-block; width: 42px; height: 22px; background-color: @cG5; border-radius: 22px; box-sizing: border-box; border: 2px solid @cG5; transition: all 0.2s linear; }
         &:after { position: absolute; left: 2px; top: 2px; content: ""; display: inline-block; width: 18px; height: 18px; background-color: #fff; border-radius: 18px; transition: all 0.2s linear; box-shadow: 0px 1px 3px #bbb; }}
     input { opacity: 0; position: absolute;  top: 0; left: 0; }
     input:checked~.switchButton:before { background-color: @c1; border: 1px solid @c1; }
@@ -130,6 +130,7 @@ img { object-fit: cover; }
 }
 .pointsItem{ display: block; position: relative; width: 100%; height: 40px; padding: 0 10px 0 15px; margin-top: 10px; display: flex; align-items: center; justify-content: center; background-color: @cWhite;
     color: @cG2; font-size: var(--fS); border-radius: 20px; pointer-events: all; z-index: 2; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+    @media @screen-desktop { background-color: @cBg; }
     .itemTitle{ position: relative; padding: 0 17px 0 28px; font-size: var(--fM) ; display: block; cursor: pointer; pointer-events:all;
         &::after{ content: ""; position: absolute; left: 0; top:calc(50% - 9px); width: 20px; height: 20px; display: block; background: url(../icon/point-line.svg);}
         &::before{ content: ""; position: absolute; right: 0; top: calc(50% - 6px); width: 12px; height: 12px; display: block; background: url(../icon/question.svg);}}
@@ -142,6 +143,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
     display: flex; align-items: center; justify-content: center; background-color: @cWhite;
     color: @cG2; font-size: var(--fS);border-radius: 20px; pointer-events: all; z-index: 2;
     -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+    @media @screen-desktop { background-color: @cBg; }
     .itemTitle{ position: relative; padding-left: 28px; font-size: var(--fM) ;
         &::after{ content: ""; position: absolute; left: 0; top:calc(50% - 7px); width: 20px; height: 14px; display: block; background: url(../icon/ticket.svg); }
     }
@@ -1334,7 +1336,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                     }
                     /* The container */
                     .container { display: block; position: relative; padding: 5px 15px 5px 45px; border-radius: 99px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: var(--fS) !important;
-                        &:hover { background: @c2; }
+                        // &:hover { background: @c2; }
                         .text { width: fit-content; height: 20px; display: flex; align-items: center; white-space: nowrap; }
                     }
                     /* Hide the browser's default radio button */
