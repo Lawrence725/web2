@@ -130,7 +130,6 @@ img { object-fit: cover; }
 }
 .pointsItem{ display: block; position: relative; width: 100%; height: 40px; padding: 0 10px 0 15px; margin-top: 10px; display: flex; align-items: center; justify-content: center; background-color: @cWhite;
     color: @cG2; font-size: var(--fS); border-radius: 20px; pointer-events: all; z-index: 2; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
-    @media @screen-desktop { background-color: @cBg; }
     .itemTitle{ position: relative; padding: 0 17px 0 28px; font-size: var(--fM) ; display: block; cursor: pointer; pointer-events:all;
         &::after{ content: ""; position: absolute; left: 0; top:calc(50% - 9px); width: 20px; height: 20px; display: block; background: url(../icon/point-line.svg);}
         &::before{ content: ""; position: absolute; right: 0; top: calc(50% - 6px); width: 12px; height: 12px; display: block; background: url(../icon/question.svg);}}
@@ -143,7 +142,6 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
     display: flex; align-items: center; justify-content: center; background-color: @cWhite;
     color: @cG2; font-size: var(--fS);border-radius: 20px; pointer-events: all; z-index: 2;
     -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
-    @media @screen-desktop { background-color: @cBg; }
     .itemTitle{ position: relative; padding-left: 28px; font-size: var(--fM) ;
         &::after{ content: ""; position: absolute; left: 0; top:calc(50% - 7px); width: 20px; height: 14px; display: block; background: url(../icon/ticket.svg); }
     }
@@ -1232,6 +1230,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
             }
         }
     }
+    .pointsItem, button.couponItem { height: 54px; margin-top: 0; }
     .loading { border-radius: 20px; display: inline-block; height: 1em; position: relative; overflow: hidden; background-color: @cG4;
         &::after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; transform: translateX(-100%); background-image: linear-gradient(90deg, rgba(#fff, 0) 0, rgba(#fff, 0.2) 20%, rgba(#fff, 0.5) 60%, rgba(#fff, 0)); animation: shimmer 1s infinite; content: ''; }
         @keyframes shimmer { 100% { transform: translateX(100%); } }
@@ -1428,6 +1427,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
             #submit.disabled{ filter: grayscale(100%); pointer-events: auto; }
         }
     }
+    .pointsItem, button.couponItem { @media @screen-desktop { background-color: @cBg; }}
     .loading { border-radius: 25px; display: inline-block; height: 1em; position: relative; overflow: hidden; background-color: @cG4;
         &::after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; transform: translateX(-100%); background-image: linear-gradient(90deg, rgba(#fff, 0) 0, rgba(#fff, 0.2) 20%, rgba(#fff, 0.5) 60%, rgba(#fff, 0)); animation: shimmer 1s infinite; content: ''; }
         @keyframes shimmer { 100% { transform: translateX(100%); } }

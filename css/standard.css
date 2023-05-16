@@ -337,11 +337,6 @@ img {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 1200px) {
-  .pointsItem {
-    background-color: #F2F1F6;
-  }
-}
 .pointsItem .itemTitle {
   position: relative;
   padding: 0 17px 0 28px;
@@ -414,11 +409,6 @@ button.couponItem {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-@media (min-width: 1200px) {
-  button.couponItem {
-    background-color: #F2F1F6;
-  }
 }
 button.couponItem .itemTitle {
   position: relative;
@@ -5040,6 +5030,11 @@ button.couponItem .coupon_nb_s::before {
   border-radius: 10px;
   object-fit: cover;
 }
+#main .pointsItem,
+#main button.couponItem {
+  height: 54px;
+  margin-top: 0;
+}
 #main .loading {
   border-radius: 20px;
   display: inline-block;
@@ -5876,6 +5871,12 @@ button.couponItem .coupon_nb_s::before {
 #paymentMain #right #bottom #submit.disabled {
   filter: grayscale(100%);
   pointer-events: auto;
+}
+@media (min-width: 1200px) {
+  #paymentMain .pointsItem,
+  #paymentMain button.couponItem {
+    background-color: #F2F1F6;
+  }
 }
 #paymentMain .loading {
   border-radius: 25px;
