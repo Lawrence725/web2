@@ -389,8 +389,11 @@ img {
 }
 .pointsItem .input input {
   width: 100%;
+  height: 26px;
+  border-bottom: 1px solid var(--cG3);
   font-size: var(--fM);
   text-align: center;
+  background-color: transparent;
 }
 button.couponItem {
   display: block;

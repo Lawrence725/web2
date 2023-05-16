@@ -259,6 +259,9 @@
                         <div class="pointsItem">
                             <span class="itemTitle" onclick="popCouponRule()">麥町點 100</span>
                             <div class="usePoints">
+                                <div class="input"> <!-- switch開啟後才出現輸入框，出現後點數預設最大值(總點數/訂單價) -->
+                                    <input type="text" placeholder="" value="100">
+                                </div>
                                 <div class="switch_type">
                                     <input name="points.use" type="hidden" value="0">
                                     <input id="points.use" type="checkbox">
