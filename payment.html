@@ -249,15 +249,29 @@
             <div id="right">
                 <div id="top">
                     <a href="index.html"><img id="logo" src="photo/logo.png"></a>
-                    <!-- 舊版點數 -->
-                    <!-- <div class="area">
+                    <div class="area">
                         <div class="item">
                             <span class="title">消費點數</span>
-                            <div class="message">
+                            <!-- <div class="message">
                                 <span>點數不夠</span>
+                            </div> -->
+                        </div>
+                        <div class="pointsItem">
+                            <span class="itemTitle" onclick="popCouponRule()">麥町點 100</span>
+                            <div class="usePoints">
+                                <div class="switch_type">
+                                    <input name="points.use" type="hidden" value="0">
+                                    <input id="points.use" type="checkbox">
+                                    <label class="switchButton" for="points.use"></label>
+                                </div>
                             </div>
                         </div>
-                        <div class="checkbox">
+                        <button class="couponItem" id="buttonCoupon" onclick="popCoupon()">
+                            <span class="itemTitle">優惠券</span>
+                            <span class="coupon_nb_s arr_r">選擇優惠券/輸入代碼</span>
+                        </button>
+                        <!-- 舊版點數 -->
+                        <!-- <div class="checkbox">
                             <label class="container">
                                 <div>
                                     <div class="text">紅利桃子</div>
@@ -291,8 +305,8 @@
                                 <img src="icon/ptTaoyuan.svg">
                                 <div class="text">152</div>
                             </label>
-                        </div>
-                    </div> -->
+                        </div> -->
+                    </div>
                     <div class="area">
                         <span class="title">付款設定</span>
                         <div class="switch v2"> <!-- class: error -->
@@ -463,7 +477,7 @@
                     <!-- 新版購物車按鈕 -->
                     <div class="bottombar">
                         <div class="bottombox">
-                            <div class="information__container">
+                            <!-- <div class="information__container">
                                 <div class="pointsItem">
                                     <span class="itemTitle" onclick="popCouponRule()">麥町點 100</span>
                                     <div class="usePoints">
@@ -477,12 +491,12 @@
                                 <button class="couponItem" id="buttonCoupon" onclick="popCoupon()">
                                     <span class="itemTitle">優惠券</span>
                                     <span class="coupon_nb_s arr_r">選擇優惠券/輸入代碼</span>
-                                </button>
+                                </button> -->
                                 <!-- <button class="couponItem" id="buttonActivity">
                                     <span class="itemTitle">優惠券</span>
                                     <span class="coupon_nb arr_r">x2</span>
                                 </button> -->
-                            </div>
+                            <!-- </div> -->
                             <div class="bottombar__container">
                                 <button class="buttonCart" onclick="window.location.href='order.html'">
                                     <span>一鍵下單</span>

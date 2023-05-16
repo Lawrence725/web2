@@ -113,32 +113,6 @@ img { object-fit: cover; }
             .mainTitle{ color: @cG1; font-size: var(--fM);}
             .subTitle{ color:@cG3; font-size: var(--fS);}
         }
-        .pointsItem{ display: block; position: relative; width: 100%; height: 54px; padding: 0 10px 0 15px; display: flex; align-items: center; justify-content: center; background-color: @cWhite;
-            color: @cG2; font-size: var(--fS); border-radius: 20px 20px 0 0; pointer-events: all; z-index: 2; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border-bottom: 1px solid #E0E0E0;
-            .itemTitle{ position: relative; padding: 0 17px 0 28px; font-size: var(--fM) ; display: block; cursor: pointer; pointer-events:all;
-                &::after{ content: ""; position: absolute; left: 0; top:calc(50% - 9px); width: 20px; height: 20px; display: block; background: url(../icon/point-line.svg);}
-                &::before{ content: ""; position: absolute; right: 0; top: calc(50% - 6px); width: 12px; height: 12px; display: block; background: url(../icon/question.svg);}}
-            .usePoints{ margin-left: auto; display: flex; align-items: center; justify-content: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-            .switch_type{ margin-left: 5px; padding-top: 5px;}
-            .input{ width: 55px; border-bottom: @cG1 solid 1px; padding: 0 3px;
-                input{ width: 100%; font-size: var(--fM); text-align: center;}}
-        }
-        button.couponItem{ display: block; position: relative; width: 100%; height: 54px; padding: 0 10px 0 15px;
-            display: flex; align-items: center; justify-content: center; background-color: @cWhite;
-            color: @cG2; font-size: var(--fS);border-radius: 20px; pointer-events: all; z-index: 2;
-            -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
-            .itemTitle{ position: relative; padding-left: 28px; font-size: var(--fM) ;
-                &::after{ content: ""; position: absolute; left: 0; top:calc(50% - 7px); width: 20px; height: 14px; display: block; background: url(../icon/ticket.svg); }
-            }
-            .couponTitle{ margin-left: auto;color: @c1; font-size: var(--fM); max-width: calc(100% - 125px); display: block; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;  height: 50px * 1; overflow:hidden;}
-            .coupon_nb{ padding-right: 30px;}
-            .arr_r{ line-height: 50px; height: 50px; padding-right: 25px; position: relative;
-                &::before{content: ""; position: absolute; right: 5px; top: calc(50% - 6px); width: 10px; height: 14px; background: url(../icon/arr-org.svg) center center no-repeat;}
-            }
-            .coupon_nb{ margin-left: auto; color: @c1; font-size: var(--fL); }
-            .coupon_nb_s{margin-left: auto; color: @cG3;
-                &::before{-webkit-filter: grayscale(1);}}
-        }
     }
     .bottombar__container { position: relative; width: 100%;
         button, a { display: block; position: relative; width: 100%; height: 54px; padding: 0 10px 0 15px; max-width: 500px; 
@@ -153,6 +127,32 @@ img { object-fit: cover; }
         }
         .bottombar__button--green { background: @c3; }
     }
+}
+.pointsItem{ display: block; position: relative; width: 100%; height: 40px; padding: 0 10px 0 15px; margin-top: 10px; display: flex; align-items: center; justify-content: center; background-color: @cWhite;
+    color: @cG2; font-size: var(--fS); border-radius: 20px; pointer-events: all; z-index: 2; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+    .itemTitle{ position: relative; padding: 0 17px 0 28px; font-size: var(--fM) ; display: block; cursor: pointer; pointer-events:all;
+        &::after{ content: ""; position: absolute; left: 0; top:calc(50% - 9px); width: 20px; height: 20px; display: block; background: url(../icon/point-line.svg);}
+        &::before{ content: ""; position: absolute; right: 0; top: calc(50% - 6px); width: 12px; height: 12px; display: block; background: url(../icon/question.svg);}}
+    .usePoints{ margin-left: auto; display: flex; align-items: center; justify-content: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+    .switch_type{ margin-left: 5px; padding-top: 5px;}
+    .input{ width: 55px; padding: 0 3px;
+        input{ width: 100%; font-size: var(--fM); text-align: center;}}
+}
+button.couponItem{ display: block; position: relative; width: 100%; height: 40px; padding: 0 10px 0 15px; margin-top: 10px;
+    display: flex; align-items: center; justify-content: center; background-color: @cWhite;
+    color: @cG2; font-size: var(--fS);border-radius: 20px; pointer-events: all; z-index: 2;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+    .itemTitle{ position: relative; padding-left: 28px; font-size: var(--fM) ;
+        &::after{ content: ""; position: absolute; left: 0; top:calc(50% - 7px); width: 20px; height: 14px; display: block; background: url(../icon/ticket.svg); }
+    }
+    .couponTitle{ margin-left: auto;color: @c1; font-size: var(--fM); max-width: calc(100% - 125px); display: block; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;  height: 50px * 1; overflow:hidden;}
+    .coupon_nb{ padding-right: 30px;}
+    .arr_r{ line-height: 50px; height: 50px; padding-right: 25px; position: relative;
+        &::before{content: ""; position: absolute; right: 5px; top: calc(50% - 6px); width: 10px; height: 14px; background: url(../icon/arr-org.svg) center center no-repeat;}
+    }
+    .coupon_nb{ margin-left: auto; color: @c1; font-size: var(--fL); }
+    .coupon_nb_s{margin-left: auto; color: @cG3;
+        &::before{-webkit-filter: grayscale(1);}}
 }
 
 // Header
