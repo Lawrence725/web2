@@ -113,8 +113,8 @@ img { object-fit: cover; }
     input:checked~.switchButton:after { left: 22px; }
 }
 .bottombar { width:100vw; padding: 15px 20px; left: 0; bottom: 0; position: fixed; display: flex-root; justify-content: center; box-sizing: border-box; z-index: 20; pointer-events: none;
-    .bottombox{
-         width: 100%; border:1px solid @c1; border-radius: 16px; background-color: #fff; max-width: 500px; margin: 0 auto;
+    .bottombox { width: 100%; border:1px solid @c1; border-radius: 16px; background-color: #fff; max-width: 500px; margin: 0 auto;
+        &.disabled { opacity: 1 !important; }
     }
     .information__container{ width: 100%; 
         .transparentTop{ width: 100%; position: relative;}

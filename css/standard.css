@@ -235,6 +235,9 @@ img {
   max-width: 500px;
   margin: 0 auto;
 }
+.bottombar .bottombox.disabled {
+  opacity: 1 !important;
+}
 .bottombar .information__container {
   width: 100%;
 }
