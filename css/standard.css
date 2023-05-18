@@ -318,6 +318,11 @@ img {
   font-size: var(--fM);
   line-height: 37px;
 }
+.bottombar .bottombar__container button img,
+.bottombar .bottombar__container a img {
+  height: 18px;
+  margin: 0 2px;
+}
 .bottombar .bottombar__container .bottombar__button--green {
   background: #96BE0B;
 }
