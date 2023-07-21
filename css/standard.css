@@ -318,6 +318,12 @@ img {
   font-size: var(--fM);
   line-height: 37px;
 }
+.bottombar .bottombar__container button span.minor,
+.bottombar .bottombar__container a span.minor {
+  padding: 0;
+  border: none;
+  font-size: var(--fS);
+}
 .bottombar .bottombar__container button img,
 .bottombar .bottombar__container a img {
   height: 18px;
@@ -846,6 +852,9 @@ button.couponItem .coupon_nb_s::before {
 #header #headerRight #buttonCart span {
   margin-left: 5px;
   font-size: var(--fM) !important;
+}
+#header #headerRight #buttonCart .minor {
+  font-size: var(--fXS);
 }
 #footer {
   width: 100%;
@@ -1444,6 +1453,7 @@ button.couponItem .coupon_nb_s::before {
 }
 .modal#popNotice .modal-content {
   width: 400px;
+  max-height: calc(100% - 90px);
   padding: 20px;
   border-radius: 20px;
   position: relative;
@@ -1451,6 +1461,7 @@ button.couponItem .coupon_nb_s::before {
   flex-direction: column;
   align-items: center;
   background-color: white;
+  overflow-y: auto;
   animation-name: popup;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
@@ -1472,6 +1483,7 @@ button.couponItem .coupon_nb_s::before {
 .modal#popNotice .modal-content .submit {
   width: 100%;
   height: 40px;
+  min-height: 40px;
   margin-top: 20px;
   border-radius: 99px;
   display: flex;
@@ -2435,6 +2447,11 @@ button.couponItem .coupon_nb_s::before {
   font-weight: bold;
   font-size: var(--fM) !important;
 }
+.modal#popCart .modal-content .container .item .right span.price .minor,
+.modal#popCartGroupbuying .modal-content .container .item .right span.price .minor {
+  margin: 0;
+  font-size: var(--fXS);
+}
 .modal#popCart .modal-content .container .item .right span.point,
 .modal#popCartGroupbuying .modal-content .container .item .right span.point {
   min-width: 25px;
@@ -2542,13 +2559,20 @@ button.couponItem .coupon_nb_s::before {
 .modal#popCartGroupbuying .modal-content .container .addon label .main .right .price {
   width: 60px;
   color: #333333;
-  text-align: end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
   font-size: var(--fS) !important;
+}
+.modal#popCart .modal-content .container .addon label .main .right .price .minor,
+.modal#popCartGroupbuying .modal-content .container .addon label .main .right .price .minor {
+  margin: 0;
+  font-size: var(--fXS);
 }
 @media (max-width: 767px) {
   .modal#popCart .modal-content .container .addon label .main .right .price,
   .modal#popCartGroupbuying .modal-content .container .addon label .main .right .price {
-    width: 40px;
+    width: 50px;
   }
 }
 .modal#popCart .modal-content .container .addon label .main .right span,
@@ -2764,6 +2788,11 @@ button.couponItem .coupon_nb_s::before {
 .modal#popCartGroupbuying .modal-content .submit .price span {
   margin: 0 2px;
 }
+.modal#popCart .modal-content .submit .price .minor,
+.modal#popCartGroupbuying .modal-content .submit .price .minor {
+  margin: 0;
+  font-size: var(--fXS);
+}
 .modal#popItem {
   z-index: 22;
 }
@@ -2893,6 +2922,10 @@ button.couponItem .coupon_nb_s::before {
 .modal#popItem .modal-content .container .top .price span {
   margin: 0 2px;
 }
+.modal#popItem .modal-content .container .top .price span.minor {
+  margin: 0;
+  font-size: var(--fXS);
+}
 .modal#popItem .modal-content .container .top .price span.discount {
   color: #828282;
   text-decoration: line-through;
@@ -2992,12 +3025,17 @@ button.couponItem .coupon_nb_s::before {
 .modal#popItem .modal-content .container .top .area label .main .right .price {
   width: 60px;
   color: #333333;
-  text-align: end;
+  display: flex;
+  justify-content: flex-end;
   font-size: var(--fS) !important;
+}
+.modal#popItem .modal-content .container .top .area label .main .right .price .minor {
+  margin: 0;
+  font-size: var(--fXS);
 }
 @media (max-width: 767px) {
   .modal#popItem .modal-content .container .top .area label .main .right .price {
-    width: 40px;
+    width: 50px;
   }
 }
 .modal#popItem .modal-content .container .top .area label .sub {
@@ -3159,6 +3197,9 @@ button.couponItem .coupon_nb_s::before {
 }
 .modal#popItem .modal-content .container .buttom .submit .price span {
   margin: 0 2px;
+}
+.modal#popItem .modal-content .container .buttom .submit .price .minor {
+  font-size: var(--fXS);
 }
 .modal#popCoupon {
   align-items: flex-end;
@@ -3695,18 +3736,18 @@ button.couponItem .coupon_nb_s::before {
 #portalMain {
   min-height: calc(100vh - 200px);
   width: calc(100% - 160px);
-  padding: 80px 80px 0;
+  padding: 60px 80px 0;
 }
 @media (max-width: 1199px) {
   #portalMain {
     width: calc(100% - 100px);
-    padding: 80px 50px 0;
+    padding: 60px 50px 0;
   }
 }
 @media (max-width: 767px) {
   #portalMain {
     width: calc(100% - 50px);
-    padding: 80px 25px 0;
+    padding: 60px 25px 0;
   }
 }
 #portalMain #banner {
@@ -5010,6 +5051,10 @@ button.couponItem .coupon_nb_s::before {
 #main .mainContainer .items .item .info .price span {
   margin: 0 2px;
 }
+#main .mainContainer .items .item .info .price span.minor {
+  margin: 0;
+  font-size: var(--fXS);
+}
 #main .mainContainer .items .item .info .price span.discount {
   color: #828282;
   text-decoration: line-through;
@@ -5312,6 +5357,10 @@ button.couponItem .coupon_nb_s::before {
 #paymentMain #left .container .item .right span.price {
   text-align: end;
   min-width: 40px;
+}
+#paymentMain #left .container .item .right span.price .minor {
+  margin: 0;
+  font-size: var(--fXS);
 }
 #paymentMain #left .container .addon {
   margin-top: 10px;
@@ -6327,7 +6376,11 @@ button.couponItem .coupon_nb_s::before {
 }
 #orderMain #right .container .item .right span.price {
   text-align: end;
-  min-width: 40px;
+  min-width: 70px;
+}
+#orderMain #right .container .item .right span.price .minor {
+  margin: 0;
+  font-size: var(--fXS);
 }
 #orderMain #right .container .addon {
   margin-top: 10px;

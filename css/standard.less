@@ -133,6 +133,7 @@ img { object-fit: cover; }
             
             span { color: white !important; font-size: var(--fL); white-space: nowrap; text-align: left;
                 &:first-child { order: 1; height: 37px; padding: 0 10px; margin-left: auto; border: 1.5px solid rgba(255, 255, 255, 0.5); border-radius: 15px; font-size: var(--fM); line-height: 37px; }
+                &.minor { padding: 0; border: none; font-size: var(--fS); }
             }
 
             img { height: 18px; margin: 0 2px; }
@@ -256,6 +257,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
             @media @screen-mobile { display: none; }
             &:hover { background: @c1; }
             span { margin-left: 5px; font-size: var(--fM) !important; }
+            .minor { font-size: var(--fXS); }
         } 
     }
 }
@@ -418,11 +420,11 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
     }
     .title { color: @cG1; font-size: var(--fL) !important; }
     &#popNotice {
-        .modal-content { width: 400px; padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
+        .modal-content { width: 400px; max-height: calc(100% - 90px); padding: 20px; border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white; overflow-y: auto; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
             @media @screen-mobile { width: 300px; }
             img { max-width: 300px; border-radius: 10px; margin: 20px 0; }
             .content { color: @cG1; font-size: var(--fS) !important; }
-            .submit { width: 100%; height: 40px; margin-top: 20px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important; background: @c1;
+            .submit { width: 100%; height: 40px; min-height: 40px; margin-top: 20px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; font-size: var(--fM) !important; background: @c1;
                 &:hover { background: @c1; }}
         }
     }
@@ -628,7 +630,8 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                             &:not(.point) { display: none; }
                         }
                         span { margin: 0 5px;
-                            &.price { text-align: end; min-width: 40px; margin-right: 5px; font-weight: bold; font-size: var(--fM) !important; }
+                            &.price { text-align: end; min-width: 40px; margin-right: 5px; font-weight: bold; font-size: var(--fM) !important; 
+                                .minor { margin: 0; font-size: var(--fXS); }}
                             &.point { min-width: 25px; }
                         }
                     }
@@ -651,8 +654,9 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                                     }
                                     span { margin: 0; }
                                 }
-                                .price { width: 60px; color: @cG1; text-align: end; font-size: var(--fS) !important;
-                                    @media @screen-mobile { width: 40px; }
+                                .price { width: 60px; color: @cG1; display: flex; align-items: flex-end; justify-content: flex-end; font-size: var(--fS) !important;
+                                    .minor { margin: 0; font-size: var(--fXS); }
+                                    @media @screen-mobile { width: 50px; }
                                 }
                                 span { margin: 0 5px; }
                                 a { margin: 0 5px; color: @c1;
@@ -701,6 +705,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                 .price { display: flex; align-items: center;
                     img { width: unset; height: 20px; margin: 0; }
                     span { margin: 0 2px; }
+                    .minor { margin: 0; font-size: var(--fXS); }
                 }
             }
         }
@@ -728,6 +733,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                             img { width: unset; height: 20px; margin: 0; }
                         }
                         span { margin: 0 2px;
+                            &.minor { margin: 0; font-size: var(--fXS); }
                             &.discount { color: @cG3; text-decoration: line-through; font-size: var(--fS) !important; }
                         }
                     }
@@ -754,8 +760,9 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                                     a { margin: 0 5px; color: @c1;
                                         &:hover { color: @cG1; }
                                     }
-                                    .price { width: 60px; color: @cG1; text-align: end; font-size: var(--fS) !important;
-                                        @media @screen-mobile { width: 40px; }
+                                    .price { width: 60px; color: @cG1; display: flex; justify-content: flex-end; font-size: var(--fS) !important;
+                                        .minor { margin: 0; font-size: var(--fXS); }
+                                        @media @screen-mobile { width: 50px; }
                                     }
                                 }
                             }
@@ -798,6 +805,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                         .price { display: flex; align-items: center;
                             img { width: unset; height: 20px; margin: 0; }
                             span { margin: 0 2px; }
+                            .minor { font-size: var(--fXS); }
                         }
                     }
                 }
@@ -925,9 +933,9 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
 }
 
 // Portal Page
-#portalMain { min-height: calc(100vh - 200px); width: calc(100% - 160px); padding: 80px 80px 0;
-    @media @screen-tablet { width: calc(100% - 100px); padding: 80px 50px 0; }
-    @media @screen-mobile { width: calc(100% - 50px); padding: 80px 25px 0; }
+#portalMain { min-height: calc(100vh - 200px); width: calc(100% - 160px); padding: 60px 80px 0;
+    @media @screen-tablet { width: calc(100% - 100px); padding: 60px 50px 0; }
+    @media @screen-mobile { width: calc(100% - 50px); padding: 60px 25px 0; }
     #banner { width: 100%; position: relative;
         @media @screen-mobile { margin-left: -25px; width: calc(100% + 50px); }
         .mySlides { height: 100%; min-height: 150px; max-height: 80vh; display: none;
@@ -1231,6 +1239,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                             img { width: unset; height: 20px; }
                         }
                         span { margin: 0 2px;
+                            &.minor { margin: 0; font-size: var(--fXS); }
                             &.discount { color: @cG3; text-decoration: line-through; font-size: var(--fS) !important; }
                         }
                     }
@@ -1305,7 +1314,8 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                     }
                     span { margin: 0 5px;
                         &.point { min-width: 25px; }
-                        &.price { text-align: end; min-width: 40px; }
+                        &.price { text-align: end; min-width: 40px;
+                            .minor { margin: 0; font-size: var(--fXS); }}
                     }
                 }
             }
@@ -1539,7 +1549,8 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                     }
                     span { margin: 0 5px;
                         &.point { min-width: 25px; }
-                        &.price { text-align: end; min-width: 40px; }
+                        &.price { text-align: end; min-width: 70px;
+                            .minor { margin: 0; font-size: var(--fXS); }}
                     }
                 }
             }
