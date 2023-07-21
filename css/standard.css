@@ -2572,7 +2572,7 @@ button.couponItem .coupon_nb_s::before {
 @media (max-width: 767px) {
   .modal#popCart .modal-content .container .addon label .main .right .price,
   .modal#popCartGroupbuying .modal-content .container .addon label .main .right .price {
-    width: 50px;
+    min-width: 50px;
   }
 }
 .modal#popCart .modal-content .container .addon label .main .right span,
@@ -3023,7 +3023,7 @@ button.couponItem .coupon_nb_s::before {
   color: #333333;
 }
 .modal#popItem .modal-content .container .top .area label .main .right .price {
-  width: 60px;
+  min-width: 60px;
   color: #333333;
   display: flex;
   justify-content: flex-end;
