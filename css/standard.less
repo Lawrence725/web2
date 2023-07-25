@@ -94,6 +94,7 @@ body { margin: 0; overflow-x: hidden; font-family: 'Noto Sans TC'; background-co
 // body::-webkit-scrollbar-thumb { border-radius: 10px; background-color: @cG4; border: 2px solid @cBg; } /* should match background, can't be transparent */
 a { text-decoration: none !important; }
 a:hover { cursor: pointer; }
+ol { margin: 0; padding-left: 25px; }
 input { border: 0; }
 input:focus { box-shadow: none !important; outline: none; }
 input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
@@ -119,7 +120,7 @@ img { object-fit: cover; }
     .information__container{ width: 100%; 
         .transparentTop{ width: 100%; position: relative;}
         a.go_login{ width: calc(70% - 40px); padding:5px 10px; display: block; display: flex; flex-direction: column; padding-left: 33%; position: relative; pointer-events: all;
-            .storeCover{ position: absolute; left: calc(33% - 55px); top: 8px; width: 48px; height: 48px; img{ width: 100%; height: 100%;}}
+            .storeCover{ position: absolute; left: calc(33% - 55px); top: 8px; width: 48px; height: 48px; display: flex; justify-content: flex-end; img{ height: 100%;}}
             .mainTitle{ color: @cG1; font-size: var(--fM);}
             .subTitle{ color:@cG3; font-size: var(--fS);}
         }
@@ -823,7 +824,8 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                 .imgCheckbox{ position: absolute; left: 15px; top: calc(50% - 10px); width: 20px; height: 20px; border-radius: 50%; background-color: #fff;}
                 .info { width: calc(100% - 120px); padding:5px 10px; 
                     .detail { margin-top: 5px; display: flex; flex-direction: column;color: @cG3; font-size: var(--fS) !important; 
-                        .subText{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+                        .subText{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+                            li:nth-of-type(1n+3) { display: none; }}
                         .price{ padding-top: 5px; font-size: var(--fXS);
                             .off{ font-size: var(--fM); color: @cG1;}
                             .lineThrough{ padding-left: 5px; text-decoration: line-through;}
