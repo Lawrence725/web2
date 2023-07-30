@@ -7571,6 +7571,12 @@ button.couponItem .coupon_nb_s::before {
     margin: 0 0 20px 0;
     border-radius: 20px;
   }
+  #portalMain .mainContainer .stores .store .image {
+    height: 200px;
+  }
+  #portalMain .mainContainer .stores .store .image > img {
+    height: 200px;
+  }
   #portalMain .mainContainer .stores .store .info .payments > div {
     width: 12%;
     margin-right: 0.6%;

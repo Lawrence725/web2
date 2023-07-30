@@ -23,7 +23,7 @@
     .mainContainer { width: 50%; margin-top: 0; 
         .stores { width: 100%; margin: 0;
             .store { width: calc(33.3% - 15px); margin: 0 22.5px 22.5px 0; padding: 0; border: 0; border-radius: 15px; overflow: hidden;
-                .image {
+                .image { 
                     > img { border-radius: 0; }
                     .discount { left: 0; }
                 }
@@ -52,6 +52,9 @@
         .mainContainer { width: 100%;
             .stores {
                 .store { width: 100%; margin: 0 0 20px 0; border-radius: 20px; 
+                    .image { height: 200px;
+                        > img { height: 200px; }
+                    }
                     .info {
                         .payments { 
                             > div { width: 12%; margin-right: 0.6%; }
