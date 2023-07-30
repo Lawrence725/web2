@@ -4,112 +4,59 @@
         <meta charset="utf-8">
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
         <link rel="icon" type="image/png" href="photo/QuickClick.png"/>
-        <title>麥町吐司工房</title>
+        <title>起家雞</title>
         <!-- CSS -->
-        <link rel="stylesheet" href="css/standard.css">
+        <link rel="stylesheet" href="css/portal.css">
         <!-- <link rel="stylesheet" href="css/theme_default.css"> -->
         <!-- <link rel="stylesheet" href="css/theme_taoyuan.css"> -->
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Awesome Icon -->
-        <link href="icon/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
-        <!-- <script src="https://kit.fontawesome.com/bfebcca289.js" crossorigin="anonymous"></script> -->
+        <link href="./css/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet">
     </head>
     <body>
         <!-- Header -->
-        <div id="headerHtml"></div>
+        <div id="header">
+            <div id="headerLeft">
+                <a class="desktop" href="index.html"><img src="photo/cheogajip.svg"></a>
+                <a class="mobile" href="index.html"><img src="photo/cheogajip.svg"></a>
+            </div>
+            
+            <div id="headerCenter">
+                <div class="inputContrl">
+                    <i class="fas fa-location-dot"></i>
+                    <input type="text" placeholder="輸入地址">
+                    <button><i class="fas fa-location-crosshairs"></i></button>
+
+                    <div class="tooltip">
+                        尋找<b>附近店家</b>
+                    </div>
+                </div>
+            </div>
+
+            <div id="headerRight">
+                起家雞 全台連鎖店
+            </div>
+        </div>
+
         <!-- Main -->
         <div id="portalMain">
             <!-- Banner -->
             <div id="banner">
                 <div class="mySlides">
-                    <img src="photo/carousel1.png">
+                    <img src="photo/cheogajip1.png">
                 </div>
                 <div class="mySlides">
-                    <img src="photo/carousel2.png">
-                </div>
-                <div class="mySlides">
-                    <img src="photo/carousel3.png">
-                    <div class="text">
-                        <span>非營業時間</span>
-                    </div>
+                    <img src="photo/cheogajip2.png">
                 </div>
                 <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
                 <div class="dots">
                     <span class="dot"></span> 
                     <span class="dot"></span> 
-                    <span class="dot"></span> 
                 </div>
             </div>
-            <!-- Info -->
-            <div id="info">
-                <div id="store">
-                    <div id="text">
-                        <span class="title">起家雞 全台連鎖店</span>
-                        <span class="content">滿$1000 折$100</span>
-                    </div>
-                    <div id="buttons">
-                        <a class="icon" id="buttonInfo" title="商店資訊">
-                            <i class="fas fa-info"></i>
-                        </a>
-                        <a class="icon" id="buttonNotice" title="公告">
-                            <i class="fas fa-bullhorn"></i>
-                        </a>
-                        <!-- <a class="icon" id="buttonDelivery" title="外送條件">
-                            <i class="fas fa-motorcycle"></i>
-                        </a> -->
-                    </div>
-                </div>
-                <!-- <a id="buttonSetting" class=""> error
-                    <div class="container" id="mode">
-                        <div class="mode">
-                            <div class="icon"><i class="fas fa-utensils"></i></div>
-                            <span>內用</span>
-                        </div>
-                        <div class="mode grayed">
-                            <div class="icon"><i class="fas fa-shopping-bag"></i></div>
-                            <span>自取</span>
-                        </div>
-                        <div class="mode grayed">
-                            <div class="icon"><i class="fas fa-motorcycle"></i></div>
-                            <span>外送</span>
-                        </div>
-                    </div>
-                    <span class="separate">|</span>
-                    <div class="container">
-                        <div class="icon"><i class="fas fa-clock"></i></div>
-                        <span>現在</span>
-                    </div>
-                    <span class="separate">|</span>
-                    <div class="container">
-                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <span>信義路一段1號</span>
-                    </div>
-                </a> -->
-                <div id="mode">
-                    <a class="mode active">
-                        <div class="icon"><i class="fas fa-utensils"></i></div>
-                        <span>內用</span>
-                    </a>
-                    <a class="mode grayed">
-                        <div class="icon"><i class="fas fa-shopping-bag"></i></div>
-                        <span>自取</span>
-                    </a>
-                    <a class="mode">
-                        <div class="icon"><i class="fas fa-motorcycle"></i></div>
-                        <span>外送</span>
-                    </a>
-                </div>
-                <div id="address" class=""> <!-- error -->
-                    <div class="left">
-                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <input type="text" placeholder="地址">
-                    </div>
-                    <a id="location"><i class="fas fa-crosshairs"></i></a>
-                    <a id="confirm"><span>確認</span></a>
-                </div>
-            </div>
+
             <!-- Stores -->
             <div class="mainContainer">
                 <!-- <span class="title">分類名稱</span> -->
@@ -127,19 +74,24 @@
                                 <span>台北市信義區信義路二段2號</span>
                             </div>
                             <div class="type">
-                                <div class=""><span>送</span></div>
-                                <div class="off"><span>自</span></div>
-                                <div class="off"><span>內</span></div>
+                                內用・自取
                             </div>
-                            <div class="payment">
-                                <div><img src="icon/cash.svg"></div>
-                                <div><img src="icon/card.svg"></div>
-                                <div><img src="icon/apple.svg" class="lg"></div>
-                                <div><img src="icon/google.svg" class="lg"></div>
-                                <div><img src="icon/line.svg"></div>
-                                <div><img src="icon/easy.svg" class="lg"></div>
-                                <div><img src="icon/jko.svg"></div>
-                                <div><img src="icon/taiwan.svg" class="lg"></div>
+                            <div class="payments">
+                                <div><img src="icon/cash.png" alt="現金"></div>
+                                <div><img src="icon/creditcard.png" alt="信用卡"></div>
+                                <div><img src="icon/visa.png" alt="VISA信用卡"></div>
+                                <div><img src="icon/mastercard.png" alt="MASTER CARD信用卡"></div>
+                                <div><img src="icon/jcb.png" alt="JCB信用卡"></div>
+                                <div><img src="icon/applepay.png" alt="Apple Pay"></div>
+                                <div><img src="icon/googlepay.png" alt="Google Pay"></div>
+                                <div><img src="icon/linepay.png" alt="Line Pay"></div>
+                                <div><img src="icon/jkopay.png" alt="街口支付"></div>
+                                <div><img src="icon/pxpay.png" alt="全支付"></div>
+                                <div><img src="icon/taiwanpay.png" alt="臺灣Pay"></div>
+                                <div><img src="icon/pluspay.png" alt="全盈Pay"></div>
+                                <div><img src="icon/icash.png" alt="icash Pay"></div>
+                                <div><img src="icon/easycard.png" alt="悠遊付"></div>
+                                <div><img src="icon/gcash.png" alt="GCash"></div>
                             </div>
                         </div>
                     </a>
@@ -157,19 +109,24 @@
                                 <span>台北市信義區信義路二段2號</span>
                             </div>
                             <div class="type">
-                                <div class=""><span>送</span></div>
-                                <div class=""><span>自</span></div>
-                                <div class="off"><span>內</span></div>
+                                內用・自取
                             </div>
-                            <div class="payment">
-                                <div><img src="icon/cash.svg"></div>
-                                <div><img src="icon/card.svg"></div>
-                                <div><img src="icon/apple.svg" class="lg"></div>
-                                <div><img src="icon/google.svg" class="lg"></div>
-                                <!-- <div><img src="icon/line.svg"></div>
-                                <div><img src="icon/easy.svg" class="lg"></div>
-                                <div><img src="icon/jko.svg"></div>
-                                <div><img src="icon/taiwan.svg" class="lg"></div> -->
+                            <div class="payments">
+                                <div><img src="icon/cash.png" alt="現金"></div>
+                                <div><img src="icon/creditcard.png" alt="信用卡"></div>
+                                <div><img src="icon/visa.png" alt="VISA信用卡"></div>
+                                <div><img src="icon/mastercard.png" alt="MASTER CARD信用卡"></div>
+                                <div><img src="icon/jcb.png" alt="JCB信用卡"></div>
+                                <div><img src="icon/applepay.png" alt="Apple Pay"></div>
+                                <div><img src="icon/googlepay.png" alt="Google Pay"></div>
+                                <div><img src="icon/linepay.png" alt="Line Pay"></div>
+                                <div><img src="icon/jkopay.png" alt="街口支付"></div>
+                                <div><img src="icon/pxpay.png" alt="全支付"></div>
+                                <div><img src="icon/taiwanpay.png" alt="臺灣Pay"></div>
+                                <div><img src="icon/pluspay.png" alt="全盈Pay"></div>
+                                <div><img src="icon/icash.png" alt="icash Pay"></div>
+                                <div><img src="icon/easycard.png" alt="悠遊付"></div>
+                                <div><img src="icon/gcash.png" alt="GCash"></div>
                             </div>
                         </div>
                     </a>
@@ -187,16 +144,24 @@
                                 <span>台北市信義區信義路二段2號</span>
                             </div>
                             <div class="type">
-                                <div class="off"><span>送</span></div>
-                                <div class="off"><span>自</span></div>
-                                <div class=""><span>內</span></div>
+                                內用・自取
                             </div>
-                            <div class="payment">
-                                <div><img src="icon/cash.svg"></div>
-                                <div><img src="icon/card.svg"></div>
-                                <div><img src="icon/easy.svg" class="lg"></div>
-                                <div><img src="icon/jko.svg"></div>
-                                <div><img src="icon/taiwan.svg" class="lg"></div>
+                            <div class="payments">
+                                <div><img src="icon/cash.png" alt="現金"></div>
+                                <div><img src="icon/creditcard.png" alt="信用卡"></div>
+                                <div><img src="icon/visa.png" alt="VISA信用卡"></div>
+                                <div><img src="icon/mastercard.png" alt="MASTER CARD信用卡"></div>
+                                <div><img src="icon/jcb.png" alt="JCB信用卡"></div>
+                                <div><img src="icon/applepay.png" alt="Apple Pay"></div>
+                                <div><img src="icon/googlepay.png" alt="Google Pay"></div>
+                                <div><img src="icon/linepay.png" alt="Line Pay"></div>
+                                <div><img src="icon/jkopay.png" alt="街口支付"></div>
+                                <div><img src="icon/pxpay.png" alt="全支付"></div>
+                                <div><img src="icon/taiwanpay.png" alt="臺灣Pay"></div>
+                                <div><img src="icon/pluspay.png" alt="全盈Pay"></div>
+                                <div><img src="icon/icash.png" alt="icash Pay"></div>
+                                <div><img src="icon/easycard.png" alt="悠遊付"></div>
+                                <div><img src="icon/gcash.png" alt="GCash"></div>
                             </div>
                         </div>
                     </a>
@@ -214,19 +179,24 @@
                                 <span>台北市信義區信義路二段2號</span>
                             </div>
                             <div class="type">
-                                <div class=""><span>送</span></div>
-                                <div class="off"><span>自</span></div>
-                                <div class=""><span>內</span></div>
+                                內用・自取
                             </div>
-                            <div class="payment">
-                                <div><img src="icon/cash.svg"></div>
-                                <div><img src="icon/card.svg"></div>
-                                <div><img src="icon/apple.svg" class="lg"></div>
-                                <div><img src="icon/google.svg" class="lg"></div>
-                                <div><img src="icon/line.svg"></div>
-                                <div><img src="icon/easy.svg" class="lg"></div>
-                                <div><img src="icon/jko.svg"></div>
-                                <div><img src="icon/taiwan.svg" class="lg"></div>
+                            <div class="payments">
+                                <div><img src="icon/cash.png" alt="現金"></div>
+                                <div><img src="icon/creditcard.png" alt="信用卡"></div>
+                                <div><img src="icon/visa.png" alt="VISA信用卡"></div>
+                                <div><img src="icon/mastercard.png" alt="MASTER CARD信用卡"></div>
+                                <div><img src="icon/jcb.png" alt="JCB信用卡"></div>
+                                <div><img src="icon/applepay.png" alt="Apple Pay"></div>
+                                <div><img src="icon/googlepay.png" alt="Google Pay"></div>
+                                <div><img src="icon/linepay.png" alt="Line Pay"></div>
+                                <div><img src="icon/jkopay.png" alt="街口支付"></div>
+                                <div><img src="icon/pxpay.png" alt="全支付"></div>
+                                <div><img src="icon/taiwanpay.png" alt="臺灣Pay"></div>
+                                <div><img src="icon/pluspay.png" alt="全盈Pay"></div>
+                                <div><img src="icon/icash.png" alt="icash Pay"></div>
+                                <div><img src="icon/easycard.png" alt="悠遊付"></div>
+                                <div><img src="icon/gcash.png" alt="GCash"></div>
                             </div>
                         </div>
                     </a>
@@ -243,172 +213,74 @@
                                 <span>台北市信義區信義路二段2號</span>
                             </div>
                             <div class="type">
-                                <div class=""><span>送</span></div>
-                                <div class=""><span>自</span></div>
-                                <div class=""><span>內</span></div>
+                                內用・自取
                             </div>
-                            <div class="payment">
-                                <div><img src="icon/cash.svg"></div>
-                                <div><img src="icon/card.svg"></div>
-                                <div><img src="icon/apple.svg" class="lg"></div>
-                                <div><img src="icon/google.svg" class="lg"></div>
-                                <div><img src="icon/line.svg"></div>
-                                <div><img src="icon/easy.svg" class="lg"></div>
-                                <div><img src="icon/jko.svg"></div>
-                                <div><img src="icon/taiwan.svg" class="lg"></div>
+                            <div class="payments">
+                                <div><img src="icon/cash.png" alt="現金"></div>
+                                <div><img src="icon/creditcard.png" alt="信用卡"></div>
+                                <div><img src="icon/visa.png" alt="VISA信用卡"></div>
+                                <div><img src="icon/mastercard.png" alt="MASTER CARD信用卡"></div>
+                                <div><img src="icon/jcb.png" alt="JCB信用卡"></div>
+                                <div><img src="icon/applepay.png" alt="Apple Pay"></div>
+                                <div><img src="icon/googlepay.png" alt="Google Pay"></div>
+                                <div><img src="icon/linepay.png" alt="Line Pay"></div>
+                                <div><img src="icon/jkopay.png" alt="街口支付"></div>
+                                <div><img src="icon/pxpay.png" alt="全支付"></div>
+                                <div><img src="icon/taiwanpay.png" alt="臺灣Pay"></div>
+                                <div><img src="icon/pluspay.png" alt="全盈Pay"></div>
+                                <div><img src="icon/icash.png" alt="icash Pay"></div>
+                                <div><img src="icon/easycard.png" alt="悠遊付"></div>
+                                <div><img src="icon/gcash.png" alt="GCash"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Store -->
+                    <a class="store" href="index.html">
+                        <div class="image">
+                            <img class="" src="photo/item.png">
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                <span>起家雞 新莊中原店</span>
+                            </div>
+                            <div class="detail">
+                                <span>台北市信義區信義路二段2號</span>
+                            </div>
+                            <div class="type">
+                                內用・自取
+                            </div>
+                            <div class="payments">
+                                <div><img src="icon/cash.png" alt="現金"></div>
+                                <div><img src="icon/creditcard.png" alt="信用卡"></div>
+                                <div><img src="icon/visa.png" alt="VISA信用卡"></div>
+                                <div><img src="icon/mastercard.png" alt="MASTER CARD信用卡"></div>
+                                <div><img src="icon/jcb.png" alt="JCB信用卡"></div>
+                                <div><img src="icon/applepay.png" alt="Apple Pay"></div>
+                                <div><img src="icon/googlepay.png" alt="Google Pay"></div>
+                                <div><img src="icon/linepay.png" alt="Line Pay"></div>
+                                <div><img src="icon/jkopay.png" alt="街口支付"></div>
+                                <div><img src="icon/pxpay.png" alt="全支付"></div>
+                                <div><img src="icon/taiwanpay.png" alt="臺灣Pay"></div>
+                                <div><img src="icon/pluspay.png" alt="全盈Pay"></div>
+                                <div><img src="icon/icash.png" alt="icash Pay"></div>
+                                <div><img src="icon/easycard.png" alt="悠遊付"></div>
+                                <div><img src="icon/gcash.png" alt="GCash"></div>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
-            <!-- Loading -->
-            <div class="loading loadBanner"></div>
-            <div id="info">
-                <div id="store">
-                    <div id="text">
-                        <div class="loading loadTitle"></div>
-                        <div class="loading loadContent"></div>
-                    </div>
-                    <div id="buttons">
-                        <div class="loading loadIcon"></div>
-                        <div class="loading loadIcon"></div>
-                        <div class="loading loadIcon"></div>
-                    </div>
-                </div>
-                <div class="loading loadSetting"></div>
-                <div class="loading loadSetting"></div>
-            </div>
-            <!-- <div class="loading loadStores"></div> -->
-            <div id="loadStores">
-                <div class="loading loadStore"></div>
-                <div class="loading loadStore"></div>
-                <div class="loading loadStore"></div>
-                <div class="loading loadStore"></div>
-            </div>
+
             <div id="noStore">
                 <span>無商店</span>
             </div>
         </div>
+
         <!-- Footer -->
         <div id="footerHtml"></div>
-        <!-- Loading Spinner -->
-        <!-- <div class="spinner"><div></div></div> -->
-        <!-- Notice Popup -->
-        <div id="popNotice" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <span class="title">公告</span>
-                <img src="photo/item.png">
-                <span class="content">像習對前細亮身乎英病見導，當思太黨、牛施接連看行念福小我他美，預乎禮錯以。他書際起華成數何為事而意前別規度代。後平來易都看著叫有子竟性識色快了今力的習中片黑？計原除了員細。合計備我低年世他來手開，細發目推院法電較次看是我下喜，數漸世什度的人故到驗？</span>
-                <a class="submit">
-                    <span>了解</span>
-                </a>
-            </div>
-        </div>
-        <!-- Info Popup -->
-        <div id="popInfo" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <span class="title">商店資訊</span>
-                <div class="content">
-                    <div><i class="fas fa-clock"></i></div>
-                    <span>10:00 ~ 21:30</span>
-                </div>
-                <div class="content">
-                    <div><i class="fas fa-map-marker-alt"></i></div>
-                    <a href="https://www.google.com/maps/search/?api=1&query=台北市大安區復興南路一段107巷29號" target="_blank" class="contentG">台北市大安區復興南路一段107巷29號</a>
-                </div>
-                <div class="payment">
-                    <div><img src="icon/cash.svg"></div>
-                    <div><img src="icon/card.svg"></div>
-                    <div><img src="icon/apple.svg" class="lg"></div>
-                    <div><img src="icon/google.svg" class="lg"></div>
-                    <div><img src="icon/line.svg"></div>
-                    <div><img src="icon/easy.svg" class="lg"></div>
-                    <div><img src="icon/jko.svg"></div>
-                    <div><img src="icon/taiwan.svg" class="lg"></div>
-                </div>
-            </div>
-        </div>
-        <!-- Setting Popup -->
-        <div id="popSetting" class="modal">
-            <div class="modal-content">
-                <div class="container">
-                    <span class="close">&times;</span>
-                    <span class="title">取餐方式</span>
-                    <!-- <span class="message">錯誤訊息</span> -->
-                    <div id="mode">
-                        <a class="mode active">
-                            <div class="icon"><i class="fas fa-utensils"></i></div>
-                            <span>內用</span>
-                        </a>
-                        <a class="mode grayed">
-                            <div class="icon"><i class="fas fa-shopping-bag"></i></div>
-                            <span>自取</span>
-                        </a>
-                        <a class="mode">
-                            <div class="icon"><i class="fas fa-motorcycle"></i></div>
-                            <span>外送</span>
-                        </a>
-                    </div>
-                    <div class="delivery">
-                        <div class="address"> <!-- error -->
-                            <div class="left">
-                                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                                <input type="text" placeholder="外送地址">
-                            </div>
-                            <a><i class="fas fa-crosshairs"></i></a>
-                        </div>
-                        <a class="action">確認</a>
-                    </div>
-                    <div class="delivery">
-                        <ol class="conditions">
-                            <li>距離2公里內，並且消費滿250元，外送免運費。</li>
-                            <li>距離2~3公里內，並且消費滿300元，外送免運費。</li>
-                            <li>外送條件3</li>
-                        </ol>
-                        <a class="action"><i class="fas fa-map fa-lg"></i></a>
-                    </div>
-                    <div class="time">
-                        <div class="left">
-                            <div class="select"> <!-- error -->
-                                <div class="icon"><i class="fas fa-calendar"></i></div>
-                                <select>
-                                    <option value="今日・07/20">今日・07/20</option>
-                                    <option value="明日・07/21">明日・07/21</option>
-                                </select>
-                                <i class="fas fa-angle-down right"></i>
-                            </div>
-                            <div class="select error"> <!-- error -->
-                                <div class="icon"><i class="fas fa-clock"></i></div>
-                                <select>
-                                    <option value="下午10:00 - 下午10:15">下午10:00 - 下午10:15</option>
-                                    <option value="下午10:15 - 下午10:30">下午10:15 - 下午10:30</option>
-                                </select>
-                                <i class="fas fa-angle-down right"></i>
-                            </div>
-                        </div>
-                        <a class="action">現在</a>
-                    </div>
-                    <div class="chair"> <!-- error -->
-                        <div class="icon"><i class="fas fa-chair"></i></div>
-                        <input type="text" placeholder="桌號">
-                    </div>
-                    <div class="note"> <!-- error -->
-                        <div><i class="fas fa-sticky-note"></i></div>
-                        <textarea placeholder="給外送員的話"></textarea>
-                    </div>
-                </div>
-                <a class="submit"> <!-- disabled -->
-                    <span>確認</span>
-                </a>
-            </div>
-        </div>
+
         <!-- Less -->
         <script src="script/less.js" type="text/javascript"></script>
-        <!-- <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script> -->
-        <!-- Script -->
-        <script src="./script/portal.js"></script>
-        <script src="./script/header.js"></script>
+        <script src="script/portal.js" type="text/javascript"></script>
     </body>
 </html>

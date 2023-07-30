@@ -1,0 +1,65 @@
+@import url("standard");
+
+#header #headerCenter {
+    .inputContrl { position: relative; width: 100%; max-width: 400px; height: 25px; padding: 5px 10px; display: flex; flex-flow: nowrap; justify-content: center; align-items: center; gap: 5px; background: @cBg; border-radius: 99em; 
+        input { width: 100%; background: none; border: none; }
+        i { font-size: 16px; color: @cG3; }
+        button i { font-size: 18px; color: @c1; }
+        .tooltip { position: absolute; width: auto; padding: 5px 10px; right: 35px; bottom: -25px; color: #FFFFFF; font-size: 12px; letter-spacing: 0.5px; background: #22798C; border-radius: 99em; z-index: 0;
+            > b { font-size: 14px;}
+        }
+        .tooltip::before { content: ''; display: block; position: absolute; top: 0; right: -7px; width: 0; height: 0;
+            border-style: solid; border-width: 20px 20px 0 0;
+            border-color: #22798C transparent transparent transparent; transform:rotate(-20deg); z-index: -1; }
+    }
+}
+
+#portalMain { display: flex; flex-flow: wrap; justify-content: space-between; align-items: flex-start; padding-top: 100px;
+    #banner { width: 46%; height: auto; margin-right: 4%; 
+        .mySlides { height: auto; 
+            > img { border-radius: 20px; }
+        }
+    }
+    .mainContainer { width: 50%; margin-top: 0; 
+        .stores { width: 100%; margin: 0;
+            .store { width: calc(33.3% - 15px); margin: 0 22.5px 22.5px 0; padding: 0; border: 0; border-radius: 15px; overflow: hidden;
+                .image {
+                    > img { border-radius: 0; }
+                    .discount { left: 0; }
+                }
+                .info {
+                    .type { display: block; color: @cG3; text-align: left; }
+                    .payments { display: flex; flex-flow: wrap; justify-content: stretch; align-items: flex-start; 
+                        > div { width: 19%; margin-right: 1.25%; margin-bottom: 0; 
+                            > img { width: 100%; height: auto; }
+                        }
+                        > div:nth-child(5n) { margin-right: 0; }
+                    }
+                }
+            }
+            .store:hover { border: 0; }
+            .store:nth-child(3n) { margin-right: 0; }
+        }
+    }
+    #noStore { width: 100%; }
+}
+
+@media (max-width: 820px) {
+    #header #headerRight { display: none; }
+
+    #portalMain { padding-top: 80px;
+        #banner { width: 100%; margin: 0 auto 20px auto; }
+        .mainContainer { width: 100%;
+            .stores {
+                .store { width: 100%; margin: 0 0 20px 0; border-radius: 20px; 
+                    .info {
+                        .payments { 
+                            > div { width: 12%; margin-right: 0.6%; }
+                            > div:nth-child(8n) { margin-right: 0; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
