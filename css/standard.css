@@ -117,7 +117,8 @@ a {
 a:hover {
   cursor: pointer;
 }
-ol {
+ol,
+ul {
   margin: 0;
   padding-left: 25px;
 }
@@ -3230,21 +3231,22 @@ button.couponItem .coupon_nb_s::before {
   padding-bottom: 10px;
 }
 .modal#popCoupon .storeCoupons {
-  width: calc(100% + 20px);
-  margin-left: -10px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 .modal#popCoupon .storeCoupons .coupon {
-  width: calc(100% - 70px);
+  width: 100%;
   padding: 5px 15px 5px 35px;
-  margin: 5px 10px;
+  margin: 5px 0;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background: #F2F1F6;
   position: relative;
+  box-sizing: border-box;
 }
 .modal#popCoupon .storeCoupons .coupon::before,
 .modal#popCoupon .storeCoupons .coupon::after {
@@ -3273,6 +3275,7 @@ button.couponItem .coupon_nb_s::before {
 .modal#popCoupon .storeCoupons .coupon .info {
   width: calc(100% - 120px);
   padding: 5px 10px;
+  overflow: hidden;
 }
 .modal#popCoupon .storeCoupons .coupon .info .detail {
   margin-top: 5px;
@@ -3322,7 +3325,7 @@ button.couponItem .coupon_nb_s::before {
 .modal#popCoupon .storeCoupons .coupon .image {
   display: flex;
   position: relative;
-  width: 100px;
+  min-width: 100px;
   height: 100px;
   border-radius: 15px;
   overflow: hidden;
@@ -3367,11 +3370,12 @@ button.couponItem .coupon_nb_s::before {
   border-color: #fff;
 }
 .modal#popCoupon .storeCoupons .addCheckbox {
-  width: calc(100% - 30px);
-  padding-left: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
 }
 .modal#popCoupon .storeCoupons .addCheckbox .info {
-  width: calc(100% - 160px);
+  width: 100%;
   padding: 5px;
 }
 .modal#popCoupon .storeCoupons .addCheckbox .noImg {
