@@ -255,10 +255,12 @@ img {
 }
 .bottombar .information__container a.go_login {
   width: calc(70% - 40px);
+  min-height: 50px;
   padding: 5px 10px;
   display: block;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding-left: 33%;
   position: relative;
   pointer-events: all;
