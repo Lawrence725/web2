@@ -2951,11 +2951,13 @@ button.couponItem .coupon_nb_s::before {
   flex-direction: column;
 }
 .modal#popItem .modal-content .container .top .area label {
-  padding: 10px 10px 10px 40px;
+  padding: 10px;
   border-radius: 10px;
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2991,7 +2993,7 @@ button.couponItem .coupon_nb_s::before {
   opacity: 0.5;
 }
 .modal#popItem .modal-content .container .top .area label .main {
-  width: 100%;
+  width: calc(100% - 19px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3050,6 +3052,7 @@ button.couponItem .coupon_nb_s::before {
   }
 }
 .modal#popItem .modal-content .container .top .area label .sub {
+  width: 100%;
   padding: 10px;
   margin-top: 10px;
   border-radius: 10px;
@@ -3058,11 +3061,13 @@ button.couponItem .coupon_nb_s::before {
   background-color: #F2F1F6;
 }
 .modal#popItem .modal-content .container .top .area label .text {
+  margin-left: 10px;
   line-height: 20px;
   display: flex;
   align-items: center;
 }
 .modal#popItem .modal-content .container .top .area label input {
+  display: none;
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -3078,20 +3083,23 @@ button.couponItem .coupon_nb_s::before {
   display: block;
 }
 .modal#popItem .modal-content .container .top .area .checkmark.radio {
-  position: absolute;
+  /* position: absolute; */
   top: 10px;
   left: 10px;
   height: 15px;
-  width: 15px;
+  min-width: 15px;
   background-color: white;
   border-radius: 50%;
   border: 2px solid #FF9900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* Create the indicator (the dot/circle - hidden when not checked) */
   /* Style the indicator (dot/circle) */
 }
 .modal#popItem .modal-content .container .top .area .checkmark.radio:after {
   content: "";
-  position: absolute;
+  /* position: absolute; */
   display: none;
 }
 .modal#popItem .modal-content .container .top .area .checkmark.radio:after {
@@ -3103,27 +3111,31 @@ button.couponItem .coupon_nb_s::before {
   background: white;
 }
 .modal#popItem .modal-content .container .top .area .checkmark.checkbox {
-  position: absolute;
+  /* position: absolute; */
   top: 10px;
   left: 10px;
   height: 15px;
-  width: 15px;
+  min-width: 15px;
   border-radius: 4px;
   background-color: white;
   border: solid 2px #FF9900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* Create the checkmark/indicator (hidden when not checked) */
   /* Style the checkmark/indicator */
 }
 .modal#popItem .modal-content .container .top .area .checkmark.checkbox:after {
   content: "";
-  position: absolute;
+  /* position: absolute; */
   display: none;
 }
 .modal#popItem .modal-content .container .top .area .checkmark.checkbox:after {
   left: 4.5px;
   top: 2px;
-  width: 3px;
-  height: 6px;
+  width: 4px;
+  height: 8px;
+  margin-bottom: 3px;
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
