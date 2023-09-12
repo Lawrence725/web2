@@ -716,7 +716,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
         .modal-content { max-width: 900px; max-height: calc(100% - 60px); padding: 10px; border-radius: 20px; position: relative; display: flex; background-color: @cBg; animation-name: popup; animation-duration: 0.5s; animation-iteration-count: 1;
             @media @screen-mobile { width: calc(100% - 60px); max-height: calc(100% - 60px); flex-direction: column; }
             .close { width: 30px; height: 30px; padding-bottom: 2px; border-radius: 10px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.25); color: white; }
-            img { width: 450px; height: 450px; margin-bottom: 15px; border-radius: 10px; object-fit: cover;
+            img { width: 450px; height: 450px; margin-left: auto; margin-right: auto; margin-bottom: 15px; border-radius: 10px; object-fit: cover;
                 @media @screen-mobile { width: 100%; height: 40vh; margin: 0 0 10px 0; }
             }
             .container { display: flex; flex-direction: column; gap: 10px;
@@ -791,7 +791,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                         //     /* Style the checkmark/indicator */
                         //     &:after { left: 4.5px; top: 2px; width: 3px; height: 6px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
                         // }
-                        label { padding: 10px; border-radius: 10px; position: relative; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: var(--fS) !important;
+                        label { max-width: 430px; padding: 10px; border-radius: 10px; position: relative; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: var(--fS) !important;
                             &:hover { background: @cBg; }
                             /* On mouse-over, add a grey background color */
                             &:hover input ~ .checkmark { background-color: white; }

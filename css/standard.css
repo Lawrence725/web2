@@ -2841,6 +2841,8 @@ button.couponItem .coupon_nb_s::before {
 .modal#popItem .modal-content img {
   width: 450px;
   height: 450px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 15px;
   border-radius: 10px;
   object-fit: cover;
@@ -2951,6 +2953,7 @@ button.couponItem .coupon_nb_s::before {
   flex-direction: column;
 }
 .modal#popItem .modal-content .container .top .area label {
+  max-width: 430px;
   padding: 10px;
   border-radius: 10px;
   position: relative;
