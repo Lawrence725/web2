@@ -3071,11 +3071,6 @@ button.couponItem .coupon_nb_s::before {
 }
 .modal#popItem .modal-content .container .top .area label input {
   display: none;
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
   /* When the radio button is checked, add a blue background */
   /* Show the indicator (dot/circle) when checked */
 }
