@@ -4546,7 +4546,6 @@ button.couponItem .coupon_nb_s::before {
 @media (max-width: 767px) {
   #main {
     padding: 80px 20px 20px;
-    overflow-x: hidden;
   }
 }
 #main .noticeBanner {
@@ -4931,8 +4930,8 @@ button.couponItem .coupon_nb_s::before {
 }
 @media (max-width: 767px) {
   #main #category {
-    padding: 0 25px;
-    margin-left: -25px;
+    padding: 0 20px;
+    margin-left: -20px;
   }
 }
 #main #category::-webkit-scrollbar {
@@ -5147,14 +5146,14 @@ button.couponItem .coupon_nb_s::before {
 }
 @media (max-width: 767px) {
   #main .loading.loadBanner {
-    margin-left: -25px;
-    width: calc(100% + 50px);
+    margin-left: -20px;
+    width: calc(100% + 40px);
     height: 30vh;
     border-radius: 0;
   }
 }
 #main .loading.loadTitle {
-  width: 250px;
+  width: 200px;
   height: 35px;
 }
 #main .loading.loadContent {
