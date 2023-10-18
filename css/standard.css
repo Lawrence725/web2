@@ -6089,6 +6089,22 @@ button.couponItem .coupon_nb_s::before {
   align-items: center;
   background-color: white;
 }
+#orderMain #left #top #info .refresh {
+  width: 40px;
+  height: 40px;
+  border-radius: 99px;
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFEED8;
+}
+#orderMain #left #top #info .refresh i {
+  background-color: #FFEED8;
+  animation: none;
+}
 #orderMain #left #top #info #number {
   width: fit-content;
   min-width: 60px;
