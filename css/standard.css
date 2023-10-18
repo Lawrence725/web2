@@ -2879,6 +2879,9 @@ button.couponItem .coupon_nb_s::before {
   background: white;
   overflow-y: auto;
 }
+.modal#popItem .modal-content .container .top > div:not(.area) {
+  max-width: 450px;
+}
 .modal#popItem .modal-content .container .top .title {
   margin-bottom: 5px;
   display: flex;
