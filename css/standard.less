@@ -151,7 +151,7 @@ img { object-fit: cover; }
     .usePoints{ margin-left: auto; display: flex; align-items: center; justify-content: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
     .switch_type{ margin-left: 5px; padding-top: 5px;}
     .input{ width: 55px; padding: 0 3px;
-        input{ width: 100%; height: 26px; border-bottom: 1px solid var(--cG3); font-size: var(--fM); text-align: center; background-color: transparent; }}
+        input{ width: 100%; height: 26px; border-bottom: 1px solid @cG3; font-size: var(--fM); text-align: center; background-color: transparent; }}
 }
 button.couponItem{ display: block; position: relative; width: 100%; height: 40px; padding: 0 10px 0 15px; margin-top: 10px;
     display: flex; align-items: center; justify-content: center; background-color: @cWhite;
@@ -623,8 +623,8 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                         .area { margin: 2px 10px 0 0; gap: 2px; display: flex; align-items: center;
                             .icon { min-width: 28px; min-height: 28px; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: @c1; background-color: @c2;
                                 i { font-size: 1em !important; }}
-                            .count { width: 30px; height: 30px; display: flex; justify-content: center; text-align: center; color: @cG1; font-size: var(--fS) !important; }
-                        }
+                            .count { width: 30px; height: 30px; display: flex; justify-content: center; text-align: center; color: @cG1; font-size: var(--fS) !important; }}
+                        .sale { color: @c1; font-size: var(--fS); }
                     }
                     .right { margin-left: 10px; display: flex; align-items: center;
                         img { width: 50px; height: 50px; margin-right: 10px; border-radius: 5px;
@@ -633,6 +633,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                         }
                         span { margin: 0 5px;
                             &.price { text-align: end; min-width: 40px; margin-right: 5px; font-weight: bold; font-size: var(--fM) !important; 
+                                .salePrice { margin: 0; font-size: var(--fS); font-weight: normal; text-decoration: line-through; color: @cG4; }
                                 .minor { margin: 0; font-size: var(--fXS); }}
                             &.point { min-width: 25px; }
                         }
@@ -723,21 +724,25 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                 @media @screen-mobile { width: 100%; height: unset; max-height: 100%; display: flex; flex-direction: column; overflow-y: auto; }
                 .top { width: calc(100% - 20px); height: calc(100% - 70px); padding: 10px; border-radius: 15px; display: flex; flex-direction: column; background: white; overflow-y: auto;
                     > div:not(.area) { max-width: 450px; }
-                    .title { margin-bottom: 5px; display: flex; flex-direction: column; color: @cG1; font-size: var(--fL) !important;
+                    .discount { font-size: var(--fS); font-weight: bold; color: @c1; }
+                    .title, .tags { margin-bottom: 5px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; color: @cG1; font-size: var(--fL) !important;
                         .discount { font-size: var(--fS); font-weight: bold; color: @c1; }
                         .remark { width: fit-content; height: 25px; padding: 2.5px 5px; margin-top: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center; background: @c2;
-                            span { white-space: nowrap; font-size: var(--fS) !important; color: @c1; }
-                        }
-                    }
-                    .header { margin-bottom: 5px; color: @cG1; font-size: var(--fM) !important; }
-                    .content { margin-bottom: 5px; color: @cG3; font-size: var(--fS) !important; }
+                            &.sale { background-color: #FADBD2;
+                                span { color: @cRed; }}
+                            span { white-space: nowrap; font-size: var(--fS) !important; color: @c1; }}}
+                    .name { color: @cG1; font-size: var(--fL); }
+                    .error { color: @cRed; font-weight: bold; font-size: var(--fS); }
+                    .header { color: @cG1; font-weight: bold; font-size: var(--fM) !important; }
+                    .content { color: @cG3; font-size: var(--fS) !important; }
+                    .saleInfo { color: @c1; font-size: var(--fS); }
                     .price { display: flex; align-items: flex-end; color: @cG1; font-size: var(--fM) !important;
                         .point { display: flex; align-items: center;
                             img { width: unset; height: 20px; margin: 0; }
                         }
                         span { margin: 0 2px;
                             &.minor { margin: 0; font-size: var(--fXS); }
-                            &.discount { color: @cG3; text-decoration: line-through; font-size: var(--fS) !important; }
+                            &.discount { color: @cG3; text-decoration: line-through; font-weight: normal; font-size: var(--fS) !important; }
                         }
                     }
                     hr { margin: 15px 0; border: 0.5px solid @cG4; }
@@ -803,22 +808,17 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                                 img     { filter: grayscale(100%); opacity: 0.5; }}
                             .main { width: calc(100% - 19px); display: flex; align-items: center; justify-content: space-between;
                                 .right { display: flex; align-items: center; height: 20px;
-                                    .number { padding: 5px 0; margin: 0 5px; border-radius: 99px; display: flex; align-items: center; background-color: @cBg;
+                                    > .number { order: 2; padding: 5px; margin: 0 5px; border-radius: 99px; display: flex; align-items: center; gap: 5px; background-color: @cBg;
                                         .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: @c1;
-                                            &:hover { color: @cG1; }
-                                        }
-                                        span { margin: 0; }
-                                    }
+                                            &:hover { color: @cG1; }}
+                                        span { margin: 0; }}
                                     span { margin: 0 5px; }
-                                    a { margin: 0 5px; color: @c1;
-                                        &:hover { color: @cG1; }
-                                    }
-                                    .price { min-width: 60px; color: @cG1; display: flex; justify-content: flex-end; font-size: var(--fS) !important;
+                                    > a { order: 3; margin: 0 5px; color: @c1;
+                                        &:hover { color: @cG1; }}
+                                    > .price { order: 1; min-width: 60px; color: @cG1; display: flex; justify-content: flex-end; font-size: var(--fS) !important;
+                                        .salePrice { color: @cG3; text-decoration: line-through; font-size: var(--fXS); }
                                         .minor { margin: 0; font-size: var(--fXS); }
-                                        @media @screen-mobile { width: 50px; }
-                                    }
-                                }
-                            }
+                                        @media @screen-mobile { width: 50px; }}}}
                             .sub { width: 100%; padding: 10px; margin-top: 10px; border-radius: 10px; display: flex; flex-direction: column; background-color: @cBg; }
                             .text { margin-left: 10px; line-height: 20px; display: flex; align-items: center; }
                             /* Hide the browser's default radio button */
@@ -860,6 +860,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                             img { width: unset; height: 20px; margin: 0; }
                             span { margin: 0 2px; }
                             .minor { font-size: var(--fXS); }
+                            .salePrice { opacity: 0.6; text-decoration: line-through; font-size: var(--fS); }
                         }
                     }
                 }
@@ -1281,12 +1282,12 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                 // &:hover { border: 2px solid @c2; }
                 .info { width: calc(100% - 130px); display: flex; flex-direction: column; justify-content: space-between;
                     &.sold > * > * { color: @cG4 !important; filter: grayscale(100%); }
-                    .title { display: flex; flex-direction: column; color: @cG1; font-size: var(--fM) !important;
-                        .remark { width: fit-content; height: 20px; padding: 2.5px 5px; margin-top: 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: @c1; background: @c2;
+                    .title, .tags { margin-bottom: 5px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; color: @cG1; font-size: var(--fM) !important;
+                        .remark { width: fit-content; height: 20px; padding: 2.5px 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: @c1; background: @c2;
                             &.sold { color: @cG4 !important; background: @cG6 !important; }
-                            span { white-space: nowrap; font-size: var(--fS) !important; }
-                        }
-                    }
+                            &.sale { color: @cRed; background-color: #FADBD2; }
+                            span { white-space: nowrap; font-size: var(--fS) !important; }}}
+                    .name { font-size: var(--fS) !important; }
                     .detail { margin-top: 5px; white-space: nowrap; overflow: hidden;  text-overflow: ellipsis; color: @cG3; font-size: var(--fS) !important; }
                     .price { margin-top: 5px; display: flex; align-items: flex-end; color: @cG1; font-size: var(--fM) !important;
                         .point { display: flex; align-items: center;
@@ -1361,6 +1362,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                 .left { display: flex; align-items: center;
                     .count { min-width: 40px; display: flex; justify-content: center; color: @cG1; font-size: var(--fS) !important; }
                     .discount { font-size: var(--fXS); font-weight: bold; color: @c1; }
+                    .sale { font-size: var(--fXS); color: @c1; }
                 }
                 .right { margin-left: 10px; display: flex; align-items: center;
                     img { width: 50px; height: 50px; margin-right: 10px; border-radius: 10px;
@@ -1369,6 +1371,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                     span { margin: 0 5px;
                         &.point { min-width: 25px; }
                         &.price { text-align: end; min-width: 40px;
+                            .salePrice { margin: 0; color: @cG4; font-size: var(--fXS); font-weight: normal; text-decoration: line-through; }
                             .minor { margin: 0; font-size: var(--fXS); }}
                     }
                 }
@@ -1603,6 +1606,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                 .left { display: flex; align-items: center;
                     .count { min-width: 40px; display: flex; justify-content: center; color: @cG1; font-size: var(--fS) !important; }
                     .discount { font-size: var(--fXS); font-weight: bold; color: @c1; }
+                    .sale { font-size: var(--fXS); color: @c1; }
                 }
                 .right { margin-left: 10px; display: flex; align-items: center;
                     img { width: 50px; height: 50px; margin-right: 10px; border-radius: 10px;
@@ -1611,6 +1615,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                     span { margin: 0 5px;
                         &.point { min-width: 25px; }
                         &.price { text-align: end; min-width: 70px;
+                            .salePrice { margin: 0; color: @cG4; font-size: var(--fXS); font-weight: normal; text-decoration: line-through; }
                             .minor { margin: 0; font-size: var(--fXS); }}
                     }
                 }
