@@ -1743,6 +1743,10 @@ button.couponItem .coupon_nb_s::before {
   font-size: var(--fS) !important;
   font-size: 12px !important;
 }
+.modal#popSetting .modal-content .delivery .conditions .none {
+  margin-left: -20px;
+  list-style-type: none;
+}
 .modal#popSetting .modal-content .delivery .action {
   min-width: 150px;
   height: 40px;
