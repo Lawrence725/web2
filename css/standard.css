@@ -5771,7 +5771,7 @@ button.couponItem .coupon_nb_s::before {
   justify-content: center;
   margin-left: 3px;
   color: #EB5757;
-  font-size: 10px;
+  font-size: var(--fXS);
 }
 #paymentMain #right #top .area .checkbox {
   height: 40px;
