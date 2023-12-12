@@ -1409,11 +1409,11 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                     &.v3 { max-width: 100%; height: unset; padding: 0 15px 15px; border: 2px solid @cBg; border-radius: 20px; gap: 0; display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; background-color: @cBg; box-sizing: border-box;
                         @media @screen-tablet { border: 2px solid white; background-color: white; }
                         &.error { border: 2px solid @cRed; }
-                        .container { width: 100%; min-height: 50px; padding: 15px 0 15px 23px; border-radius: 0; background-color: transparent; box-sizing: border-box;
-                            &:first-child { border-bottom: 1px solid @cG5; }
+                        .container { width: 100%; min-height: 30px; padding: 15px 0 0 23px; border-radius: 0; background-color: transparent; box-sizing: border-box;
+                            &:nth-child(2) { border-top: 1px solid @cG5; margin-top: 15px; }
                             &:hover { background-color: unset; }}
                         .checkmark { top: 15px; left: -2px; }
-                        .online { margin-top: 0; margin-left: -2px; }}
+                        .online { margin-left: -2px; }}
                     &.error { border: none; }
                     div.online { width: 100%; margin: 15px 0 0 auto; gap: 10px; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start;
                         div { width: fit-content; height: 28px; display: flex; align-items: center; }

@@ -5667,14 +5667,15 @@ button.couponItem .coupon_nb_s::before {
 }
 #paymentMain #right #top .area .switch.v3 .container {
   width: 100%;
-  min-height: 50px;
-  padding: 15px 0 15px 23px;
+  min-height: 30px;
+  padding: 15px 0 0 23px;
   border-radius: 0;
   background-color: transparent;
   box-sizing: border-box;
 }
-#paymentMain #right #top .area .switch.v3 .container:first-child {
-  border-bottom: 1px solid #E0E0E0;
+#paymentMain #right #top .area .switch.v3 .container:nth-child(2) {
+  border-top: 1px solid #E0E0E0;
+  margin-top: 15px;
 }
 #paymentMain #right #top .area .switch.v3 .container:hover {
   background-color: unset;
@@ -5684,7 +5685,6 @@ button.couponItem .coupon_nb_s::before {
   left: -2px;
 }
 #paymentMain #right #top .area .switch.v3 .online {
-  margin-top: 0;
   margin-left: -2px;
 }
 #paymentMain #right #top .area .switch.error {
