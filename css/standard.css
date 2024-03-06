@@ -6220,9 +6220,9 @@ button.couponItem .coupon_nb_s::before {
   #orderMain #left {
     width: calc(100% - 40px);
     height: fit-content;
-    padding: 20px;
+    padding: 20px 20px 0;
     position: static;
-    background-color: #F2F1F6;
+    background-color: white;
     box-shadow: none;
   }
 }
@@ -6238,13 +6238,14 @@ button.couponItem .coupon_nb_s::before {
 }
 #orderMain #left #top #info {
   width: 100%;
-  padding: 20px 0 0;
+  padding: 20px;
   margin: 20px 0;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: #FFEED8;
+  box-sizing: border-box;
 }
 #orderMain #left #top #info .refresh {
   margin-bottom: 20px;
@@ -6253,18 +6254,24 @@ button.couponItem .coupon_nb_s::before {
 }
 #orderMain #left #top #info #number {
   width: fit-content;
-  min-width: 60px;
-  height: 60px;
-  padding: 0 10px;
-  border-radius: 999px;
+  min-width: 80px;
+  height: 80px;
+  padding: 5px 10px 0;
+  margin-bottom: 20px;
+  border-radius: 15px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: white;
   font-size: 36px;
   box-sizing: border-box;
   border: solid 3px #FF9900;
-  color: #FF9900;
+  color: #333333;
+}
+#orderMain #left #top #info #number .number__title {
+  margin-bottom: -10px;
+  font-size: var(--fS);
 }
 #orderMain #left #top #info i {
   border-radius: 99px;
@@ -6286,29 +6293,28 @@ button.couponItem .coupon_nb_s::before {
     opacity: 1;
   }
 }
-#orderMain #left #top #info #time {
-  font-size: var(--fXL);
+#orderMain #left #top #info #time,
+#orderMain #left #top #info .info {
+  margin: -5px 0 20px;
+  font-size: var(--fL);
   text-align: center;
-  color: #FF9900;
+  color: #333333;
 }
 #orderMain #left #top #info .header {
-  margin-bottom: 20px;
   color: #333333;
-  font-size: var(--fM) !important;
+  font-size: var(--fS) !important;
 }
 #orderMain #left #top #info .content {
   margin-bottom: 20px;
   color: #EB5757;
   font-size: var(--fL) !important;
-  font-weight: bold;
   text-align: center;
 }
 #orderMain #left #top #info img {
-  width: 80%;
+  width: 90%;
 }
 #orderMain #left #top #states {
   width: 100%;
-  margin: 20px 50px;
   display: flex;
   justify-content: center;
 }
@@ -6318,6 +6324,9 @@ button.couponItem .coupon_nb_s::before {
   flex-direction: column;
   align-items: center;
 }
+#orderMain #left #top #states .state i {
+  display: none;
+}
 #orderMain #left #top #states .state span {
   margin: 10px 0;
   font-size: var(--fS) !important;
@@ -6326,7 +6335,7 @@ button.couponItem .coupon_nb_s::before {
   width: 95%;
   height: 5px;
   border-radius: 5px;
-  background-color: #F2F1F6;
+  background-color: white;
   box-shadow: 0px 20px 40px rgba(55, 84, 170, 0.2);
 }
 @media (max-width: 767px) {
@@ -6370,6 +6379,12 @@ button.couponItem .coupon_nb_s::before {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 1199px) {
+  #orderMain #left #restaurant {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E0E0E0;
+  }
+}
 #orderMain #left #restaurant .header {
   margin-top: 10px;
   color: #333333;
@@ -6396,32 +6411,41 @@ button.couponItem .coupon_nb_s::before {
 #orderMain #right {
   width: 60%;
   height: fit-content;
-  padding: 20px 0;
+  padding: 0 20px 20px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+  background-color: white;
+  box-sizing: border-box;
 }
 @media (max-width: 1199px) {
   #orderMain #right {
     width: 100%;
-    padding: 0 0 10px;
   }
 }
 #orderMain #right .container {
-  width: calc(70% - 30px);
-  padding: 15px;
-  margin: 20px 0;
-  border-radius: 20px;
+  width: 80%;
+  padding-bottom: 20px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   background-color: white;
+  box-sizing: border-box;
 }
 @media (max-width: 1199px) {
   #orderMain #right .container {
-    width: calc(100% - 70px);
-    margin: 10px 0;
+    width: 100%;
   }
+}
+#orderMain #right .container:not(:first-child):not(:last-child) {
+  border-bottom: 1px solid #E0E0E0;
+}
+#orderMain #right .container.container__order {
+  padding: 15px;
+  margin-top: 0;
+  border: none !important;
+  background-color: #F2F1F6;
 }
 #orderMain #right .container .title {
   color: #333333;

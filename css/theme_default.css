@@ -360,12 +360,8 @@
 }
 #orderMain #left #top #info #number {
   border: solid 3px var(--c1);
-  color: var(--c1);
 }
 #orderMain #left #top #info i {
-  color: var(--c1);
-}
-#orderMain #left #top #info #time {
   color: var(--c1);
 }
 #orderMain #left #top #states .state .done {

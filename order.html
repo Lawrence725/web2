@@ -21,74 +21,79 @@
                     <a href="index.html"><img id="logo" src="photo/logo.png"></a>
                     <!-- 編號 -->
                     <div id="info">
-                        <span id="number">9999</span>
-                        <i class="far fa-check-circle fa-3x"></i>
-                        <span class="header">取餐編號</span>
                         <span class="content">
                             請前往櫃檯出示下方條碼<br>
                             並現場付款以完成點餐</span>
+                        <span id="number">
+                            <span class="number__title">桌號</span>
+                            <span class="number__content">5</span>
+                        </span>
+                        <i class="far fa-check-circle fa-3x"></i>
+                        <span class="header">取餐編號</span>
+                        <span class="info">123456</span>
+                        <span class="header">預計送達時間</span>
+                        <span id="time">10:00-10:15</span>
+                        <!-- <span class="header">取餐編號</span> -->
                         <img src="./photo/barcode.png">
                         <span class="header">12345678</span>
-                        <span id="time">10:00-10:15</span>
-                        <span class="header">預計送達時間</span>
                         <a class="refresh">重新整理狀態</a>
-                    </div>
-                    <!-- 狀態 -->
-                    <div id="states">
-                        <div class="state done">
-                            <div><i class="fas fa-store fa-lg"></i></div>
-                            <span>店家確認</span>
-                            <div class="progressBar">
-                                <div class="done"></div>
+                        <!-- 狀態 -->
+                        <div id="states">
+                            <div class="state done">
+                                <div><i class="fas fa-store fa-lg"></i></div>
+                                <span>店家確認</span>
+                                <div class="progressBar">
+                                    <div class="done"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="state now">
-                            <div><i class="fas fa-mitten fa-lg"></i></div>
-                            <span>準備餐點</span>
-                            <div class="progressBar">
-                                <div class="now"></div>
+                            <div class="state now">
+                                <div><i class="fas fa-mitten fa-lg"></i></div>
+                                <span>準備餐點</span>
+                                <div class="progressBar">
+                                    <div class="now"></div>
+                                </div>
                             </div>
-                        </div>
-                        <!-- <div class="state now">
-                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                            <span>司機取餐</span>
-                            <div class="progressBar">
-                                <div class="now"></div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="state cancel">
-                            <div><i class="fas fa-times-circle fa-lg"></i></div>
-                            <span>訂單取消</span>
-                            <div class="progressBar">
-                                <div class="cancel"></div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="state cancel">
-                            <div><i class="fas fa-times-circle fa-lg"></i></div>
-                            <span>司機取消物流</span>
-                            <div class="progressBar">
-                                <div class="cancel"></div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="state wait">
-                            <div><i class="fas fa-motorcycle fa-lg"></i></div>
-                            <span>餐點運送</span>
-                            <div class="progressBar">
-                                <div class=""></div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="state wait">
-                            <div><i class="fas fa-check-circle fa-lg"></i></div>
-                            <span>成功送達</span>
-                            <div class="progressBar">
-                                <div class=""></div>
-                            </div>
-                        </div> -->
-                        <div class="state wait">
-                            <div><i class="fas fa-check-circle fa-lg"></i></div>
-                            <span>已接單</span>
-                            <div class="progressBar">
-                                <div class=""></div>
+                            <!-- <div class="state now">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <span>司機取餐</span>
+                                <div class="progressBar">
+                                    <div class="now"></div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="state cancel">
+                                <div><i class="fas fa-times-circle fa-lg"></i></div>
+                                <span>訂單取消</span>
+                                <div class="progressBar">
+                                    <div class="cancel"></div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="state cancel">
+                                <div><i class="fas fa-times-circle fa-lg"></i></div>
+                                <span>司機取消物流</span>
+                                <div class="progressBar">
+                                    <div class="cancel"></div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="state wait">
+                                <div><i class="fas fa-motorcycle fa-lg"></i></div>
+                                <span>餐點運送</span>
+                                <div class="progressBar">
+                                    <div class=""></div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="state wait">
+                                <div><i class="fas fa-check-circle fa-lg"></i></div>
+                                <span>成功送達</span>
+                                <div class="progressBar">
+                                    <div class=""></div>
+                                </div>
+                            </div> -->
+                            <div class="state wait">
+                                <div><i class="fas fa-check-circle fa-lg"></i></div>
+                                <span>已接單</span>
+                                <div class="progressBar">
+                                    <div class=""></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -188,7 +193,7 @@
                     </table>
                 </div>
                 <!-- 餐點內容 -->
-                <div class="container">
+                <div class="container container__order">
                     <span class="title">餐點內容</span>
                     <!-- 主要餐點 -->
                     <div id="items">
