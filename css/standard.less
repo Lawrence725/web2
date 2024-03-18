@@ -115,22 +115,22 @@ img { object-fit: cover; }
     input:checked~.switchButton:after { left: 22px; }
 }
 .bottombar { width:100vw; padding: 15px 20px; left: 0; bottom: 0; position: fixed; display: flex-root; justify-content: center; box-sizing: border-box; z-index: 20; pointer-events: none;
-    .bottombox { width: 100%; border:1px solid @c1; border-radius: 16px; background-color: #fff; max-width: 500px; margin: 0 auto;
-        &.disabled { opacity: 1 !important; }
-    }
-    .information__container{ width: 100%; 
-        .transparentTop{ width: 100%; position: relative;}
-        a.go_login{ width: calc(70% - 40px); min-height: 50px; padding:5px 10px; display: block; display: flex; flex-direction: column; justify-content: center; padding-left: 33%; position: relative; pointer-events: all;
-            .storeCover{ position: absolute; left: calc(33% - 55px); top: 8px; width: 48px; height: 48px; display: flex; justify-content: flex-end; img{ height: 100%;}}
-            .mainTitle{ color: @cG1; font-size: var(--fM);}
-            .subTitle{ color:@cG3; font-size: var(--fS);}
+    .bottombox { width: 100%; border: 1.5px solid @c1; border-radius: 16.5px; background-color: #fff; max-width: 500px; margin: 0 auto; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        &.disabled { opacity: 1 !important; }}
+    .information__container { width: 100%; 
+        .transparentTop { width: 100%; position: relative; }
+        a.go_login { width: 100%; padding: 5px 15px; gap: 5px; display: flex; align-items: center; pointer-events: all; box-sizing: border-box;
+            .storeCover { order: 3; margin-left: auto; display: flex;
+                img { height: 40px; }}
+            .mainTitle { order: 1; color: @cG1; font-size: var(--fM); white-space: nowrap; }
+            .subTitle { order: 2; margin-top: 3px; margin-right: auto; color: @cG3; font-size: var(--fS); }
         }
     }
     .bottombar__container { position: relative; width: 100%;
         button, a { display: block; position: relative; width: 100%; height: 54px; padding: 0 10px 0 15px; max-width: 500px; 
             display: flex; align-items: center; justify-content: center;
             color: @cWhite; font-size: var(--fS);
-            border-radius: 15px; background-color: @c1; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); pointer-events: all; z-index: 2;
+            border-radius: 15px; background-color: @c1; /*box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);*/ pointer-events: all; z-index: 2;
             -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
             
             span { color: white !important; font-size: var(--fL); white-space: nowrap; text-align: left;
@@ -171,7 +171,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
 }
 
 // Header
-#header { width: 100%; height: 60px; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; position: fixed; background-color: white; z-index: 3; box-shadow: #shadows[far]; box-sizing: border-box;
+#header { width: 100%; height: 50px; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; position: fixed; background-color: white; z-index: 3; box-sizing: border-box;
     @media @screen-tablet { padding: 0 50px; }
     @media @screen-mobile { padding: 0 20px; z-index: 3; }
     #headerLeft { display: flex; align-items: center; justify-content: flex-start;
@@ -198,13 +198,13 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
         a.type { gap: 5px; display: flex; align-items: center;
             @media @screen-mobile { max-width: 250px; }
             div.left { display: flex; flex-direction: column; align-items: flex-end;
-                div.top { display: flex; align-items: center; }
-                > span { color: @cG3; }
+                div.top { display: flex; align-items: baseline; }
+                > span { margin-top: -2px; color: @cG3; }
                 span { font-size: var(--fXS); 
                     &.title { font-size: var(--fS); white-space: nowrap; }
                     &:not(.title) { text-align: right; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
                     &.error { color: @cRed; }}}
-            div.right { min-width: 70px; min-height: 70px; margin-bottom: -10px; border-radius: 99px; position: relative; display: flex; align-items: center; justify-content: center; background-color: white;
+            div.right { min-width: 70px; min-height: 70px; margin-bottom: -20px; border-radius: 99px; position: relative; display: flex; align-items: center; justify-content: center; background-color: white; box-shadow: #shadows[close-l];
                 div.icon { min-width: 60px; min-height: 60px; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: @c1;
                     i, svg { color: white; }
                     &.error { background-color: @cRed; }}
@@ -265,7 +265,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
 }
 
 // Footer
-#footer { width: 100%; height: fit-content; min-height: 80px; padding: 25px; display: flex; align-items: center; color: @cG1; background: white; box-sizing: border-box;
+#footer { width: 100%; height: fit-content; min-height: 80px; padding: 25px; display: flex; align-items: center; color: @cG1; background: @cBg; box-sizing: border-box;
     @media @screen-tablet { padding: 20px 50px 90px; }
     @media @screen-mobile { padding: 20px 20px 90px; flex-wrap: wrap; gap: 20px; }
     #left { width: fit-content; white-space: nowrap; box-sizing: border-box;
@@ -1174,9 +1174,9 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
 }
 
 // Store Page
-#main { min-height: calc(100vh - 200px); width: 100%; padding: 80px 80px 20px; gap: 20px; display: flex; flex-direction: column; box-sizing: border-box;
-    @media @screen-tablet { padding: 80px 50px 20px; }
-    @media @screen-mobile { padding: 80px 20px 20px; }
+#main { min-height: calc(100vh - 200px); width: 100%; padding: 70px 80px 20px; gap: 20px; display: flex; flex-direction: column; box-sizing: border-box; background-color: white;
+    @media @screen-tablet { padding: 70px 50px 20px; }
+    @media @screen-mobile { padding: 70px 20px 20px; }
     .noticeBanner { width: 100%; height: 30px; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: @c1;
         // @media @screen-mobile { margin-left: -25px; width: calc(100% + 50px); }
         span { font-size: var(--fXS); color: white; }}
@@ -1222,16 +1222,17 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
     }
     #info { width: 100%; display: flex; align-items: center; justify-content: space-between;
         @media @screen-tablet { flex-direction: column; }
-        #store { width: 35%; display: flex; align-items: center;
-            @media @screen-tablet { width: 100%; }
-            @media @screen-mobile { justify-content: space-between; }
-            #text { display: flex; flex-direction: column;
+        #store { width: 100%; position: relative; display: flex; align-items: center; justify-content: space-between;
+            // @media @screen-tablet { width: 100%; }
+            // @media @screen-mobile { justify-content: space-between; }
+            #text { width: 100%; display: flex; flex-direction: column; align-items: center;
+                div { display: flex; }
                 .title { color: @cG1; font-size: var(--fL) !important; }
                 .content { font-size: var(--fS) !important; color: @c1; }
                 .remark { font-size: var(--fXS); color: @cG3; }
             }
-            #buttons { display: flex;
-                .icon { min-width: 30px; min-height: 30px; margin-left: 10px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; background: @c1;
+            #buttons { width: 100%; position: absolute; display: flex; justify-content: space-between;
+                .icon { min-width: 30px; min-height: 30px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; background: @c1;
                     &:hover { background: @c1; }}
             }
         }
@@ -1261,79 +1262,72 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
             }
         }
     }
-    #category { width: 100vw; padding: 0 80px; margin-left: -80px; position: -webkit-sticky; position: sticky; top: 60px; display: flex; align-items: center; background: @cBg; overflow-x: auto; z-index: 2; box-sizing: border-box;
+    #category { width: 100vw; height: 40px; padding: 0 80px; margin-left: -80px; position: -webkit-sticky; position: sticky; top: 50px; gap: 5px; display: flex; align-items: flex-start; background: white; overflow-x: auto; z-index: 2; box-sizing: border-box;
         @media @screen-tablet { padding: 0 50px; margin-left: -50px; }
         @media @screen-mobile { padding: 0 20px; margin-left: -20px; }
         &::-webkit-scrollbar { -webkit-appearance: none; }
         &::-webkit-scrollbar:horizontal { height: 0px; }
         // &::-webkit-scrollbar-thumb { border-radius: 10px; background: @c1; }
-        a { padding: 5px 10px; margin: 5px 10px 5px 0; border: 1.5px solid @cG5; border-radius: 99px; color: @cG1; font-size: var(--fS) !important;
+        a { height: 30px; padding: 0 10px; border: 1.5px solid @cG5; border-radius: 99px; display: flex; align-items: center; color: @cG1; font-size: var(--fS) !important;
             span { color: @cG3 !important; white-space: nowrap; }}
             // @media (hover: hover) and (pointer: fine) {
             //     &:hover:not(.active) { color: @c1; background: @c2; }}
-        .active { border: 1.5px solid @c1;
-            span { color: @c1 !important; }}}
-    .mainContainer { width: 100%;
-        #search { width: 100%; height: 40px; padding: 0 5px; margin-bottom: 20px; border-bottom: 2px solid @cG5; display: flex; align-items: center; box-sizing: border-box;
-            input { width: 100%; height: 100%; padding: 0; margin-left: 5px; background-color: @cBg; font-size: var(--fS) !important;
+        .active { background-color: @c1; border: 1px solid @c1;
+            span { color: white !important; }}}
+    .mainContainer { width: 100%; gap: 20px; display: flex; flex-direction: column; box-sizing: border-box;
+        #search { width: 100%; height: 40px; padding: 0 5px; border-bottom: 1.5px solid @cG5; display: flex; align-items: center; box-sizing: border-box;
+            input { order: 1; width: 100%; height: 100%; padding: 0; margin-left: 5px; background-color: white; font-size: var(--fS) !important;
                 &::placeholder { color: @cG4; }}
-            i { color: @cG4; }}
-        .title { color: @cG1; font-size: var(--fM) !important; }
-        .items { width: calc(100% + 20px); margin-left: -10px; display: flex; flex-wrap: wrap;
-            .item { width: calc(33% - 44px); padding: 10px; margin: 10px; border: 2px solid white; border-radius: 20px; display: flex; justify-content: space-between; background: white;
-                @media @screen-tablet { width: calc(50% - 44px); }
-                @media @screen-mobile { width: calc(100% - 44px); }
+            i { order: 2; color: @cG3; }}
+        .title { width: 100%; color: @cG1; font-size: var(--fM) !important; font-weight: bold; text-align: center; }
+        .items { width: 100%; gap: 20px; display: flex; flex-wrap: wrap; box-sizing: border-box;
+            * { box-sizing: border-box; }
+            .item { width: calc(33% - 10px); padding: 5px; border: 1.5px solid @cG5; border-radius: 15px; display: flex; justify-content: space-between; background: white;
+                @media @screen-tablet { width: calc(50% - 10px); }
+                @media @screen-mobile { width: 100%; }
                 // &:hover { border: 2px solid @c2; }
-                .info { width: calc(100% - 130px); display: flex; flex-direction: column; justify-content: space-between;
+                .info { width: calc(100% - 135px); padding: 5px 0 5px 5px; gap: 5px; display: flex; flex-direction: column; justify-content: space-between;
                     &.sold > * > * { color: @cG4 !important; filter: grayscale(100%); }
-                    .title, .tags { margin-bottom: 5px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; color: @cG1; font-size: var(--fM) !important;
-                        .remark { width: fit-content; height: 20px; padding: 2.5px 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: @c1; background: @c2;
-                            &.sold { color: @cG4 !important; background: @cG6 !important; }
-                            &.sale { color: @cRed; background-color: #FADBD2; }
-                            span { white-space: nowrap; font-size: var(--fS) !important; }}}
-                    .name { font-size: var(--fS) !important; }
-                    .detail { margin-top: 5px; white-space: nowrap; overflow: hidden;  text-overflow: ellipsis; color: @cG3; font-size: var(--fS) !important; }
-                    .price { margin-top: 5px; display: flex; align-items: flex-end; color: @cG1; font-size: var(--fM) !important;
-                        .point { display: flex; align-items: center;
-                            img { width: unset; height: 20px; }
-                        }
-                        span { margin: 0 2px;
-                            &.minor { margin: 0; font-size: var(--fXS); }
-                            &.discount { color: @cG3; text-decoration: line-through; font-size: var(--fS) !important; }
-                        }
-                    }
-                }
+                    > div:not(.price) { gap: 2px; display: flex; flex-direction: column;
+                        .title, .tags { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; color: @cG1; font-size: var(--fM) !important;
+                            .remark { width: fit-content; min-height: 20px; padding: 1px 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: @c1; background: @c2;
+                                &.sold { color: @cG4 !important; background: @cG6 !important; }
+                                &.sale { color: @cRed; background-color: #FADBD2; }
+                                span { white-space: nowrap; font-size: var(--fS) !important; }}}
+                        .name { font-size: var(--fM) !important; }
+                        .detail { white-space: nowrap; overflow: hidden;  text-overflow: ellipsis; color: @cG3; font-size: var(--fS) !important; }}
+                    .price { display: flex; align-items: baseline; color: @cG1; font-size: var(--fM) !important; font-weight: bold;
+                        .point { gap: 2px; display: flex; align-items: center;
+                            img { width: unset; height: 20px; }}
+                        span {
+                            &.minor { /*margin: 0; font-size: var(--fXS);*/ }
+                            &.discount { margin-left: 5px; color: @cG3; text-decoration: line-through; font-size: var(--fXS) !important; font-weight: normal; }}}}
                 .image { width: 120px; height: 120px; margin-left: 10px; position: relative;
                     .sold { width: 100%; height: 100%; border-radius: 10px; position: absolute; display: flex; align-items: center; justify-content: center; color: white; background: rgba(#000, 0.5); font-size: var(--fM) !important; }
-                    img { width: 120px; height: 120px; border-radius: 10px; object-fit: cover; }
-                }
-            }
-        }
-    }
+                    img { width: 120px; height: 120px; border-radius: 10px; object-fit: cover; }}}}}
     .pointsItem, button.couponItem { height: 54px; margin-top: 0; }
     .loading { border-radius: 20px; display: inline-block; height: 1em; position: relative; overflow: hidden; background-color: @cG4;
         &::after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; transform: translateX(-100%); background-image: linear-gradient(90deg, rgba(#fff, 0) 0, rgba(#fff, 0.2) 20%, rgba(#fff, 0.5) 60%, rgba(#fff, 0)); animation: shimmer 1s infinite; content: ''; }
         @keyframes shimmer { 100% { transform: translateX(100%); } }
-        &.loadBanner { width: 100%; height: 40vh; border-radius: 0 0 20px 20px;
-            @media @screen-mobile { margin-left: -20px; width: calc(100% + 40px); height: 30vh; border-radius: 0; }
+        &.loadBanner { width: 100%; height: unset; aspect-ratio: 16/9; border-radius: 20px;
+            // @media @screen-mobile { margin-left: -20px; width: calc(100% + 40px); height: 30vh; border-radius: 0; }
         }
         &.loadTitle { width: 200px; height: 35px; }
         &.loadContent { width: 150px; height: 20px; margin-top: 5px; }
-        &.loadIcon { width: 30px; height: 30px; margin-left: 10px; border-radius: 99px; }
-        &.loadSetting { width: 50%; height: 40px;
+        &.loadIcon { width: 30px; height: 30px; border-radius: 99px; }
+        &.loadSetting { display: none; width: 50%; height: 40px;
             @media @screen-tablet { width: 100%; margin-top: 20px; }
             @media @screen-mobile { height: 120px; }
         }
-        &.loadCategory { width: 100%; height: 50px; margin: 10px 0 20px; }
-        &.loadItems { width: 150px; height: 26px; }
+        &.loadCategory { width: 100%; height: 50px; }
+        &.loadItems { width: 150px; height: 26px; margin-left: auto; margin-right: auto; }
         &.loadItem { width: calc(33% - 40px); height: 144px; padding: 10px; margin: 10px;
             @media @screen-tablet { width: calc(50% - 44px); }
             @media @screen-mobile { width: calc(100% - 40px); }
         }
     }
     #loadItems { width: calc(100% + 20px); height: fit-content; margin-left: -10px; }
-    #noItem { height: 35vh; display: flex; align-items: center; justify-content: center; color: @cG3; font-size: var(--fL) !important; }
-}
+    #noItem { height: 35vh; display: flex; align-items: center; justify-content: center; color: @cG3; font-size: var(--fL) !important; }}
 
 // Payment Page
 #paymentMain { width: 100vw; height: 100vh; display: flex;
