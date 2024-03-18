@@ -937,7 +937,8 @@ button.couponItem .coupon_nb_s::before {
   width: 100%;
   height: 100%;
   padding-left: 10px;
-  border: 0;
+  border: 1.5px solid #E0E0E0 !important;
+  border-radius: 99px;
   color: #333333;
   background: transparent;
   font-size: var(--fS) !important;
@@ -946,7 +947,7 @@ button.couponItem .coupon_nb_s::before {
   cursor: pointer;
 }
 #footer #center select:focus-visible {
-  border: 0 !important;
+  border: 1.5px solid #E0E0E0 !important;
 }
 #footer #center i {
   top: calc(50% - 8px);
