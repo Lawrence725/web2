@@ -880,12 +880,12 @@ button.couponItem .coupon_nb_s::before {
 }
 @media (max-width: 1199px) {
   #footer {
-    padding: 20px 50px 90px;
+    padding: 20px 50px 200px;
   }
 }
 @media (max-width: 767px) {
   #footer {
-    padding: 20px 20px 90px;
+    padding: 20px 20px 200px;
     flex-wrap: wrap;
     gap: 20px;
   }
@@ -5097,6 +5097,62 @@ button.couponItem .coupon_nb_s::before {
   flex-wrap: wrap;
   box-sizing: border-box;
 }
+#main .mainContainer .items.items--double .item {
+  width: calc(16.5% - 15px);
+  padding: 0;
+  position: relative;
+  flex-direction: column;
+}
+@media (max-width: 1199px) {
+  #main .mainContainer .items.items--double .item {
+    width: calc(25% - 15px);
+  }
+}
+@media (max-width: 767px) {
+  #main .mainContainer .items.items--double .item {
+    width: calc(50% - 10px);
+  }
+}
+#main .mainContainer .items.items--double .item .info {
+  order: 2;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px 10px;
+}
+#main .mainContainer .items.items--double .item .info:only-child {
+  justify-content: center;
+}
+#main .mainContainer .items.items--double .item .info > div:not(.price) .title,
+#main .mainContainer .items.items--double .item .info > div:not(.price) .tags {
+  top: -10px;
+  left: -10px;
+  position: absolute;
+  z-index: 2;
+}
+#main .mainContainer .items.items--double .item .info > div:not(.price) .title .remark,
+#main .mainContainer .items.items--double .item .info > div:not(.price) .tags .remark {
+  border: 2px solid white;
+}
+#main .mainContainer .items.items--double .item .info > div:not(.price) .title .remark:not(:first-child),
+#main .mainContainer .items.items--double .item .info > div:not(.price) .tags .remark:not(:first-child) {
+  display: none;
+}
+#main .mainContainer .items.items--double .item .image {
+  order: 1;
+  width: 100%;
+  height: unset;
+  aspect-ratio: 1/1;
+  margin-left: 0;
+}
+#main .mainContainer .items.items--double .item .image .sold {
+  border-radius: 13.5px;
+}
+#main .mainContainer .items.items--double .item .image img {
+  width: 100%;
+  height: unset;
+  aspect-ratio: 1/1;
+  border-radius: 13.5px;
+}
 #main .mainContainer .items * {
   box-sizing: border-box;
 }
@@ -5126,6 +5182,9 @@ button.couponItem .coupon_nb_s::before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+#main .mainContainer .items .item .info:only-child {
+  width: 100%;
 }
 #main .mainContainer .items .item .info.sold > * > * {
   color: #BDBDBD !important;
@@ -5213,6 +5272,7 @@ button.couponItem .coupon_nb_s::before {
   height: 120px;
   margin-left: 10px;
   position: relative;
+  display: flex;
 }
 #main .mainContainer .items .item .image .sold {
   width: 100%;

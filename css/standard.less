@@ -266,8 +266,8 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
 
 // Footer
 #footer { width: 100%; height: fit-content; min-height: 80px; padding: 25px; display: flex; align-items: center; color: @cG1; background: @cBg; box-sizing: border-box;
-    @media @screen-tablet { padding: 20px 50px 90px; }
-    @media @screen-mobile { padding: 20px 20px 90px; flex-wrap: wrap; gap: 20px; }
+    @media @screen-tablet { padding: 20px 50px 200px; }
+    @media @screen-mobile { padding: 20px 20px 200px; flex-wrap: wrap; gap: 20px; }
     #left { width: fit-content; white-space: nowrap; box-sizing: border-box;
         @media @screen-mobile { width: calc(100% - 170px); margin: 0; }
         a { margin-right: 10px;
@@ -1281,12 +1281,26 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
             i { order: 2; color: @cG3; }}
         .title { width: 100%; color: @cG1; font-size: var(--fM) !important; font-weight: bold; text-align: center; }
         .items { width: 100%; gap: 20px; display: flex; flex-wrap: wrap; box-sizing: border-box;
+            &.items--double {
+                .item { width: calc(16.5% - 15px); padding: 0; position: relative; flex-direction: column;
+                    @media @screen-tablet { width: calc(25% - 15px); }
+                    @media @screen-mobile { width: calc(50% - 10px); }
+                    .info { order: 2; width: 100%; height: 100%; padding: 5px 10px 10px;
+                        &:only-child { justify-content: center; }
+                        > div:not(.price) {
+                            .title, .tags { top: -10px; left: -10px; position: absolute; z-index: 2;
+                                .remark { border: 2px solid white;
+                                    &:not(:first-child) { display: none; }}}}}
+                    .image { order: 1; width: 100%; height: unset; aspect-ratio: 1/1; margin-left: 0;
+                        .sold { border-radius: 13.5px; }
+                        img { width: 100%; height: unset; aspect-ratio: 1/1; border-radius: 13.5px; }}}}
             * { box-sizing: border-box; }
             .item { width: calc(33% - 10px); padding: 5px; border: 1.5px solid @cG5; border-radius: 15px; display: flex; justify-content: space-between; background: white;
                 @media @screen-tablet { width: calc(50% - 10px); }
                 @media @screen-mobile { width: 100%; }
                 // &:hover { border: 2px solid @c2; }
                 .info { width: calc(100% - 135px); padding: 5px 0 5px 5px; gap: 5px; display: flex; flex-direction: column; justify-content: space-between;
+                    &:only-child { width: 100%; }
                     &.sold > * > * { color: @cG4 !important; filter: grayscale(100%); }
                     > div:not(.price) { gap: 2px; display: flex; flex-direction: column;
                         .title, .tags { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; color: @cG1; font-size: var(--fM) !important;
@@ -1302,7 +1316,7 @@ button.couponItem{ display: block; position: relative; width: 100%; height: 40px
                         span {
                             &.minor { /*margin: 0; font-size: var(--fXS);*/ }
                             &.discount { margin-left: 5px; color: @cG3; text-decoration: line-through; font-size: var(--fXS) !important; font-weight: normal; }}}}
-                .image { width: 120px; height: 120px; margin-left: 10px; position: relative;
+                .image { width: 120px; height: 120px; margin-left: 10px; position: relative; display: flex;
                     .sold { width: 100%; height: 100%; border-radius: 10px; position: absolute; display: flex; align-items: center; justify-content: center; color: white; background: rgba(#000, 0.5); font-size: var(--fM) !important; }
                     img { width: 120px; height: 120px; border-radius: 10px; object-fit: cover; }}}}}
     .pointsItem, button.couponItem { height: 54px; margin-top: 0; }
