@@ -501,7 +501,7 @@ button.couponItem .coupon_nb_s::before {
   justify-content: space-between;
   position: fixed;
   background-color: white;
-  z-index: 3;
+  z-index: 4;
   box-sizing: border-box;
 }
 @media (max-width: 1199px) {
@@ -512,7 +512,6 @@ button.couponItem .coupon_nb_s::before {
 @media (max-width: 767px) {
   #header {
     padding: 0 20px;
-    z-index: 3;
   }
 }
 #header #headerLeft {
@@ -875,7 +874,7 @@ button.couponItem .coupon_nb_s::before {
   display: flex;
   align-items: center;
   color: #333333;
-  background: #F2F1F6;
+  background: white;
   box-sizing: border-box;
 }
 @media (max-width: 1199px) {
@@ -937,7 +936,7 @@ button.couponItem .coupon_nb_s::before {
   width: 100%;
   height: 100%;
   padding-left: 10px;
-  border: 1.5px solid #E0E0E0 !important;
+  border: none;
   border-radius: 99px;
   color: #333333;
   background: transparent;
@@ -947,7 +946,7 @@ button.couponItem .coupon_nb_s::before {
   cursor: pointer;
 }
 #footer #center select:focus-visible {
-  border: 1.5px solid #E0E0E0 !important;
+  border: none;
 }
 #footer #center i {
   top: calc(50% - 8px);
@@ -4620,21 +4619,21 @@ button.couponItem .coupon_nb_s::before {
 #main {
   min-height: calc(100vh - 200px);
   width: 100%;
-  padding: 70px 80px 20px;
+  padding: 110px 80px 20px;
   gap: 20px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  background-color: white;
+  background-color: #F2F1F6;
 }
 @media (max-width: 1199px) {
   #main {
-    padding: 70px 50px 20px;
+    padding: 110px 50px 20px;
   }
 }
 @media (max-width: 767px) {
   #main {
-    padding: 70px 20px 20px;
+    padding: 110px 20px 20px;
   }
 }
 #main .noticeBanner {
@@ -4839,6 +4838,7 @@ button.couponItem .coupon_nb_s::before {
   height: 10px;
   width: 10px;
   margin: 0 5px;
+  border: 1.5px solid white;
   background-color: white;
   border-radius: 50%;
   display: inline-block;
@@ -4861,6 +4861,7 @@ button.couponItem .coupon_nb_s::before {
 #main #info #store {
   width: 100%;
   position: relative;
+  gap: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -4869,7 +4870,6 @@ button.couponItem .coupon_nb_s::before {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 #main #info #store #text div {
   display: flex;
@@ -4887,10 +4887,8 @@ button.couponItem .coupon_nb_s::before {
   color: #828282;
 }
 #main #info #store #buttons {
-  width: 100%;
-  position: absolute;
+  gap: 10px;
   display: flex;
-  justify-content: space-between;
 }
 #main #info #store #buttons .icon {
   min-width: 30px;
@@ -4997,20 +4995,22 @@ button.couponItem .coupon_nb_s::before {
   }
 }
 #main #category {
+  order: -1;
   width: 100vw;
   height: 40px;
   padding: 0 80px;
   margin-left: -80px;
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 50px;
   gap: 5px;
   display: flex;
-  align-items: flex-start;
+  align-items: top;
   background: white;
   overflow-x: auto;
-  z-index: 2;
+  z-index: 3;
   box-sizing: border-box;
+  box-shadow: 0px 50px 100px rgba(55, 84, 170, 0.1);
 }
 @media (max-width: 1199px) {
   #main #category {
@@ -5033,11 +5033,11 @@ button.couponItem .coupon_nb_s::before {
 #main #category a {
   height: 30px;
   padding: 0 10px;
-  border: 1.5px solid #E0E0E0;
   border-radius: 99px;
   display: flex;
   align-items: center;
   color: #333333;
+  background-color: #F2F1F6;
   font-size: var(--fS) !important;
 }
 #main #category a span {
@@ -5073,7 +5073,7 @@ button.couponItem .coupon_nb_s::before {
   height: 100%;
   padding: 0;
   margin-left: 5px;
-  background-color: white;
+  background-color: #F2F1F6;
   font-size: var(--fS) !important;
 }
 #main .mainContainer #search input::placeholder {
@@ -5099,7 +5099,7 @@ button.couponItem .coupon_nb_s::before {
 }
 #main .mainContainer .items.items--double .item {
   width: calc(16.5% - 15px);
-  padding: 0;
+  gap: 5px;
   position: relative;
   flex-direction: column;
 }
@@ -5117,7 +5117,7 @@ button.couponItem .coupon_nb_s::before {
   order: 2;
   width: 100%;
   height: 100%;
-  padding: 5px 10px 10px;
+  padding: 0 5px 5px;
 }
 #main .mainContainer .items.items--double .item .info:only-child {
   justify-content: center;
@@ -5131,7 +5131,8 @@ button.couponItem .coupon_nb_s::before {
 }
 #main .mainContainer .items.items--double .item .info > div:not(.price) .title .remark,
 #main .mainContainer .items.items--double .item .info > div:not(.price) .tags .remark {
-  border: 2px solid white;
+  border: 3px solid white;
+  border-radius: 10px;
 }
 #main .mainContainer .items.items--double .item .info > div:not(.price) .title .remark:not(:first-child),
 #main .mainContainer .items.items--double .item .info > div:not(.price) .tags .remark:not(:first-child) {
@@ -5142,16 +5143,11 @@ button.couponItem .coupon_nb_s::before {
   width: 100%;
   height: unset;
   aspect-ratio: 1/1;
-  margin-left: 0;
-}
-#main .mainContainer .items.items--double .item .image .sold {
-  border-radius: 13.5px;
 }
 #main .mainContainer .items.items--double .item .image img {
   width: 100%;
   height: unset;
   aspect-ratio: 1/1;
-  border-radius: 13.5px;
 }
 #main .mainContainer .items * {
   box-sizing: border-box;
@@ -5159,8 +5155,8 @@ button.couponItem .coupon_nb_s::before {
 #main .mainContainer .items .item {
   width: calc(33% - 10px);
   padding: 5px;
-  border: 1.5px solid #E0E0E0;
   border-radius: 15px;
+  gap: 10px;
   display: flex;
   justify-content: space-between;
   background: white;
@@ -5270,7 +5266,6 @@ button.couponItem .coupon_nb_s::before {
 #main .mainContainer .items .item .image {
   width: 120px;
   height: 120px;
-  margin-left: 10px;
   position: relative;
   display: flex;
 }
