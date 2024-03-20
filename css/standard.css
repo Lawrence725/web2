@@ -5061,8 +5061,8 @@ button.couponItem .coupon_nb_s::before {
 #main .mainContainer #search {
   width: 100%;
   height: 40px;
-  padding: 0 5px;
   border-bottom: 1.5px solid #E0E0E0;
+  gap: 10px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -5072,7 +5072,6 @@ button.couponItem .coupon_nb_s::before {
   width: 100%;
   height: 100%;
   padding: 0;
-  margin-left: 5px;
   background-color: #F2F1F6;
   font-size: var(--fS) !important;
 }
@@ -5081,7 +5080,7 @@ button.couponItem .coupon_nb_s::before {
 }
 #main .mainContainer #search i {
   order: 2;
-  color: #828282;
+  color: #FF9900;
 }
 #main .mainContainer .title {
   width: 100%;
