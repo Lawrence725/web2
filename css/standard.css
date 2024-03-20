@@ -4698,13 +4698,13 @@ button.couponItem .coupon_nb_s::before {
 #main div.account {
   width: 100%;
   max-width: 500px;
+  padding: 5px;
   margin: 0 auto;
-  padding: 2px;
   border-radius: 20px;
   gap: 5px;
   display: flex;
   align-items: center;
-  background-color: #FF9900;
+  background-color: white;
   box-sizing: border-box;
 }
 @media (max-width: 767px) {
@@ -4716,24 +4716,30 @@ button.couponItem .coupon_nb_s::before {
   font-size: var(--fS);
 }
 #main div.account div.top {
-  margin: 0 10px;
+  padding: 5px 10px;
+  border-right: 2px solid #FF9900;
   gap: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  #main div.account div.top {
+    border-right: none;
+    border-bottom: 2px solid #FF9900;
+  }
+}
 #main div.account div.top > * {
-  color: white;
+  color: #FF9900;
 }
 #main div.account div.top span {
+  color: #333333;
   white-space: nowrap;
 }
 #main div.account div.bottom {
   width: 100%;
-  border-radius: 19px;
   display: flex;
   align-items: center;
-  background-color: white;
 }
 #main div.account div.bottom a {
   width: 100%;
