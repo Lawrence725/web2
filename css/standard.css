@@ -5011,7 +5011,7 @@ button.couponItem .coupon_nb_s::before {
   top: 50px;
   gap: 5px;
   display: flex;
-  align-items: top;
+  align-items: flex-end;
   background: white;
   overflow-x: auto;
   z-index: 3;
@@ -5037,25 +5037,20 @@ button.couponItem .coupon_nb_s::before {
   height: 0px;
 }
 #main #category a {
-  height: 30px;
-  padding: 0 10px;
-  border-radius: 99px;
+  padding: 0 10px 5px;
+  border-bottom: 2px solid transparent;
   display: flex;
-  align-items: center;
-  color: #333333;
-  background-color: #F2F1F6;
-  font-size: var(--fS) !important;
 }
 #main #category a span {
   color: #828282 !important;
+  font-size: var(--fS);
   white-space: nowrap;
 }
 #main #category .active {
-  background-color: #FF9900;
-  border: 1px solid #FF9900;
+  border-bottom: 2px solid #FF9900;
 }
 #main #category .active span {
-  color: white !important;
+  color: #FF9900 !important;
 }
 #main .mainContainer {
   width: 100%;
