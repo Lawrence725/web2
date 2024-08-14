@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    /* Font */
+    // --fXXL: clamp(1.9rem, 10vw, 2.0rem);
+    // --fXL:  clamp(1.4rem, 6vw, 1.5rem);
+    // --fL:   clamp(1.2rem, 5vw, 1.3rem);
+    // --fM:   clamp(1rem, 4vw, 1.2rem);
+    // --fS:   clamp(0.8rem, 3vw, 0.9rem);
+    // --fXS:  clamp(0.6rem, 3vw, 0.7rem);
+    --fXXL: 1.9rem;
+    --fXL:  1.4rem;
+    --fL:   1.2rem;
+    --fM:   1rem;
+    --fS:   0.8rem;
+    --fXS:  0.6rem;
+
+    /* Color 
+    ***** 自訂顏色說明 *****
+    k1: 主色 (建議深色)
+    k2: 底色 (建議k1接近白色)
+    k3: 特殊色 (測試中) */
+    --k3: #FFFFFF;
+    /* QC */
+    --q1: #FF9900;
+    --q1a:#FFEED8;
+    --q2: #22798C;
+    --q2a: #D3E4E8;
+    --q3: #96BE0B;
+    --q3a:#EAF2CE;
+    /* 桃園
+    --k1: #EF6079;
+    --k2: #F3CBC7; */
+    /* 鬍鬚張
+    --k1: #740008;
+    --k2: #F0E1E2;
+    --k3: #FFDE33; */
+    /* 米哥烘焙坊 */
+    --k1: #DD9A8A;
+    --k2: #F8E8E5;
+    // --k2:     linear-gradient(0deg, fade(#FF9900, 25%), fade(#FF9900, 25%)), white;
+    /* cama */
+    --cama1: #F7B128;
+    --c1:     #EF6079;
+    --c2:     #F3CBC7;
+    --c3:     #5CB8B2;
+    --c4:     #333F48;
+    --cG1:    #333333;
+    --cG2:    #4F4F4F;
+    --cG3:    #828282;
+    --cG4:    #BDBDBD;
+    --cG5:    #E0E0E0;
+    --cG6:    #F2F2F2;
+    --cBg:    #F2F1F6;
+    --cRed:   #EB5757;
+    --cGreen: #27AE60;
+    --cOrange:#FF9900;
+    --cBlue:  #5CB8B2;
+}
+
+// Screen
+@sMini: (max-height: 668px);
+
+/* Reset */
+*                                       { margin: 0; padding: 0;
+    &:visited                           { color: inherit; }}
+html, body                              { overscroll-behavior-x: none; }
+*, :after, :before                      { box-sizing: border-box !important; -webkit-box-sizing: border-box; }
+*, span, p, h1, h2, h3, h4, h5, h6, div, a, select, input, textarea, button, ol, ul
+                                        { font-size: var(--fM); font-family: 'Noto Sans TC', 'Roboto', 'Arial', '微軟正黑體'; }
+span, p, h1, h2, h3, h4, h5, h6, div, input, textarea, ol, ul
+                                        { color: var(--cG1); overflow-wrap: anywhere; }
+a                                       { color: inherit; text-decoration: none !important;
+    &:hover                             { cursor: pointer; }}
+button                                  { border: none;
+    &:hover                             { cursor: pointer; }}
+input                                   { border: 0; padding: 0; background-color: transparent;
+    &:focus                             { box-shadow: none !important; outline: none; }
+    &:-webkit-autofill                  { color: var(--k1) !important; background-color: transparent !important; box-shadow: 0 0 0px 1000px white inset !important; background-clip: content-box !important; }}
+textarea                                { border: 0; resize: none;
+    &:focus                             { box-shadow: none !important; outline: none; }}
+select                                  { -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; border: 0;
+    &:hover                             { cursor: pointer; }}
+img                                     { object-fit: cover; }
+i, svg                                  { text-decoration: none !important; }
+iframe                                  { border: 0; }
+
+.header { width: 100%; max-width: 430px; height: 70px; padding: 20px 20px 10px 10px; left: 50%; transform: translate(-50%, 0); position: fixed; display: flex; align-items: center; justify-content: center; gap: 5px; z-index: 5;
+    .bg { width: 1000px; height: 1000px; border-radius: 999px; position: absolute; bottom: -15px; background: var(--cama1); pointer-events: none; z-index: -1; }
+    span { font-size: var(--fXL); }
+}
+
+.main { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; width: 100%; height: calc(100dvh - 150px);
+    .logo { display: flex; flex-flow: nowrap; justify-content: center; align-items: center; width: 100%; max-width: 250px; margin: 0 auto; }
+}
+
+.footer { position: fixed; width: 100%; max-width: 430px; padding: 15px; left: 0; right: 0; bottom: 0; margin: 0 auto;
+    display: flex; flex-flow: column; justify-content: center; gap: 15px; text-align: center;
+    background: var(--cama1); border-radius: 20px 20px 0 0; 
+    button { min-height: 60px; padding: 10px; 
+        color: #FFFFFF; font-size: var(--fL); line-height: 110%;
+        background: var(--cG2); border-radius: 20px; box-shadow: 0px 5px 10px 0px rgba(55, 84, 170, 0.20); 
+        .fs { font-size: var(--fS); }
+    }
+    a { display: inline-block; padding: 5px; text-decoration: underline !important; }
+    .cama-login { color: #000000; background: #FFFFFF; }
+}
