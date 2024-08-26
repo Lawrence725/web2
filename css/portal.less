@@ -15,6 +15,27 @@
 }
 
 #portalMain { display: flex; flex-flow: wrap; justify-content: space-between; align-items: flex-start; padding-top: 100px;
+    a.login { width: 100%; height: 50px; max-width: 500px; margin: 0 auto; padding: 2px 2px 2px 15px; gap: 10px; border-radius: 99px; display: flex; align-items: center; background-color: @c1; box-sizing: border-box;
+        > i, svg { color: white; }
+        div.right { width: 100%; height: 100%; padding: 0 15px; border-radius: 99px; gap: 10px; display: flex; align-items: center; background-color: white;
+            span.title { font-size: var(--fM); white-space: nowrap; }
+            span:not(.title) { width: 100%; text-align: right; font-size: var(--fS); color: @c1; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
+            i, svg { color: @c1; }}}
+    div.account { width: 100%; max-width: 500px; padding: 5px; margin: 0 auto; border-radius: 20px; gap: 5px; display: flex; align-items: center; background-color: white; box-sizing: border-box;
+        @media @screen-mobile { flex-direction: column; }
+        span { font-size: var(--fS); }
+        div.top { padding: 5px 10px; border-right: 2px solid @c1; gap: 5px; display: flex; align-items: center; justify-content: center;
+            @media @screen-mobile { border-right: none; border-bottom: 2px solid @c1; }
+            > * { color: @c1; }
+            span { color: @cG1; white-space: nowrap; }}
+        div.bottom { width: 100%; display: flex; align-items: center;
+            a { width: 100%; height: 60px; border-radius: 19px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+                span { color: @cG3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+                img { height: 16px; }
+                &:nth-child(1) { i, svg { color: #F5B7A6; }}
+                &:nth-child(2) { i, svg { color: #FFD965; }}
+                &:nth-child(3) { i, svg { color: #C5E0B3; }}
+                &:nth-child(4) { i, svg { color: #BDD7EE; }}}}}
     #banner { width: 46%; height: auto; margin-right: 4%; 
         .mySlides { height: auto; 
             > img { border-radius: 20px; }
